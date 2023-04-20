@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "no-unused-vars": "error",
+    "react/prop-types": "off", // отключение обязательности проверки propTypes
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ], // запрет использования console.log
+    "import/no-anonymous-default-export": "error", // запрет анонимных экспортов
+    "react-hooks/rules-of-hooks": "error", // обязательность правил хуков React
+    "react-hooks/exhaustive-deps": "warn", // проверка зависимостей эффектов в хуках
+    "quotes": [
+      "error",
+      "double"
+    ], // использовать только двойные кавычки
+    "indent": [
+      "error",
+      2
+    ], // использовать отступы в 2 пробела
+    "no-tabs": "error", // запретить использование табуляции
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "hrefLeft",
+          "hrefRight"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ] // обязательность использования корректных атрибутов ссылок
+  }
 }
