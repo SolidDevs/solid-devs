@@ -4,6 +4,7 @@ const HomePage = () => {
   return (
     <>
       <h1>{t("welcome")}</h1>
+      <p>sdsd</p>
     </>
   );
 };
