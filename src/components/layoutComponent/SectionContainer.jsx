@@ -1,4 +1,4 @@
-import scss from "./LayoutComponent.module.scss";
+import scss from "./SectionContainer.module.scss";
 
 const SectionContainer = ({ children, title }) => {
   return (
