@@ -1,6 +1,6 @@
 import scss from "./LayoutComponent.module.scss";
 
-const LayoutComponent = ({ children, title }) => {
+const SectionContainer = ({ children, title }) => {
   return (
     <section className={scss.wrapper}>
       <h1 className={scss.wrapper_title}>{title}</h1>
@@ -9,4 +9,4 @@ const LayoutComponent = ({ children, title }) => {
   );
 };
 
-export default LayoutComponent;
+export default SectionContainer;
