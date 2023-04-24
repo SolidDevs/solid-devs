@@ -1,42 +1,41 @@
-# Description
+Issue #:
+[Trello](https://trello.com/b/8mLc1U3Y/solid-devs)
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+## PR type
 
-Fixes # (issue)
+Please check the type of change your PR introduces:
 
-## Screenshot before
+- [ ] Bugfix
+- [ ] Feature
+- [ ] Code style update (formatting, renaming)
+- [ ] Refactoring (no functional changes, no api changes)
+- [ ] Build related changes
+- [ ] Other (please describe):
 
-## Screenshot after
+## Screenshots
 
-## Type of change
+#### before:
 
-Please delete options that are not relevant.
+#### after:
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+## Does this introduce a breaking change?
 
-# How Has This Been Tested?
+- [ ] Yes (please describe):
+- [ ] No
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
+## Pull request checklist
 
-- [ ] Test A
-- [ ] Test B
+Please check if your PR fulfills the following requirements:
 
-**Test Configuration**:
-* Firmware version:
-* Hardware:
-* Toolchain:
-* SDK:
+- [ ] Tests for the changes have been added (for bug fixes / features)
+- [ ] Accessibility support has been tested
+- [ ] Responsive layout and functionality have been tested
+  - [ ] desktop and mobile view responsiveness are supported
+  - [ ] no loss of functionality or content when zoomed in to 400%
+  - [ ] no horizontal scrolling when zoomed in to 400% (only vertical scrolling, exception: DataGrids)
+- [ ] avoids using many levels of prop drilling
+- [ ] check console on errors and warnings.
+---
 
-# Checklist:
-
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+References:
+- [Clean code](https://github.com/airbnb/javascript)
