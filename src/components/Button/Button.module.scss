@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+.button {
+    margin-top: 20px;
+  .button__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    background: $mainBlue;
+    border-radius: 3px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    border: none;
+    .button__btn__img{
+        margin-left: 20px;
+    }
+  }
+  .button__btn_backgoundNon {
+    padding: 10px 30px;
+    background: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $mainBlue;
+    border: 1px solid $mainBlue;
+  }
+}
