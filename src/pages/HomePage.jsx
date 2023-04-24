@@ -1,4 +1,3 @@
-import LayoutComponent from "@/components/layoutComponent/LayoutComponent";
 import { useTranslation } from "react-i18next";
 const HomePage = () => {
   const { t } = useTranslation();
