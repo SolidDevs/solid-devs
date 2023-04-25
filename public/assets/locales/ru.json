@@ -1,4 +1,21 @@
 {
-    "welcome": "Добро пожаловать",
-    "hello": "Привет"
+  "aside": {
+    "itProgects": "IT проекты",
+    "ourServices": "Наши услуги",
+    "ourTechnologyStack": "Наш стэк технологий",
+    "reviews": "Отзывы",
+    "howWeAreWorking": "Как мы работаем",
+    "ourProjects": "Наши проекты"
+  },
+  "serviceBlock": {
+    "title": "Услуги по разработке программного обеспечения, на которых мы надираем задницы",
+    "WebDevelopmentApplications": "Разработка веб приложений",
+    "Services UX/UI design": "Услуги UX/UI дизайна",
+    "mobileDevelopmentApplications": "Разработка мобильных приложений",
+    "machineDevelopmentLearning": "Развитие машинного обучения",
+    "mVPDevelopmentApplications": "Разработка MVP приложений",
+    "developmentCloudApplications": "Разработка облачных приложений",
+    "applicationDevelopmentForChat": "Развитие приложений для чата",
+    "developmentBY": "Разработка ПО"
+  }
 }

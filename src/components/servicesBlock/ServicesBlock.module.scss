@@ -1,0 +1,59 @@
+.servicesBlock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.service_item {
+  background-color: #eeeeee;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 20px 10px 20px;
+  transition: ease-in-out 0.2s;
+  position: relative;
+
+  &:hover {
+    background-color: #0e61fe;
+    .service_title {
+      color: white;
+    }
+    .service_circle_items {
+      opacity: 1;
+    }
+    .svg_arrow{
+        position: relative;
+        right: 0;
+    }
+    .svg_arrow path{
+        fill: white;
+    }
+  }
+  .service_children_item {
+    align-items: center;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.service_title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  color: #323232;
+}
+.service_circle_items {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.svg_arrow{
+    position: relative;
+    right: 10px;
+    transition: ease-in-out .5s;
+}
+.svg_arrow path{
+    transition: ease-in-out .4s;
+}
