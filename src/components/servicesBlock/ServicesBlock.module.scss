@@ -1,3 +1,4 @@
+@import url("../../styles/variables.scss");
 .servicesBlock {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,7 +14,7 @@
   position: relative;
 
   &:hover {
-    background-color: #0e61fe;
+    background-color: $mainBlue;
     .service_title {
       color: white;
     }
@@ -25,7 +26,7 @@
         right: 0;
     }
     .svg_arrow path{
-        fill: white;
+        fill: $white;
     }
   }
   .service_children_item {

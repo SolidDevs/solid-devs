@@ -9,8 +9,8 @@ const ServicesBlock = () => {
   const { t } = useTranslation("");
   const serviseItems = useMemo(
     () =>
-      servicesData.map((item) => (
-        <div key={item.id} className={scss.service_item}>
+      servicesData.map((item, index) => (
+        <div key={`${item.title}_${index}`} className={scss.service_item}>
           <div className={scss.service_children_item}>
             <h1 className={scss.service_title}>{t(`${item.title}`)}</h1>
             <svg
