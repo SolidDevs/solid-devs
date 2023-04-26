@@ -31,8 +31,8 @@ const ServicesBlock = () => {
             className={scss.service_circle_items}
             src="./images/servicesBlock/circle.svg"
             alt="circle"
-            width={32}
-            height={16}
+            width={103}
+            height={84}
           />
         </div>
       )),

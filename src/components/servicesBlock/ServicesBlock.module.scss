@@ -1,4 +1,4 @@
-@import url("../../styles/variables.scss");
+@import "../../styles/variables.scss";
 .servicesBlock {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,7 +16,7 @@
   &:hover {
     background-color: $mainBlue;
     .service_title {
-      color: white;
+      color: $white;
     }
     .service_circle_items {
       opacity: 1;
@@ -42,7 +42,7 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 26px;
-  color: #323232;
+  color: $mainDarkText;
 }
 .service_circle_items {
   opacity: 0;
