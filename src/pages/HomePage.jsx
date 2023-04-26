@@ -5,7 +5,7 @@ const HomePage = () => {
     <>
       <MainContent>
         <ServicesBlock />
-      <MainContent>
+      </MainContent>
     </>
   );
 };
