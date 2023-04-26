@@ -6,5 +6,13 @@
     "reviews": "Reviews",
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
+  },
+  "navbar": {
+    "DevOps": "DevOps",
+    "frontEnd": "Front End",
+    "qualityControl": "Quality Control",
+    "backend": "Back End",
+    "mobile": "mobile phone",
+    "infrastructure": "Infrastructure"
   }
 }

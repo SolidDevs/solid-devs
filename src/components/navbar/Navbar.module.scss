@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+}
+.__linkItem {
+  padding: 13px 82px 13px 10px;
+  height: 50px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: $mainDarkText;
+  position: relative;
+  z-index: 20;
+  &::before {
+    content: "";
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: ease-in-out 0.4s;
+  }
+  &::after {
+    content: "";
+    background-color: $mainBlue;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: ease-in-out 0.4s;
+    opacity: 0;
+  }
+  &:hover {
+    z-index: 20;
+    &::after {
+      content: "";
+      background-color: $mainBlue;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+    }
+  }
+}

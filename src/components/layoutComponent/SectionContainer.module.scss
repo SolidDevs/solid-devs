@@ -1,9 +1,10 @@
-.wrapper_title {
+@import "../../styles/variables.scss";
+.title {
   font-style: normal;
   font-weight: 300;
   font-size: 35px;
   line-height: 48px;
-  color: #323232;
+  color: $mainText;
   margin-bottom: 20px;
 }
 .wrapper{
