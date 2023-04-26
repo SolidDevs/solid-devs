@@ -1,4 +1,10 @@
 {
-    "welcome": "Добро пожаловать",
-    "hello": "Привет"
+  "navbar": {
+    "DevOps": "DevOps",
+    "frontEnd": "Внешний интерфейс",
+    "qualityControl": "Контроль качества",
+    "backend": "Бэкэнд",
+    "mobile": "Мобилка",
+    "infrastructure": "Инфраструктура"
+  }
 }
