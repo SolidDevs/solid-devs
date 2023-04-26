@@ -2,18 +2,18 @@
   "welcome": "Welcome",
   "hello": "Hello",
   "itProjects": {
-    "title__1": "Crypto and blockchain",
-    "title__2": "Electronic commerce",
-    "title__3": "Sawless",
-    "title__4": "Transport",
-    "title__5": "Digital transformation",
-    "title__6": "Cloud technologies",
-    "title__7": "AdTech",
-    "title__8": "Electronic training",
-    "title__9": "Streaming of content",
-    "title__10": "HealthTech",
-    "title__11": "AdTech2",
-    "title__12": "Internet of things"
+    "title__crypto": "Crypto and blockchain",
+    "title__electronic": "Electronic commerce",
+    "title__sawless": "Sawless",
+    "title__transport": "Transport",
+    "title__digital": "Digital transformation",
+    "title__technologies": "Cloud technologies",
+    "title__adTech": "AdTech",
+    "title__training": "Electronic training",
+    "title__streaming": "Streaming of content",
+    "title__healthTech": "HealthTech",
+    "title__adTech2": "AdTech2",
+    "title__things": "Internet of things"
   },
   "sectionContainer": {
     "project__title": "What IT projects do we create"

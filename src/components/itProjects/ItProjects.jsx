@@ -10,8 +10,8 @@ const ItProjects = () => {
   return (
     <SectionContainer title={t("sectionContainer.project__title")}>
       <div className={scss.cards__main}>
-        {itProjects.map((item) => (
-          <ItProjectsCard key={item.id} {...item} />
+        {itProjects.map((item, index) => (
+          <ItProjectsCard key={`${item.title}_${index}`} {...item} />
         ))}
       </div>
     </SectionContainer>

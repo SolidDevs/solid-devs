@@ -1,67 +1,55 @@
-import Crypto from "../../public/assets/images/crypto.svg";
-import ElTrade from "../../public/assets/images/ElecTrade.svg";
-import Server from "../../public/assets/images/Serverless.svg";
-import Transport from "../../public/assets/images/Transport.svg";
+import Crypto from "../../public/assets/images/itProjects/crypto.svg";
+import ElTrade from "../../public/assets/images/itProjects/ElecTrade.svg";
+import Server from "../../public/assets/images/itProjects/Serverless.svg";
+import Transport from "../../public/assets/images/itProjects/Transport.svg";
 
 export const itProjects = [
   {
-    id: 1,
     icon: Crypto,
-    title: "itProjects.title__1",
+    title: "itProjects.title__crypto",
   },
   {
-    id: 2,
     icon: ElTrade,
-    title: "itProjects.title__2",
+    title: "itProjects.title__electronic",
   },
   {
-    id: 3,
     icon: Server,
-    title: "itProjects.title__3",
+    title: "itProjects.title__sawless",
   },
   {
-    id: 4,
     icon: Transport,
-    title: "itProjects.title__4",
+    title: "itProjects.title__transport",
   },
   {
-    id: 5,
     icon: Server,
-    title: "itProjects.title__5",
+    title: "itProjects.title__digital",
   },
   {
-    id: 6,
     icon: Server,
-    title: "itProjects.title__6",
+    title: "itProjects.title__technologies",
   },
   {
-    id: 7,
     icon: Server,
-    title: "itProjects.title__7",
+    title: "itProjects.title__adTech",
   },
   {
-    id: 8,
     icon: Server,
-    title: "itProjects.title__8",
+    title: "itProjects.title__training",
   },
   {
-    id: 9,
     icon: Server,
-    title: "itProjects.title__9",
+    title: "itProjects.title__streaming",
   },
   {
-    id: 10,
     icon: Server,
-    title: "itProjects.title__10",
+    title: "itProjects.title__healthTech",
   },
   {
-    id: 11,
     icon: Server,
-    title: "itProjects.title__11",
+    title: "itProjects.title__adTech2",
   },
   {
-    id: 12,
     icon: Server,
-    title: "itProjects.title__12",
+    title: "itProjects.title__things",
   },
 ];
