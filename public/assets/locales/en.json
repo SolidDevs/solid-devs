@@ -11,5 +11,13 @@
     "Terraform": "Terraform",
     "Ansible": "Ansible",
     "Jenkins": "Jenkins"
+  },
+  "navbar": {
+    "DevOps": "DevOps",
+    "frontEnd": "Front End",
+    "qualityControl": "Quality Control",
+    "backend": "Back End",
+    "mobile": "mobile phone",
+    "infrastructure": "Infrastructure"
   }
 }

@@ -8,16 +8,16 @@ const Aside = () => {
   const asideItems = useMemo(
     () =>
       asideLinks.map((item,index) => (
-        <a key={`${item.link}_${index}`} className={scss.aside_item_links} href="#/">
+        <a key={`${item.link}_${index}`} className={scss.__links} href="#/">
           {t(item.link)}
         </a>
       )),
-    []
+    [asideLinks]
   );
   return (
-    <aside className={scss.aside_item}>
-      <div className={scss.aside_scroll}></div>
-      <div className={scss.aside_inner}>{asideItems}</div>
+    <aside className={scss.aside}>
+      <div className={scss.__scroll}></div>
+      <div className={scss.__item}>{asideItems}</div>
     </aside>
   );
 };

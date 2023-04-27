@@ -3,8 +3,8 @@ import scss from "./SectionContainer.module.scss";
 const SectionContainer = ({ children, title }) => {
   return (
     <section className={scss.wrapper}>
-      <h1 className={scss.wrapper_title}>{title}</h1>
-      <div className={scss.wrapper_item}>{children}</div>
+      <h1 className={scss.title}>{title}</h1>
+      <div className={scss.__item}>{children}</div>
     </section>
   );
 };

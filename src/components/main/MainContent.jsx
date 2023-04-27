@@ -3,10 +3,12 @@ import scss from "./MainContent.module.scss";
 
 const MainContent = ({ children }) => {
   return (
-    <div className={`${scss.main_wrapper} container`}>
+    <main className={`${scss.main} container`}>
       <Aside />
-      <div className={scss.main_right_item}>{children}</div>
-    </div>  
+      <div className={scss.right_item}>
+        {children}
+      </div>
+    </main>  
   );
 };
 
