@@ -2,6 +2,7 @@
 .button {
   .background__btn_active {
     display: flex;
+    cursor: pointer;
     align-items: center;
     padding: 10px 30px;
     background: $mainBlue;
@@ -19,6 +20,7 @@
   }
   .background__btn_non {
     display: flex;
+    cursor: pointer;
     align-items: center;
     padding: 10px 30px;
     background: none;
@@ -28,8 +30,8 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    color: $mainBlue;
-    border: 1px solid $mainBlue;
+    color: $black;
+    border: 1px solid $darkGrayText;
     .button__btn_img {
       margin-left: 20px;
     }

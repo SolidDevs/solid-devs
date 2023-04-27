@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
       <h1>{t("weclome")}</h1>
-      <Button title={"dasdssadasdasdsa dsaa"}  variant={"background_none"} withArrow={true}/>
+      <Button title={"dasdssadasdasdsa dsaa"} variant={"background_non"} withArrow={true}/>
     </>
   );
 };
