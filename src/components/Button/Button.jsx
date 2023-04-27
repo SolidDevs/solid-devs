@@ -28,7 +28,7 @@ const Button = ({ title, variant, withArrow }) => {
         )}
       </button>
     ),
-    [title, withArrow, arrow, background__btn]
+    [title, withArrow, arrow, background__btn, t]
   );
   return <div className={scss.button}>{render__btn}</div>;
 };
