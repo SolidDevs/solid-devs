@@ -1,12 +1,12 @@
-.our__team_card {
+.ourTeam_card {
   position: relative;
   &:hover {
-    .our__team_item_hovered {
+    .our__team__item_hovered {
       opacity: 1;
     }
   }
 }
-.our__team_item_hovered {
+.our__team__item_hovered {
   background: #f1f1f1;
   border: 1px solid #d0d0d0;
   position: absolute;
@@ -22,11 +22,11 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.our__team_item_fullName, .our__team_item_position{
+.our__team__item_fullName, .our__team__item_position{
     margin: 0;
     padding: 0;
 }
-.our__team_item_fullName {
+.our__team__item_fullName {
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -34,7 +34,7 @@
   color: #323232;
 }
 
-.our__team_item_position {
+.our__team__item_position {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

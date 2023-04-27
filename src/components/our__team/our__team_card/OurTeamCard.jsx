@@ -6,7 +6,7 @@ const OurTeamCard = ({ image, name, surname, position }) => {
   const { t } = useTranslation("");
   return (
     <>
-      <div className={scss.our__team_card}>
+      <div className={scss.ourTeam_card}>
         <Image
           src={image}
           alt={`${name} ${surname}`}
@@ -15,11 +15,11 @@ const OurTeamCard = ({ image, name, surname, position }) => {
           sizes="100vw"
           style={{ width: "100%", height: "100%" }}
         />
-        <div className={scss.our__team_item_hovered}>
-          <h1 className={scss.our__team_item_fullName}>
-            {t(surname)} {" "} {t(name)}
+        <div className={scss.our__team__item_hovered}>
+          <h1 className={scss.our__team__item_fullName}>
+            {`${t(surname)}  ${t(name)}`}
           </h1>
-          <h1 className={scss.our__team_item_position}>
+          <h1 className={scss.our__team__item_position}>
             {t(position)}
           </h1>
         </div>

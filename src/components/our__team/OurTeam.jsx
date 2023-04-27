@@ -16,7 +16,7 @@ const OurTeam = () => {
   );
   return (
     <SectionContainer title={t("ourTeam.title")}>
-      <div className={scss.our__team}>{ourTeamItems}</div>
+      <div className={scss.ourTeam}>{ourTeamItems}</div>
     </SectionContainer>
   );
 };
