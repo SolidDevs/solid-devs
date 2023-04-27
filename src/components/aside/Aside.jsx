@@ -12,7 +12,7 @@ const Aside = () => {
           {t(item.link)}
         </a>
       )),
-    [t]
+    []
   );
   return (
     <aside className={scss.aside_item}>

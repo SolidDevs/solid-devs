@@ -5,7 +5,10 @@ const HomePage = () => {
   return (
     <>
       <h1>{t("weclome")}</h1>
-      <Button title={"dasdssadasdasdsa dsaa"} variant={"background__btn_active_blue"} withArrow={true}/>
+      <Button title={"Связаться"}/>
+      <Button title={"Перейти на сайт"} withArrow={true}/>
+      <Button title={"Отправить резюме"} variant={"background_non"} withArrow={true}/>
+      <Button title={"Обсудим ваш проект"} variant={"background_active"} withArrow={true}/>
     </>
   );
 };

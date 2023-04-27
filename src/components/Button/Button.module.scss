@@ -1,38 +1,36 @@
 @import "../../styles/variables.scss";
 .button {
-  .background__btn_active {
+  .background__btn {
     display: flex;
     cursor: pointer;
     align-items: center;
     padding: 10px 30px;
     background: $mainBlue;
     border-radius: 3px;
-    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     color: $white;
     border: none;
-    .button__btn_img {
+    .button__btn_arrow {
       margin-left: 20px;
     }
   }
-  .background__btn_active_blue {
+  .background__btn_active {
     display: flex;
     cursor: pointer;
     align-items: center;
     padding: 10px 30px;
     background: $blue;
     border-radius: 3px;
-    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     color: $white;
     border: none;
-    .button__btn_img {
+    .button__btn_arrow {
       margin-left: 20px;
     }
   }
@@ -43,14 +41,13 @@
     padding: 10px 30px;
     background: none;
     border-radius: 3px;
-    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
     color: $black;
     border: 1px solid $darkGrayText;
-    .button__btn_img {
+    .button__btn_arrow {
       margin-left: 20px;
     }
   }

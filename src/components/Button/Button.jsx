@@ -6,23 +6,21 @@ import arrowWhite from "../../../public/assets/images/ButtonRauseble/ArrowWhite.
 import { useTranslation } from "react-i18next";
 const Button = ({ title, variant, withArrow }) => {
   const { t } = useTranslation();
-  let background__btn;
+  let background__btn = scss.background__btn;
   if (variant === "background_non") {
     background__btn = scss.background__btn_non;
-  } else if (variant === "background__btn_active_blue") {
-    background__btn = scss.background__btn_active_blue;
-  } else {
+  } else if (variant === "background_active") {
     background__btn = scss.background__btn_active;
   }
 
-  let arrow = variant === "background_non" ? arrowBlack : arrowWhite;
+  let arrow = variant === "background__btn_non" ? arrowBlack : arrowWhite;
   const render__btn = useMemo(
     () => (
       <button className={background__btn}>
         {t(title)}
         {withArrow && (
           <Image
-            className={scss.button__btn_img}
+            className={scss.button__btn_arrow}
             src={arrow}
             width={20}
             alt="arrow"
@@ -30,7 +28,7 @@ const Button = ({ title, variant, withArrow }) => {
         )}
       </button>
     ),
-    [title, withArrow, arrow, background__btn, t]
+    []
   );
   return <div className={scss.button}>{render__btn}</div>;
 };
