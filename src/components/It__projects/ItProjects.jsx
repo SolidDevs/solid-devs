@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 const ItProjects = () => {
   const { t } = useTranslation();
-  const itProjecsRender = useMemo(
+  const itProjectsRender = useMemo(
     () =>
       itProjects.map((item, index) => (
         <ItProjectsCard key={`${item.title}_${index}`} {...item} />
@@ -16,7 +16,7 @@ const ItProjects = () => {
   );
   return (
     <SectionContainer title={t("sectionContainer.project__title")}>
-      <div className={scss.cards__main}>{itProjecsRender}</div>
+      <div className={scss.cards__main}>{itProjectsRender}</div>
     </SectionContainer>
   );
 };
