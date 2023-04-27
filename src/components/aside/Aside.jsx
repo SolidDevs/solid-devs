@@ -7,8 +7,12 @@ const Aside = () => {
   const { t } = useTranslation("");
   const asideItems = useMemo(
     () =>
-      asideLinks.map((item,index) => (
-        <a key={`${item.link}_${index}`} className={scss.aside_item_links} href="#/">
+      asideLinks.map((item, index) => (
+        <a
+          key={`${item.link}_${index}`}
+          className={scss.aside_item_links}
+          href="#/"
+        >
           {t(item.link)}
         </a>
       )),

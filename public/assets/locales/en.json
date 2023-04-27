@@ -33,5 +33,16 @@
     "backend": "Back End",
     "mobilePhone": "Mobile phone",
     "infrastructure": "Infrastructure"
+    },
+  "serviceBlock": {
+    "title": "Software development services we kick ass on",
+    "WebDevelopmentApplications": "Web Development Applications",
+    "Services UX/UI design": "Services UX/UI design",
+    "mobileDevelopmentApplications": "Mobile Development Applications",
+    "machineDevelopmentLearning": "Machine Development Learning",
+    "mVPDevelopmentApplications": "MVP Development Applications",
+    "developmentCloudApplications": "Development Cloud Applications",
+    "applicationDevelopmentForChat": "Application Development For Chat",
+    "developmentBY": "Development BY"
   }
 }
