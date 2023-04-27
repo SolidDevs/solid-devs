@@ -6,7 +6,7 @@ const MainContent = ({ children }) => {
     <div className={`${scss.main_wrapper} container`}>
       <Aside />
       <div className={scss.main_right_item}>{children}</div>
-    </div>  
+    </div>
   );
 };
 
