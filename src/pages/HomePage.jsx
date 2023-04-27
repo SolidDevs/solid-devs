@@ -1,4 +1,4 @@
-import ItProjects from "@/components/itProjects/ItProjects";
+import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import { useTranslation } from "react-i18next";
 const HomePage = () => {
