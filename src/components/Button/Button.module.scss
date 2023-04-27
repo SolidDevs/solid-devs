@@ -18,6 +18,24 @@
       margin-left: 20px;
     }
   }
+  .background__btn_active_blue {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px 30px;
+    background: $blue;
+    border-radius: 3px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    border: none;
+    .button__btn_img {
+      margin-left: 20px;
+    }
+  }
   .background__btn_non {
     display: flex;
     cursor: pointer;

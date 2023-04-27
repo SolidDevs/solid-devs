@@ -9,6 +9,8 @@ const Button = ({ title, variant, withArrow }) => {
   let background__btn;
   if (variant === "background_non") {
     background__btn = scss.background__btn_non;
+  } else if (variant === "background__btn_active_blue") {
+    background__btn = scss.background__btn_active_blue;
   } else {
     background__btn = scss.background__btn_active;
   }
