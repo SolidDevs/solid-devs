@@ -1,0 +1,5 @@
+.our__team{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
