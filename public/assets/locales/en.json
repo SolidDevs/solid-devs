@@ -27,6 +27,7 @@
     "ourProjects": "Our projects"
   },
   "technologies": {
+    "title": "Technologies and tools we use",
     "Terraform": "Terraform",
     "Ansible": "Ansible",
     "Jenkins": "Jenkins"

@@ -21,7 +21,7 @@ const Technologies = () => {
     [technologiesInfo]
   );
   return (
-    <SectionContainer title="Технологии и инструменты которые мы используем">
+    <SectionContainer title={t("technologies.title")}>
       <Navbar />
       <div className={scss.technologies}>{technologiesItems}</div>
     </SectionContainer>
