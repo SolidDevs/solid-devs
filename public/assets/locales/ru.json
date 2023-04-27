@@ -17,5 +17,13 @@
   },
   "sectionContainer": {
     "project__title": "Какие IT проекты мы создаем"
+  },
+  "aside": {
+    "itProgects": "IT проекты",
+    "ourServices": "Наши сервисы",
+    "ourTechnologyStack": "Наш стэк технологий",
+    "reviews": "Обзоры",
+    "howWeAreWorking": "Как мы работаем?",
+    "ourProjects": "Наши проекты"
   }
 }
