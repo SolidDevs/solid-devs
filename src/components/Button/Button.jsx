@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import scss from "./Button.module.scss";
 import Image from "next/image";
-import arrowBlue from "../../../public/assets/images/ButtonRauseble/ArrowBlue.svg";
+import arrowBlue from "../../../public/assets/images/ButtonRauseble/ArrowBlue.svg"
 import arrowWhite from "../../../public/assets/images/ButtonRauseble/ArrowWhite.svg";
 import { useTranslation } from "react-i18next";
 const Button = ({ title, variant, withArrow }) => {
