@@ -1,8 +1,6 @@
 @import "../../styles/variables.scss";
 .button {
-  margin-top: 20px;
-  .button__btn {
-    cursor: pointer;
+  .background__btn_active {
     display: flex;
     align-items: center;
     padding: 10px 30px;
@@ -15,18 +13,16 @@
     line-height: 22px;
     color: $white;
     border: none;
-    .button__btn__img {
+    .button__btn_img {
       margin-left: 20px;
     }
   }
-  .button__btn_backgoundNon {
-    padding: 10px 30px;
-    background: none;
-
+  .background__btn_non {
     display: flex;
     align-items: center;
+    padding: 10px 30px;
+    background: none;
     border-radius: 3px;
-    cursor: pointer;
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
@@ -34,7 +30,7 @@
     line-height: 22px;
     color: $mainBlue;
     border: 1px solid $mainBlue;
-    .button__btn__img {
+    .button__btn_img {
       margin-left: 20px;
     }
   }
