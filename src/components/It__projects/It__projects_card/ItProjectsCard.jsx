@@ -7,7 +7,7 @@ const ItProjectsCard = ({ icon, title }) => {
   const { t } = useTranslation();
   return (
     <div className={scss.projects}>
-      <Image src={icon} alt="image" />
+      <Image src={icon} alt="project icon" />
       <p>{t(title)}</p>
     </div>
   );
