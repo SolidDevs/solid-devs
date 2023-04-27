@@ -17,7 +17,7 @@ const Button = ({ title, variant, withArrow }) => {
   const render__btn = useMemo(
     () => (
       <button className={background__btn}>
-        {title}
+        {t(title)}
         {withArrow && (
           <Image
             className={scss.button__btn_img}
@@ -30,7 +30,7 @@ const Button = ({ title, variant, withArrow }) => {
     ),
     [title, withArrow, arrow, background__btn]
   );
-  return <div className={scss.button}>{t(render__btn)}</div>;
+  return <div className={scss.button}>{render__btn}</div>;
 };
 
 export default Button;
