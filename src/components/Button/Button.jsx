@@ -3,7 +3,9 @@ import scss from "./Button.module.scss";
 import arrowWhite from "../../../public/assets/ArrowWhite.svg";
 import arrowBlue from "../../../public/assets/ArrowBlue.svg";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 const Button = ({ title, variant, withArrow }) => {
+  const {t} = useTranslation();
   let background__btn;
   if (variant === "background_none") {
     background__btn = scss.background__btn_non;
@@ -26,9 +28,9 @@ const Button = ({ title, variant, withArrow }) => {
         )}
       </button>
     ),
-    [title, withArrow]
+    [title, withArrow, arrow, background__btn]
   );
-  return <div className={scss.button}>{render__btn}</div>;
+  return <div className={scss.button}>{t(render__btn)}</div>;
 };
 
 export default Button;

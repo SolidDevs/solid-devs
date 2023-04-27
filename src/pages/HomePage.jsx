@@ -4,7 +4,7 @@ const HomePage = () => {
   const { t } = useTranslation();
   return (
     <>
-      <h1>{t("welcome")}</h1>
+      <h1>{t("weclome")}</h1>
       <Button title={"dasdssadasdasdsa dsaa"}  variant={"background_none"} withArrow={true}/>
     </>
   );

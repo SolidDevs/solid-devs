@@ -1,4 +1,15 @@
 {
-    "welcome": "Welcome",
-    "hello": "Hello"
+  "aside": {
+    "itProgects": "IT projects",
+    "ourServices": "Our services",
+    "ourTechnologyStack": "Our technology stack",
+    "reviews": "Reviews",
+    "howWeAreWorking": "How we are working",
+    "ourProjects": "Our projects"
+  },
+  "button_rauseble":{
+    "contact": "Contact",
+    "project": "Let's discuss your project",
+    "site": "Go to site"
+  }
 }
