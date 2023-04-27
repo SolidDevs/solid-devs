@@ -1,9 +1,34 @@
 {
-    "welcome": "Добро пожаловать",
-    "hello": "Привет",
     "button_rauseble":{
         "contact": "Связаться",
         "project": "Обсудим ваш проект",
         "site": "Перейти на сайт"
-      }
+    },
+  "welcome": "Добро пожаловать",
+  "hello": "Привет",
+  "itProjects": {
+    "title__crypto": "Крипто и блокчейн",
+    "title__electronic": "Электронная торговля",
+    "title__sawless": "Бессерверный",
+    "title__transport": "Транспорт",
+    "title__digital": "Цифровая трансформация",
+    "title__technologies": "Облачные технологии",
+    "title__adTech": "ЭдТех",
+    "title__training": "Электронное обучение",
+    "title__streaming": "Потоковая передача контента",
+    "title__healthTech": "Здоровье",
+    "title__adTech2": "ЭдТех2",
+    "title__things": "Интернет вещей"
+  },
+  "sectionContainer": {
+    "project__title": "Какие IT проекты мы создаем"
+  },
+  "aside": {
+    "itProgects": "IT проекты",
+    "ourServices": "Наши сервисы",
+    "ourTechnologyStack": "Наш стэк технологий",
+    "reviews": "Обзоры",
+    "howWeAreWorking": "Как мы работаем?",
+    "ourProjects": "Наши проекты"
+  }
 }

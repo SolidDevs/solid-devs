@@ -1,4 +1,5 @@
 import Button from "@/components/Button/Button";
+import ItProjects from "@/components/It__projects/ItProjects";
 import { useTranslation } from "react-i18next";
 const HomePage = () => {
   const { t } = useTranslation();
@@ -6,6 +7,7 @@ const HomePage = () => {
     <>
       <h1>{t("weclome")}</h1>
       <Button title={"dasdssadasdasdsa dsaa"}  variant={"background_none"} withArrow={true}/>
+      <ItProjects/>
     </>
   );
 };

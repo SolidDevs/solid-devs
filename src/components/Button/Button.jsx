@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
 import scss from "./Button.module.scss";
-import arrowWhite from "../../../public/assets/images/ButtonRauseble/ArrowWhite";
-import arrowBlue from "../../../public/assets/images/ButtonRauseble/ArrowBlue";
 import Image from "next/image";
+import arrowBlue from "../../../public/assets/images/ButtonRauseble/ArrowBlue.svg";
+import arrowWhite from "../../../public/assets/images/ButtonRauseble/ArrowWhite.svg";
 import { useTranslation } from "react-i18next";
 const Button = ({ title, variant, withArrow }) => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   let background__btn;
   if (variant === "background_none") {
     background__btn = scss.background__btn_non;
