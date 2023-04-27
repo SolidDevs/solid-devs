@@ -6,5 +6,10 @@
     "reviews": "Reviews",
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
+  },
+  "technologies": {
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
   }
 }

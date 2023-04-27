@@ -1,4 +1,7 @@
 {
-    "welcome": "Добро пожаловать",
-    "hello": "Привет"
+  "technologies": {
+    "Terraform": "Терраформ",
+    "Ansible": "Ансибл",
+    "Jenkins": "Дженкинс"
+  }
 }
