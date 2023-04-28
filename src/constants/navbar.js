@@ -1,20 +1,8 @@
 export const navbarLinks = [
-  {
-    title: "navbar.devOps"
-  },
-  {
-    title: "navbar.frontend"
-  },
-  {
-    title: "navbar.qualityControl"
-  },
-  {
-    title: "navbar.backend"
-  },
-  {
-    title: "navbar.mobilePhone"
-  },
-  {
-    title: "navbar.infrastructure"
-  }
-]
+  "navbar.devOps",
+  "navbar.frontend",
+  "navbar.qualityControl",
+  "navbar.backend",
+  "navbar.mobilePhone",
+  "navbar.infrastructure",
+];

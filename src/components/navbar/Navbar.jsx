@@ -17,17 +17,17 @@ const Navbar = ({ navbarLinks, paramName }) => {
     () =>
       navbarLinks.map((item, index) => (
         <button
-          key={`${item.title}_${index}`}
+          key={`${item}_${index}`}
           onClick={() => {
             const path = {
               pathname: "",
-              search: `${paramName}=${item.title}`,
+              search: `${paramName}=${item}`,
             };
             router.push(path, path, { shallow: true });
           }}
           className={scss.navbar__item}
         >
-          {t(`${item.title}`)}
+          {t(`${item}`)}
         </button>
       )),
     [navbarLinks]
