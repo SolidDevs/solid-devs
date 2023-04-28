@@ -6,14 +6,14 @@ import arrowWhite from "../../../public/assets/images/ButtonRauseble/ArrowWhite.
 import { useTranslation } from "react-i18next";
 const Button = ({ title, variant, withArrow }) => {
   const { t } = useTranslation();
-  let background__btn = scss.background__btn;
-  if (variant === "background_non") {
-    background__btn = scss.background__btn_non;
-  } else if (variant === "background_active") {
-    background__btn = scss.background__btn_active;
+  let background__btn = scss.btn_blue;
+  if (variant === "btn__no_bg") {
+    background__btn = scss.btn__no_bg;
+  } else if (variant === "btn__light_blue") {
+    background__btn = scss.btn__light_blue;
   }
 
-  let arrow = variant === "background__btn_non" ? arrowBlack : arrowWhite;
+  let arrow = variant === "btn__no_bg" ? arrowBlack : arrowWhite;
   const render__btn = useMemo(
     () => (
       <button className={background__btn}>

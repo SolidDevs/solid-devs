@@ -1,6 +1,6 @@
 @import "../../styles/variables.scss";
 .button {
-  .background__btn {
+  .btn_blue {
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -17,7 +17,7 @@
       margin-left: 20px;
     }
   }
-  .background__btn_active {
+  .btn__light_blue {
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -34,7 +34,7 @@
       margin-left: 20px;
     }
   }
-  .background__btn_non {
+  .btn__no_bg {
     display: flex;
     cursor: pointer;
     align-items: center;
