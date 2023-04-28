@@ -26,6 +26,11 @@
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
   },
+  "button_rauseble":{
+    "contact": "Contact",
+    "project": "Let's discuss your project",
+    "site": "Go to site"
+  },
   "serviceBlock": {
     "title": "Software development services we kick ass on",
     "WebDevelopmentApplications": "Web Development Applications",

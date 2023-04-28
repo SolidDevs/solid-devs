@@ -1,12 +1,11 @@
 {
-  "aside": {
-    "itProgects": "IT проекты",
-    "ourServices": "Наши услуги",
-    "ourTechnologyStack": "Наш стэк технологий",
-    "reviews": "Отзывы",
-    "howWeAreWorking": "Как мы работаем",
-    "ourProjects": "Наши проекты"
-  },
+    "button_rauseble":{
+        "contact": "Связаться",
+        "project": "Обсудим ваш проект",
+        "site": "Перейти на сайт"
+    },
+  "welcome": "Добро пожаловать",
+  "hello": "Привет",
   "serviceBlock": {
     "title": "Услуги по разработке программного обеспечения, на которых мы надираем задницы",
     "WebDevelopmentApplications": "Разработка веб приложений",
