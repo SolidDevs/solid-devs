@@ -3,13 +3,16 @@ import scss from "./Navbar.module.scss";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
-const Navbar = ({ navbarLinks }) => {
+const Navbar = ({ navbarLinks, paramName }) => {
   const router = useRouter();
   let { tour } = router.query;
+
   if (tour === undefined) {
     tour = "1";
   }
+
   const { t } = useTranslation("");
+
   const navbarItems = useMemo(
     () =>
       navbarLinks.map((item, index) => (
@@ -18,7 +21,7 @@ const Navbar = ({ navbarLinks }) => {
           onClick={() => {
             const path = {
               pathname: "",
-              search: `?tour=${item.title}`,
+              search: `${paramName}=${item.title}`,
             };
             router.push(path, path, { shallow: true });
           }}
