@@ -55,5 +55,11 @@
     "backend": "Back End",
     "mobilePhone": "Mobile Phone",
     "infrastructure": "Infrastructure"
+  },
+  "technologies": {
+    "title": "Technologies and tools we use",
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
   }
 }
