@@ -41,5 +41,19 @@
     "developmentCloudApplications": "Development Cloud Applications",
     "applicationDevelopmentForChat": "Application Development For Chat",
     "developmentBY": "Development BY"
+  },
+  "ourTeam": {
+    "title": "Our team",
+    "surname": "Shaimuhamedov",
+    "name": "Amir",
+    "position": "UX/UI Designer"
+  },
+  "navbar": {
+    "devOps": "DevOps",
+    "frontend": "Front End",
+    "qualityControl": "Quality Control",
+    "backend": "Back End",
+    "mobilePhone": "Mobile Phone",
+    "infrastructure": "Infrastructure"
   }
 }

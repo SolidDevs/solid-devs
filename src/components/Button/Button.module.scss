@@ -13,8 +13,17 @@
     line-height: 22px;
     color: $white;
     border: none;
+    &:hover {
+      .button__btn_arrow {
+        position: relative;
+        left: 10px;
+      }
+    }
     .button__btn_arrow {
       margin-left: 20px;
+      position: relative;
+      left: 0;
+      transition: ease-in-out 0.3s;
     }
   }
   .btn__light_blue {
@@ -30,8 +39,17 @@
     line-height: 22px;
     color: $white;
     border: none;
+    &:hover {
+      .button__btn_arrow {
+        position: relative;
+        left: 10px;
+      }
+    }
     .button__btn_arrow {
       margin-left: 20px;
+      position: relative;
+      left: 0;
+      transition: ease-in-out 0.3s;
     }
   }
   .btn__no_bg {
@@ -47,8 +65,17 @@
     line-height: 22px;
     color: $black;
     border: 1px solid $darkGrayText;
+    &:hover {
+      .button__btn_arrow {
+        position: relative;
+        left: 10px;
+      }
+    }
     .button__btn_arrow {
       margin-left: 20px;
+      position: relative;
+      left: 0;
+      transition: ease-in-out 0.3s;
     }
   }
 }

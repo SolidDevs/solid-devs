@@ -1,11 +1,15 @@
-import Button from "@/components/Button/Button";
+import ItProjects from "@/components/It__projects/ItProjects";
+import MainContent from "@/components/MainContent/MainContent";
+import OurTeam from "@/components/our__team/OurTeam";
+import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 const HomePage = () => {
   return (
     <>
-      <Button title={"Связаться"}/>
-      <Button title={"Перейти на сайт"} withArrow={true}/>
-      <Button title={"Отправить резюме"} variant={"btn__no_bg"} withArrow={true}/>
-      <Button title={"Обсудим ваш проект"} variant={"btn__light_blue"} withArrow={true}/>
+      <MainContent>
+        <ItProjects />
+        <ServicesBlock />
+        <OurTeam />
+      </MainContent>
     </>
   );
 };
