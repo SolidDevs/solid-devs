@@ -48,5 +48,13 @@
     "surname": "Шаймухамедов",
     "name": "Амир",
     "position": "UX/UI Дизайнер"
+  },
+  "navbar": {
+    "devOps": "DevOps",
+    "frontend": "Внешний интерфейс",
+    "qualityControl": "Контроль качества",
+    "backend": "Бэкэнд",
+    "mobilePhone": "Мобилка",
+    "infrastructure": "Инфраструктура"
   }
 }

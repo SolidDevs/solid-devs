@@ -42,5 +42,13 @@
     "surname": "Shaimuhamedov",
     "name": "Amir",
     "position": "UX/UI Designer"
+  },
+  "navbar": {
+    "devOps": "DevOps",
+    "frontend": "Front End",
+    "qualityControl": "Quality Control",
+    "backend": "Back End",
+    "mobilePhone": "Mobile Phone",
+    "infrastructure": "Infrastructure"
   }
 }
