@@ -7,7 +7,6 @@ const HomePage = () => {
       <Button title={"Отправить резюме"} variant={"btn__no_bg"} withArrow={true}/>
       <Button title={"Обсудим ваш проект"} variant={"btn__light_blue"} withArrow={true}/>
     </>
-  );
-};
-
+);
+}
 export default HomePage;
