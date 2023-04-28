@@ -36,5 +36,11 @@
     "developmentCloudApplications": "Development Cloud Applications",
     "applicationDevelopmentForChat": "Application Development For Chat",
     "developmentBY": "Development BY"
+  },
+  "ourTeam": {
+    "title": "Our team",
+    "surname": "Shaimuhamedov",
+    "name": "Amir",
+    "position": "UX/UI Designer"
   }
 }
