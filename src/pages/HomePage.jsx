@@ -1,6 +1,5 @@
 import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
-import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 const HomePage = () => {
   return (
@@ -8,7 +7,6 @@ const HomePage = () => {
       <MainContent>
         <ItProjects />
         <ServicesBlock />
-        <OurTeam />
       </MainContent>
     </>
   );
