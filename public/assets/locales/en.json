@@ -26,14 +26,6 @@
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
   },
-  "navbar": {
-    "devOps": "DevOps",
-    "frontend": "Front End",
-    "qualityControl": "Quality control",
-    "backend": "Back End",
-    "mobilePhone": "Mobile phone",
-    "infrastructure": "Infrastructure"
-    },
   "serviceBlock": {
     "title": "Software development services we kick ass on",
     "WebDevelopmentApplications": "Web Development Applications",
@@ -44,5 +36,11 @@
     "developmentCloudApplications": "Development Cloud Applications",
     "applicationDevelopmentForChat": "Application Development For Chat",
     "developmentBY": "Development BY"
+  },
+  "ourTeam": {
+    "title": "Our team",
+    "surname": "Shaimuhamedov",
+    "name": "Amir",
+    "position": "UX/UI Designer"
   }
 }
