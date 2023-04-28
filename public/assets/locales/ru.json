@@ -43,14 +43,6 @@
     "howWeAreWorking": "Как мы работаем?",
     "ourProjects": "Наши проекты"
   },
-  "navbar": {
-    "devOps": "DevOps",
-    "frontend": "Внешний интерфейс",
-    "qualityControl": "Контроль качества",
-    "backend": "Бэкэнд",
-    "mobilePhone": "Мобилка",
-    "infrastructure": "Инфраструктура"
-    },
   "ourTeam": {
     "title": "Наша команда",
     "surname": "Шаймухамедов",
