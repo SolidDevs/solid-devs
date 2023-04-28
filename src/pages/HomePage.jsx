@@ -11,6 +11,6 @@ const HomePage = () => {
         <OurTeam />
       </MainContent>
     </>
-);
-}
+  );
+};
 export default HomePage;
