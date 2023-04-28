@@ -50,5 +50,11 @@
     "backend": "Бэкэнд",
     "mobilePhone": "Мобилка",
     "infrastructure": "Инфраструктура"
+    },
+  "ourTeam": {
+    "title": "Наша команда",
+    "surname": "Шаймухамедов",
+    "name": "Амир",
+    "position": "UX/UI Дизайнер"
   }
 }
