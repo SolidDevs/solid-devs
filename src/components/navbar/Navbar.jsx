@@ -1,36 +1,44 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import scss from "./Navbar.module.scss";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
 const Navbar = ({ navbarLinks, paramName }) => {
   const router = useRouter();
-  let { tour } = router.query;
-
-  if (tour === undefined) {
-    tour = "1";
-  }
-
+  const [paramValue, setParamValue] = useState("");
+  useEffect(() => {
+    const { query } = router;
+    const value = query[paramName];
+    setParamValue(value);
+  }, [router, paramName]);
   const { t } = useTranslation("");
+
+  const handleClick = (item) => {
+    const query = router.query;
+    query[paramName] = item;
+    const path = {
+      pathname: router.pathname,
+      query,
+    };
+    router.push(path, path, { shallow: true });
+  };
 
   const navbarItems = useMemo(
     () =>
       navbarLinks.map((item, index) => (
         <button
           key={`${item}_${index}`}
-          onClick={() => {
-            const path = {
-              pathname: "",
-              search: `${paramName}=${item}`,
-            };
-            router.push(path, path, { shallow: true });
-          }}
-          className={scss.navbar__item}
+          onClick={() => handleClick(item)}
+          className={
+            paramValue == item
+              ? scss.navbar__item_currentSelect
+              : scss.navbar__item
+          }
         >
-          {t(`${item}`)}
+          {t(`navbar.${item}`)}
         </button>
       )),
-    [navbarLinks]
+    [navbarLinks, paramValue]
   );
   return <nav className={scss.navbar}>{navbarItems}</nav>;
 };
