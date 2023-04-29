@@ -1,0 +1,16 @@
+.talk {
+  h1 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 48px;
+    color: #262626;
+  }
+  .talk__slide {
+    padding: 30px;
+    background: #f1f1f1;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+}
