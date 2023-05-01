@@ -4,8 +4,6 @@ import FeedBack from "@/components/feed__back/feedBack";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
-import { fedBack2 } from "@/constants/fedback2";
-import { feedBackArr } from "@/constants/feedBack";
 const HomePage = () => {
   return (
     <>
@@ -14,9 +12,8 @@ const HomePage = () => {
         <ServicesBlock />
         <TechnologiesBlock />
         <OurTeam />
-        <FeedBack feedBackArr={feedBackArr} title={"What people say"}/>
+        <FeedBack />
       </MainContent>
-      <FeedBack feedBackArr={fedBack2} title={"More what people say"}/>
     </>
   );
 };

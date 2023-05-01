@@ -1351,6 +1351,11 @@
   "resolved" "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   "version" "2.0.0"
 
+"jquery@>=1.8.0":
+  "integrity" "sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz"
+  "version" "3.6.4"
+
 "js-sdsl@^4.1.4":
   "integrity" "sha512-FfVSdx6pJ41Oa+CF7RDaFmTnCaFhua+SNYQX74riGOpl96x+2jQCqEfQ2bnXu/5DPCqlRuiqyvTJM0Qjz26IVg=="
   "resolved" "https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.4.0.tgz"
@@ -1888,6 +1893,11 @@
   "integrity" "sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew=="
   "resolved" "https://registry.npmjs.org/slash/-/slash-4.0.0.tgz"
   "version" "4.0.0"
+
+"slick-carousel@^1.8.1":
+  "integrity" "sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA=="
+  "resolved" "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.8.1.tgz"
+  "version" "1.8.1"
 
 "source-map-js@^1.0.2", "source-map-js@>=0.6.2 <2.0.0":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="
