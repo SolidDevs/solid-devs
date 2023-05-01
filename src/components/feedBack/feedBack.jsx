@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
-import scss from "./feedBack.module.scss";
-import FeedBackCard from "./feedBackCard/feedBackCard";
+import scss from "./FeedBack.module.scss";
+import FeedBackCard from "./FeedBackCard/FeedBackCard";
 import { feedBackArr } from "@/constants/feedBack";
 const FeedBack = () => {
   const renderCard = useMemo(
