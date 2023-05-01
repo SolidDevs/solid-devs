@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import scss from "./FeedBack.module.scss";
-import FeedBackCard from "./FeedBackCard/FeedBackCard";
 import { feedBackArr } from "@/constants/feedBack";
+import FeedBackCard from "./FeedBackCard/FeedBackCard.jsx";
 const FeedBack = () => {
   const renderCard = useMemo(
     () => feedBackArr.map((el) => <FeedBackCard {...el} key={el.title} />),
