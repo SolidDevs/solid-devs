@@ -1,9 +1,9 @@
 {
-    "button_rauseble":{
-        "contact": "Связаться",
-        "project": "Обсудим ваш проект",
-        "site": "Перейти на сайт"
-    },
+  "button_rauseble": {
+    "contact": "Связаться",
+    "project": "Обсудим ваш проект",
+    "site": "Перейти на сайт"
+  },
   "welcome": "Добро пожаловать",
   "hello": "Привет",
   "serviceBlock": {
@@ -16,7 +16,7 @@
     "developmentCloudApplications": "Разработка облачных приложений",
     "applicationDevelopmentForChat": "Развитие приложений для чата",
     "developmentBY": "Разработка ПО"
-    },
+  },
   "itProjects": {
     "title__crypto": "Крипто и блокчейн",
     "title__electronic": "Электронная торговля",
@@ -62,5 +62,10 @@
     "name": "Аман Аманбек",
     "job": "CEO, Kyrgyz Ryders",
     "call": "Что говорят люди"
+  },
+  "main": {
+    "title": "Solid Devs",
+    "subtitle": "Ваш путь к цифровой трансформации",
+    "description": "Мы разрабатываем, проектируем, автоматизируем и управляем, применяя наш инженерный опыт для наилучших решений для вашего бизнеса."
   }
 }
