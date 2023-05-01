@@ -1,0 +1,23 @@
+.underFooter {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 25px;
+  }
+
+  p {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 23px;
+    color: #d3d3d3;
+    margin: 0;
+  }
+}

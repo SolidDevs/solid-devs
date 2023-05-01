@@ -26,6 +26,31 @@
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
   },
+<<<<<<< HEAD
+=======
+  "footer": {
+    "title__company": "About company",
+    "company__desc": "The power of the programs in the field of software created to bring your business to the top!",
+    "title__adress": "Our address",
+    "adress__desc": "Kyrgyzstan, Bishkek c., Akhunbaev st. 133",
+    "title__pages": "Pages:",
+    "page__us": "About Us",
+    "page__jobs": "Vacancies",
+    "page__outstaff": "Outstaff",
+    "title__services": "Our services:",
+    "subTitle__dev": "Development of applications web",
+    "subTitle__des": "UX/UI design services",
+    "subTitle__mobile": "Development of mobile applications",
+    "subTitle__learn": "Development of machine learning",
+    "subTitle__mvp": "Development of MVP applications",
+    "subTitle__cloud": "Development of cloud applications",
+    "subTitle__chat": "Chatting Applications Development",
+    "subTitle__programm": "Development of software",
+    "title__socials": "We are in social networks:",
+    "footer__right": "© All rights reserved. Solid Devs 2023",
+    "footer__politic": "Privacy Policy"
+  },
+>>>>>>> f74710c641da682c93400364a13dbd81f53549d7
   "button_rauseble": {
     "contact": "Contact",
     "project": "Let's discuss your project",
