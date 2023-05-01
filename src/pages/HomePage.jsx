@@ -8,7 +8,7 @@ import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock"
 const HomePage = () => {
   return (
     <>
-    <Main/>
+      <Main />
       <MainContent>
         <ItProjects />
         <ServicesBlock />
