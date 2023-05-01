@@ -1,6 +1,6 @@
-import Image from "next/image";
 import React from "react";
-import scss from "./feedBackCard.module.scss";
+import Image from "next/image";
+import scss from "./FeedBackCard.module.scss";
 import { useTranslation } from "react-i18next";
 const FeedBackCard = ({ title, subtitle, img, name, job }) => {
   const { t } = useTranslation();
