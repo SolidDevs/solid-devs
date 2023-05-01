@@ -8,9 +8,9 @@ const PagesBlock = ({ title, aboutUs, jobs, outstaff }) => {
   return (
     <div className={scss.pages__block_content}>
       <h3>{t(title)}</h3>
-      <Link href="#">{t(aboutUs)}</Link>
-      <Link href="#">{t(jobs)}</Link>
-      <Link href="#">{t(outstaff)}</Link>
+      <Link href="/aboutus">{t(aboutUs)}</Link>
+      <Link href="/jobs">{t(jobs)}</Link>
+      <Link href="/outstaff">{t(outstaff)}</Link>
     </div>
   );
 };

@@ -1,17 +1,17 @@
 import React from "react";
 import scss from "./Footer.module.scss";
-import FooterLogo from "./Footer__logo/FooterLogo";
+import FooterLogo from "./components/FooterLogo/FooterLogo";
 import {
   footerFirst,
   footerFourth,
   footerSecond,
   footerThird,
 } from "@/constants/footer";
-import UnderFooter from "./Under__footer/UnderFooter";
-import AboutBlock from "./Footer__about_us/AboutBlock";
-import PagesBlock from "./Footer__pages_block/PagesBlock";
-import ServicesBlock from "./Footer__services_block/ServicesBlock";
-import SocialBlock from "./Footer__social_block/SocialBlock";
+import UnderFooter from "./components/UnderFooter/UnderFooter";
+import AboutBlock from "./components/AboutUs/AboutBlock";
+import PagesBlock from "./components/PagesBlock/PagesBlock";
+import ServicesBlock from "./components/ServicesBlock/ServicesBlock";
+import SocialBlock from "./components/SocialBock/SocialBlock";
 
 const Footer = () => {
   const footerRender = React.useMemo(
