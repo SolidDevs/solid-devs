@@ -26,8 +26,6 @@
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
   },
-<<<<<<< HEAD
-=======
   "footer": {
     "title__company": "About company",
     "company__desc": "The power of the programs in the field of software created to bring your business to the top!",
@@ -50,7 +48,6 @@
     "footer__right": "© All rights reserved. Solid Devs 2023",
     "footer__politic": "Privacy Policy"
   },
->>>>>>> f74710c641da682c93400364a13dbd81f53549d7
   "button_rauseble": {
     "contact": "Contact",
     "project": "Let's discuss your project",
