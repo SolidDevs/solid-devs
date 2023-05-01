@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 
-const ThirdBlock = ({ title, items }) => {
+const ServicesBlock = ({ title, items }) => {
   const { t } = useTranslation();
   return (
     <div>
@@ -13,4 +13,4 @@ const ThirdBlock = ({ title, items }) => {
   );
 };
 
-export default ThirdBlock;
+export default ServicesBlock;

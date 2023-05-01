@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const FirstBlock = ({ title, desc }) => {
+const AboutBlock = ({ title, desc }) => {
   const { t } = useTranslation();
   return (
     <div>
@@ -11,4 +11,4 @@ const FirstBlock = ({ title, desc }) => {
   );
 };
 
-export default FirstBlock;
+export default AboutBlock;

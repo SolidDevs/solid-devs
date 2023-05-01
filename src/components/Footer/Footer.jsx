@@ -7,11 +7,11 @@ import {
   footerSecond,
   footerThird,
 } from "@/constants/footer";
-import FirstBlock from "./Footer__first_block/FirstBlock";
 import UnderFooter from "./Under__footer/UnderFooter";
-import SecondBlock from "./Footer__second_block/SecondBlock";
-import ThirdBlock from "./Footer__third_block/ThirdBlock";
-import FourthBlock from "./Footer__fourth_block/FourthBlock";
+import AboutBlock from "./Footer__about_us/AboutBlock";
+import PagesBlock from "./Footer__pages_block/PagesBlock";
+import ServicesBlock from "./Footer__services_block/ServicesBlock";
+import SocialBlock from "./Footer__social_block/SocialBlock";
 
 const Footer = () => {
   const footerRender = React.useMemo(
@@ -19,22 +19,22 @@ const Footer = () => {
       <>
         <div>
           {footerFirst.map((item, index) => (
-            <FirstBlock key={`${item.title}_${index}`} {...item} />
+            <AboutBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
         <div>
           {footerSecond.map((item, index) => (
-            <SecondBlock key={`${item.title}_${index}`} {...item} />
+            <PagesBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
         <div>
           {footerThird.map((item, index) => (
-            <ThirdBlock key={`${item.title}_${index}`} {...item} />
+            <ServicesBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
         <div>
           {footerFourth.map((item, index) => (
-            <FourthBlock key={`${item.title}_${index}`} {...item} />
+            <SocialBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
       </>
