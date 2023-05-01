@@ -1,18 +1,21 @@
 import Footer from "@/components/Footer/Footer";
 import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
-import { useTranslation } from "react-i18next";
+import OurTeam from "@/components/our__team/OurTeam";
+import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
+import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
+
 const HomePage = () => {
-  const { t } = useTranslation();
   return (
     <>
-      <h1>{t("welcome")}</h1>
       <MainContent>
         <ItProjects />
+        <ServicesBlock />
+        <TechnologiesBlock />
+        <OurTeam />
       </MainContent>
       <Footer />
     </>
   );
 };
-
 export default HomePage;

@@ -47,5 +47,41 @@
     "title__socials": "We are in social networks:",
     "footer__right": "© All rights reserved. Solid Devs 2023",
     "footer__politic": "Privacy Policy"
+  },
+  "button_rauseble":{
+    "contact": "Contact",
+    "project": "Let's discuss your project",
+    "site": "Go to site"
+  },
+  "serviceBlock": {
+    "title": "Software development services we kick ass on",
+    "WebDevelopmentApplications": "Web Development Applications",
+    "Services UX/UI design": "Services UX/UI design",
+    "mobileDevelopmentApplications": "Mobile Development Applications",
+    "machineDevelopmentLearning": "Machine Development Learning",
+    "mVPDevelopmentApplications": "MVP Development Applications",
+    "developmentCloudApplications": "Development Cloud Applications",
+    "applicationDevelopmentForChat": "Application Development For Chat",
+    "developmentBY": "Development BY"
+  },
+  "ourTeam": {
+    "title": "Our team",
+    "surname": "Shaimuhamedov",
+    "name": "Amir",
+    "position": "UX/UI Designer"
+  },
+  "navbar": {
+    "devOps": "DevOps",
+    "frontend": "Front End",
+    "qualityControl": "Quality Control",
+    "backend": "Back End",
+    "mobilePhone": "Mobile Phone",
+    "infrastructure": "Infrastructure"
+  },
+  "technologies": {
+    "title": "Technologies and tools we use",
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
   }
 }

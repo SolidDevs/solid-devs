@@ -1,6 +1,22 @@
 {
+    "button_rauseble":{
+        "contact": "Связаться",
+        "project": "Обсудим ваш проект",
+        "site": "Перейти на сайт"
+    },
   "welcome": "Добро пожаловать",
   "hello": "Привет",
+  "serviceBlock": {
+    "title": "Услуги по разработке программного обеспечения, на которых мы надираем задницы",
+    "WebDevelopmentApplications": "Разработка веб приложений",
+    "Services UX/UI design": "Услуги UX/UI дизайна",
+    "mobileDevelopmentApplications": "Разработка мобильных приложений",
+    "machineDevelopmentLearning": "Развитие машинного обучения",
+    "mVPDevelopmentApplications": "Разработка MVP приложений",
+    "developmentCloudApplications": "Разработка облачных приложений",
+    "applicationDevelopmentForChat": "Развитие приложений для чата",
+    "developmentBY": "Разработка ПО"
+    },
   "itProjects": {
     "title__crypto": "Крипто и блокчейн",
     "title__electronic": "Электронная торговля",
@@ -47,5 +63,25 @@
     "title__socials": "Мы в соц сетях:",
     "footer__right": "© Все права защищены. Solid Devs 2023",
     "footer__politic": "Политика конфиденциальности"
+  },
+  "ourTeam": {
+    "title": "Наша команда",
+    "surname": "Шаймухамедов",
+    "name": "Амир",
+    "position": "UX/UI Дизайнер"
+  },
+  "navbar": {
+    "devOps": "DevOps",
+    "frontend": "Внешний интерфейс",
+    "qualityControl": "Контроль качества",
+    "backend": "Бэкэнд",
+    "mobilePhone": "Мобилка",
+    "infrastructure": "Инфраструктура"
+  },
+  "technologies": {
+    "title": "Технологии и инструменты, которые мы применяем",
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
   }
 }
