@@ -1,57 +1,56 @@
 @import "../../../styles/variables.scss";
 
 .service_card {
-    background-color: #eeeeee;
-    height: 200px;
-    display: flex;
-    align-items: flex-end;
-    padding: 0 20px 10px 20px;
-    transition: ease-in-out 0.2s;
-    position: relative;
-  
-    &:hover {
-      background-color: $mainBlue;
-      .title {
-        color: $white;
-      }
-      ._circle__items {
-        opacity: 1;
-      }
-      .svg__arrow{
-          position: relative;
-          right: 0;
-      }
-      .svg__arrow path{
-          fill: $white;
-      }
+  background-color: #eeeeee;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 20px 10px 20px;
+  transition: ease-in-out 0.2s;
+  position: relative;
+
+  &:hover {
+    background-color: $mainBlue;
+    .title {
+      color: $white;
     }
-    .__item {
-      align-items: center;
-      height: 52px;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+    ._circle__items {
+      opacity: 1;
     }
-  }
-  .title {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 26px;
-    color: $mainDarkText;
-  }
-  ._circle__items {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .svg__arrow{
+    .svg__arrow {
       position: relative;
-      right: 10px;
-      transition: ease-in-out .5s;
+      right: 0;
+    }
+    .svg__arrow path {
+      fill: $white;
+    }
   }
-  .svg__arrow path{
-      transition: ease-in-out .4s;
+  .__item {
+    align-items: center;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
-  
+}
+.title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  color: $mainDarkText;
+}
+._circle__items {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.svg__arrow {
+  position: relative;
+  right: 10px;
+  transition: ease-in-out 0.5s;
+}
+.svg__arrow path {
+  transition: ease-in-out 0.4s;
+}
