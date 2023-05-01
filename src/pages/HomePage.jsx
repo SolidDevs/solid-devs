@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import { useTranslation } from "react-i18next";
@@ -9,6 +10,7 @@ const HomePage = () => {
       <MainContent>
         <ItProjects />
       </MainContent>
+      <Footer />
     </>
   );
 };
