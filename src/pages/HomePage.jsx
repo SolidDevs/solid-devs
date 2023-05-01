@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import FeedBack from "@/components/feed__back/feedBack";
@@ -16,6 +17,7 @@ const HomePage = () => {
         <OurTeam />
         <FeedBack />
       </MainContent>
+      <Footer />
     </>
   );
 };
