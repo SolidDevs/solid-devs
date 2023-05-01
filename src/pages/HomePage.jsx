@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import OurTeam from "@/components/our__team/OurTeam";
@@ -13,6 +14,7 @@ const HomePage = () => {
         <TechnologiesBlock />
         <OurTeam />
       </MainContent>
+      <Footer />
     </>
   );
 };
