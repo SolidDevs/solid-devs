@@ -7,15 +7,15 @@ const Main = () => {
   const { t } = useTranslation();
   const renderText = useMemo(
     () =>
-      mainSubtitles.map((el) => (
-        <div className={scss.main__subtitles} key={el.title}>
-          <div className={scss.subtitles__title} key={el.title}>
+      mainSubtitles.map((el, index) => (
+        <div className={scss.main__subtitles} key={`${el.title}_${index}`}>
+          <div className={scss.subtitles__title} >
             <p>{t(el.title)}</p>
           </div>
-          <div className={scss.subtitles__subtitle} key={el.title}>
+          <div className={scss.subtitles__subtitle}>
             <p>{t(el.subtitle)}</p>
           </div>
-          <div className={scss.subtitles__description} key={el.title}>
+          <div className={scss.subtitles__description}>
             <p>{t(el.description)}</p>
           </div>
         </div>
