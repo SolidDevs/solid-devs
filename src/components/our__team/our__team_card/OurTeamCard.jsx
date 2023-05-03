@@ -19,9 +19,7 @@ const OurTeamCard = ({ image, name, surname, position }) => {
           <h1 className={scss.our__team__item_fullName}>
             {`${t(surname)}  ${t(name)}`}
           </h1>
-          <h1 className={scss.our__team__item_position}>
-            {t(position)}
-          </h1>
+          <h1 className={scss.our__team__item_position}>{t(position)}</h1>
         </div>
       </div>
     </>

@@ -32,7 +32,7 @@
     "title__adress": "Our address",
     "adress__desc": "Kyrgyzstan, Bishkek c., Akhunbaev st. 133",
     "title__pages": "Pages:",
-    "page__us": "About Us",
+    "page__us": "About Us", 
     "page__jobs": "Vacancies",
     "page__outstaff": "Outstaff",
     "title__services": "Our services:",
@@ -78,10 +78,9 @@
     "mobilePhone": "Mobile Phone",
     "infrastructure": "Infrastructure"
   },
-  "technologies": {
-    "title": "Technologies and tools we use",
-    "Terraform": "Terraform",
-    "Ansible": "Ansible",
-    "Jenkins": "Jenkins"
+  "main": {
+    "title": "Solid Devs",
+    "subtitle": "Your path to digital transformation",
+    "description": "We develop, design, automate and manage, applying our engineering expertise to the best solutions for your business."
   }
 }
