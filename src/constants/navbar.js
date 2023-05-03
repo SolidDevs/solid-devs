@@ -1,4 +1,4 @@
-export const navbarLinks = [
+export const technologiesLinks = [
   "devOps",
   "frontend",
   "qualityControl",
@@ -6,3 +6,7 @@ export const navbarLinks = [
   "mobilePhone",
   "infrastructure",
 ];
+
+export const workLinks = [
+  "Idea","Study","prototyping","Design","Development","Review","Testing","launch"
+]

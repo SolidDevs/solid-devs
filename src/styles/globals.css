@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 
 a {
   color: inherit;
@@ -12,8 +6,10 @@ a {
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .container,
@@ -33,7 +29,6 @@ a {
 }
 
 @media (min-width: 576px) {
-
   .container,
   .container-sm {
     max-width: 540px;
@@ -41,7 +36,6 @@ a {
 }
 
 @media (min-width: 768px) {
-
   .container,
   .container-md,
   .container-sm {
@@ -50,7 +44,6 @@ a {
 }
 
 @media (min-width: 992px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -60,7 +53,6 @@ a {
 }
 
 @media (min-width: 1200px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -71,7 +63,6 @@ a {
 }
 
 @media (min-width: 1400px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -80,4 +71,14 @@ a {
   .container-xxl {
     max-width: 1320px;
   }
+}
+.work__wrapper .slick-disabled > p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #797979 !important;
+}
+.work__wrapper .slick-disabled .svg path{
+  fill: #797979 !important;
 }

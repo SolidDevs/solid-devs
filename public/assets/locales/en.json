@@ -26,7 +26,7 @@
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects"
   },
-  "button_rauseble":{
+  "button_rauseble": {
     "contact": "Contact",
     "project": "Let's discuss your project",
     "site": "Go to site"
@@ -54,12 +54,27 @@
     "qualityControl": "Quality Control",
     "backend": "Back End",
     "mobilePhone": "Mobile Phone",
-    "infrastructure": "Infrastructure"
+    "infrastructure": "Infrastructure",
+    "Idea": "Idea",
+    "Study": "Study",
+    "prototyping": "prototyping",
+    "Design": "Design",
+    "Development": "Development",
+    "Review": "Review",
+    "Testing": "Testing",
+    "launch": "launch"
   },
   "technologies": {
     "title": "Technologies and tools we use",
     "Terraform": "Terraform",
     "Ansible": "Ansible",
     "Jenkins": "Jenkins"
+  },
+  "work": {
+    "title": "How we are working?",
+    "card_title": "Idea",
+    "description": "Answering all your questions and refining your ideas",
+    "Study": "Study",
+    "Back": "Back"
   }
 }
