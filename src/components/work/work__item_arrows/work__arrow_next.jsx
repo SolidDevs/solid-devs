@@ -19,7 +19,7 @@ export default function SampleNextArrow(props) {
           fill="#797979"
         />
       </svg>
-      <p className={scss.slider__item_title}>{t("work.Study")}</p>
+      <p className={scss.slider__item}>{t("work.Study")}</p>
     </div>
   );
 }

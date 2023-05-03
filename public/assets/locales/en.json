@@ -72,7 +72,7 @@
   },
   "work": {
     "title": "How we are working?",
-    "card_title": "Idea",
+    "card__title": "Idea",
     "description": "Answering all your questions and refining your ideas",
     "Study": "Study",
     "Back": "Back"

@@ -6,7 +6,7 @@ export default function SamplePrevArrow(props) {
   const { className, onClick } = props;
   return (
     <div className={`${className} ${scss.prevArrow}`} onClick={onClick}>
-      <p className={scss.slider__item_title}>{t("work.Back")}</p>
+      <p className={scss.slider__item}>{t("work.Back")}</p>
 
       <svg
         className={`${scss.svg} svg`}

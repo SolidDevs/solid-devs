@@ -28,10 +28,10 @@ const Work = () => {
     () =>
       workSliderData.map((item, index) => (
         <div key={`${item.title}_${index}`} className={scss.work__item}>
-          <h1 className={scss.work__item_counter}>{item.count}</h1>
+          <h1 className={scss.work__item__counter}>{item.count}</h1>
           <div className={scss.work__item_info}>
             <p className={scss.title}>{t(item.title)}</p>
-            <p className={scss.work__item_description}>{t(item.description)}</p>
+            <p className={scss.description}>{t(item.description)}</p>
           </div>
         </div>
       )),
