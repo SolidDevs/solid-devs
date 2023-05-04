@@ -9,8 +9,11 @@ import FeedBackCard from "./feedBackCard/FeedBackCard";
 const FeedBack = ({ sliderSettings }) => {
   const { t } = useTranslation();
   const renderCard = useMemo(
-    () => feedBackArr.map((el) => <FeedBackCard {...el} key={el.title} />),
-    [feedBackArr]
+    () =>
+      feedBackArr.map((el, index) => (
+        <FeedBackCard {...el} key={`${el.title}_${index}`} />
+      )),
+    []
   );
   return (
     <div className={scss.talk}>

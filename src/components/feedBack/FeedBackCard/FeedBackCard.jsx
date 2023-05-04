@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import scss from "./FeedBackCard.module.scss";
 import { useTranslation } from "react-i18next";
