@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+.main {
+  background-image: url("../../../public/assets/images/Main/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  margin-bottom: 40px;
+  padding: 60px 0px;
+  .main__subtitles {
+    height: 100%;
+    margin-bottom: 26px;
+    .subtitles__title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: $grayText;
+      p {
+        margin: 0;
+      }
+    }
+    .subtitles__subtitle {
+      width: 50%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 65px;
+      color: $white;
+      p {
+        margin: 0;
+      }
+    }
+    .subtitles__description {
+      width: 50%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 26px;
+      letter-spacing: 0.03em;
+      color: $grayText;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+    .main{
+      padding: 30px 0px;
+      .main__subtitles{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        .subtitles__description{
+          width: 100%;
+        }
+        .subtitles__subtitle{
+          width: 100%;
+        }
+      }
+    }
+}
