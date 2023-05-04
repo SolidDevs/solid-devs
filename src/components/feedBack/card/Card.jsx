@@ -1,7 +1,7 @@
 import Image from "next/image";
-import scss from "./FeedBackCard.module.scss";
+import scss from "./Card.module.scss";
 import { useTranslation } from "react-i18next";
-const FeedBackCard = ({ title, subtitle, img, name, job }) => {
+const card = ({ title, subtitle, img, name, job }) => {
   const { t } = useTranslation();
   return (
     <div className={scss.card}>
@@ -22,4 +22,4 @@ const FeedBackCard = ({ title, subtitle, img, name, job }) => {
   );
 };
 
-export default FeedBackCard;
+export default card;
