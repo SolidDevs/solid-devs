@@ -1,0 +1,24 @@
+@import "../../../styles/variables.scss";
+
+.mainCard {
+  padding: 0 20px;
+  border: 20px solid $blue;
+
+  h3 {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $mainDarkText;
+  }
+
+  p {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $darkGrayText;
+  }
+}

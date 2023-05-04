@@ -1,0 +1,20 @@
+.mainReasonsBlock {
+  h2 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 65px;
+    color: #262626;
+    margin-bottom: 25px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px 32px;
+  }
+  .line {
+    border: 1px solid #b8b8b8;
+    margin: 50px 0 20px;
+  }
+}

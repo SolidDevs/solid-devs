@@ -82,5 +82,20 @@
     "title": "Solid Devs",
     "subtitle": "Your path to digital transformation",
     "description": "We develop, design, automate and manage, applying our engineering expertise to the best solutions for your business."
+  },
+  "reasons": {
+    "title": "Why Solid?",
+    "title__team": "The team of experts",
+    "team__desc": "Our team consists of professionals with experience in areas such as software development, design, testing, marketing and sale.",
+    "title__approach": "Individual approach",
+    "approach__desc": "We understand that each project is unique, so we always set up our approach to the development of the software in accordance with the specific needs and goals of our customers.",
+    "title__experience": "Experience",
+    "experience__desc": "We have more than 10 years of experience in the development of software and during this time we have been able to create many high-quality and innovative products.",
+    "title__quality": "Quality",
+    "quality__desc": "We pay special attention to the quality of our software and always strive to surpass the expectations of our customers.",
+    "title__support": "Support",
+    "support__desc": "We do not just create software for our customers, we also provide constant support after its launch.",
+    "title__price": "Price",
+    "price__desc": "We offer competitive prices for our services, without reducing the quality of our software and the level of service."
   }
 }

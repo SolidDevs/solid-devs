@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer/Footer";
-import ItProjects from "@/components/It__projects/ItProjects";
+import ItProjects from "@/components/ItProjects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import Main from "@/components/main/Main";
 import OurTeam from "@/components/our__team/OurTeam";
