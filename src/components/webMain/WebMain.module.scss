@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+$variableSize: calc(20vw + 18vh);
+$title__size: calc(2vw + 2vh);
+$description__size: calc(0.8vw + 1vh);
+
+.main {
+  margin-bottom: 40px;
+  padding: 40px 0px 60px;
+
+  .main__content {
+    display: flex;
+
+    .content__image {
+      width: $variableSize;
+      object-fit: contain;
+    }
+
+    .content__text__wrapper {
+      padding: 20px 0px 70px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+
+      button {
+        margin-bottom: 20px;
+      }
+    }
+
+    .content__title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: $title__size;
+      line-height: 60px;
+      color: #262626;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .content__description {
+      width: 80%;
+      font-style: normal;
+      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: $description__size;
+      line-height: 28px;
+      letter-spacing: 0.03em;
+      color: $darkGrayText;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .main {
+      padding: 30px 0px;
+    }
+  }
+}

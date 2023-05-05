@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+
 .button {
   .btn_blue {
     display: flex;
@@ -8,17 +9,19 @@
     background: $mainBlue;
     border-radius: 3px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: $white;
     border: none;
+
     &:hover {
       .button__btn_arrow {
         position: relative;
         left: 10px;
       }
     }
+
     .button__btn_arrow {
       margin-left: 20px;
       position: relative;
@@ -26,6 +29,7 @@
       transition: ease-in-out 0.3s;
     }
   }
+
   .btn__light_blue {
     display: flex;
     cursor: pointer;
@@ -34,17 +38,19 @@
     background: $blue;
     border-radius: 3px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: $white;
     border: none;
+
     &:hover {
       .button__btn_arrow {
         position: relative;
         left: 10px;
       }
     }
+
     .button__btn_arrow {
       margin-left: 20px;
       position: relative;
@@ -52,6 +58,7 @@
       transition: ease-in-out 0.3s;
     }
   }
+
   .btn__no_bg {
     display: flex;
     cursor: pointer;
@@ -60,17 +67,19 @@
     background: none;
     border-radius: 3px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: $black;
     border: 1px solid $darkGrayText;
+
     &:hover {
       .button__btn_arrow {
         position: relative;
         left: 10px;
       }
     }
+
     .button__btn_arrow {
       margin-left: 20px;
       position: relative;
