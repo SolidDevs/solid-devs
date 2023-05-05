@@ -7,11 +7,6 @@ import Image from "next/image";
 const WebMain = () => {
   const { t } = useTranslation();
 
-  const imageStyle = {
-    borderRadius: '50%',
-    border: '1px solid #666',
-  };
-
   const renderContent = useMemo(
     () => (
       <div className={scss.content__text__wrapper}>
@@ -24,7 +19,7 @@ const WebMain = () => {
         <Button title={t("button_rauseble.project")} withArrow={true} variant='btn__light_blue' />
       </div>
     ),
-    []
+    [t]
   );
   return (
     <div className={scss.main}>
@@ -32,7 +27,7 @@ const WebMain = () => {
         <div className={scss.main__content}>
           {renderContent}
           <Image
-            src='/images/webMain/webMainImage.png'
+            src="/images/webMain/webMainImage.png"
             alt="website image"
             className={scss.content__image}
             width={500}
