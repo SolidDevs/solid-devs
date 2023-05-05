@@ -6,6 +6,16 @@
     },
   "welcome": "Добро пожаловать",
   "hello": "Привет",
+  "header" : {
+    "about" : "О нас",
+    "career" : "Карьера",
+    "service" : "Услуги и цены",
+    "languageRu" :  "Рус",
+    "languageEn" :  "Англ",
+    "languageFullRu" :  "Русский",
+    "languageFullEn" :  "Английский",
+    "button" : "Связаться"
+  },
   "serviceBlock": {
     "title": "Услуги по разработке программного обеспечения, на которых мы надираем задницы",
     "WebDevelopmentApplications": "Разработка веб приложений",

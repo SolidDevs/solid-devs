@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import ItProjects from "@/components/It__projects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import OurTeam from "@/components/our__team/OurTeam";
@@ -8,6 +9,7 @@ import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock"
 const HomePage = () => {
   return (
     <>
+      <Header/>
       <MainContent>
         <ItProjects />
         <ServicesBlock />
