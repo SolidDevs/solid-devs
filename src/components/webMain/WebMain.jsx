@@ -31,7 +31,7 @@ const WebMain = () => {
       <div className="container">
         <div className={scss.main__content}>
           {renderContent}
-          <img
+          <Image
             src='/images/webMain/webMainImage.png'
             alt="website image"
             className={scss.content__image}
