@@ -14,6 +14,7 @@ const Header = () => {
   const { route } = useRouter();
   const click = () => setIsOpen(!isOpen);
   const change = () => {
+    setIsOpen(!isOpen)
     setIsRussianLanguage(!isRussianLanguage);
     i18n.changeLanguage(isRussianLanguage ? "en" : "ru");
   };
