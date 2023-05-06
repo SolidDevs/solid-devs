@@ -83,6 +83,15 @@
     "subtitle": "Your path to digital transformation",
     "description": "We develop, design, automate and manage, applying our engineering expertise to the best solutions for your business."
   },
+  "feedBack": {
+    "title": "Kyrgyz Riders",
+    "subtitle": "The new features have been well received by users. The attentive and flexible team excelled in responding to stakeholders in a timely manner. Their technical expertise enables them to offer valuable solutions.",
+    "name": "Aman Amanbek",
+    "speciality": "CEO, Kyrgyz Ryders",
+    "heading": "What people say",
+    "prevArrow": "Back",
+    "nextArrow": "Next"
+  },
   "webMain": {
     "title": "Web development",
     "description": "Creating a website or creating a custom web application is the result of great teamwork. Everyone participates in it: software engineers, designers, markup developers and other specialists. Choosing the right web development agency is the first step to getting a quality web solution that satisfies the customer."
