@@ -78,7 +78,7 @@ const Header = () => {
       <aside className={scss.header__right}>
         <div className={scss.header__rightLanguage} onClick={click}>
           <p
-             style={{ marginRight: isRussianLanguage ? "40px" : "45px" }}
+            style={{ marginRight: isRussianLanguage ? "40px" : "45px" }}
           >
             {language}
           </p>
