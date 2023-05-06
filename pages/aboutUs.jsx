@@ -1,5 +1,5 @@
 import AboutUsPage from "@/pages/AboutUsPage";
 
-export default function WebService() {
+export default function AboutUs() {
   return <AboutUsPage />;
 }
