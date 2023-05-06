@@ -24,7 +24,7 @@ const TechnologiesBlock = () => {
           <p className={scss.title}>{t(item.title)}</p>
         </div>
       )),
-    [technologiesInfo]
+    [t]
   );
   return (
     <SectionContainer title={t("technologies.title")}>

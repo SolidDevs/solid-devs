@@ -20,7 +20,7 @@ const Main = () => {
           </div>
         </div>
       )),
-    [mainSubtitles]
+    [t]
   );
   return (
     <div className={scss.main}>

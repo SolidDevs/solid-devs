@@ -1,0 +1,22 @@
+@import "../../../styles/variables.scss";
+
+.reasons__card {
+    padding: 0 20px;
+    border: 20px solid $blue;
+
+    h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $mainDarkText;
+    }
+
+    p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: $darkGrayText;
+    }
+}
