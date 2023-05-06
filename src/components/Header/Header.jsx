@@ -48,7 +48,7 @@ const Header = () => {
         </label>
       )
     );
-  }, [isOpen, isRussianLanguage, languageFull, languageSecondFull, change]);
+  }, [isOpen]);
   
 
   return (
