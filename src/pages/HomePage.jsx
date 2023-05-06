@@ -5,6 +5,7 @@ import Main from "@/components/main/Main";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
+import Work from "@/components/work/Work";
 const HomePage = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const HomePage = () => {
         <ServicesBlock />
         <TechnologiesBlock />
         <OurTeam />
+        <Work />
       </MainContent>
       <Footer />
     </>

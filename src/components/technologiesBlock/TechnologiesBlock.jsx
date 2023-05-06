@@ -1,4 +1,4 @@
-import { navbarLinks } from "@/constants/navbar";
+import { technologiesLinks } from "@/constants/navbar";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import Navbar from "../navbar/Navbar";
 import scss from "./Technologies.module.scss";
@@ -28,7 +28,7 @@ const TechnologiesBlock = () => {
   );
   return (
     <SectionContainer title={t("technologies.title")}>
-      <Navbar navbarLinks={navbarLinks} paramName={"technologies"} />
+      <Navbar navbarLinks={technologiesLinks} paramName={"technologies"} />
       <div className={scss.technologies}>{technologiesItems}</div>
     </SectionContainer>
   );

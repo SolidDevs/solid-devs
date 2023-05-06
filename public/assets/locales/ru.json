@@ -76,7 +76,28 @@
     "qualityControl": "Контроль качества",
     "backend": "Бэкэнд",
     "mobilePhone": "Мобилка",
-    "infrastructure": "Инфраструктура"
+    "infrastructure": "Инфраструктура",
+    "Idea": "Идея",
+    "Study": "Исследование",
+    "prototyping": "Прототипирование",
+    "Design": "Дизайн",
+    "Development": "Развитие",
+    "Review": "Обзор",
+    "Testing": "Тестирование",
+    "launch": "Запуск"
+  },
+  "technologies": {
+    "title": "Технологии и инструменты, которые мы применяем",
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
+  },
+  "work": {
+    "title": "Как мы работаем?",
+    "card__title": "Идея",
+    "description": "Отвечем на все ваши вопросы и дорабаем вашу идею",
+    "Study": "Исследование",
+    "Back": "Назад"
   },
   "main": {
     "title": "Solid Devs",
