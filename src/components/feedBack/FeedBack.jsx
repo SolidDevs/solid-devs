@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import SampleNextArrow from "./arrows/NextArrow/SampleNextArrow";
-import SamplePrevArrow from "./arrows/PrevArrow/SamplePrevArrow";
+import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
+import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 const FeedBack = ({ isMain }) => {
   let currentShow = 3;
   if (isMain) {
