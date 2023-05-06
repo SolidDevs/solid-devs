@@ -1,6 +1,5 @@
 import Head from "next/head"
 import HomePage from "@/pages/HomePage"
-import ReasonsBlock from "@/components/ReasonsBlock/ReasonsBlock"
 
 
 export default function Home() {
