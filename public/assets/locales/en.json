@@ -89,5 +89,29 @@
   },
   "reasons": {
     "title": "Why Solid?"
+  },
+  "carier": {
+    "btnText": "Send resume",
+    "practicumtitle": "Practicum",
+    "practicumDescription": "An internship from Solid Practicum helps you become a professional in your field. This is an environment where each of you will be divided into a team, and progress will be monitored by experience. We also offer you to take an excellent resume, find a high-paying job, and help with an interview. A flexible work format internship where you can work both offline and online. For those who have gathered their soft / hard skills, you should get into the development department of hard developers",
+    "teamTitle": "How to become part of the team?",
+    "teamDescription": "We are always looking for a team of professional developers who can work on individual projects with us. Professionals in our understanding are free, erudite, serious people who are constantly learning new things, hardworking and can become part of our internal culture.",
+    "writeLetter": "Write a letter with a story about yourself, share the projects in which you participated, send a cool resume. We will answer everyone with whom it will be interesting to continue the conversation about cooperation"
+  },
+  "carierTeamSteps": {
+    "firstStepTitle": "Call",
+    "firstStepDesc": "Our HR specialists will call you after reviewing your CV",
+    "secondStepTitle": "Interview",
+    "secondStepDesc": "We define your professional skills",
+    "thirdStepTitle": "Recruitment",
+    "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
+  },
+  "carierPracticumSteps": {
+    "firstStepTitle": "Call",
+    "firstStepDesc": "Our HR specialists will call you after reviewing your CV",
+    "secondStepTitle": "Interview",
+    "secondStepDesc": "We define your professional skills",
+    "thirdStepTitle": "Recruitment",
+    "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
   }
 }
