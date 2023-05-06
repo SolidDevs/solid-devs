@@ -28,14 +28,14 @@
       margin: 0;
     }
   }
-  .card__account {
+  .card__user {
     display: flex;
     align-items: center;
     img {
       border: 1.5px solid #fe640e;
       border-radius: 100%;
     }
-    .account__user {
+    .user__profile {
       margin-left: 18px;
       display: flex;
       flex-direction: column;

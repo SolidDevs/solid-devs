@@ -15,7 +15,7 @@ const HomePage = () => {
         <ServicesBlock />
         <TechnologiesBlock />
         <OurTeam />
-        <FeedBack />
+        <FeedBack isMain={true}/>
       </MainContent>
       <Footer />
     </>
