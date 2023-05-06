@@ -16,7 +16,6 @@ export default function Home() {
         <link rel="icon" href="/solid-logo.svg" />
       </Head>
       <HomePage />
-      <ReasonsBlock/>
     </div>
   )
 }
