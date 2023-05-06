@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import scss from "./FeedBack.module.scss";
-import Card from "./Card/Card";
+import Card from "./card/Card";
 import { feedBackArr } from "@/constants/feedBack";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
