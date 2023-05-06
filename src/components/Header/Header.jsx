@@ -59,9 +59,9 @@ const Header = () => {
         </Link>
         <nav className={scss.header__navs}>
           <Link
-            href={"/about"}
+            href={"/aboutUs"}
             className={
-              route == "/about"
+              route == "/aboutUs"
                 ? scss.header__nav_isActive
                 : scss.header__nav_notActive
             }
@@ -71,7 +71,7 @@ const Header = () => {
           <Link
             href={"/career"}
             className={
-              route == "/about"
+              route == "/career"
                 ? scss.header__nav_isActive
                 : scss.header__nav_notActive
             }
@@ -79,9 +79,9 @@ const Header = () => {
             <p>{t("header.career")}</p>
           </Link>
           <Link
-            href={"/service"}
+            href={"/webService"}
             className={
-              route == "/service"
+              route == "/webService"
                 ? scss.header__nav_isActive
                 : scss.header__nav_notActive
             }
