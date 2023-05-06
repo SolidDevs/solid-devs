@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import scss from "./Card.module.scss";
-const card = ({ title, subtitle, img, name, job }) => {
+const Сard = ({ title, subtitle, img, name, job }) => {
   const { t } = useTranslation("");
   return (
     <div className={scss.card}>
@@ -22,4 +22,4 @@ const card = ({ title, subtitle, img, name, job }) => {
   );
 };
 
-export default card;
+export default Сard;

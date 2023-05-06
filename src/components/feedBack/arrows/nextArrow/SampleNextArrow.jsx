@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import scss from "../arrow.module.scss"
+import scss from "../arrow.module.scss";
 export default function SampleNextArrow(props) {
   const { t } = useTranslation("");
   const { className, onClick } = props;

@@ -8,10 +8,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
-const FeedBack = ({isMain}) => {
-  let currentShow = 2
-  if(isMain){
-    currentShow = 3
+const FeedBack = ({ isMain }) => {
+  let currentShow = 2;
+  if (isMain) {
+    currentShow = 3;
   }
   const sliderSettings = {
     infinite: false,
