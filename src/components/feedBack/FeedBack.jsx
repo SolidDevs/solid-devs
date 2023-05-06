@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
 import scss from "./FeedBack.module.scss";
-import Card from "./card/Card";
+import Card from "./Card/Card";
 import { feedBackArr } from "@/constants/feedBack";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
-import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
+import SampleNextArrow from "./arrows/NextArrow/SampleNextArrow";
+import SamplePrevArrow from "./arrows/PrevArrow/SamplePrevArrow";
 const FeedBack = ({ isMain }) => {
   let currentShow = 3;
   if (isMain) {
@@ -56,7 +56,7 @@ const FeedBack = ({ isMain }) => {
   );
   return (
     <div className={scss.feedBack}>
-      <h1>{t("feedBack.call")}</h1>
+      <h1>{t("feedBack.heading")}</h1>
       <div className={scss.feedBack__slide}>
         <Slider {...sliderSettings}>{renderCard}</Slider>
       </div>

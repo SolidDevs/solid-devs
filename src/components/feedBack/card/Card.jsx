@@ -6,7 +6,10 @@ const Сard = ({ title, subtitle, img, name, speciality, id }) => {
   const isColor = id % 2 === 0;
   return (
     <div className={scss.card}>
-      <div className={scss.card__title}  style={{ color: isColor ? "#00b212" : "#0E61FE" }}>
+      <div
+        className={scss.card__title}
+        style={{ color: isColor ? "#00b212" : "#0E61FE" }}
+      >
         <p>{t(title)}</p>
       </div>
       <div className={scss.card__subtitle}>
@@ -14,7 +17,7 @@ const Сard = ({ title, subtitle, img, name, speciality, id }) => {
       </div>
       <div className={scss.card__user}>
         <Image src={img} width={50} height={50} alt={t(name)} />
-        <div className={scss.user__profile}>
+        <div className={scss.user__info}>
           <h1>{t(name)}</h1>
           <p>{t(speciality)}</p>
         </div>
