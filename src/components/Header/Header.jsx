@@ -9,10 +9,10 @@ import i18n from "i18next";
 
 const Header = () => {
   const { t } = i18n;
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isRussianLanguage, setIsRussianLanguage] = useState(false);
   const { route } = useRouter();
-  const click = () => setIsLanguageOpen(!isLanguageOpen);
+  const click = () => setIsOpen(!isOpen);
   const change = () => {
     setIsRussianLanguage(!isRussianLanguage);
     i18n.changeLanguage(isRussianLanguage ? "en" : "ru");
@@ -36,20 +36,34 @@ const Header = () => {
         : t("header.languageFullEn"),
     [isRussianLanguage]
   );
+  const languageSelect = useMemo(() => {
+    return (
+      isOpen && (
+        <label
+          className={scss.header__select}
+          style={{ right: isRussianLanguage ? "200px" : "177px" }}
+        >
+          <p onClick={change}>{languageSecondFull}</p>
+          <p>{languageFull}</p>
+        </label>
+      )
+    );
+  }, [isOpen, isRussianLanguage, languageFull, languageSecondFull, change]);
+  
 
   return (
     <section className={scss.header}>
-      <aside className={scss.header__left}>
+      <aside className={scss.header_left}>
         <Link href={"/"}>
-          <span className={scss.header__leftTitle}>SOLID DEVS</span>
+          <span className={scss.header__title}>SOLID DEVS</span>
         </Link>
-        <nav className={scss.header__leftNavs}>
+        <nav className={scss.header__navs}>
           <Link
             href={"/about"}
             className={
               route == "/about"
-                ? scss.header__leftItemsIsActiveLink
-                : scss.header__leftItemsLink
+                ? scss.header__nav_isActive
+                : scss.header__nav_notActive
             }
           >
             <p>{t("header.about")}</p>
@@ -58,42 +72,36 @@ const Header = () => {
             href={"/career"}
             className={
               route == "/about"
-                ? scss.header__leftItemsIsActiveLink
-                : scss.header__leftItemsLink
+                ? scss.header__nav_isActive
+                : scss.header__nav_notActive
             }
           >
             <p>{t("header.career")}</p>
           </Link>
-          <div className={scss.header__leftItemsOption}>
-            <p>{t("header.service")}</p>
-            <Image
-              src={arrow}
-              alt="arrow"
-              width={16}
-              height={8}
-            />
-          </div>
+          <Link
+            href={"/service"}
+            className={
+              route == "/service"
+                ? scss.header__nav_isActive
+                : scss.header__nav_notActive
+            }
+          >
+            <div className={scss.header__option}>
+              <p>{t("header.service")}</p>
+              <Image src={arrow} alt="arrow" width={16} height={8} />
+            </div>
+          </Link>
         </nav>
       </aside>
-      <aside className={scss.header__right}>
-        <div className={scss.header__rightLanguage} onClick={click}>
-          <p
-            style={{ marginRight: isRussianLanguage ? "40px" : "45px" }}
-          >
+      <aside className={scss.header_right}>
+        <div className={scss.header__language} onClick={click}>
+          <p style={{ marginRight: isRussianLanguage ? "40px" : "45px" }}>
             {language}
           </p>
           <Image src={arrow} alt="arrow" width={16} height={8} />
         </div>
         <Button title={t("header.button")} withArrow={false} />
-        {isLanguageOpen && (
-          <label
-            className={scss.header__rightOption}
-            style={{ right: isRussianLanguage ? "200px" : "177px" }}
-          >
-            <p onClick={change}>{languageSecondFull}</p>
-            <p>{languageFull}</p>
-          </label>
-        )}
+        {languageSelect}
       </aside>
     </section>
   );
