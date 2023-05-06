@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import scss from "./Card.module.scss";
-const Сard = ({ title, subtitle, img, name, speciality }) => {
+const Сard = ({ title, subtitle, img, name, speciality, id }) => {
   const { t } = useTranslation("");
+  const isColor = id % 2 === 0;
   return (
     <div className={scss.card}>
-      <div className={scss.card__title}>
+      <div className={scss.card__title}  style={{ color: isColor ? "#00b212" : "#0E61FE" }}>
         <p>{t(title)}</p>
       </div>
       <div className={scss.card__subtitle}>
