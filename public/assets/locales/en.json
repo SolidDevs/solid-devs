@@ -88,10 +88,49 @@
     "mobilePhone": "Mobile Phone",
     "infrastructure": "Infrastructure"
   },
-  "technologies": {
-    "title": "Technologies and tools we use",
-    "Terraform": "Terraform",
-    "Ansible": "Ansible",
-    "Jenkins": "Jenkins"
+  "main": {
+    "title": "Solid Devs",
+    "subtitle": "Your path to digital transformation",
+    "description": "We develop, design, automate and manage, applying our engineering expertise to the best solutions for your business."
+  },
+  "feedBack": {
+    "title": "Kyrgyz Riders",
+    "subtitle": "The new features have been well received by users. The attentive and flexible team excelled in responding to stakeholders in a timely manner. Their technical expertise enables them to offer valuable solutions.",
+    "name": "Aman Amanbek",
+    "speciality": "CEO, Kyrgyz Ryders",
+    "heading": "What people say",
+    "prevArrow": "Back",
+    "nextArrow": "Next"
+  },
+  "webMain": {
+    "title": "Web development",
+    "description": "Creating a website or creating a custom web application is the result of great teamwork. Everyone participates in it: software engineers, designers, markup developers and other specialists. Choosing the right web development agency is the first step to getting a quality web solution that satisfies the customer."
+  },
+  "reasons": {
+    "title": "Why Solid?"
+  },
+  "carier": {
+    "btnText": "Send resume",
+    "practicumtitle": "Practicum",
+    "practicumDescription": "An internship from Solid Practicum helps you become a professional in your field. This is an environment where each of you will be divided into a team, and progress will be monitored by experience. We also offer you to take an excellent resume, find a high-paying job, and help with an interview. A flexible work format internship where you can work both offline and online. For those who have gathered their soft / hard skills, you should get into the development department of hard developers",
+    "teamTitle": "How to become part of the team?",
+    "teamDescription": "We are always looking for a team of professional developers who can work on individual projects with us. Professionals in our understanding are free, erudite, serious people who are constantly learning new things, hardworking and can become part of our internal culture.",
+    "writeLetter": "Write a letter with a story about yourself, share the projects in which you participated, send a cool resume. We will answer everyone with whom it will be interesting to continue the conversation about cooperation"
+  },
+  "carierTeamSteps": {
+    "firstStepTitle": "Call",
+    "firstStepDesc": "Our HR specialists will call you after reviewing your CV",
+    "secondStepTitle": "Interview",
+    "secondStepDesc": "We define your professional skills",
+    "thirdStepTitle": "Recruitment",
+    "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
+  },
+  "carierPracticumSteps": {
+    "firstStepTitle": "Call",
+    "firstStepDesc": "Our HR specialists will call you after reviewing your CV",
+    "secondStepTitle": "Interview",
+    "secondStepDesc": "We define your professional skills",
+    "thirdStepTitle": "Recruitment",
+    "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
   }
 }

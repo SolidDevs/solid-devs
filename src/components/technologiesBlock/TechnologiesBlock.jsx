@@ -14,12 +14,17 @@ const TechnologiesBlock = () => {
       technologiesInfo.map((item, index) => (
         <div key={`${item.title}_${index}`} className={scss.__item}>
           <div className={scss.icon}>
-            <Image src={`${item.img}`} alt={item.title} width={30} height={30} />
+            <Image
+              src={`${item.img}`}
+              alt={item.title}
+              width={30}
+              height={30}
+            />
           </div>
           <p className={scss.title}>{t(item.title)}</p>
         </div>
       )),
-    [technologiesInfo]
+    [t]
   );
   return (
     <SectionContainer title={t("technologies.title")}>

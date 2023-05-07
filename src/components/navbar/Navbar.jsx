@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import scss from "./Navbar.module.scss";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
@@ -13,7 +13,7 @@ const Navbar = ({ navbarLinks, paramName }) => {
   }, [router, paramName]);
   const { t } = useTranslation("");
 
-  const handleClick = (item) => {
+  const handleClick = useCallback((item) => {
     const query = router.query;
     query[paramName] = item;
     const path = {
@@ -21,7 +21,7 @@ const Navbar = ({ navbarLinks, paramName }) => {
       query,
     };
     router.push(path, path, { shallow: true });
-  };
+  }, [paramName, router])
 
   const navbarItems = useMemo(
     () =>
@@ -38,7 +38,7 @@ const Navbar = ({ navbarLinks, paramName }) => {
           {t(`navbar.${item}`)}
         </button>
       )),
-    [navbarLinks, paramValue]
+    [navbarLinks, paramValue, handleClick, t]
   );
   return <nav className={scss.navbar}>{navbarItems}</nav>;
 };
