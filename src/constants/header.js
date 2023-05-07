@@ -1,7 +1,3 @@
-import i18n from "@/i18next/i18next"
-
-const {t} = i18n
-
 export const navs = [
     {
         link : "/aboutUs",

@@ -15,7 +15,7 @@ const Header = () => {
   const { route } = useRouter();
   const handleClick = () => setIsOpen(!isOpen);
   const change = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
     setIsRussianLanguage(!isRussianLanguage);
     i18n.changeLanguage(isRussianLanguage ? "en" : "ru");
   };
@@ -54,25 +54,25 @@ const Header = () => {
 
   const headerNavs = useMemo(
     () =>
-      navs.map(({ link, text }) => (
-        console.log(route === link),
-        <Link
-          key={link}
-          href={link}
-          className={
-            route === link 
-              ? scss.header__nav_isActive
-              : scss.header__nav_notActive
-          }
-        >
-          <p>{t(text)}</p>
-        </Link>
-      )),
-    [route,isOpen]
+      navs.map(
+        ({ link, text }) => (
+          (
+            <Link
+              key={link}
+              href={link}
+              className={
+                route === link
+                  ? scss.header__nav_isActive
+                  : scss.header__nav_notActive
+              }
+            >
+              <p>{t(text)}</p>
+            </Link>
+          )
+        )
+      ),
+    [route, isOpen]
   );
-
-
-  
 
   return (
     <section className={scss.header}>
@@ -80,9 +80,7 @@ const Header = () => {
         <Link href={"/"}>
           <span className={scss.header__title}>SOLID DEVS</span>
         </Link>
-        <nav className={scss.header__navs}>
-          {headerNavs}
-        </nav>
+        <nav className={scss.header__navs}>{headerNavs}</nav>
       </aside>
       <aside className={scss.header_right}>
         <div className={scss.header__language} onClick={handleClick}>
