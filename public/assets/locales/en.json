@@ -1,6 +1,16 @@
 {
   "welcome": "Welcome",
   "hello": "Hello",
+  "header" : {
+    "about" : "About us",
+    "career" : "Career",
+    "service" : "Service" ,
+    "languageRu" :  "Ru",
+    "languageEn" :  "En",
+    "languageFullRu" :  "Russia",
+    "languageFullEn" :  "English",
+    "button" : "Contact"
+  },
   "itProjects": {
     "title__crypto": "Crypto and blockchain",
     "title__electronic": "Electronic commerce",
