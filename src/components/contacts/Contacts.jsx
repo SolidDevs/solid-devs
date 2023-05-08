@@ -1,7 +1,6 @@
 import React from "react";
 import scss from "./Contacts.module.scss";
 import { useTranslation } from "react-i18next";
-import Button from "../Button/Button";
 const Contacts = () => {
   const { t } = useTranslation();
   return (
