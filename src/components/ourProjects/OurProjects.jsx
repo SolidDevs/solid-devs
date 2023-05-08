@@ -5,12 +5,54 @@ import { ourProjectArr } from "@/constants/ourProjects";
 import Button from "../Button/Button";
 import Image from "next/image";
 import arrow from "../../../public/assets/images/ourProject/arrow.svg";
+import Slider from "react-slick";
+import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
+import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 const OurProjects = () => {
   const { t } = useTranslation();
+  const sliderSettings = {
+    infinite: false,
+    speed: 500,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          nextArrow: false,
+          prevArrow: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          nextArrow: false,
+          prevArrow: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          nextArrow: false,
+          prevArrow: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const renderProject = useMemo(
     () =>
-      ourProjectArr.map((el) => (
-        <div className={scss.projects__item}>
+      ourProjectArr.map((el, index) => (
+        <div className={scss.projects__item} key={`${el.title}_${index}`}>
           <div className={scss.item__info}>
             <div className={scss.item__title}>
               <h1>{t(el.title)}</h1>
@@ -29,19 +71,23 @@ const OurProjects = () => {
               ))}
             </div>
             <Button
-              title={"Перейти на сайт"}
+              title={"button_rauseble.site"}
               variant={"btn__no_bg"}
               withArrow={true}
             />
           </div>
           <div className={scss.item__img}>
-            <Image src={el.imgSLider} width={388} height={230}/>
+            <Image src={el.imgSLider} width={388} height={230} />
           </div>
         </div>
       )),
     []
   );
-  return <div className={scss.projects}>{renderProject}</div>;
+  return (
+    <div className={scss.projects}>
+      <Slider {...sliderSettings}>{renderProject}</Slider>
+    </div>
+  );
 };
 
 export default OurProjects;

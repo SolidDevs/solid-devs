@@ -9,9 +9,9 @@ import "slick-carousel/slick/slick.css";
 import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 const FeedBack = ({ isMain }) => {
-  let currentShow = 2;
+  let currentShow = 3;
   if (isMain) {
-    currentShow = 3;
+    currentShow = 2;
   }
   const sliderSettings = {
     infinite: false,
@@ -55,9 +55,9 @@ const FeedBack = ({ isMain }) => {
     []
   );
   return (
-    <div className={scss.talk}>
-      <h1>{t("feedBack.call")}</h1>
-      <div className={scss.talk__slide}>
+    <div className={scss.feedBack}>
+      <h1>{t("feedBack.heading")}</h1>
+      <div className={scss.feedBack__slide}>
         <Slider {...sliderSettings}>{renderCard}</Slider>
       </div>
     </div>

@@ -3,8 +3,12 @@
   margin-bottom: 70px;
   height: 13%;
   .projects__item {
-    display: flex;
+    display: flex !important;
     .item__info {
+      width: 40%;
+      button {
+        width: 100%;
+      }
       padding: 20px 20px 36px 20px;
       background: #f1f1f1;
       h1,
@@ -35,23 +39,24 @@
       .item__links {
         margin-top: 10px;
         margin-bottom: 20px;
-        .links__item{
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            p {
-                margin-left: 15px;
-                font-style: normal;
-                font-weight: 300;
-                font-size: 17px;
-                line-height: 23px;
-                color: $darkGrayText;
-              }
+        .links__item {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          p {
+            margin-left: 15px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 23px;
+            color: $darkGrayText;
+          }
         }
         border-bottom: 1px solid $darkGrayText;
       }
     }
-    .item__img{
+    .item__img {
       width: 70%;
       display: flex;
       align-items: center;
@@ -59,6 +64,20 @@
       background-image: url("../../../public/assets/images/ourProject/background.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .projects {
+    .projects__item {
+      flex-direction: column;
+      .item__info {
+        width: 100%;
+      }
+      .item__img {
+        width: 100%;
+      }
     }
   }
 }

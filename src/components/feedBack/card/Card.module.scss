@@ -1,9 +1,10 @@
+@import "../../../styles/variables.scss";
 .card {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 20px;
-  background: #ffff;
+  background: $white;
   height: 100%;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   .card__title {
@@ -28,14 +29,14 @@
       margin: 0;
     }
   }
-  .card__account {
+  .card__user {
     display: flex;
     align-items: center;
     img {
       border: 1.5px solid #fe640e;
       border-radius: 100%;
     }
-    .account__user {
+    .user__info {
       margin-left: 18px;
       display: flex;
       flex-direction: column;
