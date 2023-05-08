@@ -22,8 +22,8 @@ const Contacts = () => {
             <p>{t("contacts.form__title")}</p>
           </div>
           <div className={scss.form__inputs}>
+            <input type="number" />
             <input type="text" />
-            <input type="nubmer" />
           </div>
         </div>
       </div>
