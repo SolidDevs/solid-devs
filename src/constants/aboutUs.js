@@ -1,18 +1,18 @@
 export const aboutUs = [
   {
-    title: "70+",
-    description: "Разработчики и дизайнеры",
+    title: "aboutUs.title__70",
+    description: "aboutUs.70__desc",
   },
   {
-    title: "6",
-    description: "Лет на рынке",
+    title: "aboutUs.title__6",
+    description: "aboutUs.6__desc",
   },
   {
-    title: "20+",
-    description: "Миллионов пользователей",
+    title: "aboutUs.title__20",
+    description: "aboutUs.20__desc",
   },
   {
-    title: "0",
-    description: "Обнаружена уязвимость PayPal",
+    title: "aboutUs.title__0",
+    description: "aboutUs.0__desc",
   },
 ];

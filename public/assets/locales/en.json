@@ -1,15 +1,15 @@
 {
   "welcome": "Welcome",
   "hello": "Hello",
-  "header" : {
-    "about" : "About us",
-    "career" : "Career",
-    "service" : "Service" ,
-    "languageRu" :  "Ru",
-    "languageEn" :  "En",
-    "languageFullRu" :  "Russia",
-    "languageFullEn" :  "English",
-    "button" : "Contact"
+  "header": {
+    "about": "About us",
+    "career": "Career",
+    "service": "Service",
+    "languageRu": "Ru",
+    "languageEn": "En",
+    "languageFullRu": "Russia",
+    "languageFullEn": "English",
+    "button": "Contact"
   },
   "itProjects": {
     "title__crypto": "Crypto and blockchain",
@@ -132,5 +132,19 @@
     "secondStepDesc": "We define your professional skills",
     "thirdStepTitle": "Recruitment",
     "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
+  },
+  "aboutUs": {
+    "aboutUs__main_title": "About Us",
+    "firstStepDesc": "Unlike most other companies, we primarily take into account business needs, forcing advanced technologies to work on your company's goals.",
+    "secondStepDesc": "We are well versed in web and native mobile development.Good, effective architecture is the main thing.Your product should be scalable, repaired and focused on the future, and we will make it possible.",
+    "thirdStepDesc": "One of our main values is design.As fans of everything simple, we create clear, understandable user interfaces even for the most difficult work processes.versions of your product.Instead of making assumptions and allocating huge budgets in advance, we must quickly create MVP for you, bring it to the market, collect reviews and repeat it quickly!",
+    "title__70": "70+",
+    "70__desc": "Developers and designers",
+    "title__6": "6",
+    "6__desc": "Years in the market",
+    "title__20": "20+",
+    "20__desc": "Millions of users",
+    "title__0": "0",
+    "0__desc": "The vulnerability of PayPal was discovered"
   }
 }
