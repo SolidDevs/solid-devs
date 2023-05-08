@@ -49,7 +49,7 @@ const OurProjects = () => {
       },
     ],
   };
-  const renderProject = useMemo(
+  const renderProjects = useMemo(
     () =>
       ourProjectArr.map((el, index) => (
         <div className={scss.projects__item} key={`${el.title}_${index}`}>
@@ -65,13 +65,13 @@ const OurProjects = () => {
                 <>
                   <div className={scss.links__item}>
                     <Image src={arrow} width={8} height={14} />
-                    <p>{t(link.link)}</p>
+                    <p>{t(link)}</p>
                   </div>
                 </>
               ))}
             </div>
             <Button
-              title={"button_rauseble.site"}
+              title={"button_reuseble.site"}
               variant={"btn__no_bg"}
               withArrow={true}
             />
@@ -85,7 +85,7 @@ const OurProjects = () => {
   );
   return (
     <div className={scss.projects}>
-      <Slider {...sliderSettings}>{renderProject}</Slider>
+      <Slider {...sliderSettings}>{renderProjects}</Slider>
     </div>
   );
 };
