@@ -8,7 +8,7 @@ const AboutCard = ({ title, description }) => {
     <div className={scss.card__main}>
       <div>
         <h3>
-          {t(title)} <div className={scss.cub}></div>
+          {t(title)} <div className={scss.card__cub}></div>
         </h3>
         <p>{t(description)}</p>
       </div>
