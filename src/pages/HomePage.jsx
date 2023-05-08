@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import ItProjects from "@/components/ItProjects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import Main from "@/components/main/Main";
+import OurProjects from "@/components/ourProjects/OurProjects";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
@@ -16,6 +17,7 @@ const HomePage = () => {
         <ServicesBlock />
         <TechnologiesBlock />
         <OurTeam />
+        <OurProjects/>
       </MainContent>
       <Footer />
     </>
