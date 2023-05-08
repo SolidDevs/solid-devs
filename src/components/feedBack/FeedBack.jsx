@@ -55,10 +55,12 @@ const FeedBack = ({ isMain }) => {
     []
   );
   return (
-    <div className={scss.feedBack}>
-      <h1>{t("feedBack.heading")}</h1>
-      <div className={scss.feedBack__slide}>
-        <Slider {...sliderSettings}>{renderCard}</Slider>
+    <div className="container">
+      <div className={scss.feedBack}>
+        <h1>{t("feedBack.heading")}</h1>
+        <div className={scss.feedBack__slide}>
+          <Slider {...sliderSettings}>{renderCard}</Slider>
+        </div>
       </div>
     </div>
   );
