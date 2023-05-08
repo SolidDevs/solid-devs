@@ -1,15 +1,15 @@
 {
   "welcome": "Welcome",
   "hello": "Hello",
-  "header" : {
-    "about" : "About us",
-    "career" : "Career",
-    "service" : "Service" ,
-    "languageRu" :  "Ru",
-    "languageEn" :  "En",
-    "languageFullRu" :  "Russia",
-    "languageFullEn" :  "English",
-    "button" : "Contact"
+  "header": {
+    "about": "About us",
+    "career": "Career",
+    "service": "Service",
+    "languageRu": "Ru",
+    "languageEn": "En",
+    "languageFullRu": "Russia",
+    "languageFullEn": "English",
+    "button": "Contact"
   },
   "itProjects": {
     "title__crypto": "Crypto and blockchain",
@@ -58,7 +58,7 @@
     "footer__right": "© All rights reserved. Solid Devs 2023",
     "footer__politic": "Privacy Policy"
   },
-  "button_rauseble": {
+  "button_reuseble": {
     "contact": "Contact",
     "project": "Let's discuss your project",
     "site": "Go to site"
@@ -105,6 +105,20 @@
   "webMain": {
     "title": "Web development",
     "description": "Creating a website or creating a custom web application is the result of great teamwork. Everyone participates in it: software engineers, designers, markup developers and other specialists. Choosing the right web development agency is the first step to getting a quality web solution that satisfies the customer."
+  },
+  "ourProjects": {
+    "title": "Kyrgyz Riders",
+    "subtitle": "Tourism company",
+    "links": {
+      "link__market": "Market Analis",
+      "link__idea": "Refinement of an idea",
+      "link__cjm": "CJM",
+      "link__flow": "User flow",
+      "link__prototiping": "Prototyping",
+      "link__design": "Design",
+      "link__website/Admin": " Website / Admin Panel Coding",
+      "link__test": " Testing/Launch"
+    }
   },
   "reasons": {
     "title": "Why Solid?"
