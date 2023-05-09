@@ -108,6 +108,18 @@
     "serviceTitle": "Web development services, which we provide",
     "processTitle": "Development process"
   },
+  "benefitAndStatistic": {
+    "benefitsTitle": "Benefits of Chat Application Development",
+    "firstTitle": "Real time communication time",
+    "secondTitle": "Increased performance",
+    "thirdTitle": "File storage and sharing",
+    "fourth": "Faster support",
+    "fifth": "Minor or missing barriers to communication",
+    "sixth": "Highest conversion rate",
+    "statisticsTitle": "Solid Statistics",
+    "statisticTitle1": "Many years of development experience chat applications",
+    "statisticTitle2": "Successfully developed chat applications"
+  },
   "ourProjects": {
     "title": "Kyrgyz Riders",
     "subtitle": "Tourism company",

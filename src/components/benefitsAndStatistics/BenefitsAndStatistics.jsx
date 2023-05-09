@@ -1,18 +1,18 @@
-import { webServicesData } from "@/constants/services";
-import { proccessData } from "@/constants/process";
-import scss from "./ServicesAndProcess.module.scss";
+import scss from "./BenefitsAndStatistics.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import ReusableCard from "./card/ReusableCard";
+import ReusableContentCard from "./contentCard/ReusableContentCard";
+import { benefitsData } from "@/constants/benefits";
+import { statisticsData } from "@/constants/statistics";
 
-const ServicesAndProcess = ({ variant }) => {
+const BenefitsAndStatistics = ({ variant }) => {
   const { t } = useTranslation();
-  let data = variant == "process" ? proccessData : webServicesData;
+  let data = variant == "process" ? statisticsData : benefitsData;
 
   const reasonsRender = useMemo(
     () =>
       data.map((item, index) => (
-        <ReusableCard
+        <ReusableContentCard
           key={`${item.title}_${index}`}
           {...item}
           variant={variant}
@@ -30,9 +30,9 @@ const ServicesAndProcess = ({ variant }) => {
 
   const renderTitle = useMemo(() => {
     if (variant == "process") {
-      return <h2>{t("webMain.processTitle")}</h2>;
+      return <h2>{t("benefitAndStatistic.statisticsTitle")}</h2>;
     } else {
-      return <h2>{t("webMain.serviceTitle")}</h2>;
+      return <h2>{t("benefitAndStatistic.benefitsTitle")}</h2>;
     }
   }, [variant]);
   return (
@@ -46,4 +46,4 @@ const ServicesAndProcess = ({ variant }) => {
   );
 };
 
-export default ServicesAndProcess;
+export default BenefitsAndStatistics;
