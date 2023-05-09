@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+.contactUs {
+  margin-bottom: 70px;
+  .contactUs__wrapper {
+    display: flex;
+    gap: 113px;
+    .contactUs__info {
+      .info__title {
+        width: 90%;
+        p {
+          margin: 0;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 48px;
+          line-height: 60px;
+          color: #262626;
+        }
+      }
+      .info__subtitle {
+        width: 80%;
+        p {
+          margin: 15px 0px 30px 0px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 19px;
+          line-height: 28px;
+          color: $darkGrayText;
+        }
+      }
+      .info__btns {
+        display: flex;
+        gap: 30px;
+        .btns__mail {
+          button {
+            padding: 15px 90px;
+          }
+        }
+      }
+    }
+    .contactUs__cards {
+      background: $white;
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 18px;
+      gap: 20px;
+      height: 100%;
+      .contactUs__card:nth-child(2) {
+        margin-left: 30%;
+      }
+      .contactUs__card {
+        background: $blue;
+        padding: 10px 20px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        gap: 21px;
+
+        .card__title {
+          p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 23px;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
