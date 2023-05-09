@@ -22,8 +22,8 @@ const Contacts = () => {
             <p>{t("contacts.form__title")}</p>
           </div>
           <div className={scss.form__inputs}>
-            <input type="number" />
-            <input type="text" />
+            <input type="number" placeholder="+996 (707) 77-77-77"/>
+            <input type="text" placeholder="privet@solid.kg"/>
           </div>
         </div>
       </div>

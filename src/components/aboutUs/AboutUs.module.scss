@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+.about__description {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 160px;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+  .left__content {
+    h2 {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 60px;
+      color: #262626;
+      margin: 50px 0 0;
+    }
+    p {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 28px;
+      color: $darkGrayText;
+    }
+  }
+  .right__content {
+    margin-top: 161px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 41px 84px;
+
+    @media (max-width: 1024px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 540px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.about__line {
+  border: 1px solid #b8b8b8;
+  margin: 32px 0 50px;
+}

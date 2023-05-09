@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import ItProjects from "@/components/It__projects/ItProjects";
+import ItProjects from "@/components/ItProjects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import Contacts from "@/components/contacts/Contacts";
 import FeedBack from "@/components/feedBack/FeedBack";

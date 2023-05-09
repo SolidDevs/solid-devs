@@ -76,6 +76,9 @@
           border: none;
           padding: 10px 40px;
         }
+        input::placeholder{
+          color: $white;
+        }
       }
     }
   }
