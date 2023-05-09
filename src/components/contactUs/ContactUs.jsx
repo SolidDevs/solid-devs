@@ -9,12 +9,15 @@ const ContactUs = () => {
   const renderCards = useMemo(
     () =>
       contactUsCardArr.map((el, index) => (
-        <div className={scss.contactUs__card} id={index}>
-          <div className={scss.card__img}>
-            <Image src={el.avatar} width={59} height={59} alt={el.title} />
-          </div>
-          <div className={scss.card__title}>
-            <p>{t(el.title)}</p>
+        <div className={scss.contactUs__card} key={`${el.title}_${index}`}>
+          <div className={scss.card__wrapper}>
+            <div className={scss.card__img}>
+              <Image src={el.avatar} width={59} height={59} alt={el.title} />
+            </div>
+            <div className={scss.card__line}></div>
+            <div className={scss.card__title}>
+              <p>{t(el.title)}</p>
+            </div>
           </div>
         </div>
       )),
@@ -22,6 +25,7 @@ const ContactUs = () => {
   );
   return (
     <div className={scss.contactUs}>
+      <div className={scss.contactUs__line}></div>
       <div className="container">
         <div className={scss.contactUs__wrapper}>
           <div className={scss.contactUs__info}>
