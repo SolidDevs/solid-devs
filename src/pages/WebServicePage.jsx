@@ -6,7 +6,7 @@ import WebMain from "@/components/webMain/WebMain";
 const WebServicePage = () => {
   return (
     <>
-      <Header />
+      <Header/>
       <WebMain />
       <ServicesAndProcess />
       <ServicesAndProcess variant="process" />
