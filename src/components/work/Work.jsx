@@ -9,11 +9,12 @@ import Slider from "react-slick";
 import SampleNextArrow from "./work__item_arrows/work__arrow_next";
 import SamplePrevArrow from "./work__item_arrows/work__arrow_prev";
 
-
-
-
 const Work = () => {
   const { t } = useTranslation("");
+
+  const handleArrowClick = () => {
+    console.log('slideTitle')
+  }
 
   const settings = {
     dots: false,
@@ -21,14 +22,17 @@ const Work = () => {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow onClick={handleArrowClick} />,
+    prevArrow: <SamplePrevArrow onClick={handleArrowClick} />,
   };
+
+
+
   const sliderCards = useMemo(
     () =>
       workSliderData.map((item, index) => (
         <div key={`${item.title}_${index}`} className={scss.work__item}>
-          <h1 className={scss.work__item__counter}>{item.count}</h1>
+          <h1 className={scss.work__item__counter}>{`0${index + 1}`}</h1>
           <div className={scss.work__item_info}>
             <p className={scss.title}>{t(item.title)}</p>
             <p className={scss.description}>{t(item.description)}</p>
