@@ -149,6 +149,13 @@
     "thirdStepTitle": "Recruitment",
     "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
   },
+  "contacts": {
+    "info__title": "Write to us",
+    "form__title": "Contacts",
+    "info__subtitle": "After you fill out the application form, we will contact you and discuss yout idea!",
+    "info__description": "Don't like filling out forms? write to privet@solid.kg",
+    "form": "Application to form"
+  },
   "aboutUs": {
     "main__title": "About Us",
     "firstStepDesc": "Unlike most other companies, we primarily take into account business needs, forcing advanced technologies to work on your company's goals.",
