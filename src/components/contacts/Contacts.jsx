@@ -22,8 +22,8 @@ const Contacts = () => {
             <p>{t("contacts.form__title")}:</p>
           </div>
           <div className={scss.form__buttons}>
-            <button>+996 (707) 77-77-77</button>
-            <button>privet@solid.kg</button>
+            <div>+996 (707) 77-77-77</div>
+            <div>privet@solid.kg</div>
           </div>
         </div>
       </div>
