@@ -4,7 +4,7 @@ export const navs = [
     text: "header.about",
   },
   {
-    link: "/career",
+    link: "/carier",
     text: "header.career",
   },
   {

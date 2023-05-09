@@ -19,7 +19,7 @@ const Contacts = () => {
         </div>
         <div className={scss.contact__form}>
           <div className={scss.form__title}>
-            <p>{t("contacts.form__title")}</p>
+            <p>{t("contacts.form__title")}:</p>
           </div>
           <div className={scss.form__inputs}>
             <input type="number" placeholder="+996 (707) 77-77-77"/>
