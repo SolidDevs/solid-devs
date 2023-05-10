@@ -1,13 +1,13 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import WebMain from "@/components/webMain/WebMain";
+import ReusableMainContent from "@/components/webMain/WebMain";
 import { uiMain } from "@/constants/reusableMain";
 
 const UiDesignPage = () => {
   return (
     <>
       <Header />
-      <WebMain data={uiMain}/>
+      <ReusableMainContent data={uiMain}/>
       <Footer />
     </>
   );

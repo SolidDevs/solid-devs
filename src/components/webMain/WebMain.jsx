@@ -30,8 +30,6 @@ const WebMain = ({ data }) => {
       <div className="container">
         <div className={scss.main__content}>
           {renderContent}
-          {
-            data.image &&
             <Image
               src={data.image}
               alt="website image"
@@ -39,7 +37,6 @@ const WebMain = ({ data }) => {
               width={500}
               height={500}
             />
-          }
         </div>
       </div>
     </div>
