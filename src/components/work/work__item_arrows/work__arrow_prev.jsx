@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function SamplePrevArrow(props) {
   const { t } = useTranslation("");
-  const { className, onClick, setCounter, title, arr, counter } = props;
+  const { className, onClick, setCounter, title, counter } = props;
   const router = useRouter()
 
   const pushToQueryPrev = () => {
@@ -20,7 +20,6 @@ export default function SamplePrevArrow(props) {
     } else {
       setCounter(0)
     }
-
   }
 
   return (

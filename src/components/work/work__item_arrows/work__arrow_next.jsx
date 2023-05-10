@@ -1,9 +1,7 @@
-import { useTranslation } from "react-i18next";
 import scss from "../Work.module.scss";
 import { useRouter } from "next/router";
 
 export default function SampleNextArrow(props) {
-  const { t } = useTranslation("");
   const { className, onClick, setCounter, title, arr, counter } = props;
   const router = useRouter()
 
