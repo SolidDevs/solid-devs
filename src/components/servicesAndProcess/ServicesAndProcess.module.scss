@@ -4,7 +4,7 @@ $title__size: calc(2vw + 2vh);
 $line__height: calc(3vw + 2vh);
 
 .serviceMain {
-  background-color: $blue;
+  background-color: $mainDarkText;
   padding: 20px 0px 50px;
 
   h2 {
@@ -47,9 +47,4 @@ $line__height: calc(3vw + 2vh);
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-}
-
-.main__line {
-  border: 1px solid #b8b8b8;
-  margin-top: 50px;
 }
