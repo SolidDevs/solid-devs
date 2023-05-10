@@ -4,12 +4,13 @@
   "header" : {
     "about" : "About us",
     "career" : "Career",
-    "service" : "Service" ,
-    "languageRu" :  "Ru",
-    "languageEn" :  "En",
-    "languageFullRu" :  "Russia",
-    "languageFullEn" :  "English",
-    "button" : "Contact"
+    "service" : "Service and price" ,
+    "button" : "Contact",
+    "our_services" : "Our service",
+    "mvp" : "Development of MVP applications",
+    "ux-ui" : " UX/UI design services",
+    "mobile" : "Mobile application development",
+    "chat" : "Chat application development"
   },
   "itProjects": {
     "title__crypto": "Crypto and blockchain",

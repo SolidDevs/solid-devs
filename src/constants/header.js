@@ -4,11 +4,26 @@ export const navs = [
     text: "header.about",
   },
   {
-    link: "/career",
+    link: "/carier",
     text: "header.career",
+  }
+];
+
+export const  modal_navs = [
+  {
+    text : "header.mvp",
+    link : "/mvp"
   },
   {
-    link: "/webService",
-    text: "header.service",
+    text : "header.ux-ui",
+    link : "/ux-ui"
   },
-];
+  {
+    text : "header.mobile",
+    link : "/mobile"
+  },
+  {
+    text : "header.chat",
+    link : "/chat"
+  }
+]
