@@ -16,7 +16,11 @@ const WebMain = ({ data }) => {
         <div className={scss.content__description}>
           <p>{t(data.description)}</p>
         </div>
-        <Button title={t("button__reusable.project")} withArrow={true} variant='btn__light_blue' />
+        <Button
+          title={t("button__reusable.project")}
+          withArrow={true}
+          variant="btn__light_blue"
+        />
       </div>
     ),
     [t]
@@ -26,13 +30,13 @@ const WebMain = ({ data }) => {
       <div className="container">
         <div className={scss.main__content}>
           {renderContent}
-            <Image
-              src={data.image}
-              alt="website image"
-              className={scss.content__image}
-              width={500}
-              height={500}
-            />
+          <Image
+            src={data.image}
+            alt="website image"
+            className={scss.content__image}
+            width={500}
+            height={500}
+          />
         </div>
       </div>
     </div>
