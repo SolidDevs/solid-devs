@@ -3,7 +3,7 @@ import SectionContainer from "../layoutComponent/SectionContainer";
 import Navbar from "../navbar/Navbar";
 import scss from "./Work.module.scss";
 import { useTranslation } from "react-i18next";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { workSliderData } from "@/constants/work";
 import Slider from "react-slick";
 import SampleNextArrow from "./work__item_arrows/work__arrow_next";
@@ -12,9 +12,7 @@ import SamplePrevArrow from "./work__item_arrows/work__arrow_prev";
 const Work = () => {
   const { t } = useTranslation("");
 
-  const handleArrowClick = () => {
-    console.log('slideTitle')
-  }
+  const [counter, setCounter] = useState(0);
 
   const settings = {
     dots: false,
@@ -22,11 +20,9 @@ const Work = () => {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow onClick={handleArrowClick} />,
-    prevArrow: <SamplePrevArrow onClick={handleArrowClick} />,
+    nextArrow: <SampleNextArrow title={workLinks[counter + 1]} arr={workLinks} counter={counter} setCounter={setCounter} />,
+    prevArrow: <SamplePrevArrow title={workLinks[counter - 1]} arr={workLinks} counter={counter} setCounter={setCounter} />,
   };
-
-
 
   const sliderCards = useMemo(
     () =>
@@ -41,9 +37,10 @@ const Work = () => {
       )),
     [workSliderData]
   );
+
   return (
     <SectionContainer title={t("work.title")}>
-      <Navbar navbarLinks={workLinks} paramName={"work"} />
+      <Navbar clickable={false} navbarLinks={workLinks} paramName={"work"} />
       <div className={`${scss.wrapper} work__wrapper`}>
         <Slider {...settings}>{sliderCards}</Slider>
       </div>

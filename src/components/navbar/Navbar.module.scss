@@ -58,6 +58,32 @@
       }
     }
   }
+  .navbar__item_nonActive {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 13px 38px 13px 10px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 23px;
+    color: #262626;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      bottom: 0px;
+      transition: ease-in-out 0.3s;
+      z-index: 20;
+      height: 2px;
+      background-color: $mainBlue;
+    }
+  }
 }
 .navbar__item_currentSelect {
   background: none;

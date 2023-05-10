@@ -1,13 +1,31 @@
 import scss from "../Work.module.scss";
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 
 export default function SamplePrevArrow(props) {
   const { t } = useTranslation("");
-  const { className, onClick } = props;
-  return (
-    <div className={`${className} ${scss.prevArrow}`} onClick={onClick}>
-      <p className={scss.slider__item}>{t("work.Back")}</p>
+  const { className, onClick, setCounter, title, arr, counter } = props;
+  const router = useRouter()
 
+  const pushToQueryPrev = () => {
+    if (counter != 0) {
+      onClick()
+      setCounter((prev) => prev - 1)
+      const path = {
+        pathname: router.pathname,
+        query: { work: title }
+        ,
+      };
+      router.push(path, path, { shallow: true });
+    } else {
+      setCounter(0)
+    }
+
+  }
+
+  return (
+    <div className={`${className} ${scss.prevArrow}`} onClick={() => pushToQueryPrev()}>
+      <p className={scss.slider__item}>{t("work.Back")}</p>
       <svg
         className={`${scss.svg} svg`}
         width="32"

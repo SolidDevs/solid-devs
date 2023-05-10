@@ -28,7 +28,7 @@ const TechnologiesBlock = () => {
   );
   return (
     <SectionContainer title={t("technologies.title")}>
-      <Navbar navbarLinks={technologiesLinks} paramName={"technologies"} />
+      <Navbar clickable={true} navbarLinks={technologiesLinks} paramName={"technologies"} />
       <div className={scss.technologies}>{technologiesItems}</div>
     </SectionContainer>
   );

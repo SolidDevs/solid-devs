@@ -3,7 +3,7 @@ import scss from "./Navbar.module.scss";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
-const Navbar = ({ navbarLinks, paramName }) => {
+const Navbar = ({ navbarLinks, paramName, clickable }) => {
   const router = useRouter();
   const [paramValue, setParamValue] = useState("");
   useEffect(() => {
@@ -28,11 +28,11 @@ const Navbar = ({ navbarLinks, paramName }) => {
       navbarLinks.map((item, index) => (
         <button
           key={`${item}_${index}`}
-          onClick={() => handleClick(item)}
+          onClick={() => clickable && handleClick(item)}
           className={
             paramValue == item
               ? scss.navbar__item_currentSelect
-              : scss.navbar__item
+              : clickable ? scss.navbar__item : scss.navbar__item_nonActive
           }
         >
           {t(`navbar.${item}`)}

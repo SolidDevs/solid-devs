@@ -1,11 +1,30 @@
 import { useTranslation } from "react-i18next";
 import scss from "../Work.module.scss";
+import { useRouter } from "next/router";
 
 export default function SampleNextArrow(props) {
   const { t } = useTranslation("");
-  const { className, onClick } = props;
+  const { className, onClick, setCounter, title, arr, counter } = props;
+  const router = useRouter()
+
+  const pushToQueryNext = () => {
+    if (counter == arr.length - 1) {
+      setCounter(7)
+    } else {
+      onClick()
+      setCounter((prev) => prev + 1)
+      const path = {
+        pathname: router.pathname,
+        query: { work: title }
+        ,
+      };
+      router.push(path, path, { shallow: true });
+    }
+
+  }
+
   return (
-    <div className={`${className} ${scss.nextArrow}`} onClick={onClick}>
+    <div className={`${className} ${scss.nextArrow}`} onClick={() => pushToQueryNext()}>
       <svg
         className={`${scss.svg} svg`}
         width="32"
@@ -19,7 +38,7 @@ export default function SampleNextArrow(props) {
           fill="#797979"
         />
       </svg>
-      <p className={scss.slider__item}>{t("work.Study")}</p>
+      <p className={scss.slider__item}>{title}</p>
     </div>
   );
 }
