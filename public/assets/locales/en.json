@@ -58,10 +58,11 @@
     "footer__right": "© All rights reserved. Solid Devs 2023",
     "footer__politic": "Privacy Policy"
   },
-  "button_reuseble": {
+  "button__reusable": {
     "contact": "Contact",
     "project": "Let's discuss your project",
-    "site": "Go to site"
+    "site": "Go to site",
+    "mail": "Mail" 
   },
   "serviceBlock": {
     "title": "Software development services we kick ass on",
@@ -185,5 +186,10 @@
   "chatMain": {
     "title": "Chatual application development services",
     "description": "People and enterprises need an instant connection, because it is fast, easy and in real time.Thus, it would be difficult to imagine life without instant messengers, because they help us remain in touch with our friends, family and colleagues."
+  },
+  "contactUs": {
+    "title": "Contact us for a free estimate",
+    "subtitle": "After you fill out the application form, we will contact you and discuss your idea! Don't like filling out forms? Then send an email.",
+    "card__title": "Hello! I would like to order from you the development of an application for my company."
   }
 }
