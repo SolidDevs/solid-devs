@@ -2,6 +2,7 @@ import webImage from "/public/images/webMain/webMainImage.png";
 import designImage from "/public/images/reusableMain/design.png";
 import mobileImage from "/public/images/reusableMain/mobile.png";
 import mvpImage from "/public/images/reusableMain/mvp.png";
+import chatImage from "/public/images/reusableMain/chat.png";
 
 export const webMain = {
   title: "webMain.title",
@@ -30,4 +31,5 @@ export const mvpMain = {
 export const chatMain = {
   title: "chatMain.title",
   description: "chatMain.description",
+  image: chatImage,
 };
