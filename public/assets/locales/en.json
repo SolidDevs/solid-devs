@@ -171,6 +171,22 @@
     "title__0": "0",
     "0__desc": "The vulnerability of PayPal was discovered"
   },
+  "uiMain": {
+    "title": "UX/UI Design",
+    "description": "With the support of first-class experts, Yellow provides you with first-class user interface design and user experience for web applications and mobile applications.We know how to effectively attract an audience to your product.Project architecture and user needs are our main priorities that allow us to organize clear logical flows of users to obtain a unique interface."
+  },
+  "mobileMain": {
+    "title": "Development of mobile applications",
+    "description": "Since smartphones and tablets have become an integral part of our daily life, demand and demand for mobile application development services have increased sharply and are currently steadily remained at a high level.However, you cannot immediately hire the first agency that offers this service.The team should have sufficient relevant experience and confirmed track record, which will show how much they deserve confidence.Our mobile application developers are ready to provide you with this and help bring your idea to life.."
+  },
+  "mvpMain": {
+    "title": "MVP development services",
+    "description": "MVP means “the minimum viable product”, and this is a great solution for the early stages of the product.If your budget is limited or you need to check the water before releasing something large and complex, MVP is what you need.Yellow offers the best MVP development services.We can be ready to present key functionality for one to three months."
+  },
+  "chatMain": {
+    "title": "Chatual application development services",
+    "description": "People and enterprises need an instant connection, because it is fast, easy and in real time.Thus, it would be difficult to imagine life without instant messengers, because they help us remain in touch with our friends, family and colleagues."
+  },
   "contactUs": {
     "title": "Contact us for a free estimate",
     "subtitle": "After you fill out the application form, we will contact you and discuss your idea! Don't like filling out forms? Then send an email.",
