@@ -22,14 +22,6 @@ const ServicesAndProcess = ({ variant }) => {
     [data, variant]
   );
 
-  const renderLine = useMemo(() => {
-    if (variant == "process") {
-      return (
-        <div className={scss.main__line}></div>
-      )
-    }
-  }, [variant])
-
   const renderTitle = useMemo(() => {
     if (variant == "process") {
       return (
@@ -47,7 +39,6 @@ const ServicesAndProcess = ({ variant }) => {
         {renderTitle}
         <div className={scss.main__cards}>{reasonsRender}</div>
       </div>
-      {renderLine}
     </div>
   );
 };
