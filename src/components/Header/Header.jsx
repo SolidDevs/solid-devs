@@ -10,22 +10,22 @@ import { navs } from "@/constants/header";
 import { modal_navs } from "@/constants/header";
 
 const Header = () => {
-  const { t ,language } = i18n;
+  const { t, language } = i18n;
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [lan ,setLan] = useState(false)
+  const [lan, setLan] = useState(false);
   const { route } = useRouter();
   const handleClick = () => setIsModalOpen(!isModalOpen);
   const change = () => {
-    i18n.changeLanguage( !lan ? "ru" : "en");
+    i18n.changeLanguage(!lan ? "ru" : "en");
   };
   const ru = () => {
-    setLan(true)
-    change()
-  }
+    setLan(true);
+    change();
+  };
   const en = () => {
-    setLan(false)
-    change()
-  }
+    setLan(false);
+    change();
+  };
   const headerNavs = useMemo(
     () =>
       navs.map(({ link, text }) => (
@@ -41,28 +41,18 @@ const Header = () => {
           <p>{t(text)}</p>
         </Link>
       )),
-    [route,language]
+    [route, language]
   );
 
-  const modal__navs = useMemo(() =>
-    modal_navs.map(({ text, link }) => (
-      <Link key={link} href={link} className={scss.modal__nav}>
-        {t(text)}
-      </Link>
-    )),[language]
+  const modal__navs = useMemo(
+    () =>
+      modal_navs.map(({ text, link }) => (
+        <Link key={link} href={link} className={scss.modal__nav}>
+          {t(text)}
+        </Link>
+      )),
+    [language]
   );
-  const modal = useMemo(() => {
-    return (
-      isModalOpen && (
-        <section className={scss.modal} onClick={handleClick}>
-          <main onClick={event => event.stopPropagation()}>
-            <h2>{t("header.our_services")}</h2>
-            <nav>{modal__navs}</nav>
-          </main>
-        </section>
-      )
-    );
-  }, [isModalOpen,language]);
 
   return (
     <section className={scss.header}>
@@ -73,9 +63,12 @@ const Header = () => {
         <nav className={scss.header__navs}>
           {headerNavs}
           <label
-            className={scss.header__option}
-            onClick={handleClick} 
-            style={{background : isModalOpen ? "#F5F5F5" : "$white"}}
+            className={
+              !isModalOpen
+                ? scss.header__option_notActive
+                : scss.header__option_isActive
+            }
+            onClick={handleClick}
           >
             <p>{t("header.service")}</p>
             <Image src={arrow} alt="arrow" width={16} height={8} />
@@ -84,12 +77,34 @@ const Header = () => {
       </aside>
       <aside className={scss.header_right}>
         <div className={scss.header__language}>
-          <p onClick={en}>En</p>
-          <p onClick={ru}>Ру</p>
+          <p
+            onClick={en}
+            className={
+              !lan ? scss.header__lan_isActive : scss.header__lan_notActive
+            }
+          >
+            En
+          </p>
+          <p
+            onClick={ru}
+            className={
+              lan ? scss.header__lan_isActive : scss.header__lan_notActive
+            }
+          >
+            Ру
+          </p>
         </div>
         <Button title={t("header.button")} withArrow={false} />
       </aside>
-      {modal}
+      <footer
+        className={isModalOpen ? scss.modal_isActive : scss.modal_notActive}
+        onClick={handleClick}
+      >
+        <main onClick={(event) => event.stopPropagation()}>
+          <h2>{t("header.our_services")}</h2>
+          <nav>{modal__navs}</nav>
+        </main>
+      </footer>
     </section>
   );
 };
