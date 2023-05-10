@@ -1,0 +1,35 @@
+.nextArrow.nextArrow,
+.prevArrow.prevArrow {
+    display: block;
+  top: 109%;
+  width: fit-content;
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+  justify-content: space-between;
+  .svg.svg path {
+    fill: #262626;
+  }
+  .slider__item.slider__item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #262626;
+  }
+  &::before {
+    content: "";
+  }
+}
+.prevArrow.prevArrow {
+  left: 2%;
+}
+.nextArrow.nextArrow {
+  right: 1%;
+  .svg.svg {
+    transform: rotate(180deg) !important;
+  }
+}

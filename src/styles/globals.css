@@ -28,6 +28,15 @@ a {
   margin-left: auto;
 }
 
+.slick-slider{
+  width: 100%;
+}
+.slick-track{
+  display: flex;
+}
+.slick-slide>div{
+  margin: 0px 16px;
+}
 @media (min-width: 576px) {
   .container,
   .container-sm {
