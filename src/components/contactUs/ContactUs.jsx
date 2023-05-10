@@ -38,13 +38,13 @@ const ContactUs = () => {
             <div className={scss.info__btns}>
               <div className={scss.btns__project}>
                 <Button
-                  title={"button__reuseble.project"}
+                  title={"button__reusable.project"}
                   variant={"btn__light_blue"}
                 />
               </div>
               <div className={scss.btns__mail}>
                 <Button
-                  title={"button__reuseble.mail"}
+                  title={"button__reusable.mail"}
                   variant={"btn__no_bg"}
                 />
               </div>

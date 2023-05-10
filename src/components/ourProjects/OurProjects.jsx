@@ -71,7 +71,7 @@ const OurProjects = () => {
               ))}
             </div>
             <Button
-              title={"button__reuseble.site"}
+              title={"button__reusable.site"}
               variant={"btn__no_bg"}
               withArrow={true}
             />

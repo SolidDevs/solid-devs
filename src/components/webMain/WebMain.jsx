@@ -16,7 +16,7 @@ const WebMain = () => {
         <div className={scss.content__description}>
           <p>{t("webMain.description")}</p>
         </div>
-        <Button title={t("button__reuseble.project")} withArrow={true} variant='btn__light_blue' />
+        <Button title={t("button__reusable.project")} withArrow={true} variant='btn__light_blue' />
       </div>
     ),
     [t]
