@@ -1,49 +1,49 @@
-export const navs = [
+export const header__navs = [
   {
-    link: "/aboutUs",
-    text: "header.about",
+    path: "/aboutUs",
+    title: "header.about",
   },
   {
-    link: "/carier",
-    text: "header.career",
+    path: "/carier",
+    title: "header.career",
   }
 ];
 
-export const  modal_navs = [
+export const  service__navs = [
   {
-    text : "header.mvp",
-    link : "/mvp"
+    title : "header.mvp",
+    path : "/mvp"
   },
   {
-    text : "header.ux-ui",
-    link : "/ux-ui"
+    title : "header.ux-ui",
+    path : "/ux-ui"
   },
   {
-    text : "header.mobile",
-    link : "/mobile"
+    title : "header.mobile",
+    path : "/mobile"
   },
   {
-    text : "header.chat",
-    link : "/chat"
+    title : "header.chat",
+    path : "/chat"
   }
 ]
-export const cntModal_inputs = [
+export const inputs = [
   {
-    text : "header.your-name",
+    title : "header.your-name",
     name : "name",
     id: 1
   },
   {
-    text : "header.company",
+    title : "header.company",
     name : "company",
     id : 2
   },{
-    text : "header.email",
+    title : "header.email",
     name : "email",
     id : 3
   },
   {
-    text : "header.number",
+    title : "header.number",
     name : "number",
     id : 4
   }

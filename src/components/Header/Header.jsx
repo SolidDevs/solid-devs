@@ -6,19 +6,22 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Button from "../Button/Button";
 import i18n from "i18next";
-import { navs } from "@/constants/header";
-import { modal_navs } from "@/constants/header";
-import { cntModal_inputs } from "@/constants/header";
-import krestik from "/public/images/Header/krestic.svg";
+import { header__navs } from "@/constants/header";
+import { service__navs} from "@/constants/header";
+import { inputs } from "@/constants/header";
+import close from "/public/images/Header/krestic.svg";
 
 const Header = () => {
   const { t, language } = i18n;
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isCntModalOpen, setIsCntModalOpen] = useState(false);
+  const [isContactModalOpen, setIsCntModalOpen] = useState(false);
   const [lan, setLan] = useState(false);
   const { route } = useRouter();
   const handleClick = () => setIsModalOpen(!isModalOpen);
-  const handleButtonClick = () => setIsCntModalOpen(!isCntModalOpen);
+  const handleButtonClick = () => {
+    setIsCntModalOpen(!isContactModalOpen);
+    setIsModalOpen(false)
+  }
   const [inputValues, setInputValues] = useState({
     username: "",
     number: "",
@@ -39,32 +42,32 @@ const Header = () => {
   };
 
   useEffect(() => {
-    document.body.style.height = isCntModalOpen ? "100vh" : "auto";
-    document.body.style.overflow = isCntModalOpen ? "hidden" : "visible";
-  }, [isCntModalOpen]);
+    document.body.style.height = isContactModalOpen ? "100vh" : "auto";
+    document.body.style.overflow = isContactModalOpen ? "hidden" : "visible";
+  }, [isContactModalOpen]);
 
   const handleInputChange = (e) => {
-    inputValues;
-    const { name, value } = e.target;
-    setInputValues((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+    const formData = new FormData(e.target);
+    const requestData = {};
+    for (let [name, value] of formData.entries()) {
+      requestData[name] = value;
+    };
+  }
+
 
   const headerNavs = useMemo(
     () =>
-      navs.map(({ link, text }) => (
+      header__navs.map(({ path, title }) => (
         <Link
-          key={link}
-          href={link}
+          key={path}
+          href={path}
           className={
-            route === link
-              ? scss.header__nav_isActive
+            route === path
+              ? scss.header__nav_active
               : scss.header__nav_notActive
           }
         >
-          <p>{t(text)}</p>
+          <p>{t(title)}</p>
         </Link>
       )),
     [route, language]
@@ -72,19 +75,19 @@ const Header = () => {
 
   const modal__navs = useMemo(
     () =>
-      modal_navs.map(({ text, link }) => (
-        <Link key={link} href={link} className={scss.modal__nav}>
-          {t(text)}
+      service__navs.map(({ title, path }) => (
+        <Link key={path} href={path} className={scss.modal__nav}>
+          {t(title)}
         </Link>
       )),
     [language]
   );
 
-  const cnt_inputs = useMemo(
+  const contact__inputs = useMemo(
     () =>
-      cntModal_inputs.map(({ text, id, name }) => (
+      inputs.map(({ title, id, name }) => (
         <input
-          placeholder={t(text)}
+          placeholder={t(title)}
           type="text"
           key={id}
           name={name}
@@ -98,8 +101,8 @@ const Header = () => {
     <section className={scss.header}>
       <header
         className={
-          isCntModalOpen
-            ? scss.header__cntModal_isActive
+          isContactModalOpen
+            ? scss.header__cntModal_active
             : scss.header__cntModal_notActive
         }
         onClick={handleButtonClick}
@@ -111,14 +114,14 @@ const Header = () => {
           <header>
             <h1>{t("header.your-project")}</h1>
             <Image
-              src={krestik}
+              src={close}
               width={26}
               height={26}
               onClick={handleButtonClick}
-              alt="krestic"
+              alt="close"
             />
           </header>
-          <main>{cnt_inputs}</main>
+          <main>{contact__inputs}</main>
           <footer>
             <input
               placeholder={t("header.us-help")}
@@ -142,7 +145,7 @@ const Header = () => {
             className={
               !isModalOpen
                 ? scss.header__option_notActive
-                : scss.header__option_isActive
+                : scss.header__option_active
             }
             onClick={handleClick}
           >
@@ -156,7 +159,7 @@ const Header = () => {
           <p
             onClick={en}
             className={
-              !lan ? scss.header__lan_isActive : scss.header__lan_notActive
+              !lan ? scss.header__lan_active : scss.header__lan_notActive
             }
           >
             En
@@ -164,7 +167,7 @@ const Header = () => {
           <p
             onClick={ru}
             className={
-              lan ? scss.header__lan_isActive : scss.header__lan_notActive
+              lan ? scss.header__lan_active : scss.header__lan_notActive
             }
           >
             Ру
@@ -176,7 +179,7 @@ const Header = () => {
         </label>
       </aside>
       <footer
-        className={isModalOpen ? scss.modal_isActive : scss.modal_notActive}
+        className={isModalOpen ? scss.modal_active : scss.modal_notActive}
         onClick={handleClick}
       >
         <main onClick={(event) => event.stopPropagation()}>
