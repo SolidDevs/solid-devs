@@ -16,7 +16,7 @@ export const data_f_priority = [
     icon: "/images/webServices/check-mark.png",
   },
   {
-    title: "benefitAndStatistic.limited__com-tion",
+    title: "benefitAndStatistic.barrier",
     icon: "/images/webServices/check-mark.png",
   },
   {

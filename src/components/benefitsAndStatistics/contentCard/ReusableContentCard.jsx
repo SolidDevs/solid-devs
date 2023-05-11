@@ -7,7 +7,7 @@ const ReusableContentCard = ({ title, icon, variant, accounting }) => {
   const { t } = useTranslation();
   const renderContent = useMemo(() => {
     if (variant == "statistic") {
-      return <p>{accounting}</p>;
+      return <p>{accounting}+</p>;
     } else {
       return <Image src={icon} alt="icon" width={27} height={19} />;
     }

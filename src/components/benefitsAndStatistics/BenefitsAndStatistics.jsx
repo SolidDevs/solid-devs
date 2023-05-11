@@ -10,7 +10,7 @@ const BenefitsAndStatistics = ({ variant }) => {
   const { language } = i18n;
   let data = variant == "statistic" ? data_f_information : data_f_priority;
 
-  const showRender = useMemo(
+  const renderCards = useMemo(
     () =>
       data.map((item, index) => (
         <ReusableContentCard
@@ -44,7 +44,7 @@ const BenefitsAndStatistics = ({ variant }) => {
     >
       <div className="container">
         {renderHeading}
-        <div className={scss.priority__cards}>{showRender}</div>
+        <div className={scss.priority__cards}>{renderCards}</div>
       </div>
       {renderLine}
     </div>
