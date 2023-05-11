@@ -8,7 +8,7 @@ const WebServicePage = () => {
   return (
     <>
       <Header />
-      <ReusableMainContent data={webMain}/>
+      <ReusableMainContent data={webMain} />
       <ServicesAndProcess />
       <ServicesAndProcess variant="process" />
       <ContactUs />
