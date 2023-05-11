@@ -34,17 +34,6 @@ const Header = () => {
     change();
   };
 
-  useEffect(() => {
-    if(isCntModalOpen) {
-      document.body.style.height = '100vh'
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.height = 'auto'
-      document.body.style.overflow = 'visible'
-    }
-  }, [isCntModalOpen])
-
-
   const handleInputChange = (e) => {
     inputValues
     const { name, value } = e.target;
