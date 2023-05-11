@@ -4,15 +4,16 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProcess";
 import ReusableMainContent from "@/components/webMain/WebMain";
 import { chatMain } from "@/constants/reusableMain";
+import { chatWeb } from "@/constants/reusebleService";
 
 const ChatDevPage = () => {
   return (
     <>
       <Header />
       <ReusableMainContent data={chatMain} />
-      <ServicesAndProcess />
-      <ServicesAndProcess variant={"process"} />
-      <ServicesAndProcess />
+      <ServicesAndProcess data={chatWeb}/>
+      {/* <ServicesAndProcess variant={"process"} /> */}
+      {/* <ServicesAndProcess /> */}
       <ContactUs />
       <Footer />
     </>

@@ -1,13 +1,14 @@
 import { webServicesData } from "@/constants/services";
 import { proccessData } from "@/constants/process";
-import scss from "./ServicesAndProcess.module.scss"
+import scss from "./ServicesAndProcess.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ReusableCard from "./card/ReusableCard";
 
-const ServicesAndProcess = ({ variant }) => {
+const ServicesAndProcess = ({ variant, data }) => {
   const { t } = useTranslation();
-  let data = variant == "process" ? proccessData : webServicesData
+
+  console.log(data);
 
   const reasonsRender = useMemo(
     () =>
@@ -21,18 +22,13 @@ const ServicesAndProcess = ({ variant }) => {
       )),
     [data, variant]
   );
-
   const renderTitle = useMemo(() => {
     if (variant == "process") {
-      return (
-        <h2>{t("webMain.processTitle")}</h2>
-      )
+      return <h2>{t(data.map((title) => title.desc))}</h2>;
     } else {
-      return (
-        <h2>{t("webMain.serviceTitle")}</h2>
-      )
+      return <h2>{t(data.map((title) => title.desc))}</h2>;
     }
-  }, [variant])
+  }, [variant]);
   return (
     <div className={variant == "process" ? scss.processMain : scss.serviceMain}>
       <div className="container">

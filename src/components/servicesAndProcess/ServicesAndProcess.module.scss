@@ -37,7 +37,7 @@ $line__height: calc(3vw + 2vh);
 
 .main__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 
   @media (max-width: 1024px) {

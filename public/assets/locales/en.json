@@ -62,7 +62,7 @@
     "contact": "Contact",
     "project": "Let's discuss your project",
     "site": "Go to site",
-    "mail": "Mail" 
+    "mail": "Mail"
   },
   "serviceBlock": {
     "title": "Software development services we kick ass on",
@@ -191,5 +191,45 @@
     "title": "Contact us for a free estimate",
     "subtitle": "After you fill out the application form, we will contact you and discuss your idea! Don't like filling out forms? Then send an email.",
     "card__title": "Hello! I would like to order from you the development of an application for my company."
+  },
+  "uiWeb": {
+    "title": "UX/UI design services,which we provide",
+    "card__title": "Web Application Design",
+    "card__subtitle": "A creative and understandable website design significantly increases the chances of a visitor to complete the target action we need. There should be no unnecessary distractions that will affect site navigation. The role of design is to create a pleasant atmosphere for the selected product or service and encourage users to make a choice."
+  },
+  "uiProcess": {
+    "title": "Process Design",
+    "card__title": "Analytics",
+    "card__subtitle": "This stage provides the team and the client with valuable information about the market, product and audience: how saturated the market is, what users want to have, what design services will be required."
+  },
+  "mobileWeb": {
+    "title": "Development Services mobile applications,which we provide",
+    "card__title": "Web Application Development",
+    "card__subtitle": "Since people spend a lot of time on the Internet, a well-built website becomes a top priority for a business. Our team provides customized web development services, meaning we create websites and web applications according to your requirements."
+  },
+  "mobileProcess": {
+    "title": "Mobile development process",
+    "card__title": "Design",
+    "card__subtitle": "This step includes wireframing, creating a clickable prototype, and creating a final usable UI/UX design."
+  },
+  "mvpWeb": {
+    "title": "Development Services custom applications MVPs we provide",
+    "card__title": "Business analysis",
+    "card__subtitle": "Before the process of creating an MVP, our team researches your application idea, business model, target audience and competitors in order to assess the requirements and preferences of the market."
+  },
+  "mvpProcess": {
+    "title": "MVP software development process",
+    "card__title": "Brainstorm, Analysis",
+    "card__subtitle": "When you come to us with an MVP idea, we help define it and then get to work."
+  },
+  "mvp": {
+    "title": "Why do you need an MVP?",
+    "card__title": "Minimize costs",
+    "card__subtitle": "A full blown application can cost millions of dollars to build, but without proper development, it can never pay off. MVP minimizes risk because at every step of the process you will know what works and what doesn't. It reveals the preferences of the users and therefore the features to which they will be loyal."
+  },
+  "chatWeb": {
+    "title": "What are the types of chat apps we provide",
+    "card__title": "Communication",
+    "card__subtitle": "You can easily stay in touch with friends, family and colleagues, exchange text and multimedia messages, make audio and video calls and more."
   }
 }
