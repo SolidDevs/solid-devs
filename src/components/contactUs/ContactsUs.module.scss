@@ -1,0 +1,105 @@
+@import "../../styles/variables.scss";
+.contactUs {
+  margin-bottom: 70px;
+  .contactUs__line {
+    border: 1px solid #b8b8b8;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+  .contactUs__wrapper {
+    display: flex;
+    align-items: center;
+    .contactUs__info {
+      width: 100%;
+      .info__title {
+        width: 90%;
+        p {
+          margin: 0;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 48px;
+          line-height: 60px;
+          color: #262626;
+        }
+      }
+      .info__subtitle {
+        width: 80%;
+        p {
+          margin: 15px 0px 30px 0px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 19px;
+          line-height: 28px;
+          color: $darkGrayText;
+        }
+      }
+      .info__btns {
+        display: flex;
+        gap: 30px;
+        .btns__mail {
+          button {
+            padding: 15px 90px;
+          }
+        }
+      }
+    }
+    .contactUs__cards {
+      background: $white;
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 18px;
+      gap: 20px;
+      height: 100%;
+      .contactUs__card:nth-child(2) {
+        margin-left: 30%;
+        .card__wrapper {
+          flex-direction: row-reverse;
+          .card__line {
+            margin-left: 0;
+            margin-right: 21px;
+          }
+          .card__title {
+            margin-left: 0;
+            margin-right: 17px;
+          }
+        }
+      }
+      .contactUs__card {
+        background: $blue;
+        padding: 10px 20px;
+        width: 70%;
+        .card__line {
+          border-left: 1px solid $white;
+          height: 55px;
+          margin-left: 21px;
+        }
+        .card__wrapper {
+          display: flex;
+          align-items: center;
+          .card__title {
+            margin-left: 17px;
+            p {
+              margin: 0;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 15px;
+              line-height: 23px;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contactUs {
+    .contactUs__wrapper {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+}
