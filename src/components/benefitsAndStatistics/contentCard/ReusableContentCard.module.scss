@@ -1,15 +1,15 @@
 @import "../../../styles/variables.scss";
 
-.card {
-  padding: 20px 20px;
+.cards {
+  padding: 0px 25px;
   background: #f1f1f1;
   border: 1px solid #e6e6e6;
   display: flex;
   align-items: center;
 
-  .card__icon {
-    width: 59px;
-    height: 59px;
+  .cards__pictogram {
+    width: 56px;
+    height: 56px;
     background-color: $blue;
     border-radius: 3px;
     display: flex;
@@ -26,7 +26,7 @@
     height: 58px;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 21px;
     display: flex;
     align-items: center;
     line-height: 29px;
@@ -43,8 +43,8 @@
   }
 }
 @media (max-width: 992px) {
-  .card {
-    .card__icon {
+  .cards {
+    .cards__pictogram {
       width: 54px;
       height: 54px;
     }
@@ -56,7 +56,7 @@
   }
 }
 @media (max-width: 364px) {
-  .card {
+  .cards {
     h3 {
       width: 200px;
       font-size: 18px;
@@ -65,8 +65,8 @@
   }
 }
 @media (max-width: 336px) {
-  .card {
-    .card__icon {
+  .cards {
+    .cards__pictogram {
       width: 45px;
       height: 45px;
     }
@@ -78,9 +78,9 @@
   }
 }
 @media (max-width: 325px) {
-  .card {
-    padding: 5px 15px;
-    .card__icon {
+  .cards {
+    padding: 0px 15px;
+    .cards__pictogram {
       width: 40px;
       height: 40px;
     }
@@ -92,9 +92,9 @@
   }
 }
 @media (max-width: 325px) {
-  .card {
-    padding: 5px 10px;
-    .card__icon {
+  .cards {
+    padding: 0px 10px;
+    .cards__pictogram {
       width: 35px;
       height: 35px;
     }

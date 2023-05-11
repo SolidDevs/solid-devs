@@ -11,7 +11,7 @@ const WebServicePage = () => {
       <ServicesAndProcess />
       <ServicesAndProcess variant="process" />
       <BenefitsAndStatistics />
-      <BenefitsAndStatistics variant="process" />
+      <BenefitsAndStatistics variant="statistic" />
       <Footer />
     </>
   );

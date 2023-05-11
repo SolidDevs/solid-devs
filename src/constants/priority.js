@@ -1,26 +1,26 @@
-export const benefitsData = [
+export const data_f_priority = [
   {
-    title: "benefitAndStatistic.firstTitle",
+    title: "benefitAndStatistic.connection",
     icon: "/images/webServices/check-mark.png",
   },
   {
-    title: "benefitAndStatistic.secondTitle",
+    title: "benefitAndStatistic.performance",
     icon: "/images/webServices/check-mark.png",
   },
   {
-    title: "benefitAndStatistic.thirdTitle",
+    title: "benefitAndStatistic.storage",
     icon: "/images/webServices/check-mark.png",
   },
   {
-    title: "benefitAndStatistic.fourth",
+    title: "benefitAndStatistic.assistance",
     icon: "/images/webServices/check-mark.png",
   },
   {
-    title: "benefitAndStatistic.fifth",
+    title: "benefitAndStatistic.limited__com-tion",
     icon: "/images/webServices/check-mark.png",
   },
   {
-    title: "benefitAndStatistic.sixth",
+    title: "benefitAndStatistic.conversions",
     icon: "/images/webServices/check-mark.png",
   },
 ];
