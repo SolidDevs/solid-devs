@@ -9,7 +9,7 @@ import i18n from "i18next";
 import { navs } from "@/constants/header";
 import { modal_navs } from "@/constants/header";
 import { cntModal_inputs } from "@/constants/header";
-import krestik from "/public/images/Header/krestic.svg"
+import krestik from "/public/images/Header/krestic.svg";
 
 const Header = () => {
   const { t, language } = i18n;
@@ -20,7 +20,11 @@ const Header = () => {
   const handleClick = () => setIsModalOpen(!isModalOpen);
   const handleButtonClick = () => setIsCntModalOpen(!isCntModalOpen);
   const [inputValues, setInputValues] = useState({
-    username: "", number: "", email : "", company : "" , usHelp : ""
+    username: "",
+    number: "",
+    email: "",
+    company: "",
+    usHelp: "",
   });
   const change = () => {
     i18n.changeLanguage(!lan ? "ru" : "en");
@@ -34,12 +38,17 @@ const Header = () => {
     change();
   };
 
+  useEffect(() => {
+    document.body.style.height = isCntModalOpen ? "100vh" : "auto";
+    document.body.style.overflow = isCntModalOpen ? "hidden" : "visible";
+  }, [isCntModalOpen]);
+
   const handleInputChange = (e) => {
-    inputValues
+    inputValues;
     const { name, value } = e.target;
     setInputValues((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -72,26 +81,54 @@ const Header = () => {
   );
 
   const cnt_inputs = useMemo(
-    () => cntModal_inputs.map(({text,id,name}) => (
-      <input placeholder={t(text)} type="text" key={id} name={name} onChange={handleInputChange} />
-    ) ),
+    () =>
+      cntModal_inputs.map(({ text, id, name }) => (
+        <input
+          placeholder={t(text)}
+          type="text"
+          key={id}
+          name={name}
+          onChange={handleInputChange}
+        />
+      )),
     [language]
   );
 
   return (
     <section className={scss.header}>
-      <header className={ isCntModalOpen ? scss.header__cntModal_isActive : scss.header__cntModal_notActive} onClick={handleButtonClick}>
-        <section className={scss.header__cntModal} onClick={(event) => event.stopPropagation()}>
+      <header
+        className={
+          isCntModalOpen
+            ? scss.header__cntModal_isActive
+            : scss.header__cntModal_notActive
+        }
+        onClick={handleButtonClick}
+      >
+        <section
+          className={scss.header__cntModal}
+          onClick={(event) => event.stopPropagation()}
+        >
           <header>
             <h1>{t("header.your-project")}</h1>
-            <Image src={krestik} width={26} height={26} onClick={handleButtonClick} alt="krestic"/>
+            <Image
+              src={krestik}
+              width={26}
+              height={26}
+              onClick={handleButtonClick}
+              alt="krestic"
+            />
           </header>
-          <main>
-            {cnt_inputs}
-          </main>
+          <main>{cnt_inputs}</main>
           <footer>
-            <input placeholder={t("header.us-help")} type="text" name="usHelp" onChange={handleInputChange}/>
-            <button className={scss.header__button} onClick={handleButtonClick}>{t("header.send")}</button>
+            <input
+              placeholder={t("header.us-help")}
+              type="text"
+              name="usHelp"
+              onChange={handleInputChange}
+            />
+            <button className={scss.header__button} onClick={handleButtonClick}>
+              {t("header.send")}
+            </button>
           </footer>
         </section>
       </header>
@@ -133,10 +170,10 @@ const Header = () => {
             Ру
           </p>
         </div>
-        <label onClick={handleButtonClick}> <Button
-          title={t("header.button")}
-          withArrow={false}
-        /></label>
+        <label onClick={handleButtonClick}>
+          {" "}
+          <Button title={t("header.button")} withArrow={false} />
+        </label>
       </aside>
       <footer
         className={isModalOpen ? scss.modal_isActive : scss.modal_notActive}
