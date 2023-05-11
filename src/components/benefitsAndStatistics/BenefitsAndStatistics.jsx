@@ -6,10 +6,11 @@ import { data_f_priority } from "@/constants/priority";
 import { data_f_information } from "@/constants/information";
 
 const BenefitsAndStatistics = ({ variant }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
   let data = variant == "statistic" ? data_f_information : data_f_priority;
 
-  const reasonsRender = useMemo(
+  const showRender = useMemo(
     () =>
       data.map((item, index) => (
         <ReusableContentCard
@@ -28,20 +29,22 @@ const BenefitsAndStatistics = ({ variant }) => {
     }
   }, [variant]);
 
-  const renderTitle = useMemo(() => {
+  const renderHeading = useMemo(() => {
     if (variant == "statistic") {
       return <h2>{t("benefitAndStatistic.information")}</h2>;
     } else {
       return <h2>{t("benefitAndStatistic.priority")}</h2>;
     }
-  }, [variant]);
+  }, [variant, language]);
   return (
     <div
-      className={variant == "statistic" ? scss.statisticCard : scss.priorityCard}
+      className={
+        variant == "statistic" ? scss.statisticCard : scss.priorityCard
+      }
     >
       <div className="container">
-        {renderTitle}
-        <div className={scss.priority__cards}>{reasonsRender}</div>
+        {renderHeading}
+        <div className={scss.priority__cards}>{showRender}</div>
       </div>
       {renderLine}
     </div>
