@@ -27,3 +27,24 @@ export const  modal_navs = [
     link : "/chat"
   }
 ]
+export const cntModal_inputs = [
+  {
+    text : "header.your-name",
+    name : "name",
+    id: 1
+  },
+  {
+    text : "header.company",
+    name : "company",
+    id : 2
+  },{
+    text : "header.email",
+    name : "email",
+    id : 3
+  },
+  {
+    text : "header.number",
+    name : "number",
+    id : 4
+  }
+]

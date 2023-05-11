@@ -127,6 +127,9 @@
         background: #f1f1f1;
       }
     }
+    label{
+      
+    }
   }
   .modal_isActive {
     position: fixed;
@@ -136,7 +139,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
     border-top: 1px solid #dadada;
-    animation: fadeIn 0.3s ease forwards; 
+    animation: fadeIn 0.3s ease forwards;
     main {
       background: $white;
       padding: 30px;
@@ -151,10 +154,10 @@
         color: #262626;
       }
       nav {
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
         .modal__nav {
           font-style: normal;
           font-weight: 400;
@@ -176,7 +179,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
     border-top: 1px solid #dadada;
-    animation: fadeOut 0.3s ease forwards; 
+    animation: fadeOut 0.3s ease forwards;
     main {
       background: $white;
       padding: 30px;
@@ -191,10 +194,10 @@
         color: #262626;
       }
       nav {
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
         .modal__nav {
           font-style: normal;
           font-weight: 400;
@@ -208,7 +211,180 @@
       }
     }
   }
+  .header__cntModal_notActive {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100vh;
+    animation: fadeOut 0.1s ease forwards;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    padding-top: 144px;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        color: #262626;
+        margin: 0;
+      }
+      img{
+        cursor: pointer;
+      }
+    }
+    .header__cntModal {
+      background: $white;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      height: 466px;
+      padding: 40px;
+      width: 796px;
+      main {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 32px;
+        input {
+          padding-left: 20px;
+          background: $white;
+          border: 1px solid #b8b8b8;
+          border-radius: 3px;
+          padding: 10px 20px;
+          width: 100%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #797979;
+        }
+      }
+      footer {
+        input {
+          height: 97px;
+          padding-left: 20px;
+          background: $white;
+          border: 1px solid #b8b8b8;
+          border-radius: 3px;
+          padding: 10px 20px 40px 20px;
+          width: 100%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #797979;
+        }
+        .header__button {
+          width: 100%;
+          background: $white;
+          border: 1px solid #0e61fe;
+          border-radius: 3px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #0e61fe;
+          padding: 10px 20px;
+          margin-top: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .header__cntModal_isActive {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100vh;
+    animation: fadeIn 0.1s ease forwards;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    padding-top: 144px;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        color: #262626;
+        margin: 0;
+      }
+      img{
+        cursor: pointer;
+      }
+    }
+    .header__cntModal {
+      background: $white;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      height: 466px;
+      padding: 40px;
+      width: 796px;
+      main {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 32px;
+        input {
+          padding-left: 20px;
+          background: $white;
+          border: 1px solid #b8b8b8;
+          border-radius: 3px;
+          padding: 10px 20px;
+          width: 100%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #797979;
+        }
+      }
+      footer {
+        input {
+          height: 97px;
+          padding-left: 20px;
+          background: $white;
+          border: 1px solid #b8b8b8;
+          border-radius: 3px;
+          padding: 10px 20px 40px 20px;
+          width: 100%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #797979;
+        }
+        .header__button {
+          width: 100%;
+          background: $white;
+          border: 1px solid #0e61fe;
+          border-radius: 3px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #0e61fe;
+          padding: 10px 20px;
+          margin-top: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
