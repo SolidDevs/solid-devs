@@ -22,7 +22,7 @@ const ReusableCard = ({ title, description, icon, variant, numeration }) => {
         {renderContent}
       </div>
       <h3>{t(title)}</h3>
-      <p>{t(description)}</p>
+      <p className={scss.card__description}>{t(description)}</p>
     </div>
   );
 };
