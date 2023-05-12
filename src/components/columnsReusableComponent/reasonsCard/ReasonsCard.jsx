@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import scss from "./ReasonsCard.module.scss";
-import React, { useMemo } from "react";
+import React from "react";
 import Image from "next/image";
-import icon from "../../../../public/images/webServices/serviceIcon.png"
+import icon from "../../../../public/images/webServices/serviceIcon.png";
 
-const ReasonsCard = ({ title, description}) => {
+const ReasonsCard = ({ title, description }) => {
   const { t } = useTranslation();
   return (
     <div className={scss.reasons__card}>
