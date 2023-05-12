@@ -3,7 +3,7 @@
 $rubber__padding__size: calc(6vw + 5vh);
 $step__height: calc(5vw + 4vh);
 $step__width: calc(16vw + 16vw);
-$step__numeration__width: calc(4vw + 2vh);
+$step__numeration__width: calc(4vw + -1.5vh);
 
 .carier__wrapper {
   display: flex;
@@ -28,7 +28,7 @@ $step__numeration__width: calc(4vw + 2vh);
 
       .step__numeration {
         width: $step__numeration__width;
-        background-color: $blue;
+        background-color: #6B6B6B;;
         color: $white;
         display: flex;
         align-items: center;

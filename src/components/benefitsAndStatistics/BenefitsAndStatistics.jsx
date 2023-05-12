@@ -1,16 +1,15 @@
-import { webServicesData } from "@/constants/services";
-import { proccessData } from "@/constants/process";
-import scss from "./ServicesAndProcess.module.scss";
+import scss from "./BenefitsAndStatistics.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import ReusableCard from "./card/ReusableCard";
+import ReusableContentCard from "./contentCard/ReusableContentCard";
 
-const ServicesAndProcess = ({ variant, data }) => {
+const BenefitsAndStatistics = ({ variant, data }) => {
   const { t } = useTranslation();
-  const reasonsRender = useMemo(
+
+  const renderCards = useMemo(
     () =>
       data.map((item, index) => (
-        <ReusableCard
+        <ReusableContentCard
           key={`${item.title}_${index}`}
           {...item}
           variant={variant}
@@ -19,6 +18,13 @@ const ServicesAndProcess = ({ variant, data }) => {
       )),
     [data, variant]
   );
+
+  const renderLine = useMemo(() => {
+    if (variant == "statistic") {
+      return <div className={scss.priority__line}></div>;
+    }
+  }, [variant]);
+
   const renderTitle = useMemo(() => {
     if (variant == "process") {
       return <h2>{t(data.map((title) => title.desc))}</h2>;
@@ -27,13 +33,18 @@ const ServicesAndProcess = ({ variant, data }) => {
     }
   }, [variant]);
   return (
-    <div className={variant == "process" ? scss.processMain : scss.serviceMain}>
+    <div
+      className={
+        variant == "statistic" ? scss.statisticCard : scss.priorityCard
+      }
+    >
       <div className="container">
         {renderTitle}
-        <div className={scss.main__cards}>{reasonsRender}</div>
+        <div className={scss.priority__cards}>{renderCards}</div>
       </div>
+      {renderLine}
     </div>
   );
 };
 
-export default ServicesAndProcess;
+export default BenefitsAndStatistics;

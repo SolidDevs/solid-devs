@@ -124,7 +124,9 @@
     }
   },
   "reasons": {
-    "title": "Why Solid?"
+    "heading": "Why Solid?",
+    "compound": "Team of experts",
+    "skills": "Our team consists of professionals with experience in such areas as software development, design, testing, marketing and sales."
   },
   "carier": {
     "btnText": "Send resume",
@@ -231,5 +233,19 @@
     "title": "What are the types of chat apps we provide",
     "card__title": "Communication",
     "card__subtitle": "You can easily stay in touch with friends, family and colleagues, exchange text and multimedia messages, make audio and video calls and more."
+  },
+  "chatPriority": {
+    "title": "Benefits of Chat Application Development",
+    "connection": "Real time communication time",
+    "performance": "Increased performance",
+    "storage": "File storage and sharing",
+    "assistance": "Faster support",
+    "barrier": "Minor or missing barriers to communication",
+    "conversions": "Highest conversion rate"
+  },
+  "chatInfo": {
+    "title": "Solid Statistics",
+    "experience": "Many years of development experience chat applications",
+    "successes": "Successfully developed chat applications"
   }
 }

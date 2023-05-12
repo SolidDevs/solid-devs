@@ -2,9 +2,10 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import ContactUs from "@/components/contactUs/ContactUs";
 import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProcess";
+import BenefitsAndStatistics from "@/components/benefitsAndStatistics/BenefitsAndStatistics";
 import ReusableMainContent from "@/components/webMain/WebMain";
 import { chatMain } from "@/constants/reusableMain";
-import { chatWeb } from "@/constants/reusebleService";
+import { chatInformation, chatPriority, chatWeb } from "@/constants/reusebleService";
 
 const ChatDevPage = () => {
   return (
@@ -12,8 +13,8 @@ const ChatDevPage = () => {
       <Header />
       <ReusableMainContent data={chatMain} />
       <ServicesAndProcess data={chatWeb}/>
-      {/* <ServicesAndProcess variant={"process"} /> */}
-      {/* <ServicesAndProcess /> */}
+      <BenefitsAndStatistics data={chatPriority}/>
+      <BenefitsAndStatistics variant="statistic" data={chatInformation}/>
       <ContactUs />
       <Footer />
     </>
