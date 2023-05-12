@@ -16,7 +16,7 @@ const ReasonsBlock = () => {
   return (
     <div className={scss.main__reasons}>
       <div className="container">
-        <h2>{t("reasons.title")}</h2>
+        <h2>{t("reasons.heading")}</h2>
         <div className={scss.reasons__cards}>{reasonsRender}</div>
       </div>
       <div className={scss.reasons__line}></div>

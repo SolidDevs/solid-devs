@@ -78,7 +78,7 @@ a {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1320px;
+    max-width: 90%;
   }
 }
 .work__wrapper .slick-disabled > p {
