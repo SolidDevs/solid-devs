@@ -41,6 +41,8 @@ const Header = () => {
     change();
   };
 
+  
+
   useEffect(() => {
     document.body.style.height = isContactModalOpen ? "100vh" : "auto";
     document.body.style.overflow = isContactModalOpen ? "hidden" : "visible";
@@ -53,6 +55,7 @@ const Header = () => {
       ...prevInputValues,
       [name]: value,
     }));
+    localStorage.setItem("form", inputValues);
   };
 
   const headerNavs = useMemo(
