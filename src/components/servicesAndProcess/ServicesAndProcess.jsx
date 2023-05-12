@@ -1,5 +1,3 @@
-import { webServicesData } from "@/constants/services";
-import { proccessData } from "@/constants/process";
 import scss from "./ServicesAndProcess.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
