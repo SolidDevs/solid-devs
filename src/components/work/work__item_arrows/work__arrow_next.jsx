@@ -2,15 +2,16 @@ import scss from "../Work.module.scss";
 import { useRouter } from "next/router";
 
 export default function SampleNextArrow(props) {
-  const { className, onClick, setCounter, title, arr, counter } = props;
+  const { className, onClick, title, arr, counter, setState } = props;
   const router = useRouter()
 
   const pushToQueryNext = () => {
+
     if (counter == arr.length - 1) {
-      setCounter(7)
+      setState(7)
     } else {
       onClick()
-      setCounter((prev) => prev + 1)
+      setState(counter + 1)
       const path = {
         pathname: router.pathname,
         query: { work: title }

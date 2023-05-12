@@ -1,34 +1,34 @@
 export const workSliderData = [
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.idea",
+    description: "work.cards.ideaDesc",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.study",
+    description: "work.cards.studyDes",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.prototyping",
+    description: "work.cards.protoDesc",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.design",
+    description: "work.cards.designDes",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.dev",
+    description: "work.cards.devDesc",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.Review",
+    description: "work.cards.reviewDesc",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.testing",
+    description: "work.cards.testDesc",
   },
   {
-    title: "work.card__title",
-    description: "work.description",
+    title: "work.cards.launch",
+    description: "work.cards.launchDes",
   },
 ];

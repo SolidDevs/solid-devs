@@ -4,13 +4,13 @@ import { useRouter } from "next/router";
 
 export default function SamplePrevArrow(props) {
   const { t } = useTranslation("");
-  const { className, onClick, setCounter, title, counter } = props;
+  const { className, onClick, title, counter, setState } = props;
   const router = useRouter()
 
   const pushToQueryPrev = () => {
     if (counter != 0) {
+      setState(counter - 1)
       onClick()
-      setCounter((prev) => prev - 1)
       const path = {
         pathname: router.pathname,
         query: { work: title }
@@ -18,7 +18,7 @@ export default function SamplePrevArrow(props) {
       };
       router.push(path, path, { shallow: true });
     } else {
-      setCounter(0)
+      setState(0)
     }
   }
 

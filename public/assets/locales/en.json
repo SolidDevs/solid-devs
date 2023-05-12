@@ -94,10 +94,26 @@
   },
   "work": {
     "title": "How we are working?",
-    "card__title": "Idea",
-    "description": "Answering all your questions and refining your ideas",
     "Study": "Study",
-    "Back": "Back"
+    "Back": "Back",
+    "cards": {
+      "idea": "Idea",
+      "ideaDesc": "We will answer all your questions and refine your idea",
+      "study": "Study",
+      "studyDes": "Analysis of the market, competitors and target audience",
+      "prototyping": "Prototyping",
+      "protoDesc": "Creating a raw version of the app to see how it works.",
+      "design": "Design",
+      "designDes": "Making your application beautiful and usable.",
+      "dev": "Development",
+      "devDesc": "As a development company, we take full responsibility for the code.",
+      "Review": "Review",
+      "reviewDesc": "Cross-validation helps keep code clear and functional.",
+      "testing": "Testing",
+      "testDesc": "We use manual and automated tests.",
+      "launch": "Launch",
+      "launchDes": "We stay with you after launch to fix and update the solution."
+    }
   },
   "main": {
     "title": "Solid Devs",

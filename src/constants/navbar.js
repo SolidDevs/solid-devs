@@ -8,5 +8,12 @@ export const technologiesLinks = [
 ];
 
 export const workLinks = [
-  "Idea","Study","prototyping","Design","Development","Review","Testing","launch"
-]
+  "work.cards.idea",
+  "work.cards.study",
+  "work.cards.prototyping",
+  "work.cards.design",
+  "work.cards.dev",
+  "work.cards.Review",
+  "work.cards.testing",
+  "work.cards.launch",
+];

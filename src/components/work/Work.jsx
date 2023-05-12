@@ -1,9 +1,9 @@
 import { workLinks } from "@/constants/navbar";
 import SectionContainer from "../layoutComponent/SectionContainer";
-import Navbar from "../navbar/Navbar";
+import WorkNavbar from "../navbar/WorkNavbar";
 import scss from "./Work.module.scss";
 import { useTranslation } from "react-i18next";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef } from "react";
 import { workSliderData } from "@/constants/work";
 import Slider from "react-slick";
 import SampleNextArrow from "./work__item_arrows/work__arrow_next";
@@ -12,7 +12,15 @@ import SamplePrevArrow from "./work__item_arrows/work__arrow_prev";
 const Work = () => {
   const { t } = useTranslation("");
 
-  const [counter, setCounter] = useState(0);
+  const sliderRef = useRef(null);
+
+  const [state, setState] = useState(0)
+
+  const showElement = (index) => {
+    sliderRef?.current?.slickGoTo(index);
+  };
+
+  showElement(state);
 
   const settings = {
     dots: false,
@@ -20,8 +28,8 @@ const Work = () => {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow title={workLinks[counter + 1]} arr={workLinks} counter={counter} setCounter={setCounter} />,
-    prevArrow: <SamplePrevArrow title={workLinks[counter - 1]} arr={workLinks} counter={counter} setCounter={setCounter} />,
+    nextArrow: <SampleNextArrow setState={setState} title={workLinks[state + 1]} arr={workLinks} counter={state} />,
+    prevArrow: <SamplePrevArrow setState={setState} title={workLinks[state - 1]} arr={workLinks} counter={state} />,
   };
 
   const sliderCards = useMemo(
@@ -40,9 +48,9 @@ const Work = () => {
 
   return (
     <SectionContainer title={t("work.title")}>
-      <Navbar clickable={false} navbarLinks={workLinks} paramName={"work"} />
+      <WorkNavbar setState={setState} state={state} navbarLinks={workLinks} paramName={"work"} />
       <div className={`${scss.wrapper} work__wrapper`}>
-        <Slider {...settings}>{sliderCards}</Slider>
+        <Slider ref={sliderRef} {...settings}>{sliderCards}</Slider>
       </div>
     </SectionContainer>
   );
