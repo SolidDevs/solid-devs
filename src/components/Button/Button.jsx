@@ -12,11 +12,10 @@ const Button = ({ title, variant, withArrow }) => {
   } else if (variant === "btn__light_blue") {
     background__btn = scss.btn__light_blue;
   }
-
   let arrow = variant === "btn__no_bg" ? arrowBlack : arrowWhite;
   const render__btn = useMemo(
     () => (
-      <button className={background__btn}>
+      <button className={background__btn} style={{height: title == "Contact" || title == "Связаться" ? "42px" : "53px"}}>
         {t(title)}
         {withArrow && (
           <Image

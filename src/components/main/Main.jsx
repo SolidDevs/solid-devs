@@ -26,7 +26,7 @@ const Main = () => {
     <div className={scss.main}>
       <div className="container">
         {renderText}
-        <Button title={t("button_rauseble.project")} withArrow={true} />
+        <Button title={t("button__reusable.project")} withArrow={true} />
       </div>
     </div>
   );

@@ -1,26 +1,32 @@
 export const reasonsList = [
   {
-    title: "Команда экспертов.",
-    description: "Наша команда состоит из профессионалов с опытом работы в таких областях, как разработка ПО, дизайн, тестирование, маркетинг и продажи."
+    title: "reasons.compound",
+    description: "reasons.skills",
+    icon: "/images/webServices/serviceIcon.png",
   },
   {
-    title: "Команда экспертов.",
-    description: "Наша команда состоит из профессионалов с опытом работы в таких областях, как разработка ПО, дизайн, тестирование, маркетинг и продажи."
+    title: "reasons.compound",
+    description: "reasons.skills",
+    icon: "/images/webServices/serviceIcon.png",
   },
   {
-    title: "Команда экспертов.",
-    description: "Наша команда состоит из профессионалов с опытом работы в таких областях, как разработка ПО, дизайн, тестирование, маркетинг и продажи."
+    title: "reasons.compound",
+    description: "reasons.skills",
+    icon: "/images/webServices/serviceIcon.png",
   },
   {
-    title: "Команда экспертов.",
-    description: "Наша команда состоит из профессионалов с опытом работы в таких областях, как разработка ПО, дизайн, тестирование, маркетинг и продажи."
+    title: "reasons.compound",
+    description: "reasons.skills",
+    icon: "/images/webServices/serviceIcon.png",
   },
   {
-    title: "Команда экспертов.",
-    description: "Наша команда состоит из профессионалов с опытом работы в таких областях, как разработка ПО, дизайн, тестирование, маркетинг и продажи."
+    title: "reasons.compound",
+    description: "reasons.skills",
+    icon: "/images/webServices/serviceIcon.png",
   },
   {
-    title: "Команда экспертов.",
-    description: "Наша команда состоит из профессионалов с опытом работы в таких областях, как разработка ПО, дизайн, тестирование, маркетинг и продажи."
+    title: "reasons.compound",
+    description: "reasons.skills",
+    icon: "/images/webServices/serviceIcon.png",
   },
-]
+];
