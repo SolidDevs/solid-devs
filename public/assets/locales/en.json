@@ -62,7 +62,7 @@
     "contact": "Contact",
     "project": "Let's discuss your project",
     "site": "Go to site",
-    "mail": "Mail" 
+    "mail": "Mail"
   },
   "serviceBlock": {
     "title": "Software development services we kick ass on",
@@ -136,7 +136,9 @@
     }
   },
   "reasons": {
-    "title": "Why Solid?"
+    "heading": "Why Solid?",
+    "compound": "Team of experts",
+    "skills": "Our team consists of professionals with experience in such areas as software development, design, testing, marketing and sales."
   },
   "carier": {
     "btnText": "Send resume",
