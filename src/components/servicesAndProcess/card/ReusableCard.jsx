@@ -7,20 +7,14 @@ const ReusableCard = ({ title, description, icon, variant, numeration }) => {
   const { t } = useTranslation();
   const renderContent = useMemo(() => {
     if (variant == "process") {
-      return (
-        <p>{numeration}</p>
-      )
+      return <p>{numeration}</p>;
     } else {
-      return (
-        <Image src={icon} alt="icon" width={27} height={16} />
-      )
+      return <Image src={icon} alt="icon" width={27} height={16} />;
     }
-  }, [variant])
+  }, [variant]);
   return (
     <div className={scss.card}>
-      <div className={scss.card__icon}>
-        {renderContent}
-      </div>
+      <div className={scss.card__icon}>{renderContent}</div>
       <h3>{t(title)}</h3>
       <p className={scss.card__description}>{t(description)}</p>
     </div>
