@@ -12,39 +12,43 @@ export const header__navs = [
 export const  service__navs = [
   {
     title : "header.mvp",
-    path : "/mvp"
+    path : "/mvpDev"
   },
   {
     title : "header.ux-ui",
-    path : "/ux-ui"
+    path : "/uiDesign"
   },
   {
     title : "header.mobile",
-    path : "/mobile"
+    path : "/mobileDev"
   },
   {
     title : "header.chat",
-    path : "/chat"
+    path : "/chatDev"
   }
 ]
 export const inputs = [
   {
     title : "header.your-name",
     name : "name",
-    id: 1
+    id: 1,
+    type : "text"
   },
   {
     title : "header.company",
     name : "company",
-    id : 2
+    id : 2,
+    type: "text"
   },{
     title : "header.email",
     name : "email",
-    id : 3
+    id : 3,
+    type : "email"
   },
   {
     title : "header.number",
     name : "number",
-    id : 4
+    id : 4,
+    type : "number"
   }
 ]

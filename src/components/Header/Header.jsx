@@ -13,17 +13,17 @@ import close from "/public/images/Header/krestic.svg";
 
 const Header = () => {
   const { t, language } = i18n;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
   const [isContactModalOpen, setIsCntModalOpen] = useState(false);
   const [lan, setLan] = useState(false);
   const { route } = useRouter();
-  const handleClick = () => setIsModalOpen(!isModalOpen);
+  const handleClick = () => setIsServiceModalOpen(!isServiceModalOpen);
   const handleButtonClick = () => {
     setIsCntModalOpen(!isContactModalOpen);
-    setIsModalOpen(false)
+    setIsServiceModalOpen(false)
   }
   const [inputValues, setInputValues] = useState({
-    username: "",
+    name: "",
     number: "",
     email: "",
     company: "",
@@ -47,13 +47,13 @@ const Header = () => {
   }, [isContactModalOpen]);
 
   const handleInputChange = (e) => {
-    const formData = new FormData(e.target);
-    const requestData = {};
-    for (let [name, value] of formData.entries()) {
-      requestData[name] = value;
-    };
-  }
-
+    const { name, value } = e.target;
+  
+    setInputValues((prevInputValues) => ({
+      ...prevInputValues,
+      [name]: value,
+    }));
+  };
 
   const headerNavs = useMemo(
     () =>
@@ -73,7 +73,7 @@ const Header = () => {
     [route, language]
   );
 
-  const modal__navs = useMemo(
+  const serviceNavs = useMemo(
     () =>
       service__navs.map(({ title, path }) => (
         <Link key={path} href={path} className={scss.modal__nav}>
@@ -83,12 +83,12 @@ const Header = () => {
     [language]
   );
 
-  const contact__inputs = useMemo(
+  const contactInputs = useMemo(
     () =>
-      inputs.map(({ title, id, name }) => (
+      inputs.map(({ title, id, name , type}) => (
         <input
           placeholder={t(title)}
-          type="text"
+          type= {type}
           key={id}
           name={name}
           onChange={handleInputChange}
@@ -102,13 +102,13 @@ const Header = () => {
       <header
         className={
           isContactModalOpen
-            ? scss.header__cntModal_active
-            : scss.header__cntModal_notActive
+            ? scss.header__contactModal_active
+            : scss.header__contactModal_notActive
         }
         onClick={handleButtonClick}
       >
         <section
-          className={scss.header__cntModal}
+          className={scss.header__contactModal}
           onClick={(event) => event.stopPropagation()}
         >
           <header>
@@ -121,7 +121,7 @@ const Header = () => {
               alt="close"
             />
           </header>
-          <main>{contact__inputs}</main>
+          <form className={scss.header__form}>{contactInputs}</form>
           <footer>
             <input
               placeholder={t("header.us-help")}
@@ -143,7 +143,7 @@ const Header = () => {
           {headerNavs}
           <label
             className={
-              !isModalOpen
+              !isServiceModalOpen
                 ? scss.header__option_notActive
                 : scss.header__option_active
             }
@@ -179,12 +179,12 @@ const Header = () => {
         </label>
       </aside>
       <footer
-        className={isModalOpen ? scss.modal_active : scss.modal_notActive}
+        className={isServiceModalOpen ? scss.modal_active : scss.modal_notActive}
         onClick={handleClick}
       >
         <main onClick={(event) => event.stopPropagation()}>
           <h2>{t("header.our_services")}</h2>
-          <nav>{modal__navs}</nav>
+          <nav>{serviceNavs}</nav>
         </main>
       </footer>
     </section>
