@@ -7,21 +7,28 @@ import { useRouter } from "next/router";
 import Button from "../Button/Button";
 import i18n from "i18next";
 import { header__navs } from "@/constants/header";
-import { service__navs} from "@/constants/header";
+import { service__navs } from "@/constants/header";
 import { inputs } from "@/constants/header";
 import close from "/public/images/Header/krestic.svg";
 
 const Header = () => {
   const { t, language } = i18n;
+  const [isFormValid, setIsFormValid] = useState(false);
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
-  const [isContactModalOpen, setIsCntModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [lan, setLan] = useState(false);
   const { route } = useRouter();
   const handleClick = () => setIsServiceModalOpen(!isServiceModalOpen);
   const handleButtonClick = () => {
-    setIsCntModalOpen(!isContactModalOpen);
-    setIsServiceModalOpen(false)
-  }
+    setIsContactModalOpen(!isContactModalOpen);
+    setIsServiceModalOpen(false);
+    setIsFormValid(true);
+    const backgroundElement = event.currentTarget;
+    const targetElement = event.target;
+    if (targetElement === backgroundElement) {
+      setIsContactModalOpen(!isContactModalOpen);
+    }
+  };
   const [inputValues, setInputValues] = useState({
     name: "",
     number: "",
@@ -41,8 +48,6 @@ const Header = () => {
     change();
   };
 
-  
-
   useEffect(() => {
     document.body.style.height = isContactModalOpen ? "100vh" : "auto";
     document.body.style.overflow = isContactModalOpen ? "hidden" : "visible";
@@ -50,12 +55,29 @@ const Header = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-  
     setInputValues((prevInputValues) => ({
       ...prevInputValues,
       [name]: value,
     }));
-    localStorage.setItem("form", inputValues);
+  };
+
+  useEffect(() => {
+    localStorage.setItem( "form",inputValues);
+    const isFormEmpty = Object.values(inputValues).some(
+      (value) => value === ""
+    );
+    setIsFormValid(isFormEmpty);
+  }, [inputValues]);
+
+  const sendForm = () => {
+    setIsContactModalOpen(false);
+    setInputValues({
+      name: "",
+      number: "",
+      email: "",
+      company: "",
+      usHelp: "",
+    });
   };
 
   const headerNavs = useMemo(
@@ -88,16 +110,17 @@ const Header = () => {
 
   const contactInputs = useMemo(
     () =>
-      inputs.map(({ title, id, name , type}) => (
+      inputs.map(({ title, id, name, type }) => (
         <input
           placeholder={t(title)}
-          type= {type}
+          type={type}
           key={id}
+          value={inputValues[name]}
           name={name}
           onChange={handleInputChange}
         />
       )),
-    [language]
+    [language, inputValues]
   );
 
   return (
@@ -130,9 +153,13 @@ const Header = () => {
               placeholder={t("header.us-help")}
               type="text"
               name="usHelp"
+              value={inputValues["usHelp"]}
               onChange={handleInputChange}
             />
-            <button className={scss.header__button} onClick={handleButtonClick}>
+            <button
+              className={scss.header__button}
+              onClick={isFormValid ? () => "" : sendForm}
+            >
               {t("header.send")}
             </button>
           </footer>
@@ -182,7 +209,9 @@ const Header = () => {
         </label>
       </aside>
       <footer
-        className={isServiceModalOpen ? scss.modal_active : scss.modal_notActive}
+        className={
+          isServiceModalOpen ? scss.modal_active : scss.modal_notActive
+        }
         onClick={handleClick}
       >
         <main onClick={(event) => event.stopPropagation()}>
