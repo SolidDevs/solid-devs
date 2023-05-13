@@ -9,7 +9,7 @@ import i18n from "i18next";
 import { header__navs } from "@/constants/header";
 import { service__navs } from "@/constants/header";
 import { inputs } from "@/constants/header";
-import close from "/public/images/Header/krestic.svg";
+import close from "/public/images/Header/close.svg";
 
 const Header = () => {
   const { t, language } = i18n;
@@ -42,9 +42,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    document.body.style.height = isContactModalOpen ? "100vh" : "auto";
-    document.body.style.overflow = isContactModalOpen ? "hidden" : "visible";
-  }, [isContactModalOpen]);
+    document.body.style.height = isContactModalOpen || isServiceModalOpen  ? "100vh" : "auto";
+    document.body.style.overflow = isContactModalOpen || isServiceModalOpen? "hidden" : "visible";
+  }, [isContactModalOpen,isServiceModalOpen]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -99,7 +99,7 @@ const Header = () => {
         <input
           placeholder={t(title)}
           type={type}
-          key={id}
+          key= {id + "_" + title}
           value={inputValues[name]}
           name={name}
           onChange={handleInputChange}
@@ -108,7 +108,6 @@ const Header = () => {
       )),
     [language, inputValues]
   );
-
   return (
     <section className={scss.header}>
       <header
