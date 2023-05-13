@@ -100,7 +100,7 @@ const Header = () => {
         <input
           placeholder={t(title)}
           type={type}
-          key={id + "_" + title}
+          key={`${title}_${id}`}
           value={inputValues[name]}
           name={name}
           onChange={handleInputChange}
@@ -156,7 +156,6 @@ const Header = () => {
       </header>
       <aside className={scss.header_left}>
         <Link href={"/"}>
-          {/* <span className={scss.header__title}>SOLID DEVS</span> */}
           <Logo />
         </Link>
         <nav className={scss.header__navs}>

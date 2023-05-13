@@ -63,7 +63,7 @@ const OurProjects = () => {
             <div className={scss.item__links}>
               {el.links.map((link, i) => (
                 <>
-                  <div key={`${link}_${i + 1}`} className={scss.links__item}>
+                  <div key={`${link}_${i}`} className={scss.links__item}>
                     <Image src={arrow} width={8} height={14} />
                     <p>{t(link)}</p>
                   </div>
