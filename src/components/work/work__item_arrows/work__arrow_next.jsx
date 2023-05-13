@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import scss from "../Work.module.scss";
 import { useRouter } from "next/router";
 
 export default function SampleNextArrow(props) {
   const { className, onClick, title, arr, counter, setState } = props;
   const router = useRouter()
+
+  const { t } = useTranslation()
 
   const pushToQueryNext = () => {
 
@@ -37,7 +40,7 @@ export default function SampleNextArrow(props) {
           fill="#797979"
         />
       </svg>
-      <p className={scss.slider__item}>{title}</p>
+      <p className={scss.slider__item}>{t(title)}</p>
     </div>
   );
 }
