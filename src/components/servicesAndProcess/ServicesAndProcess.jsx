@@ -1,13 +1,10 @@
-import { webServicesData } from "@/constants/services";
-import { proccessData } from "@/constants/process";
 import scss from "./ServicesAndProcess.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ReusableCard from "./card/ReusableCard";
 
-const ServicesAndProcess = ({ variant }) => {
+const ServicesAndProcess = ({ variant, data }) => {
   const { t } = useTranslation();
-  let data = variant == "process" ? proccessData : webServicesData;
 
   const reasonsRender = useMemo(
     () =>
@@ -23,17 +20,16 @@ const ServicesAndProcess = ({ variant }) => {
   );
 
   const renderTitle = useMemo(() => {
-    if (variant == "process") {
-      return <h2>{t("webMain.processTitle")}</h2>;
-    } else {
-      return <h2>{t("webMain.serviceTitle")}</h2>;
-    }
-  }, [variant]);
+    const title = data.map((title) => title.desc)
+    return <h2>{t(title)}</h2>
+  }, [data, t]);
+
+  const gridClass = reasonsRender.length === 2 ? scss.main__grid : scss.main__cards
   return (
     <div className={variant == "process" ? scss.processMain : scss.serviceMain}>
       <div className="container">
         {renderTitle}
-        <div className={scss.main__cards}>{reasonsRender}</div>
+        <div className={gridClass}>{reasonsRender}</div>
       </div>
     </div>
   );

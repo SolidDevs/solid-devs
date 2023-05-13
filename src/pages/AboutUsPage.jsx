@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
+import Preloader from "@/components/Preloader/Preloader";
 import AboutUs from "@/components/aboutUs/AboutUs";
 import ReasonsBlock from "@/components/columnsReusableComponent/ReasonsBlock";
 import ContactUs from "@/components/contactUs/ContactUs";
@@ -10,6 +11,7 @@ const AboutUsPage = () => {
     <>
       <Header/>
       <AboutUs />
+      <Preloader />
       <ReasonsBlock />
       <FeedBack />
       <ContactUs/>
