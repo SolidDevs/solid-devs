@@ -9,12 +9,12 @@ import FeedBack from "@/components/feedBack/FeedBack";
 const AboutUsPage = () => {
   return (
     <>
-      <Header/>
+      <Header />
       <AboutUs />
       <Preloader />
       <ReasonsBlock />
       <FeedBack />
-      <ContactUs/>
+      <ContactUs />
       <Footer />
     </>
   );
