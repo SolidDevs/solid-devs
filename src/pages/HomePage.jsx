@@ -10,7 +10,14 @@ import OurProjects from "@/components/ourProjects/OurProjects";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
+import useService from "@/hooks/useService";
+import { useEffect } from "react";
 const HomePage = () => {
+  const { services, getServices } = useService('webService')
+  useEffect(() => {
+    getServices()
+  }, [])
+  console.log(services)
   return (
     <>
       <Header />
