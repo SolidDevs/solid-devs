@@ -1,6 +1,6 @@
 export const header__navs = [
   {
-    path: "/aboutUs",
+    path: "/",
     title: "header.about",
   },
   {
@@ -12,7 +12,7 @@ export const header__navs = [
 export const  service__navs = [
   {
     title : "header.mvp",
-    path : "/mvp"
+    path : "/mvpDev"
   },
   {
     title : "header.ux-ui",
