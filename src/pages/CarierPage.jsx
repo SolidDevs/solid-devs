@@ -5,9 +5,9 @@ import CarierInfoBlock from "@/components/carierInfoBlock/CarierInfoBlock";
 const CarierPage = () => {
   return (
     <>
-      <Header/>
-      <CarierInfoBlock variant='team' />
-      <CarierInfoBlock variant='practicum' />
+      <Header />
+      <CarierInfoBlock variant="team" />
+      <CarierInfoBlock variant="practicum" />
       <Footer />
     </>
   );

@@ -66,10 +66,11 @@
     "footer__right": "© All rights reserved. Solid Devs 2023",
     "footer__politic": "Privacy Policy"
   },
-  "button_rauseble": {
+  "button__reusable": {
     "contact": "Contact",
     "project": "Let's discuss your project",
-    "site": "Go to site"
+    "site": "Go to site",
+    "mail": "Mail"
   },
   "serviceBlock": {
     "title": "Software development services we kick ass on",
@@ -112,10 +113,40 @@
   },
   "webMain": {
     "title": "Web development",
-    "description": "Creating a website or creating a custom web application is the result of great teamwork. Everyone participates in it: software engineers, designers, markup developers and other specialists. Choosing the right web development agency is the first step to getting a quality web solution that satisfies the customer."
+    "description": "Creating a website or creating a custom web application is the result of great teamwork. Everyone participates in it: software engineers, designers, markup developers and other specialists. Choosing the right web development agency is the first step to getting a quality web solution that satisfies the customer.",
+    "serviceTitle": "Web development services, which we provide",
+    "processTitle": "Development process"
+  },
+  "benefitAndStatistic": {
+    "priority": "Benefits of Chat Application Development",
+    "connection": "Real time communication time",
+    "performance": "Increased performance",
+    "storage": "File storage and sharing",
+    "assistance": "Faster support",
+    "barrier": "Minor or missing barriers to communication",
+    "conversions": "Highest conversion rate",
+    "information": "Solid Statistics",
+    "experience": "Many years of development experience chat applications",
+    "successes": "Successfully developed chat applications"
+  },
+  "ourProjects": {
+    "title": "Kyrgyz Riders",
+    "subtitle": "Tourism company",
+    "links": {
+      "link__market": "Market Analis",
+      "link__idea": "Refinement of an idea",
+      "link__cjm": "CJM",
+      "link__flow": "User flow",
+      "link__prototiping": "Prototyping",
+      "link__design": "Design",
+      "link__website/Admin": " Website / Admin Panel Coding",
+      "link__test": " Testing/Launch"
+    }
   },
   "reasons": {
-    "title": "Why Solid?"
+    "heading": "Why Solid?",
+    "compound": "Team of experts",
+    "skills": "Our team consists of professionals with experience in such areas as software development, design, testing, marketing and sales."
   },
   "carier": {
     "btnText": "Send resume",
@@ -140,5 +171,47 @@
     "secondStepDesc": "We define your professional skills",
     "thirdStepTitle": "Recruitment",
     "thirdStepDesc": "After passing the whole stage, we choose the best candidate"
+  },
+  "contacts": {
+    "info__title": "Write to us",
+    "form__title": "Contacts",
+    "info__subtitle": "After you fill out the application form, we will contact you and discuss yout idea!",
+    "info__description": "Don't like filling out forms? write to privet@solid.kg",
+    "form": "Application to form"
+  },
+  "aboutUs": {
+    "main__title": "About Us",
+    "firstStepDesc": "Unlike most other companies, we primarily take into account business needs, forcing advanced technologies to work on your company's goals.",
+    "secondStepDesc": "We are well versed in web and native mobile development.Good, effective architecture is the main thing.Your product should be scalable, repaired and focused on the future, and we will make it possible.",
+    "thirdStepDesc": "One of our main values is design.As fans of everything simple, we create clear, understandable user interfaces even for the most difficult work processes.versions of your product.Instead of making assumptions and allocating huge budgets in advance, we must quickly create MVP for you, bring it to the market, collect reviews and repeat it quickly!",
+    "title__70": "70+",
+    "70__desc": "Developers and designers",
+    "title__6": "6",
+    "6__desc": "Years in the market",
+    "title__20": "20+",
+    "20__desc": "Millions of users",
+    "title__0": "0",
+    "0__desc": "The vulnerability of PayPal was discovered"
+  },
+  "uiMain": {
+    "title": "UX/UI Design",
+    "description": "With the support of first-class experts, Yellow provides you with first-class user interface design and user experience for web applications and mobile applications.We know how to effectively attract an audience to your product.Project architecture and user needs are our main priorities that allow us to organize clear logical flows of users to obtain a unique interface."
+  },
+  "mobileMain": {
+    "title": "Development of mobile applications",
+    "description": "Since smartphones and tablets have become an integral part of our daily life, demand and demand for mobile application development services have increased sharply and are currently steadily remained at a high level.However, you cannot immediately hire the first agency that offers this service.The team should have sufficient relevant experience and confirmed track record, which will show how much they deserve confidence.Our mobile application developers are ready to provide you with this and help bring your idea to life.."
+  },
+  "mvpMain": {
+    "title": "MVP development services",
+    "description": "MVP means “the minimum viable product”, and this is a great solution for the early stages of the product.If your budget is limited or you need to check the water before releasing something large and complex, MVP is what you need.Yellow offers the best MVP development services.We can be ready to present key functionality for one to three months."
+  },
+  "chatMain": {
+    "title": "Chatual application development services",
+    "description": "People and enterprises need an instant connection, because it is fast, easy and in real time.Thus, it would be difficult to imagine life without instant messengers, because they help us remain in touch with our friends, family and colleagues."
+  },
+  "contactUs": {
+    "title": "Contact us for a free estimate",
+    "subtitle": "After you fill out the application form, we will contact you and discuss your idea! Don't like filling out forms? Then send an email.",
+    "card__title": "Hello! I would like to order from you the development of an application for my company."
   }
 }

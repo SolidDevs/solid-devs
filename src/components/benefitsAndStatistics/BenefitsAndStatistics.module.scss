@@ -1,0 +1,55 @@
+@import "../../../src//styles/variables.scss";
+
+$title__size: calc(2vw + 2vh);
+$line__height: calc(3vw + 2vh);
+
+.priorityCard {
+  background-color: $white;
+  padding: 20px 0px 50px;
+
+  h2 {
+    font-style: normal;
+    width: 100%;
+    font-weight: 300;
+    font-size: $title__size;
+    line-height: $line__height;
+    color: #262626;
+    margin-bottom: 25px;
+  }
+}
+
+.statisticCard {
+  background: #494949;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  padding-top: 20px;
+
+  h2 {
+    white-space: nowrap;
+    font-style: normal;
+    width: 50%;
+    font-weight: 300;
+    font-size: $title__size;
+    line-height: $line__height;
+    color: $white;
+    margin-bottom: 25px;
+  }
+}
+
+.priority__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.priority__line {
+  border: 1px solid #b8b8b8;
+  margin-top: 50px;
+}

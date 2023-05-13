@@ -3,7 +3,7 @@ import insta from "../../public/assets/images/Footer/insta.svg";
 import linkedin from "../../public/assets/images/Footer/linkedin.svg";
 import telega from "../../public/assets/images/Footer/telega.svg";
 
-export const footerFirst = [
+export const footerCompany = [
   {
     title: "footer.title__company",
     desc: "footer.company__desc",
@@ -14,7 +14,7 @@ export const footerFirst = [
   },
 ];
 
-export const footerSecond = [
+export const footerPages= [
   {
     title: "footer.title__pages",
     aboutUs: "footer.page__us",
@@ -23,7 +23,7 @@ export const footerSecond = [
   },
 ];
 
-export const footerThird = [
+export const footerServices = [
   {
     title: "footer.title__services",
     items: [
@@ -39,7 +39,7 @@ export const footerThird = [
   },
 ];
 
-export const footerFourth = [
+export const footerSocials = [
   {
     title: "footer.title__socials",
     fb: fb,

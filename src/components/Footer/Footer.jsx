@@ -2,10 +2,10 @@ import React from "react";
 import scss from "./Footer.module.scss";
 import FooterLogo from "./components/FooterLogo/FooterLogo";
 import {
-  footerFirst,
-  footerFourth,
-  footerSecond,
-  footerThird,
+  footerCompany,
+  footerPages,
+  footerServices,
+  footerSocials,
 } from "@/constants/footer";
 import UnderFooter from "./components/UnderFooter/UnderFooter";
 import AboutBlock from "./components/AboutUs/AboutBlock";
@@ -18,22 +18,22 @@ const Footer = () => {
     () => (
       <>
         <div>
-          {footerFirst.map((item, index) => (
+          {footerCompany.map((item, index) => (
             <AboutBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
         <div>
-          {footerSecond.map((item, index) => (
+          {footerPages.map((item, index) => (
             <PagesBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
         <div>
-          {footerThird.map((item, index) => (
+          {footerServices.map((item, index) => (
             <ServicesBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
         <div>
-          {footerFourth.map((item, index) => (
+          {footerSocials.map((item, index) => (
             <SocialBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
