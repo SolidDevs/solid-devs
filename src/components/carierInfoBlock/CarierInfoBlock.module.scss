@@ -1,7 +1,7 @@
 @import "../../../src/styles/variables.scss";
 
 $rubber__padding__size: calc(6vw + 5vh);
-$step__height: calc(5vw + 4vh);
+$step__height: calc(5vw + 5vh);
 $step__width: calc(16vw + 16vw);
 $step__numeration__width: calc(4vw + -1.5vh);
 
@@ -40,7 +40,7 @@ $step__numeration__width: calc(4vw + -1.5vh);
       }
 
       .step__text__container {
-        padding: 10px;
+        padding: 10px 10px 10px 15px;
         width: 100%;
 
         .text__title {
@@ -49,6 +49,7 @@ $step__numeration__width: calc(4vw + -1.5vh);
           font-size: 20px;
           line-height: 27px;
           color: #333333;
+          margin-bottom: 5px;
         }
 
         .text__description {
