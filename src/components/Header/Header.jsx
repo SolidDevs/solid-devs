@@ -86,7 +86,7 @@ const Header = () => {
   const serviceNavs = useMemo(
     () =>
       service__navs.map(({ title, path }) => (
-        <Link key={path} href={path} className={scss.modal__nav}>
+        <Link key={path} href={path} className={route == path ? scss.modal__nav_active : scss.modal__nav_notActive }>
           {t(title)}
         </Link>
       )),
