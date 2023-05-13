@@ -12,7 +12,7 @@ export const header__navs = [
 export const  service__navs = [
   {
     title : "header.mvp",
-    path : "/"
+    path : "/mvp"
   },
   {
     title : "header.ux-ui",
