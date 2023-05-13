@@ -54,23 +54,19 @@ const Header = () => {
 
   const headerNavs = useMemo(
     () =>
-      navs.map(
-        ({ link, text }) => (
-          (
-            <Link
-              key={link}
-              href={link}
-              className={
-                route === link
-                  ? scss.header__nav_isActive
-                  : scss.header__nav_notActive
-              }
-            >
-              <p>{t(text)}</p>
-            </Link>
-          )
-        )
-      ),
+      navs.map(({ link, text }) => (
+        <Link
+          key={link}
+          href={link}
+          className={
+            route === link
+              ? scss.header__nav_isActive
+              : scss.header__nav_notActive
+          }
+        >
+          <p>{t(text)}</p>
+        </Link>
+      )),
     [route, isOpen]
   );
 
