@@ -13,7 +13,6 @@ import close from "/public/images/Header/krestic.svg";
 
 const Header = () => {
   const { t, language } = i18n;
-  const [isFormValid, setIsFormValid] = useState(false);
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [lan, setLan] = useState(false);
@@ -22,12 +21,6 @@ const Header = () => {
   const handleButtonClick = () => {
     setIsContactModalOpen(!isContactModalOpen);
     setIsServiceModalOpen(false);
-    setIsFormValid(true);
-    const backgroundElement = event.currentTarget;
-    const targetElement = event.target;
-    if (targetElement === backgroundElement) {
-      setIsContactModalOpen(!isContactModalOpen);
-    }
   };
   const [inputValues, setInputValues] = useState({
     name: "",
@@ -60,16 +53,7 @@ const Header = () => {
       [name]: value,
     }));
   };
-
-  useEffect(() => {
-    localStorage.setItem( "form",inputValues);
-    const isFormEmpty = Object.values(inputValues).some(
-      (value) => value === ""
-    );
-    setIsFormValid(isFormEmpty);
-  }, [inputValues]);
-
-  const sendForm = () => {
+  const sendForm = (event) => {
     setIsContactModalOpen(false);
     setInputValues({
       name: "",
@@ -78,6 +62,7 @@ const Header = () => {
       company: "",
       usHelp: "",
     });
+    event.preventDefault();
   };
 
   const headerNavs = useMemo(
@@ -118,6 +103,7 @@ const Header = () => {
           value={inputValues[name]}
           name={name}
           onChange={handleInputChange}
+          required
         />
       )),
     [language, inputValues]
@@ -147,22 +133,25 @@ const Header = () => {
               alt="close"
             />
           </header>
-          <form className={scss.header__form}>{contactInputs}</form>
-          <footer>
-            <input
-              placeholder={t("header.us-help")}
-              type="text"
-              name="usHelp"
-              value={inputValues["usHelp"]}
-              onChange={handleInputChange}
-            />
-            <button
-              className={scss.header__button}
-              onClick={isFormValid ? () => "" : sendForm}
-            >
-              {t("header.send")}
-            </button>
-          </footer>
+          <form onSubmit={sendForm}>
+            <main>{contactInputs}</main>
+            <footer>
+              <input
+                placeholder={t("header.us-help")}
+                type="text"
+                name="usHelp"
+                value={inputValues["usHelp"]}
+                required
+                onChange={handleInputChange}
+              />
+              <button
+                type="sumbit"
+                className={scss.header__button}
+              >
+                {t("header.send")}
+              </button>
+            </footer>
+          </form>
         </section>
       </header>
       <aside className={scss.header_left}>
