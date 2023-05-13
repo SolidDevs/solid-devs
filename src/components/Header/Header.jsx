@@ -10,6 +10,7 @@ import { header__navs } from "@/constants/header";
 import { service__navs } from "@/constants/header";
 import { inputs } from "@/constants/header";
 import close from "/public/images/Header/close.svg";
+import Logo from "../logo/Logo";
 
 const Header = () => {
   const { t, language } = i18n;
@@ -42,9 +43,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    document.body.style.height = isContactModalOpen || isServiceModalOpen  ? "100vh" : "auto";
-    document.body.style.overflow = isContactModalOpen || isServiceModalOpen? "hidden" : "visible";
-  }, [isContactModalOpen,isServiceModalOpen]);
+    document.body.style.height = isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
+    document.body.style.overflow = isContactModalOpen || isServiceModalOpen ? "hidden" : "visible";
+  }, [isContactModalOpen, isServiceModalOpen]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -86,7 +87,7 @@ const Header = () => {
   const serviceNavs = useMemo(
     () =>
       service__navs.map(({ title, path }) => (
-        <Link key={path} href={path} className={route == path ? scss.modal__nav_active : scss.modal__nav_notActive }>
+        <Link key={path} href={path} className={route == path ? scss.modal__nav_active : scss.modal__nav_notActive}>
           {t(title)}
         </Link>
       )),
@@ -99,7 +100,7 @@ const Header = () => {
         <input
           placeholder={t(title)}
           type={type}
-          key= {id + "_" + title}
+          key={id + "_" + title}
           value={inputValues[name]}
           name={name}
           onChange={handleInputChange}
@@ -155,7 +156,8 @@ const Header = () => {
       </header>
       <aside className={scss.header_left}>
         <Link href={"/"}>
-          <span className={scss.header__title}>SOLID DEVS</span>
+          {/* <span className={scss.header__title}>SOLID DEVS</span> */}
+          <Logo />
         </Link>
         <nav className={scss.header__navs}>
           {headerNavs}

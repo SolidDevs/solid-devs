@@ -1,0 +1,28 @@
+.logo {
+  width: 150px;
+  animation: smoothBackground 8s linear infinite;
+  background-image: url("../../../public/images/logo/logo1.svg");
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: 27px;
+  border-right: 1px solid #dadada;
+}
+
+@keyframes smoothBackground {
+  0% {
+    background-image: url("../../../public/images/logo/logo1.svg");
+  }
+  25% {
+    background-image: url("../../../public/images/logo/logo2.svg");
+  }
+  50% {
+    background-image: url("../../../public/images/logo/logo3.svg");
+  }
+  75% {
+    background-image: url("../../../public/images/logo/logo4.svg");
+  }
+  100% {
+    background-image: url("../../../public/images/logo/logo5.svg");
+  }
+}
