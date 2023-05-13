@@ -49,3 +49,17 @@ $line__height: calc(3vw + 2vh);
     grid-template-columns: 1fr;
   }
 }
+
+.main__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
