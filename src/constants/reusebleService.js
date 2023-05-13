@@ -269,29 +269,35 @@ export const webServices = [
   {
     desc: "webServices.title",
     title: "webServices.card__title",
+    icon: "/images/webServices/serviceIcon.png",
     description: "webServices.card__subtitle",
   },
   {
+    icon: "/images/webServices/serviceIcon.png",
     desc: "webServices.title",
     title: "webServices.card__title",
     description: "webServices.card__subtitle",
   },
   {
+    icon: "/images/webServices/serviceIcon.png",
     desc: "webServices.title",
     title: "webServices.card__title",
     description: "webServices.card__subtitle",
   },
   {
+    icon: "/images/webServices/serviceIcon.png",
     desc: "webServices.title",
     title: "webServices.card__title",
     description: "webServices.card__subtitle",
   },
   {
+    icon: "/images/webServices/serviceIcon.png",
     desc: "webServices.title",
     title: "webServices.card__title",
     description: "webServices.card__subtitle",
   },
   {
+    icon: "/images/webServices/serviceIcon.png",
     desc: "webServices.title",
     title: "webServices.card__title",
     description: "webServices.card__subtitle",
