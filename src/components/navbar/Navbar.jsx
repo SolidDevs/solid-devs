@@ -36,7 +36,6 @@ const Navbar = ({ navbarLinks, paramName }) => {
           }
         >
           {t(`navbar.${item}`)}
-          {console.log(index)}
         </button>
       )),
     [navbarLinks, paramValue, handleClick, t]
