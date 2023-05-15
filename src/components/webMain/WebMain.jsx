@@ -34,8 +34,8 @@ const WebMain = ({ title, description, image }) => {
             src={image}
             alt="website image"
             className={scss.content__image}
-            width={500}
-            height={500}
+            width={631}
+            height={563}
           />
         </div>
       </div>

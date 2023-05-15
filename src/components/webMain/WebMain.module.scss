@@ -10,7 +10,7 @@ $description__size: calc(0.8vw + 1vh);
     display: flex;
 
     .content__image {
-      width: $variableSize;
+      width: 100%;
       object-fit: contain;
     }
 
@@ -38,7 +38,7 @@ $description__size: calc(0.8vw + 1vh);
     }
 
     .content__description {
-      width: 80%;
+      width: 100%;
       font-style: normal;
       margin-bottom: 30px;
       font-weight: 400;
