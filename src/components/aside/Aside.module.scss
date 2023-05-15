@@ -1,8 +1,13 @@
+@import "../../styles/variables.scss";
+
 .aside_item {
   display: grid;
   grid-template-columns: 4px 1fr;
   height: 283px;
   gap: 24px;
+  @include breackpoint(sm) {
+    display: none;
+  }
   .aside_scroll {
     background: #d9d9d9;
     height: 100%;
