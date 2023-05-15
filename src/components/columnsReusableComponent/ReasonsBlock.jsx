@@ -1,5 +1,5 @@
 import { reasonsList } from "@/constants/reasons";
-import scss from "./ReasonsBlock.module.scss"
+import scss from "./ReasonsBlock.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ReasonsCard from "./reasonsCard/ReasonsCard";
