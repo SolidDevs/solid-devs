@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
   a {
     height: 50px;
   }
