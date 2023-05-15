@@ -4,17 +4,17 @@ import { useTranslation } from "react-i18next";
 import Button from "../Button/Button";
 import Image from "next/image";
 
-const WebMain = ({ data }) => {
+const WebMain = ({ title, description, image }) => {
   const { t } = useTranslation();
 
   const renderContent = useMemo(
     () => (
       <div className={scss.content__text__wrapper}>
         <div className={scss.content__title}>
-          <p>{t(data.title)}</p>
+          <p>{t(title)}</p>
         </div>
         <div className={scss.content__description}>
-          <p>{t(data.description)}</p>
+          <p>{t(description)}</p>
         </div>
         <Button
           title={t("button__reusable.project")}
@@ -31,7 +31,7 @@ const WebMain = ({ data }) => {
         <div className={scss.main__content}>
           {renderContent}
           <Image
-            src={data.image}
+            src={image}
             alt="website image"
             className={scss.content__image}
             width={500}
