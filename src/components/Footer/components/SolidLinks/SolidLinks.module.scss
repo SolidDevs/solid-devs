@@ -1,0 +1,11 @@
+.links__main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  a {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    color: #afafaf !important;
+  }
+}

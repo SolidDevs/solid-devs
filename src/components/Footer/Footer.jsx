@@ -12,27 +12,38 @@ import AboutBlock from "./components/AboutUs/AboutBlock";
 import PagesBlock from "./components/PagesBlock/PagesBlock";
 import ServicesBlock from "./components/ServicesBlock/ServicesBlock";
 import SocialBlock from "./components/SocialBock/SocialBlock";
+import SolidLinks from "./components/SolidLinks/SolidLinks";
 
 const Footer = () => {
   const footerRender = React.useMemo(
     () => (
       <>
-        <div>
+        <div className={scss.about__block}>
           {footerCompany.map((item, index) => (
             <AboutBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
-        <div>
+        <div className={scss.about__block__mobile}>
+          {footerCompany.slice(1, 2).map((item, index) => (
+            <AboutBlock key={`${item.title}_${index}`} {...item} />
+          ))}
+        </div>
+        <div className={scss.pages__block}>
           {footerPages.map((item, index) => (
             <PagesBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
-        <div>
+        <div className={scss.line__mobile}></div>
+        <div className={scss.solid__links}>
+          <SolidLinks/>
+        </div>
+        <div className={scss.service__block}>
           {footerServices.map((item, index) => (
             <ServicesBlock key={`${item.title}_${index}`} {...item} />
           ))}
         </div>
-        <div>
+        <div className={scss.line__mobile}></div>
+        <div className={scss.social__block}>
           {footerSocials.map((item, index) => (
             <SocialBlock key={`${item.title}_${index}`} {...item} />
           ))}

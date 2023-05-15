@@ -7,7 +7,7 @@ import Image from "next/image";
 const SocialBlock = ({ title, fb, insta, linkedin, telega }) => {
   const { t } = useTranslation();
   return (
-    <div className={scss.fourth__block_content}>
+    <div className={scss.social__content}>
       <h3>{t(title)}</h3>
       <div className={scss.footer__icons}>
         <Link href="https://www.facebook.com/" target="blank">
