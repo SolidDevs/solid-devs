@@ -14,19 +14,19 @@ import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock"
 const HomePage = () => {
   return (
     <>
-      {/* <Header />
-      <Main /> */}
+      <Header />
+      <Main />
       <MainContent>
-        {/* <ItProjects />
+        <ItProjects />
         <ServicesBlock />
-        <TechnologiesBlock /> */}
+        <TechnologiesBlock />
         <OurTeam />
-        {/* <FeedBack isMain={true} />
+        <FeedBack isMain={true} />
         <OurProjects />
-        <Contacts /> */}
+        <Contacts />
       </MainContent>
-      {/* <ContactUs />
-      <Footer /> */}
+      <ContactUs />
+      <Footer />
     </>
   );
 };

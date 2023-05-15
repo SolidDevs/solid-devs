@@ -44,12 +44,8 @@
   color: #323232;
   @include breackpoint(sm) {
     padding-top: 10%;
-    font-size: 18px;
+    font-size: 1.2rem;
   }
-  // @include breackpoint(sm) {
-  //   padding-top: 0px;
-  //   font-size: 14px;
-  // }
 }
 
 .our__team__item_position {
@@ -58,15 +54,8 @@
     width: 100%;
     padding: 7px 0px 0 0;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 1rem;
   }
-  // @include breackpoint(xs) {
-  //   border-top: 1px solid #b3b3b3;
-  //   width: 100%;
-  //   padding: 7px 0px 0 0;
-  //   font-weight: 600;
-  //   font-size: 12px;
-  // }
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
