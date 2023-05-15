@@ -84,13 +84,17 @@
           cursor: pointer;
           margin-bottom: 10px;
           background: $blue;
-          padding: 10px 40px;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 17px;
-          line-height: 23px;
-          color: $white;
+          padding: 10px 0px;
           border-radius: 3px;
+          p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 23px;
+            color: $white;
+            margin-left: 40px;
+          }
         }
       }
     }
@@ -139,6 +143,17 @@
           .form__buttons {
             background: #f1f1f1;
             padding: 20px;
+            div {
+              p {
+                margin: 0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 23px;
+                color: $white;
+                text-align: center;
+              }
+            }
           }
         }
       }
