@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 .ourTeam__card {
   position: relative;
   &:hover {
@@ -6,6 +8,7 @@
     }
   }
 }
+
 .our__team__item_hovered {
   background: #f1f1f1;
   border: 1px solid #d0d0d0;
@@ -21,6 +24,12 @@
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
+  @include breackpoint(sm) {
+    // gap: calc(10% + 5%);
+    justify-content: space-between;
+    padding: 7px;
+    padding-left: 10px;
+  }
 }
 .our__team__item_fullName,
 .our__team__item_position {
@@ -33,9 +42,31 @@
   font-size: 16px;
   line-height: 20px;
   color: #323232;
+  @include breackpoint(sm) {
+    padding-top: 10%;
+    font-size: 18px;
+  }
+  // @include breackpoint(sm) {
+  //   padding-top: 0px;
+  //   font-size: 14px;
+  // }
 }
 
 .our__team__item_position {
+  @include breackpoint(sm) {
+    border-top: 1px solid #b3b3b3;
+    width: 100%;
+    padding: 7px 0px 0 0;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  // @include breackpoint(xs) {
+  //   border-top: 1px solid #b3b3b3;
+  //   width: 100%;
+  //   padding: 7px 0px 0 0;
+  //   font-weight: 600;
+  //   font-size: 12px;
+  // }
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
