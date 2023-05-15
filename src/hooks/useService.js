@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getDocs, query } from "firebase/firestore";
+import { query } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
 
 const useService = (collection) => {
