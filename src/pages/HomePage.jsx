@@ -10,6 +10,7 @@ import OurProjects from "@/components/ourProjects/OurProjects";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
+
 const HomePage = () => {
   return (
     <>
