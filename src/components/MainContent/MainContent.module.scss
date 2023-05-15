@@ -1,4 +1,10 @@
+@import "../../styles/variables.scss";
+
 .main_wrapper {
   display: grid;
   grid-template-columns: 23% 77%;
+  @include breackpoint(sm) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
