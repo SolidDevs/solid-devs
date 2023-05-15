@@ -28,10 +28,7 @@ const ItProjects = () => {
           <p>{t("sectionContainer.project__title")}</p>
           <Image src={vector} width={14} height={8} alt="vector" />
         </div>
-
-          {isModal && (
-            <div className={scss.cards__main}>{itProjectsRender}</div>
-          )}
+        {isModal && <div className={scss.cards__main}>{itProjectsRender}</div>}
       </div>
     </div>
   );
