@@ -6,9 +6,9 @@ import scss from "./UnderFooter.module.scss";
 const UnderFooter = () => {
   const { t } = useTranslation();
   return underFooter.map((item, index) => (
-    <div key={`${item.title}_${index}`} {...item} className={scss.underFooter}>
+    <div key={`${item.title}_${index}`} {...item} className={scss.under__footer}>
       <p>{t(item.right)}</p>
-      <p>{t(item.politic)}</p>
+      <p className={scss.footer__politic}>{t(item.politic)}</p>
     </div>
   ));
 };

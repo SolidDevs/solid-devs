@@ -1,14 +1,10 @@
-.underFooter {
+.under__footer {
   display: flex;
   justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 10px;
-  }
-
-  @media (max-width: 576px) {
-    padding: 0 25px;
   }
 
   p {
@@ -19,5 +15,17 @@
     line-height: 23px;
     color: #d3d3d3;
     margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 19px;
+      color: #afafaf;
+    }
+  }
+
+  .footer__politic {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
