@@ -5,10 +5,10 @@ import { itProjects } from "@/constants/itProjects";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import vector from "../../../public/assets/images/itProjects/vector.svg";
+import arrow from "../../../public/assets/images/itProjects/arrow.svg";
 const ItProjects = () => {
   const { t } = useTranslation();
-  const [isModal, setModal] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const itProjectsRender = useMemo(
     () =>
       itProjects.map((item, index) => (
@@ -24,11 +24,13 @@ const ItProjects = () => {
         </SectionContainer>
       </div>
       <div className={scss.projects__adaptive}>
-        <div className={scss.title} onClick={() => setModal(!isModal)}>
+        <div className={scss.title} onClick={() => setOpen(!isOpen)}>
           <p>{t("sectionContainer.project__title")}</p>
-          <Image src={vector} width={14} height={8} alt="vector" />
+          <Image src={arrow} width={14} height={8} alt="arrow" />
         </div>
-        {isModal && <div className={scss.cards__main}>{itProjectsRender}</div>}
+        <div className={`${scss.cards__main} ${isOpen ? scss.show : ""}`}>
+          {itProjectsRender}
+        </div>
       </div>
     </div>
   );
