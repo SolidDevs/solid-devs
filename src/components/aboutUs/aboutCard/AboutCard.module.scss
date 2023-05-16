@@ -29,6 +29,11 @@
     margin: 0;
     position: relative;
     width: fit-content;
+    @media (max-width: 576px) {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
   p {
     font-family: "Nunito Sans";
@@ -37,5 +42,10 @@
     font-size: 18px;
     line-height: 25px;
     color: #949494;
+    @media (max-width: 576px) {
+      font-size: 16px;
+      line-height: 20px;
+      color: #979797;
+    }
   }
 }
