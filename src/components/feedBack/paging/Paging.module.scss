@@ -1,0 +1,23 @@
+.paging__item_active {
+  width: 50px !important;
+  height: 5px !important;
+  background: #0e61fe !important;
+  border: none;
+  cursor: pointer;
+  padding: 0 !important;
+  &::before {
+    display: none;
+  }
+}
+
+.paging__item {
+  width: 50px !important;
+  height: 5px !important;
+  background: #dfdfdf !important;
+  border: none;
+  cursor: pointer;
+  padding: 0 !important;
+  &::before {
+    display: none;
+  }
+}
