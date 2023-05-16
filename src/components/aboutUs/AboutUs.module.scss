@@ -4,10 +4,24 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 160px;
+
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
+    gap: 120px;
   }
+
+  @media (max-width: 768px) {
+    gap: 80px;
+  }
+
+  @media (max-width: 576px) {
+    gap: 0px;
+  }
+
   .left__content {
+    @media (max-width: 768px) {
+      padding: 0 8px;
+    }
     h2 {
       font-family: "Nunito Sans";
       font-style: normal;
@@ -36,8 +50,13 @@
       margin-top: 0;
     }
 
-    @media (max-width: 540px) {
-      grid-template-columns: 1fr;
+    @media (max-width: 576px) {
+      margin: 0 -12px;
+      padding: 20px 20px;
+      gap: 30px 64px;
+      background: #f1f1f1;
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
     }
   }
 }
@@ -45,4 +64,8 @@
 .about__line {
   border: 1px solid #b8b8b8;
   margin: 32px 0 50px;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
