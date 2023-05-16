@@ -12,9 +12,12 @@ import AboutBlock from "./components/AboutUs/AboutBlock";
 import PagesBlock from "./components/PagesBlock/PagesBlock";
 import ServicesBlock from "./components/ServicesBlock/ServicesBlock";
 import SocialBlock from "./components/SocialBock/SocialBlock";
-import SolidLinks from "./components/SolidLinks/SolidLinks";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   const footerRender = React.useMemo(
     () => (
       <>
@@ -35,7 +38,8 @@ const Footer = () => {
         </div>
         <div className={scss.line__mobile}></div>
         <div className={scss.solid__links}>
-          <SolidLinks/>
+          <Link href="/aboutUs">{t("solidLinks.about")}</Link>
+          <Link href="/carier">{t("solidLinks.career")}</Link>
         </div>
         <div className={scss.service__block}>
           {footerServices.map((item, index) => (

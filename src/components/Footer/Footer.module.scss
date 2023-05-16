@@ -24,6 +24,18 @@
       display: none;
     }
 
+    .solid__links {
+      display: flex !important;
+      flex-direction: column;
+      gap: 10px;
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #afafaf;
+      }
+    }
+
     @media (max-width: 1024px) {
       grid-template-columns: 2fr 1fr;
       gap: 50px;
