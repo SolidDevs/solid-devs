@@ -21,8 +21,6 @@ const Aside = () => {
 
   },[])
 
-  console.log(scroll)
-
   const memoizedValue = useMemo(() => {
     if (scroll >= 24 && scroll < 85) {
       return scss.aside_scroll_service;
