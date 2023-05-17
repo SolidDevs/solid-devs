@@ -1,0 +1,55 @@
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loading__preloader {
+    width: 300px;
+    height: 80px;
+    animation: smoothBackground 1.5s linear infinite;
+    background-image: url("../../../public/images/logo/logo1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+  }
+
+  @keyframes smoothBackground {
+    0% {
+      background-image: url("../../../public/images/logo/logo1.svg");
+    }
+    25% {
+      background-image: url("../../../public/images/logo/logo2.svg");
+    }
+    50% {
+      background-image: url("../../../public/images/logo/logo3.svg");
+    }
+    75% {
+      background-image: url("../../../public/images/logo/logo4.svg");
+    }
+    100% {
+      background-image: url("../../../public/images/logo/logo5.svg");
+    }
+  }
+}
+@media (max-width: 912px) {
+  .loading {
+    .loading__preloader {
+      background-size: 260px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .loading {
+    .loading__preloader {
+      background-size: 240px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .loading {
+    .loading__preloader {
+      background-size: 180px;
+    }
+  }
+}

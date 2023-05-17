@@ -277,5 +277,9 @@
     "title": "Development process",
     "card__title": "Idea, research and analysis",
     "card__subtitle": "Our team evaluates the project, conducts a competitive analysis and organize the work."
+  },
+  "solidLinks": {
+    "about": "About Us",
+    "career": "Career"
   }
 }

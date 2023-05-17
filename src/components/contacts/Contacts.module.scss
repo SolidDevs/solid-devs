@@ -18,6 +18,22 @@
       div p {
         margin: 0;
       }
+      .info__descriptions {
+        button {
+          display: none;
+          width: 100%;
+          cursor: pointer;
+          background: $blue;
+          border-radius: 3px;
+          border: none;
+          padding: 12px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          color: $white;
+        }
+      }
       .info__title {
         p {
           font-style: normal;
@@ -68,13 +84,17 @@
           cursor: pointer;
           margin-bottom: 10px;
           background: $blue;
-          padding: 10px 40px;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 17px;
-          line-height: 23px;
+          padding: 10px 0px;
           color: $white;
           border-radius: 3px;
+          p {
+            margin: 0;
+            text-align: center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 23px;
+          }
         }
       }
     }
@@ -103,6 +123,67 @@
           width: 100%;
         }
       }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .contact {
+    background: $white;
+    .contact__wrapper {
+      .contact__form {
+        padding: 0;
+        box-shadow: none;
+        background: #ffff;
+        .form__title {
+          p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+        .form__descriptions {
+          .form__title {
+            p {
+              margin-bottom: 15px;
+            }
+          }
+          .form__buttons {
+            background: #f1f1f1;
+            padding: 20px;
+          }
+        }
+      }
+      .contact__info {
+        padding: 0;
+        box-shadow: none;
+        .info__title {
+          p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+        .info__descriptions {
+          margin-top: 15px;
+          background: #f1f1f1;
+          padding: 20px;
+          button {
+            display: block;
+          }
+          p {
+            margin: 0;
+          }
+          .info__description {
+            margin-top: 15px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    > button {
+      display: none;
     }
   }
 }

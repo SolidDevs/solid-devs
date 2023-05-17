@@ -10,20 +10,27 @@ const Contacts = () => {
           <div className={scss.info__title}>
             <p>{t("contacts.info__title")}</p>
           </div>
-          <div className={scss.info__subtitle}>
-            <p>{t("contacts.info__subtitle")}</p>
-          </div>
-          <div className={scss.info__description}>
-            <p>{t("contacts.info__description")}</p>
+          <div className={scss.info__descriptions}>
+            <div className={scss.info__subtitle}>
+              <p>{t("contacts.info__subtitle")}</p>
+            </div>
+            <div className={scss.info__description}>
+              <p>{t("contacts.info__description")}</p>
+            </div>
+            <button>{t("contacts.form")}</button>
           </div>
         </div>
         <div className={scss.contact__form}>
-          <div className={scss.form__title}>
-            <p>{t("contacts.form__title")}:</p>
-          </div>
-          <div className={scss.form__buttons}>
-            <div>+996 (707) 77-77-77</div>
-            <div>privet@solid.kg</div>
+          <div className={scss.form__descriptions}>
+            <div className={scss.form__title}>
+              <p>{t("contacts.form__title")}:</p>
+            </div>
+            <div className={scss.form__buttons}>
+              <div>
+                <p>+996 (707) 77-77-77</p>
+              </div>
+              <div>privet@solid.kg</div>
+            </div>
           </div>
         </div>
       </div>

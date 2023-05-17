@@ -32,15 +32,18 @@ a {
   margin-left: auto;
 }
 
-.slick-slider{
+.slick-slider {
   width: 100%;
 }
-.slick-track{
+
+.slick-track {
   display: flex;
 }
-.slick-slide>div{
+
+.slick-slide>div {
   margin: 0px 16px;
 }
+
 @media (min-width: 576px) {
 
   .container,
@@ -89,4 +92,10 @@ a {
   .container-xxl {
     max-width: 90%;
   }
+}
+@media (max-width: 768px) {
+    .container{
+      padding: 0;
+      max-width: 100%;
+    }
 }

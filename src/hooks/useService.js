@@ -1,22 +1,21 @@
 import { useState } from "react";
-import {
-  getDocs,
-  query,
-} from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
 
-const useService = (collection) => {
+const useService = (collectionName) => {
   const [services, setServices] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   const getServices = async () => {
-    const servicesArr = []
-    const getFireStore = query(collection(db, collection))
+    const servicesArr = [];
+    const getFireStore = query(collection(db, collectionName));
     const querySnapshot = await getDocs(getFireStore);
-    querySnapshot.forEach((doc) => servicesArr.push({ tid: doc.id, ...doc.data() }));
+    querySnapshot.forEach((doc) =>
+      servicesArr.push({ tid: doc.id, ...doc.data() })
+    );
     setServices(servicesArr);
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   return {
     services,
