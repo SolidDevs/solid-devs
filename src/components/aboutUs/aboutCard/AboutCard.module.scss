@@ -3,7 +3,8 @@
 .card__main {
   display: grid;
   grid-template-columns: 157px;
-  @media (max-width: 540px) {
+
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
   .card__cub {
@@ -13,9 +14,12 @@
     position: absolute;
     top: -25px;
     right: -25px;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
   h3 {
-    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 300;
     font-size: 48px;
@@ -24,13 +28,23 @@
     margin: 0;
     position: relative;
     width: fit-content;
+    @media (max-width: 576px) {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
   p {
-    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     color: #949494;
+    @media (max-width: 576px) {
+      margin: 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: #979797;
+    }
   }
 }
