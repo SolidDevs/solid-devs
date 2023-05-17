@@ -26,11 +26,11 @@ const Aside = () => {
       return scss.aside_scroll_service;
     } else if (scroll >= 85 && scroll < 120) {
       return scss.aside_scroll_stack;
-    } else if (scroll >= 122 && scroll < 155) {
+    } else if (scroll >= 122 && scroll < 165) {
       return scss.aside_scroll_reviews;
-    } else if (scroll >= 155 && scroll < 199) {
+    } else if (scroll >= 165 && scroll < 201) {
       return scss.aside_scroll_we;
-    } else if (scroll >= 199) {
+    } else if (scroll >= 201) {
       return scss.aside_scroll_project;
     } else {
       return scss.aside_scroll_it;
