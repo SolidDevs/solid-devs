@@ -8,6 +8,10 @@
   color: $mainText;
   margin-bottom: 20px;
   width: 60%;
+  @media (max-width: 576px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 .wrapper {
   margin-bottom: 70px;
