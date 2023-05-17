@@ -24,18 +24,6 @@
       display: none;
     }
 
-    .solid__links {
-      display: flex !important;
-      flex-direction: column;
-      gap: 10px;
-      a {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: #afafaf;
-      }
-    }
-
     @media (max-width: 1024px) {
       grid-template-columns: 2fr 1fr;
       gap: 50px;
@@ -53,8 +41,7 @@
       }
 
       .about__block__mobile,
-      .line__mobile,
-      .solid__links {
+      .line__mobile {
         display: block;
       }
 
@@ -63,6 +50,18 @@
         font-size: 14px !important;
         line-height: 19px !important;
         color: #afafaf !important;
+      }
+
+      .solid__links {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+        a {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #afafaf;
+        }
       }
     }
 

@@ -13,6 +13,10 @@ $step__numeration__width: calc(4vw + -1.5vh);
   padding-bottom: 60px;
   position: relative;
 
+  @media (max-width: 912px) {
+    padding: 25px 20px 30px 20px;
+  }
+
   .steps__container {
     display: flex;
     flex-direction: column;
@@ -20,6 +24,10 @@ $step__numeration__width: calc(4vw + -1.5vh);
     padding-top: 40px;
 
     .step {
+      @media (max-width: 912px) {
+        display: none;
+      }
+
       background: linear-gradient(
         90deg,
         #ffffff 0.85%,
@@ -66,8 +74,16 @@ $step__numeration__width: calc(4vw + -1.5vh);
   .text__content {
     width: 58%;
 
+    @media (max-width: 912px) {
+      width: 100%;
+    }
+
     button {
       margin-top: 40px;
+      @media (max-width: 576px) {
+        width: 100%;
+        justify-content: space-between;
+      }
     }
 
     .content__title {
@@ -77,6 +93,11 @@ $step__numeration__width: calc(4vw + -1.5vh);
       line-height: 60px;
       color: #262626;
       margin: 0 0 10px 0;
+
+      @media (max-width: 576px) {
+        font-size: 32px;
+        line-height: 44px;
+      }
     }
 
     .content__description {
@@ -86,6 +107,12 @@ $step__numeration__width: calc(4vw + -1.5vh);
       line-height: 28px;
       color: #797979;
       margin: 0;
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+        line-height: 25px;
+        color: #979797;
+      }
     }
 
     .content__letter__text {
