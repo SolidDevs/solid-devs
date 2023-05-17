@@ -37,8 +37,8 @@ const ProjectsItem = ({ title, subtitle, links }) => {
           withArrow={true}
         />
       </div>
-      <div onClick={() => setActive(!isActive)} className={scss.item__info_adaptive}>
-        <div className={scss.wrapper__title}>
+      <div className={scss.item__info_adaptive}>
+        <div onClick={() => setActive(!isActive)} className={scss.wrapper__title}>
           <div className={scss.wrapper__title_left}>
             <div className={scss.item__title}>
               <h1>{t(subtitle)}</h1>
@@ -52,24 +52,25 @@ const ProjectsItem = ({ title, subtitle, links }) => {
           </div>
         </div>
         {
-          isActive &&
-          <>
-            <div className={scss.item__links}>
-              {links.map((link, i) => (
-                <>
-                  <div key={`${link}_${i}`} className={scss.links__item}>
-                    <Image src={arrow} width={8} height={14} />
-                    <p>{t(link)}</p>
-                  </div>
-                </>
-              ))}
+          isActive ?
+            <div className={scss.item__link_show}>
+              <div className={scss.item__links}>
+                {links.map((link, i) => (
+                  <>
+                    <div key={`${link}_${i}`} className={scss.links__item}>
+                      <Image src={arrow} width={8} height={14} />
+                      <p>{t(link)}</p>
+                    </div>
+                  </>
+                ))}
+              </div>
+              <Button
+                title={"button__reusable.site"}
+                variant={"btn__no_bg"}
+                withArrow={true}
+              />
             </div>
-            <Button
-              title={"button__reusable.site"}
-              variant={"btn__no_bg"}
-              withArrow={true}
-            />
-          </>
+            : <div className={scss.item__links_hide}></div>
         }
       </div>
       <div className={scss.item__img}>

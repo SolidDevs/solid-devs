@@ -123,6 +123,8 @@
       .item__links {
         margin-top: 10px;
         margin-bottom: 20px;
+        transition: all ease-in-out 0.4s;
+        opacity: 1;
         .links__item {
           cursor: pointer;
           display: flex;
@@ -140,6 +142,14 @@
         border-bottom: 1px solid $darkGrayText;
         border-top: 1px solid $darkGrayText;
         padding: 12px 0;
+      }
+      .item__link_show {
+        opacity: 1;
+        transition: all ease-in-out 0.5s;
+      }
+      .item__links_hide {
+        opacity: 0;
+        transition: all ease-in-out 1s;
       }
       .wrapper__title_right {
         transform: rotate(0deg);
