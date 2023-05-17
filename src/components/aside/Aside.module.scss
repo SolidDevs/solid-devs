@@ -3,18 +3,97 @@
   grid-template-columns: 4px 1fr;
   height: 283px;
   gap: 24px;
-  .aside_scroll {
+  position: sticky;
+  top: 17%;
+  margin-bottom: 87px;
+  .aside_scroll_it {
     background: #d9d9d9;
     height: 100%;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
       width: 4px;
       height: 48px;
-      background-color: #0e61fe;
+      background: #0e61fe;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside_scroll_service {
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 50px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside_scroll_stack {
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 100px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside_scroll_reviews {
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 150px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside_scroll_we {
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 200px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside_scroll_project {
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 240px;
+      left: 0;
+      position: absolute;
     }
   }
   .aside_inner {

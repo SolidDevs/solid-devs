@@ -64,7 +64,7 @@ const OurProjects = () => {
               {el.links.map((link, i) => (
                 <>
                   <div key={`${link}_${i}`} className={scss.links__item}>
-                    <Image src={arrow} width={8} height={14} />
+                    <Image src={arrow} width={8} height={14} alt="arrow" />
                     <p>{t(link)}</p>
                   </div>
                 </>
@@ -77,7 +77,7 @@ const OurProjects = () => {
             />
           </div>
           <div className={scss.item__img}>
-            <Image src={el.imgSLider} width={388} height={230} />
+            <Image src={el.imgSLider} width={388} height={230} alt="sliderImg" />
           </div>
         </div>
       )),

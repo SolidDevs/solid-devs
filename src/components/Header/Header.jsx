@@ -16,10 +16,16 @@ const Header = () => {
   const { t, language } = i18n;
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalIndex,setModalIndex] = useState(false)
+  const [serviceIndex,setServiceIndex] = useState(false)
   const [lan, setLan] = useState(false);
   const { route } = useRouter();
-  const handleClick = () => setIsServiceModalOpen(!isServiceModalOpen);
+  const handleClick = () => {
+    setServiceIndex(true)
+    setIsServiceModalOpen(!isServiceModalOpen)
+  };
   const handleButtonClick = () => {
+    setModalIndex(true)
     setIsContactModalOpen(!isContactModalOpen);
     setIsServiceModalOpen(false);
   };
@@ -41,6 +47,10 @@ const Header = () => {
     setLan(false);
     change();
   };
+
+
+
+
 
   useEffect(() => {
     document.body.style.height = isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
@@ -66,6 +76,8 @@ const Header = () => {
     event.preventDefault();
   };
 
+  
+  
   const headerNavs = useMemo(
     () =>
       header__navs.map(({ path, title }) => (
@@ -109,8 +121,10 @@ const Header = () => {
       )),
     [language, inputValues]
   );
-  return (
-    <section className={scss.header}>
+
+  const contactModal = useMemo(
+    () => 
+    modalIndex && (
       <header
         className={
           isContactModalOpen
@@ -154,6 +168,29 @@ const Header = () => {
           </form>
         </section>
       </header>
+    )
+  )
+
+  const serviceModal = useMemo(
+    () => 
+    serviceIndex && (
+      <footer
+        className={
+          isServiceModalOpen ? scss.modal_active : scss.modal_notActive
+        }
+        onClick={handleClick}
+      >
+        <main onClick={(event) => event.stopPropagation()}>
+          <h2>{t("header.our_services")}</h2>
+          <nav>{serviceNavs}</nav>
+        </main>
+      </footer>
+    )
+  )
+  
+  return (
+    <section className={scss.header}>
+      {contactModal}
       <aside className={scss.header_left}>
         <Link href={"/"}>
           <Logo />
@@ -197,17 +234,7 @@ const Header = () => {
           <Button title={t("header.button")} withArrow={false} />
         </label>
       </aside>
-      <footer
-        className={
-          isServiceModalOpen ? scss.modal_active : scss.modal_notActive
-        }
-        onClick={handleClick}
-      >
-        <main onClick={(event) => event.stopPropagation()}>
-          <h2>{t("header.our_services")}</h2>
-          <nav>{serviceNavs}</nav>
-        </main>
-      </footer>
+      {serviceModal}
     </section>
   );
 };
