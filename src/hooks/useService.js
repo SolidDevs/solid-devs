@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
-  collection,
   getDocs,
   query,
 } from "firebase/firestore";
-import { db } from '@/firebase/firebase';
+import { db } from "@/firebase/firebase";
 
 const useService = (collection) => {
   const [services, setServices] = useState([]);

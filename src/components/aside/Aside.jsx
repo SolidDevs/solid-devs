@@ -1,4 +1,3 @@
-import { UseTranslation } from "next-i18next";
 import scss from "./Aside.module.scss";
 import { asideLinks } from "../../constants/aside";
 import { useTranslation } from "react-i18next";
@@ -6,14 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 
 const Aside = () => {
   const { t } = useTranslation("");
-
   const [scroll,setSrcoll] = useState(0)
-
-
-  const handleItemClick = (index) => {
-
-    console.log(`Clicked item index: ${index}`);
-  };
+  const handleItemClick = () => ""
 
   const onScroll = () => {
     const widthScroll = document.documentElement.scrollTop
@@ -21,11 +14,6 @@ const Aside = () => {
     const scrolled= (widthScroll / height ) * 230 - 15
     setSrcoll(scrolled > 60 ? scrolled > 160 ? 240 :  scrolled * 1.5 : scrolled)
   }
-
-  console.log(scroll)
-
-
-
   useEffect(() => {
 
     window.addEventListener("scroll",onScroll)
@@ -59,9 +47,6 @@ const Aside = () => {
       {t(item.link)}
     </a>
   ));
-
-
-
 
   return (
     <aside className={scss.aside_item}>
