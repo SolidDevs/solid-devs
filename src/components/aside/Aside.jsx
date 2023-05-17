@@ -22,15 +22,15 @@ const Aside = () => {
   },[])
 
   const memoizedValue = useMemo(() => {
-    if (scroll >= 34 && scroll < 95) {
+    if (scroll >= 24 && scroll < 85) {
       return scss.aside_scroll_service;
-    } else if (scroll >= 95 && scroll < 130) {
+    } else if (scroll >= 85 && scroll < 120) {
       return scss.aside_scroll_stack;
-    } else if (scroll >= 132 && scroll < 165) {
+    } else if (scroll >= 122 && scroll < 155) {
       return scss.aside_scroll_reviews;
-    } else if (scroll >= 165 && scroll < 209) {
+    } else if (scroll >= 155 && scroll < 199) {
       return scss.aside_scroll_we;
-    } else if (scroll >= 209) {
+    } else if (scroll >= 199) {
       return scss.aside_scroll_project;
     } else {
       return scss.aside_scroll_it;
