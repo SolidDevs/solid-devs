@@ -10,6 +10,9 @@ export const asideLinks = [
     link: "aside.ourTechnologyStack"
   },
   {
+    link: "aside.ourTeam"
+  },
+  {
     link: "aside.reviews"
   },
   {

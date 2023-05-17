@@ -21,19 +21,23 @@ const Aside = () => {
 
   },[])
 
+  console.log(scroll)
+
   const memoizedValue = useMemo(() => {
     if (scroll >= 24 && scroll < 85) {
       return scss.aside_scroll_service;
-    } else if (scroll >= 85 && scroll < 120) {
+    } else if (scroll >= 85 && scroll < 122) {
       return scss.aside_scroll_stack;
-    } else if (scroll >= 122 && scroll < 165) {
+    } else if (scroll >= 122 && scroll < 155) {
+      return scss.aside_scroll_team;
+    } else if (scroll >= 155 && scroll < 201) {
       return scss.aside_scroll_reviews;
-    } else if (scroll >= 165 && scroll < 201) {
+    } else if (scroll >= 201 && scroll < 230) {
       return scss.aside_scroll_we;
-    } else if (scroll >= 201) {
-      return scss.aside_scroll_project;
-    } else {
+    } else  if (scroll < 24) {
       return scss.aside_scroll_it;
+    }else  if (scroll >= 227) {
+      return scss.aside_scroll_project;
     }
   }, [scroll]);
 

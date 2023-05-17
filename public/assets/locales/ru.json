@@ -59,7 +59,8 @@
     "ourTechnologyStack": "Наш стэк технологий",
     "reviews": "Обзоры",
     "howWeAreWorking": "Как мы работаем?",
-    "ourProjects": "Наши проекты"
+    "ourProjects": "Наши проекты",
+    "ourTeam" : "Наша команда"
   },
   "footer": {
     "title__company": "О компании",

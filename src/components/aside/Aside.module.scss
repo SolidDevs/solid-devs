@@ -62,7 +62,7 @@
       position: absolute;
     }
   }
-  .aside_scroll_reviews {
+  .aside_scroll_team{
     @include breackpoint(sm) {
       display: none;
     }
@@ -80,7 +80,7 @@
       position: absolute;
     }
   }
-  .aside_scroll_we {
+  .aside_scroll_reviews {
     @include breackpoint(sm) {
       display: none;
     }
@@ -98,7 +98,7 @@
       position: absolute;
     }
   }
-  .aside_scroll_project {
+  .aside_scroll_we {
     @include breackpoint(sm) {
       display: none;
     }
@@ -112,6 +112,24 @@
       height: 48px;
       background: #0e61fe;
       top: 240px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside_scroll_project {
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside_scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 290px;
       left: 0;
       position: absolute;
     }
