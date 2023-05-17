@@ -39,6 +39,7 @@
   font-size: 20px;
   line-height: 26px;
   color: $mainDarkText;
+  white-space: pre-line;
 }
 ._circle__items {
   opacity: 0;
@@ -91,13 +92,9 @@
     margin: 0;
     font-size: 19px;
     line-height: 26px;
-    max-width: 218px;
   }
   ._circle__items {
     display: none;
-  }
-  .svg__arrow {
-    margin-left: 15px;
   }
   .svg__arrow path {
     transition: initial;
