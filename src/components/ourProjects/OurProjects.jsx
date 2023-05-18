@@ -8,10 +8,12 @@ import Paging from "./paging/Paging";
 import ProjectsItem from "./projectsItem/ProjectsItem";
 import Image from "next/image";
 import Button from "../Button/Button";
+import { useTranslation } from "react-i18next";
+import arrow from '/public/assets/images/ourProject/arrow.svg'
 
 const OurProjects = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-
+  const {t} = useTranslation()
   const handleSlideChange = (index) => {
     setActiveSlide(index);
   };
