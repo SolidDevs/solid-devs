@@ -27,14 +27,14 @@
   },
   "serviceBlock": {
     "title": "Услуги по разработке программного обеспечения, на которых мы надираем задницы",
-    "WebDevelopmentApplications": "Разработка веб приложений",
-    "Services UX/UI design": "Услуги UX/UI дизайна",
-    "mobileDevelopmentApplications": "Разработка мобильных приложений",
-    "machineDevelopmentLearning": "Развитие машинного обучения",
-    "mVPDevelopmentApplications": "Разработка MVP приложений",
-    "developmentCloudApplications": "Разработка облачных приложений",
-    "applicationDevelopmentForChat": "Развитие приложений для чата",
-    "developmentBY": "Разработка ПО"
+    "WebDevelopmentApplications": "Разработка \nвеб приложений",
+    "Services UX/UI design": "Услуги \nUX/UI дизайна",
+    "mobileDevelopmentApplications": "Разработка мобильных \nприложений",
+    "machineDevelopmentLearning": "Развитие \nмашинного обучения",
+    "mVPDevelopmentApplications": "Разработка \nMVP приложений",
+    "developmentCloudApplications": "Разработка облачных \nприложений",
+    "applicationDevelopmentForChat": "Развитие приложений \nдля чата",
+    "developmentBY": "Разработка \nПО"
   },
   "itProjects": {
     "title__crypto": "Крипто и блокчейн",

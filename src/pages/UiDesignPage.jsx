@@ -10,9 +10,9 @@ const UiDesignPage = () => {
   return (
     <>
       <Header />
-      <ReusableMainContent data={uiMain}/>
+      <ReusableMainContent data={uiMain} />
       <ServicesAndProcess data={uiWeb} />
-      <ServicesAndProcess data={uiProcess} variant={"process"}/>
+      <ServicesAndProcess data={uiProcess} variant={"process"} />
       <ContactUs />
       <Footer />
     </>

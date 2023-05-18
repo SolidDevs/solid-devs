@@ -19,7 +19,7 @@
     }
     .svg__arrow {
       position: relative;
-      right: 0;
+      right: 0px;
     }
     .svg__arrow path {
       fill: $white;
@@ -39,6 +39,7 @@
   font-size: 20px;
   line-height: 26px;
   color: $mainDarkText;
+  white-space: pre-line;
 }
 ._circle__items {
   opacity: 0;
@@ -50,7 +51,52 @@
   position: relative;
   right: 10px;
   transition: ease-in-out 0.5s;
+  @media (max-width: 768px) {
+    right: 0;
+  }
 }
 .svg__arrow path {
   transition: ease-in-out 0.4s;
+}
+@media (max-width: 768px) {
+  .service__card {
+    background-color: #f1f1f1;
+    height: 118px;
+    padding: 15px 15px;
+    &:hover {
+      background-color: #e3e3e3;
+      .title {
+        color: #262626;
+      }
+      ._circle__items {
+        opacity: initial;
+      }
+      .svg__arrow {
+        position: initial;
+        right: 0;
+        transition: initial;
+      }
+      .svg__arrow path {
+        fill: $mainBlue;
+      }
+    }
+    .__item {
+      display: flex;
+      height: 88px;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .title {
+    margin: 0;
+    font-size: 19px;
+    line-height: 26px;
+  }
+  ._circle__items {
+    display: none;
+  }
+  .svg__arrow path {
+    transition: initial;
+  }
 }

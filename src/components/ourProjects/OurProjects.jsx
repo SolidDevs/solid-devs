@@ -1,15 +1,20 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import scss from "./OurProjects.module.scss";
-import { useTranslation } from "react-i18next";
 import { ourProjectArr } from "@/constants/ourProjects";
-import Button from "../Button/Button";
-import Image from "next/image";
-import arrow from "../../../public/assets/images/ourProject/arrow.svg";
 import Slider from "react-slick";
 import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
+import Paging from "./paging/Paging";
+import ProjectsItem from "./projectsItem/ProjectsItem";
+
 const OurProjects = () => {
-  const { t } = useTranslation();
+
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handleSlideChange = (index) => {
+    setActiveSlide(index);
+  };
+
   const sliderSettings = {
     infinite: false,
     speed: 500,
@@ -41,14 +46,18 @@ const OurProjects = () => {
       {
         breakpoint: 480,
         settings: {
-          nextArrow: false,
-          prevArrow: false,
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          dotsClass: `slick-dots ${scss.customDots}`,
+          customPaging: (i) => <Paging isActive={i === activeSlide} />,
+          beforeChange: (_, newIndex) => handleSlideChange(newIndex),
         },
       },
     ],
   };
+
   const renderProjects = useMemo(
     () =>
       ourProjectArr.map((el, index) => (
@@ -80,6 +89,7 @@ const OurProjects = () => {
             <Image src={el.imgSLider} width={388} height={230} alt="sliderImg" />
           </div>
         </div>
+        <ProjectsItem {...el} key={`${el.title}_${index}`} />
       )),
     []
   );

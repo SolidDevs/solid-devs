@@ -75,15 +75,15 @@
     "mail": "Mail"
   },
   "serviceBlock": {
-    "title": "Software development services we kick ass on",
-    "WebDevelopmentApplications": "Web Development Applications",
-    "Services UX/UI design": "Services UX/UI design",
-    "mobileDevelopmentApplications": "Mobile Development Applications",
-    "machineDevelopmentLearning": "Machine Development Learning",
-    "mVPDevelopmentApplications": "MVP Development Applications",
-    "developmentCloudApplications": "Development Cloud Applications",
-    "applicationDevelopmentForChat": "Application Development For Chat",
-    "developmentBY": "Development BY"
+    "title": "Software  development services we kick ass on",
+    "WebDevelopmentApplications": "Web Development \nApplications",
+    "Services UX/UI design": "Services \nUX/UI design",
+    "mobileDevelopmentApplications": "Mobile Development \nApplications",
+    "machineDevelopmentLearning": "Machine Development \nLearning",
+    "mVPDevelopmentApplications": "MVP Development \nApplications",
+    "developmentCloudApplications": "Development Cloud \nApplications",
+    "applicationDevelopmentForChat": "Application Development \nFor Chat",
+    "developmentBY": "Development \nBY"
   },
   "ourTeam": {
     "title": "Our team",
