@@ -6,7 +6,7 @@ const OurTeamCard = ({ image, name, surname, position }) => {
   const { t } = useTranslation("");
   return (
     <>
-      <div className={scss.ourTeam__card}>
+      <div className={scss.ourTeam__card} id="team">
         <Image
           src={image}
           alt={`${name} ${surname}`}

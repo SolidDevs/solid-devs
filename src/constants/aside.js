@@ -1,24 +1,31 @@
 
 export const asideLinks = [
   {
-    link: "aside.itProgects"
+    link: "aside.itProgects",
+    href : "#it"
   },
   {
-    link: "aside.ourServices"
+    link: "aside.ourServices",
+    href : "#service"
   },
   {
-    link: "aside.ourTechnologyStack"
+    link: "aside.ourTechnologyStack",
+    href : "#stack"
   },
   {
-    link: "aside.ourTeam"
+    link: "aside.ourTeam",
+    href : "#team"
   },
   {
-    link: "aside.reviews"
+    link: "aside.reviews",
+    href : "#reviews"
   },
   {
-    link: "aside.howWeAreWorking"
+    link: "aside.howWeAreWorking",
+    href : "#we"
   },
   {
-    link: "aside.ourProjects"
+    link: "aside.ourProjects",
+    href : "#project"
   },
 ]

@@ -1,61 +1,81 @@
 import scss from "./Aside.module.scss";
 import { asideLinks } from "../../constants/aside";
 import { useTranslation } from "react-i18next";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 
 const Aside = () => {
-  const { t } = useTranslation("");
-  const [scroll,setSrcoll] = useState(0)
-  const handleItemClick = () => ""
+  const { t } = useTranslation();
+  const [currentSection, setCurrentSection] = useState(null);
+  const [index, setIndex] = useState(scss.aside_scroll_it);
 
-  const onScroll = () => {
-    const widthScroll = document.documentElement.scrollTop
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    const scrolled= (widthScroll / height ) * 230 - 15
-    setSrcoll(scrolled > 60 ? scrolled > 160 ? 240 :  scrolled * 1.5 : scrolled)
-  }
   useEffect(() => {
+    const handleScroll = () => {
+      const currentSection = document.elementFromPoint(
+        window.innerWidth / 2,
+        window.innerHeight / 2
+      );
+      if (currentSection) {
+        const currentSectionId = currentSection.getAttribute("id");
+        setCurrentSection(currentSectionId);
+      }
+    };
 
-    window.addEventListener("scroll",onScroll)
-    return() => window.removeEventListener("scroll",onScroll) 
+    window.addEventListener("scroll", handleScroll);
 
-  },[])
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentSection]);
 
-  const memoizedValue = useMemo(() => {
-    if (scroll >= 24 && scroll < 85) {
-      return scss.aside_scroll_service;
-    } else if (scroll >= 85 && scroll < 122) {
-      return scss.aside_scroll_stack;
-    } else if (scroll >= 122 && scroll < 155) {
-      return scss.aside_scroll_team;
-    } else if (scroll >= 155 && scroll < 201) {
-      return scss.aside_scroll_reviews;
-    } else if (scroll >= 201 && scroll < 230) {
-      return scss.aside_scroll_we;
-    } else  if (scroll < 24) {
-      return scss.aside_scroll_it;
-    }else  if (scroll >= 227) {
-      return scss.aside_scroll_project;
+  const change = (href) => {
+    if (href === "#it") {
+      setIndex(scss.aside_scroll_it);
+    } else if (href === "#service") {
+      setIndex(scss.aside_scroll_service);
+    } else if (href === "#stack") {
+      setIndex(scss.aside_scroll_stack);
+    } else if (href === "#team") {
+      setIndex(scss.aside_scroll_team);
+    } else if (href === "#reviews") {
+      setIndex(scss.aside_scroll_reviews);
+    } else if (href === "#project") {
+      setIndex(scss.aside_scroll_project);
     }
-  }, [scroll]);
+  };
 
   const asideItems = asideLinks.map((item, index) => (
     <a
       key={`${item.link}_${index}`}
       className={scss.aside_item_links}
-      href="#/"
-      onClick={() => handleItemClick(index)}
+      href={item.href}
+      onClick={() => change(item.href)}
     >
       {t(item.link)}
     </a>
   ));
 
+  useEffect(() => {
+    if (currentSection === "it") {
+      setIndex(scss.aside_scroll_it);
+    } else if (currentSection === "service") {
+      setIndex(scss.aside_scroll_service);
+    } else if (currentSection === "stack") {
+      setIndex(scss.aside_scroll_stack);
+    } else if (currentSection === "team") {
+      setIndex(scss.aside_scroll_team);
+    } else if (currentSection === "reviews") {
+      setIndex(scss.aside_scroll_reviews);
+    }else if (currentSection === "project") {
+      setIndex(scss.aside_scroll_project);
+    }
+  }, [currentSection]);
+
   return (
     <aside className={scss.aside_item}>
-      <div className={memoizedValue}>
+      <div className={index}>
         <div className={scss.aside_scroll_before}></div>
       </div>
-      <div className={scss.aside_inner}>{asideItems}</div> 
+      <div className={scss.aside_inner}>{asideItems}</div>
     </aside>
   );
 };

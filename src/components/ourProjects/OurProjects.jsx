@@ -52,18 +52,18 @@ const OurProjects = () => {
   const renderProjects = useMemo(
     () =>
       ourProjectArr.map((el, index) => (
-        <div className={scss.projects__item} key={`${el.title}_${index}`}>
-          <div className={scss.item__info}>
-            <div className={scss.item__title}>
+        <div className={scss.projects__item} key={`${el.title}_${index}`} id="project">
+          <div className={scss.item__info}  id="project">
+            <div className={scss.item__title } id="project">
               <h1>{t(el.title)}</h1>
             </div>
-            <div className={scss.item__subtitle}>
+            <div className={scss.item__subtitle}  id="project">
               <p>{t(el.subtitle)}</p>
             </div>
-            <div className={scss.item__links}>
+            <div className={scss.item__links}  id="project">
               {el.links.map((link, i) => (
                 <>
-                  <div key={`${link}_${i}`} className={scss.links__item}>
+                  <div key={`${link}_${i}`} className={scss.links__item}  id="project">
                     <Image src={arrow} width={8} height={14} alt="arrow" />
                     <p>{t(link)}</p>
                   </div>
@@ -76,7 +76,7 @@ const OurProjects = () => {
               withArrow={true}
             />
           </div>
-          <div className={scss.item__img}>
+          <div className={scss.item__img}  id="project">
             <Image src={el.imgSLider} width={388} height={230} alt="sliderImg" />
           </div>
         </div>
@@ -84,8 +84,8 @@ const OurProjects = () => {
     []
   );
   return (
-    <div className={scss.projects}>
-      <Slider {...sliderSettings}>{renderProjects}</Slider>
+    <div className={scss.projects} id="project">
+      <Slider {...sliderSettings} id="project">{renderProjects}</Slider>
     </div>
   );
 };

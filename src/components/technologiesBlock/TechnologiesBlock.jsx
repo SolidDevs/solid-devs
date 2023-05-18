@@ -12,7 +12,7 @@ const TechnologiesBlock = () => {
   const technologiesItems = useMemo(
     () =>
       technologiesInfo.map((item, index) => (
-        <div key={`${item.title}_${index}`} className={scss.__item}>
+        <div key={`${item.title}_${index}`} className={scss.__item} id="stack">
           <div className={scss.icon}>
             <Image
               src={`${item.img}`}
@@ -27,9 +27,9 @@ const TechnologiesBlock = () => {
     [t]
   );
   return (
-    <SectionContainer title={t("technologies.title")}>
+    <SectionContainer title={t("technologies.title")}  id="stack">
       <Navbar navbarLinks={navbarLinks} paramName={"technologies"} />
-      <div className={scss.technologies}>{technologiesItems}</div>
+      <div className={scss.technologies} id="stack">{technologiesItems}</div>
     </SectionContainer>
   );
 };
