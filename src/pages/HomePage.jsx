@@ -25,7 +25,6 @@ const HomePage = () => {
         <OurProjects />
         <Contacts />
       </MainContent>
-      <ContactUs />
       <Footer />
     </>
   );
