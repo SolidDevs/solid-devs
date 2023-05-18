@@ -11,7 +11,6 @@ const AboutUsPage = () => {
     <>
       <Header />
       <AboutUs />
-      <Preloader />
       <ReasonsBlock />
       <FeedBack />
       <ContactUs />
