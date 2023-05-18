@@ -28,44 +28,44 @@ const Aside = () => {
   }, [currentSection]);
 
   const change = (href) => {
-    if (href === "#it") {
+    if (href === "#itProject") {
       setIndex(scss.aside_scroll_it);
     } else if (href === "#service") {
       setIndex(scss.aside_scroll_service);
-    } else if (href === "#stack") {
+    } else if (href === "#technologies") {
       setIndex(scss.aside_scroll_stack);
     } else if (href === "#team") {
       setIndex(scss.aside_scroll_team);
-    } else if (href === "#reviews") {
+    } else if (href === "#feedback") {
       setIndex(scss.aside_scroll_reviews);
-    } else if (href === "#project") {
+    } else if (href === "#ourProject") {
       setIndex(scss.aside_scroll_project);
     }
   };
 
-  const asideItems = asideLinks.map((item, index) => (
+  const aside__links = asideLinks.map((item, index) => (
     <a
       key={`${item.link}_${index}`}
       className={scss.aside_item_links}
-      href={item.href}
-      onClick={() => change(item.href)}
+      href={item.path}
+      onClick={() => change(item.path)}
     >
       {t(item.link)}
     </a>
   ));
 
   useEffect(() => {
-    if (currentSection === "it") {
+    if (currentSection === "itProject") {
       setIndex(scss.aside_scroll_it);
     } else if (currentSection === "service") {
       setIndex(scss.aside_scroll_service);
-    } else if (currentSection === "stack") {
+    } else if (currentSection === "technologies") {
       setIndex(scss.aside_scroll_stack);
     } else if (currentSection === "team") {
       setIndex(scss.aside_scroll_team);
-    } else if (currentSection === "reviews") {
+    } else if (currentSection === "feedback") {
       setIndex(scss.aside_scroll_reviews);
-    }else if (currentSection === "project") {
+    } else if (currentSection === "ourProject") {
       setIndex(scss.aside_scroll_project);
     }
   }, [currentSection]);
@@ -73,9 +73,9 @@ const Aside = () => {
   return (
     <aside className={scss.aside_item}>
       <div className={index}>
-        <div className={scss.aside_scroll_before}></div>
+        <div className={scss.aside__scroll_before}></div>
       </div>
-      <div className={scss.aside_inner}>{asideItems}</div>
+      <div className={scss.aside_inner}>{aside__links}</div>
     </aside>
   );
 };

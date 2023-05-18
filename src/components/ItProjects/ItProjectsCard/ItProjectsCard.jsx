@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const ItProjectsCard = ({ icon, title }) => {
   const { t } = useTranslation();
   return (
-    <div className={scss.projects} id="it">
+    <div className={scss.projects} id="itProject">
       <Image src={icon} alt="project icon" />
       <p>{t(title)}</p>
     </div>
