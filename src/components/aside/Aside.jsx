@@ -1,7 +1,7 @@
 import scss from "./Aside.module.scss";
 import { asideLinks } from "../../constants/aside";
 import { useTranslation } from "react-i18next";
-import { useEffect, useMemo, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 const Aside = () => {
   const { t } = useTranslation();
