@@ -25,6 +25,7 @@ const WebMain = ({ data }) => {
     ),
     [t, data]
   );
+
   return (
     <div className={scss.main}>
       <div className="container">
@@ -33,7 +34,14 @@ const WebMain = ({ data }) => {
           <Image
             src={data.image}
             alt="website image"
-            className={scss.content__image}
+            className={scss.content__image_nonAdaptive}
+            width={631}
+            height={563}
+          />
+          <Image
+            src={data.adaptiveImage}
+            alt="website image"
+            className={scss.content__image_adaptive}
             width={631}
             height={563}
           />
