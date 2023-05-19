@@ -21,7 +21,7 @@ const HomePage = () => {
         <ServicesBlock />
         <TechnologiesBlock />
         <FeedBack isMain={true} />
-        <OurTeam />
+        <OurTeam/>
         <OurProjects />
         <Contacts />
       </MainContent>
