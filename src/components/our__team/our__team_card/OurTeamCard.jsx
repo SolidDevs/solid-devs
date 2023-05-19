@@ -15,11 +15,11 @@ const OurTeamCard = ({ image, name, surname, position }) => {
           sizes="100vw"
           style={{ width: "100%", height: "100%" }}
         />
-        <div className={scss.our__team__item_hovered}>
-          <h1 className={scss.our__team__item_fullName}>
+        <div className={scss.our__team__item_hovered} id="team" >
+          <h1 className={scss.our__team__item_fullName} id="team" >
             {`${t(surname)}  ${t(name)}`}
           </h1>
-          <h1 className={scss.our__team__item_position}>{t(position)}</h1>
+          <h1 className={scss.our__team__item_position} id="team" >{t(position)}</h1>
         </div>
       </div>
     </>

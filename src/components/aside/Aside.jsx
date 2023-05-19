@@ -40,7 +40,7 @@ const Aside = () => {
       setIndex(scss.aside__rewiews_scroll);
     } else if (href === "#ourProject") {
       setIndex(scss.aside__ourProject_scroll);
-    }else if (currentSection === "#work") {
+    }else if (href === "#work") {
       setIndex(scss.aside__work_scroll);
     }
   };
@@ -73,6 +73,8 @@ const Aside = () => {
       setIndex(scss.aside__work_scroll);
     }
   }, [currentSection]);
+
+  console.log(currentSection)
 
   return (
     <aside className={scss.aside_item}>
