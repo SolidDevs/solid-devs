@@ -6,7 +6,7 @@ import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 import Paging from "./paging/Paging";
 import ProjectsItem from "./projectsItem/ProjectsItem";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "react-i18next";
 
 const OurProjects = () => {
 
