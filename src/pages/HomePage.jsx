@@ -2,7 +2,6 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import ItProjects from "@/components/ItProjects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
-import ContactUs from "@/components/contactUs/ContactUs";
 import Contacts from "@/components/contacts/Contacts";
 import FeedBack from "@/components/feedBack/FeedBack";
 import Main from "@/components/main/Main";
@@ -14,18 +13,18 @@ import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock"
 const HomePage = () => {
   return (
     <>
-      {/* <Header />
-      <Main /> */}
+      <Header />
+      <Main />
       <MainContent>
-        {/* <ItProjects />
+        <ItProjects />
         <ServicesBlock />
-        <TechnologiesBlock /> */}
+        <TechnologiesBlock />
         <OurTeam />
         <FeedBack isMain={true} />
         <OurProjects />
-        {/* <Contacts /> */}
+        <Contacts />
       </MainContent>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
