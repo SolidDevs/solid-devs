@@ -13,12 +13,12 @@ export const asideLinks = [
     path : "#technologies"
   },
   {
-    link: "aside.ourTeam",
-    path : "#team"
-  },
-  {
     link: "aside.reviews",
     path : "#feedback"
+  },
+  {
+    link: "aside.ourTeam",
+    path : "#team"
   },
   {
     link: "aside.howWeAreWorking",

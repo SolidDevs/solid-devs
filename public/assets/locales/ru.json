@@ -62,6 +62,12 @@
     "ourProjects": "Наши проекты",
     "ourTeam" : "Наша команда"
   },
+  "technologies" : {
+    "title" : "Технологии и инструменты которые мы используем",
+    "Terraform" : "Terraform",
+    "Ansible" : "Ansible",
+    "Jenkins" : "Jenkins"
+  },
   "footer": {
     "title__company": "О компании",
     "company__desc": "Мощь инноваций в области программного обеспечения, созданная для того, чтобы вывести ваш бизнес на вершину!",

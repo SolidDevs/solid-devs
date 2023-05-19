@@ -20,8 +20,8 @@ const HomePage = () => {
         <ItProjects />
         <ServicesBlock />
         <TechnologiesBlock />
-        <OurTeam />
         <FeedBack isMain={true} />
+        <OurTeam />
         <OurProjects />
         <Contacts />
       </MainContent>

@@ -46,6 +46,12 @@
     "ourTeam": "Our Team"
 
   },
+  "technologies" : {
+    "title" : "Technologies and tools we use",
+    "Terraform" : "Terraform",
+    "Ansible" : "Ansible",
+    "Jenkins" : "Jenkins"
+  },
   "footer": {
     "title__company": "About company",
     "company__desc": "The power of the programs in the field of software created to bring your business to the top!",
