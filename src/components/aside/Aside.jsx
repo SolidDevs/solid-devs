@@ -74,8 +74,6 @@ const Aside = () => {
     }
   }, [currentSection]);
 
-  console.log(currentSection)
-
   return (
     <aside className={scss.aside_item}>
       <div className={index}>
