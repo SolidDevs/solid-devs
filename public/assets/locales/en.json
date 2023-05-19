@@ -1,23 +1,23 @@
 {
   "welcome": "Welcome",
   "hello": "Hello",
-  "header" : {
-    "about" : "About us",
-    "career" : "Career",
-    "service" : "Service" ,
-    "button" : "Contact",
-    "our_services" : "Our service",
-    "mvp" : "Development of MVP applications",
-    "ux-ui" : " UX/UI design services",
-    "mobile" : "Mobile application development",
-    "chat" : "Chat application development",
-    "your-project" : "Tell us about your project",
+  "header": {
+    "about": "About us",
+    "career": "Career",
+    "service": "Service",
+    "button": "Contact",
+    "our_services": "Our service",
+    "mvp": "Development of MVP applications",
+    "ux-ui": " UX/UI design services",
+    "mobile": "Mobile application development",
+    "chat": "Chat application development",
+    "your-project": "Tell us about your project",
     "your-name": "Your name",
     "company": "Company",
     "email": "Work mail",
     "number": "Phone number",
     "us-help": "How can we help you?",
-    "send" : "Send"
+    "send": "Send"
   },
   "itProjects": {
     "title__crypto": "Crypto and blockchain",
@@ -130,6 +130,7 @@
     "successes": "Successfully developed chat applications"
   },
   "ourProjects": {
+    "ourProjectsTitle": "Our projects",
     "title": "Kyrgyz Riders",
     "subtitle": "Tourism company",
     "links": {
