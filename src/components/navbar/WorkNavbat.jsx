@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import scss from "./Navbar.module.scss";
+import scss from "./WorkNavbar.module.scss";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
-const Navbar = ({ navbarLinks, paramName }) => {
+const WorkNavbar = ({ navbarLinks, paramName, state, setState }) => {
   const router = useRouter();
   const [paramValue, setParamValue] = useState("");
+
   useEffect(() => {
     const { query } = router;
     const value = query[paramName];
@@ -13,7 +14,8 @@ const Navbar = ({ navbarLinks, paramName }) => {
   }, [router, paramName]);
   const { t } = useTranslation("");
 
-  const handleClick = useCallback((item) => {
+  const handleClick = useCallback((item, index) => {
+    setState(index)
     const query = router.query;
     query[paramName] = t(item);
     const path = {
@@ -28,14 +30,14 @@ const Navbar = ({ navbarLinks, paramName }) => {
       navbarLinks.map((item, index) => (
         <button
           key={`${item}_${index}`}
-          onClick={() => handleClick(item)}
+          onClick={() => handleClick(item, index)}
           className={
-            paramValue == item
+            state > index - 1
               ? scss.navbar__item_currentSelect
               : scss.navbar__item_nonActive
           }
         >
-          {t(`navbar.${item}`)}
+          {t(`${item}`)}
         </button>
       )),
     [navbarLinks, paramValue, handleClick, t]
@@ -43,4 +45,4 @@ const Navbar = ({ navbarLinks, paramName }) => {
   return <nav className={scss.navbar}>{navbarItems}</nav>;
 };
 
-export default Navbar;
+export default WorkNavbar;
