@@ -63,3 +63,28 @@ $line__height: calc(3vw + 2vh);
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .serviceMain {
+    background-color: #f1f1f1;
+    padding: 20px 20px;
+    margin-bottom: 50px;
+    h2 {
+      color: #262626;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+  }
+  .processMain{
+    background-color: #f1f1f1;
+    padding: 20px 20px;
+    h2 {
+      color: #262626;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+  }
+}
