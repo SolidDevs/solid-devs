@@ -9,6 +9,7 @@ import OurProjects from "@/components/ourProjects/OurProjects";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
+import Work from "@/components/work/Work";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
         <ServicesBlock />
         <TechnologiesBlock />
         <OurTeam />
+        <Work />
         <FeedBack isMain={true} />
         <OurProjects />
         <Contacts />
