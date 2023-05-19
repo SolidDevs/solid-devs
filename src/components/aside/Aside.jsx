@@ -40,6 +40,8 @@ const Aside = () => {
       setIndex(scss.aside__rewiews_scroll);
     } else if (href === "#ourProject") {
       setIndex(scss.aside__ourProject_scroll);
+    }else if (currentSection === "#work") {
+      setIndex(scss.aside__work_scroll);
     }
   };
 
@@ -67,6 +69,8 @@ const Aside = () => {
       setIndex(scss.aside__rewiews_scroll);
     } else if (currentSection === "ourProject") {
       setIndex(scss.aside__ourProject_scroll);
+    }else if (currentSection === "work") {
+      setIndex(scss.aside__work_scroll);
     }
   }, [currentSection]);
 

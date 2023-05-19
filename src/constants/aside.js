@@ -22,7 +22,7 @@ export const asideLinks = [
   },
   {
     link: "aside.howWeAreWorking",
-    path : "#we"
+    path : "#work"
   },
   {
     link: "aside.ourProjects",
