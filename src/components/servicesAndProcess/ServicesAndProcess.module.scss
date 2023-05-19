@@ -63,28 +63,41 @@ $line__height: calc(3vw + 2vh);
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  $title__size: calc(3vw + 2vh);
+  $line__height: calc(4vw + 2vh);
   .serviceMain {
     background-color: #f1f1f1;
     padding: 20px 20px;
     margin-bottom: 50px;
     h2 {
       color: #262626;
-      width: 100%;
+      width: 56%;
+      font-size: $title__size;
+      line-height: $line__height;
       margin: 0;
       margin-bottom: 15px;
       margin-top: 20px;
     }
   }
-  .processMain{
+  .processMain {
     background-color: #f1f1f1;
     padding: 20px 20px;
     h2 {
       color: #262626;
       width: 100%;
       margin: 0;
+      font-size: $title__size;
+      line-height: $line__height;
       margin-bottom: 15px;
       margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 412px) {
+  .serviceMain {
+    h2 {
+      width: 68%;
     }
   }
 }
