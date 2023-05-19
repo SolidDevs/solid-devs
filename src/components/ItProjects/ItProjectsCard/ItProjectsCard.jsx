@@ -8,7 +8,7 @@ const ItProjectsCard = ({ icon, title }) => {
   return (
     <div className={scss.projects} id="itProject">
       <Image src={icon} alt="project icon" />
-      <p>{t(title)}</p>
+      <p id="itProject">{t(title)}</p>
     </div>
   );
 };

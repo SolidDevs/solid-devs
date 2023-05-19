@@ -12,8 +12,8 @@ const ProjectsItem = ({ title, subtitle, links }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={scss.projects__item} id="project">
-      <div className={scss.item__info} id="project">
+    <div className={scss.projects__item} id="ourProject">
+      <div className={scss.item__info} id="ourProject">
         <div className={scss.item__title}>
           <h1>{t(title)}</h1>
         </div>
@@ -26,7 +26,7 @@ const ProjectsItem = ({ title, subtitle, links }) => {
               <div
                 key={`${link}_${i}`}
                 className={scss.links__item}
-                id="project"
+                id="ourProject"
               >
                 <Image src={arrow} width={8} height={14} />
                 <p>{t(link)}</p>
@@ -40,7 +40,7 @@ const ProjectsItem = ({ title, subtitle, links }) => {
           withArrow={true}
         />
       </div>
-      <div className={scss.item__info_adaptive} id="project">
+      <div className={scss.item__info_adaptive} id="ourProject">
         <div
           onClick={() => setActive(!isActive)}
           className={scss.wrapper__title}

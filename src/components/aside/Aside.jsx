@@ -29,24 +29,24 @@ const Aside = () => {
 
   const change = (href) => {
     if (href === "#itProject") {
-      setIndex(scss.aside_scroll_it);
+      setIndex(scss.aside__itProject_scroll);
     } else if (href === "#service") {
-      setIndex(scss.aside_scroll_service);
+      setIndex(scss.aside__service_scroll);
     } else if (href === "#technologies") {
-      setIndex(scss.aside_scroll_stack);
+      setIndex(scss.aside__technoligies_scroll);
     } else if (href === "#team") {
-      setIndex(scss.aside_scroll_team);
+      setIndex(scss.aside__team_scroll);
     } else if (href === "#feedback") {
-      setIndex(scss.aside_scroll_reviews);
+      setIndex(scss.aside__rewiews_scroll);
     } else if (href === "#ourProject") {
-      setIndex(scss.aside_scroll_project);
+      setIndex(scss.aside__ourProject_scroll);
     }
   };
 
   const aside__links = asideLinks.map((item, index) => (
     <a
       key={`${item.link}_${index}`}
-      className={scss.aside_item_links}
+      className={scss.aside__links}
       href={item.path}
       onClick={() => change(item.path)}
     >
@@ -56,17 +56,17 @@ const Aside = () => {
 
   useEffect(() => {
     if (currentSection === "itProject") {
-      setIndex(scss.aside_scroll_it);
+      setIndex(scss.aside__itProject_scroll);
     } else if (currentSection === "service") {
-      setIndex(scss.aside_scroll_service);
+      setIndex(scss.aside__service_scroll);
     } else if (currentSection === "technologies") {
-      setIndex(scss.aside_scroll_stack);
+      setIndex(scss.aside__technoligies_scroll);
     } else if (currentSection === "team") {
-      setIndex(scss.aside_scroll_team);
+      setIndex(scss.aside__team_scroll);
     } else if (currentSection === "feedback") {
-      setIndex(scss.aside_scroll_reviews);
+      setIndex(scss.aside__rewiews_scroll);
     } else if (currentSection === "ourProject") {
-      setIndex(scss.aside_scroll_project);
+      setIndex(scss.aside__ourProject_scroll);
     }
   }, [currentSection]);
 

@@ -64,8 +64,8 @@ const OurProjects = () => {
     []
   );
   return (
-    <div className={scss.projects} id="project">
-      <Slider {...sliderSettings} id="project">
+    <div className={scss.projects} id="ourProject">
+      <Slider {...sliderSettings} id="ourProject">
         {renderProjects}
       </Slider>
     </div>
