@@ -59,7 +59,14 @@
     "ourTechnologyStack": "Наш стэк технологий",
     "reviews": "Обзоры",
     "howWeAreWorking": "Как мы работаем?",
-    "ourProjects": "Наши проекты"
+    "ourProjects": "Наши проекты",
+    "ourTeam" : "Наша команда"
+  },
+  "technologies" : {
+    "title" : "Технологии и инструменты которые мы используем",
+    "Terraform" : "Terraform",
+    "Ansible" : "Ansible",
+    "Jenkins" : "Jenkins"
   },
   "footer": {
     "title__company": "О компании",

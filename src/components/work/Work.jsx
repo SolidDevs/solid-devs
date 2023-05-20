@@ -33,8 +33,8 @@ const Work = () => {
   const sliderCards = useMemo(
     () =>
       workSliderData.map((item, index) => (
-        <div key={`${item.title}_${index}`} className={scss.work__item}>
-          <h1 className={scss.work__item__counter}>{`0${index + 1}`}</h1>
+        <div key={`${item.title}_${index}`} className={scss.work__item}  id="work">
+          <h1 className={scss.work__item__counter} id="work" >{`0${index + 1}`}</h1>
           <div className={scss.work__item_info}>
             <p className={scss.title}>{t(item.title)}</p>
             <p className={scss.description}>{t(item.description)}</p>
@@ -45,9 +45,9 @@ const Work = () => {
   );
 
   return (
-    <SectionContainer title={t("work.title")}>
+    <SectionContainer title={t("work.title")} id="work">
       <WorkNavbar setState={setState} state={state} navbarLinks={workLinks} paramName={"work"} />
-      <div className={`${scss.wrapper} work__wrapper`}>
+      <div className={`${scss.wrapper} work__wrapper`} id="work">
         <Slider ref={sliderRef} {...settings}>{sliderCards}</Slider>
       </div>
     </SectionContainer>

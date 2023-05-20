@@ -5,27 +5,142 @@
   grid-template-columns: 4px 1fr;
   height: 283px;
   gap: 24px;
-  @include breackpoint(sm) {
-    display: none;
-  }
-  .aside_scroll {
+  position: sticky;
+  top: 17%;
+  margin-bottom: 87px;
+  .aside__itProject_scroll {
+    @include breackpoint(sm) {
+      display: none;
+    }
     background: #d9d9d9;
     height: 100%;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
       width: 4px;
       height: 48px;
-      background-color: #0e61fe;
+      background: #0e61fe;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside__service_scroll{
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 50px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside__technoligies_scroll{
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 100px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside__team_scroll{
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 190px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside__rewiews_scroll{
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 150px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside__work_scroll {
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 240px;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .aside__ourProject_scroll {
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 290px;
+      left: 0;
+      position: absolute;
     }
   }
   .aside_inner {
+    @include breackpoint(sm) {
+      display: none;
+    }
     display: flex;
     flex-direction: column;
-    .aside_item_links {
+    .aside__links {
       height: 48px;
       display: flex;
       align-items: center;

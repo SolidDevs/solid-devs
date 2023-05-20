@@ -71,8 +71,8 @@ const FeedBack = ({ isMain }) => {
     []
   );
   return (
-    <div className={scss.feedBack}>
-      <h1>{t("feedBack.heading")}</h1>
+    <div className={scss.feedBack}  id="feedback" >
+      <h1  id="feedback" >{t("feedBack.heading")}</h1>
       <div className={scss.feedBack__slide}>
         <Slider {...sliderSettings}>{renderCard}</Slider>
       </div>

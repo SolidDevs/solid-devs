@@ -17,18 +17,18 @@ const ItProjects = () => {
     []
   );
   return (
-    <div className={scss.projects}>
-      <div className={scss.projects__cards}>
-        <SectionContainer title={t("sectionContainer.project__title")}>
+    <div className={scss.projects} id="itProject">
+      <div className={scss.projects__cards} id="itProject" >
+        <SectionContainer title={t("sectionContainer.project__title")} id="itProject">
           <div className={scss.cards__main}>{itProjectsRender}</div>
         </SectionContainer>
       </div>
-      <div className={scss.projects__adaptive}>
-        <div className={scss.title} onClick={() => setOpen(!isOpen)}>
+      <div className={scss.projects__adaptive} id="itProject">
+        <div className={scss.title} onClick={() => setOpen(!isOpen)} id="itProject">
           <p>{t("sectionContainer.project__title")}</p>
           <Image src={arrow} width={14} height={8} alt="arrow" />
         </div>
-        <div className={`${scss.cards__main} ${isOpen ? scss.show : ""}`}>
+        <div className={`${scss.cards__main} ${isOpen ? scss.show : ""}`} id="itProject">
           {itProjectsRender}
         </div>
       </div>

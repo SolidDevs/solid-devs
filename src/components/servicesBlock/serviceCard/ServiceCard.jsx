@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const ServiceCard = ({ title }) => {
   const { t } = useTranslation("");
   return (
-    <div className={scss.service__card}>
+    <div className={scss.service__card} id="service">
       <div className={scss.__item}>
         <h1 className={scss.title}>{t(`${title}`)}</h1>
         <svg

@@ -9,11 +9,8 @@ import ProjectsItem from "./projectsItem/ProjectsItem";
 import { useTranslation } from "react-i18next";
 
 const OurProjects = () => {
-
   const { t } = useTranslation();
-
   const [activeSlide, setActiveSlide] = useState(0);
-
   const handleSlideChange = (index) => {
     setActiveSlide(index);
   };
@@ -70,8 +67,8 @@ const OurProjects = () => {
   );
 
   return (
-    <div className={scss.ourProjects}>
-      <h1>{t("ourProjects.ourProjectsTitle")}</h1>
+    <div className={scss.ourProjects}  id="ourProject" >
+      <h1  id="ourProject" >{t("ourProjects.ourProjectsTitle")}</h1>
       <div className={scss.projects}>
         <Slider {...sliderSettings}>{renderProjects}</Slider>
       </div>
