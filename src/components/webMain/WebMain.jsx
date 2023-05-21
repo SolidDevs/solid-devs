@@ -23,7 +23,7 @@ const WebMain = ({ data }) => {
         />
       </div>
     ),
-    [t]
+    [t, data]
   );
   return (
     <div className={scss.main}>

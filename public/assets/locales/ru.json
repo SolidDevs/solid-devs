@@ -7,34 +7,34 @@
   },
   "welcome": "Добро пожаловать",
   "hello": "Привет",
-  "header" : {
-    "about" : "О нас",
-    "career" : "Карьера",
-    "service" : "Услуги",
-    "button" : "Связаться",
-    "our_services" : "Наши услуги",
-    "mvp" : "Разработка MVP приложений",
-    "ux-ui" : "Услуги UX/UI дизайна",
-    "mobile" : "Разработка мобильных приложений",
-    "chat" : "Разработка приложений для чата",
-    "your-project" : "Расскажите нам о своем проекте",
+  "header": {
+    "about": "О нас",
+    "career": "Карьера",
+    "service": "Услуги",
+    "button": "Связаться",
+    "our_services": "Наши услуги",
+    "mvp": "Разработка MVP приложений",
+    "ux-ui": "Услуги UX/UI дизайна",
+    "mobile": "Разработка мобильных приложений",
+    "chat": "Разработка приложений для чата",
+    "your-project": "Расскажите нам о своем проекте",
     "your-name": "Ваше имя",
     "company": "Компания",
     "email": "Рабочая почта",
     "number": "Номер телефона",
     "us-help": "Чем мы можем вам помочь?",
-    "send" : "Отправить"
+    "send": "Отправить"
   },
   "serviceBlock": {
     "title": "Услуги по разработке программного обеспечения, на которых мы надираем задницы",
-    "WebDevelopmentApplications": "Разработка веб приложений",
-    "Services UX/UI design": "Услуги UX/UI дизайна",
-    "mobileDevelopmentApplications": "Разработка мобильных приложений",
-    "machineDevelopmentLearning": "Развитие машинного обучения",
-    "mVPDevelopmentApplications": "Разработка MVP приложений",
-    "developmentCloudApplications": "Разработка облачных приложений",
-    "applicationDevelopmentForChat": "Развитие приложений для чата",
-    "developmentBY": "Разработка ПО"
+    "WebDevelopmentApplications": "Разработка \nвеб приложений",
+    "Services UX/UI design": "Услуги \nUX/UI дизайна",
+    "mobileDevelopmentApplications": "Разработка мобильных \nприложений",
+    "machineDevelopmentLearning": "Развитие \nмашинного обучения",
+    "mVPDevelopmentApplications": "Разработка \nMVP приложений",
+    "developmentCloudApplications": "Разработка облачных \nприложений",
+    "applicationDevelopmentForChat": "Развитие приложений \nдля чата",
+    "developmentBY": "Разработка \nПО"
   },
   "itProjects": {
     "title__crypto": "Крипто и блокчейн",
@@ -275,5 +275,9 @@
     "title": "Процесс разработки",
     "card__title": "Идея, исследование и анализ",
     "card__subtitle": "Наша команда оценивает проект, проводит конкурентный анализ и организует работу."
+  },
+  "solidLinks": {
+    "about": "О нас",
+    "career": "Карьера"
   }
 }

@@ -43,8 +43,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    document.body.style.height = isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
-    document.body.style.overflow = isContactModalOpen || isServiceModalOpen ? "hidden" : "visible";
+    document.body.style.height =
+      isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
+    document.body.style.overflow =
+      isContactModalOpen || isServiceModalOpen ? "hidden" : "visible";
   }, [isContactModalOpen, isServiceModalOpen]);
 
   const handleInputChange = (e) => {
@@ -87,7 +89,13 @@ const Header = () => {
   const serviceNavs = useMemo(
     () =>
       service__navs.map(({ title, path }) => (
-        <Link key={path} href={path} className={route == path ? scss.modal__nav_active : scss.modal__nav_notActive}>
+        <Link
+          key={path}
+          href={path}
+          className={
+            route == path ? scss.modal__nav_active : scss.modal__nav_notActive
+          }
+        >
           {t(title)}
         </Link>
       )),
@@ -144,10 +152,7 @@ const Header = () => {
                 required
                 onChange={handleInputChange}
               />
-              <button
-                type="sumbit"
-                className={scss.header__button}
-              >
+              <button type="sumbit" className={scss.header__button}>
                 {t("header.send")}
               </button>
             </footer>

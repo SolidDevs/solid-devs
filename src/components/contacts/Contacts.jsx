@@ -27,9 +27,7 @@ const Contacts = () => {
             </div>
             <div className={scss.form__buttons}>
               <div>
-                <p>
-                +996 (707) 77-77-77
-                </p>
+                <p>+996 (707) 77-77-77</p>
               </div>
               <div>
                 <p>privet@solid.kg</p>
