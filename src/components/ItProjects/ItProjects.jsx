@@ -26,14 +26,14 @@ const ItProjects = () => {
   }, [isOpen]);
 
   return (
-    <div className={scss.projects}>
-      <div className={scss.projects__cards}>
-        <SectionContainer title={t("sectionContainer.project__title")}>
+    <div className={scss.projects} id="itProject">
+      <div className={scss.projects__cards} id="itProject" >
+        <SectionContainer title={t("sectionContainer.project__title")} id="itProject">
           <div className={scss.cards__main}>{itProjectsRender}</div>
         </SectionContainer>
       </div>
-      <div className={scss.projects__adaptive}>
-        <div className={scss.title} onClick={() => setOpen(!isOpen)}>
+      <div className={scss.projects__adaptive} id="itProject">
+        <div className={scss.title} onClick={() => setOpen(!isOpen)} id="itProject">
           <p>{t("sectionContainer.project__title")}</p>
           <div className={isOpen ? scss.title_right_active : scss.title_right}>
             <Image src={arrow} alt="arrow" />
@@ -50,7 +50,7 @@ const ItProjects = () => {
           }}
           ref={cardsMainRef}
         >
-          <div className={scss.cards__main}>{itProjectsRender}</div>
+          <div className={scss.cards__main} id="itProject">{itProjectsRender}</div>
         </div>
       </div>
     </div>

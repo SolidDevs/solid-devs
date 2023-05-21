@@ -2,6 +2,7 @@
 
 .projects__item {
   display: flex !important;
+  margin: 0 -16px;
   @include breackpoint(xm) {
     flex-direction: column-reverse;
   }
@@ -69,6 +70,11 @@
     background-image: url("../../../../public/assets/images/ourProject/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    img {
+      width: 70%;
+      height: fit-content;
+      object-fit: contain;
+    }
   }
 }
 

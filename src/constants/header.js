@@ -1,6 +1,6 @@
 export const header__navs = [
   {
-    path: "/",
+    path: "/aboutUs",
     title: "header.about",
   },
   {

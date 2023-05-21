@@ -1,4 +1,4 @@
-import { navbarLinks } from "@/constants/navbar";
+import { technologiesLinks } from "@/constants/navbar";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import Navbar from "../navbar/Navbar";
 import scss from "./Technologies.module.scss";
@@ -12,7 +12,7 @@ const TechnologiesBlock = () => {
   const technologiesItems = useMemo(
     () =>
       technologiesInfo.map((item, index) => (
-        <div key={`${item.title}_${index}`} className={scss.__item}>
+        <div key={`${item.title}_${index}`} className={scss.__item} id="technologies">
           <div className={scss.icon}>
             <Image
               src={`${item.img}`}
@@ -27,9 +27,9 @@ const TechnologiesBlock = () => {
     [t]
   );
   return (
-    <SectionContainer title={t("technologies.title")}>
-      <Navbar navbarLinks={navbarLinks} paramName={"technologies"} />
-      <div className={scss.technologies}>{technologiesItems}</div>
+    <SectionContainer title={t("technologies.title")} id="technologies" >
+      <Navbar clickable={true} navbarLinks={technologiesLinks} paramName={"technologies"} />
+      <div className={scss.technologies} id="technologies" >{technologiesItems}</div>
     </SectionContainer>
   );
 };

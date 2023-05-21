@@ -1,23 +1,23 @@
 {
   "welcome": "Welcome",
   "hello": "Hello",
-  "header" : {
-    "about" : "About us",
-    "career" : "Career",
-    "service" : "Service" ,
-    "button" : "Contact",
-    "our_services" : "Our service",
-    "mvp" : "Development of MVP applications",
-    "ux-ui" : " UX/UI design services",
-    "mobile" : "Mobile application development",
-    "chat" : "Chat application development",
-    "your-project" : "Tell us about your project",
+  "header": {
+    "about": "About us",
+    "career": "Career",
+    "service": "Service",
+    "button": "Contact",
+    "our_services": "Our service",
+    "mvp": "Development of MVP applications",
+    "ux-ui": " UX/UI design services",
+    "mobile": "Mobile application development",
+    "chat": "Chat application development",
+    "your-project": "Tell us about your project",
     "your-name": "Your name",
     "company": "Company",
     "email": "Work mail",
     "number": "Phone number",
     "us-help": "How can we help you?",
-    "send" : "Send"
+    "send": "Send"
   },
   "itProjects": {
     "title__crypto": "Crypto and blockchain",
@@ -42,7 +42,15 @@
     "ourTechnologyStack": "Our technology stack",
     "reviews": "Reviews",
     "howWeAreWorking": "How we are working",
-    "ourProjects": "Our projects"
+    "ourProjects": "Our projects",
+    "ourTeam": "Our Team"
+
+  },
+  "technologies" : {
+    "title" : "Technologies and tools we use",
+    "Terraform" : "Terraform",
+    "Ansible" : "Ansible",
+    "Jenkins" : "Jenkins"
   },
   "footer": {
     "title__company": "About company",
@@ -130,6 +138,7 @@
     "successes": "Successfully developed chat applications"
   },
   "ourProjects": {
+    "ourProjectsTitle": "Our projects",
     "title": "Kyrgyz Riders",
     "subtitle": "Tourism company",
     "links": {
@@ -281,5 +290,28 @@
   "solidLinks": {
     "about": "About Us",
     "career": "Career"
+  },
+  "work": {
+    "title": "How we are working?",
+    "Study": "Study",
+    "Back": "Back",
+    "cards": {
+      "idea": "Idea",
+      "ideaDesc": "We will answer all your questions and refine your idea",
+      "study": "Study",
+      "studyDes": "Analysis of the market, competitors and target audience",
+      "prototyping": "Prototyping",
+      "protoDesc": "Creating a raw version of the app to see how it works.",
+      "design": "Design",
+      "designDes": "Making your application beautiful and usable.",
+      "dev": "Development",
+      "devDesc": "As a development company, we take full responsibility for the code.",
+      "Review": "Review",
+      "reviewDesc": "Cross-validation helps keep code clear and functional.",
+      "testing": "Testing",
+      "testDesc": "We use manual and automated tests.",
+      "launch": "Launch",
+      "launchDes": "We stay with you after launch to fix and update the solution."
+    }
   }
 }

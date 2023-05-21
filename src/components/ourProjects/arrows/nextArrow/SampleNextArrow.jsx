@@ -2,7 +2,7 @@ import scss from "../arrow.module.scss";
 export default function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
-    <div className={`${className} ${scss.nextArrow}`} onClick={onClick}>
+    <div className={`${className} ${scss.nextArrow}`} onClick={onClick} id="project">
       <svg
         width="56"
         height="26"

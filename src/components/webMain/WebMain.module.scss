@@ -6,12 +6,43 @@ $description__size: calc(0.8vw + 1vh);
 
 .main {
   padding: 37px 0 40px;
+  @include breackpoint(xm) {
+    background-color: #494949;
+  }
   .main__content {
     display: flex;
-
-    .content__image {
+    @include breackpoint(md) {
+      flex-direction: column-reverse;
+    }
+    @include breackpoint(xm) {
+      flex-direction: column-reverse;
+    }
+    .content__image_nonAdaptive {
       width: 100%;
       object-fit: contain;
+      @include breackpoint(md) {
+        width: 100%;
+        object-fit: contain;
+      }
+      @include breackpoint(xm) {
+        display: block;
+        object-fit: contain;
+      }
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+    .content__image_adaptive {
+      width: 100%;
+      object-fit: contain;
+      @include breackpoint(xm) {
+        display: block;
+        margin: -10vh 0px;
+        object-fit: contain;
+      }
+      @media (min-width: 601px) {
+        display: none;
+      }
     }
 
     .content__text__wrapper {
@@ -19,9 +50,16 @@ $description__size: calc(0.8vw + 1vh);
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-
+      @include breackpoint(xm) {
+        padding: 0px 20px 0px;
+      }
       button {
         margin-bottom: 25px;
+        @include breackpoint(xm) {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
       }
     }
 
@@ -31,6 +69,13 @@ $description__size: calc(0.8vw + 1vh);
       font-size: $title__size;
       line-height: 60px;
       color: #262626;
+      @include breackpoint(xm) {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 44px;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
 
       p {
         margin: 0;
@@ -46,7 +91,12 @@ $description__size: calc(0.8vw + 1vh);
       line-height: 28px;
       letter-spacing: 0.03em;
       color: $darkGrayText;
-
+      @include breackpoint(xm) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #d3d3d3;
+      }
       p {
         margin: 0;
       }
