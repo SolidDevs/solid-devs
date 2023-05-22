@@ -88,3 +88,22 @@
     transform: rotate(180deg) !important;
   }
 }
+
+@media (min-width: 600px) {
+  .mobileView {
+    display: none;
+  }
+  .desktopView {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .mobileView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .desktopView {
+    display: none;
+  }
+}
