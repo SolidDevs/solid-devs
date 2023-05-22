@@ -14,19 +14,19 @@ import Work from "@/components/work/Work";
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <Main />
+      {/* <Header />
+      <Main /> */}
       <MainContent>
-        <ItProjects />
+        {/* <ItProjects />
         <ServicesBlock />
         <TechnologiesBlock />
         <FeedBack isMain={true} />
-        <OurTeam />
+        <OurTeam /> */}
         <Work />
-        <OurProjects />
-        <Contacts />
+        {/* <OurProjects />
+        <Contacts /> */}
       </MainContent>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
