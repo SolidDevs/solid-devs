@@ -56,8 +56,7 @@ const Work = () => {
   };
 
   const renderAdaptiveItems = useMemo(() =>
-    workSliderData.map((el, i) => <AdaptiveWorkIte activeItem={activeItem} handleClick={handleClick} countOfItem={i} key={`${el.title}_${i}`} {...el} />)
-    , [workSliderData, handleClick, activeItem])
+    workSliderData.map((el, i) => <AdaptiveWorkIte activeItem={activeItem} handleClick={handleClick} countOfItem={i} key={`${el.title}_${i}`} {...el} />), [workSliderData, handleClick, activeItem])
 
   return (
     <SectionContainer title={t("work.title")} id="work">
