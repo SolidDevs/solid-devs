@@ -1,5 +1,5 @@
 @import "../../styles/variables.scss";
-.technologies {
+.technologies__dekstop {
   display: grid;
   grid-template-columns: repeat(8, 75px);
   padding: 30px 40px;
@@ -35,4 +35,40 @@
   margin-bottom: 0;
   padding: 0;
   text-align: center;
+}
+.technologies__item {
+  .adaptive__item {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .technologies__dekstop {
+    display: none;
+  }
+  .technologies__item {
+    .item__dekstop {
+      display: none;
+    }
+    .technologies__line {
+      height: 42px;
+      margin-right: 11px;
+      border: 1px solid #b6b6b6;
+    }
+    .item__adaptive {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid #7a7a7a;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      .title{
+        margin-top: 0;
+      }
+      .icon {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
 }
