@@ -8,6 +8,7 @@ import { workSliderData } from "@/constants/work";
 import Slider from "react-slick";
 import SampleNextArrow from "./workArrows/WorkNextArrow";
 import SamplePrevArrow from "./workArrows/WorkPrevArrow";
+import AdaptiveWorkIte from "./adaptiveWorkItem/AdaptiveWorkIte";
 
 const Work = () => {
   const { t } = useTranslation("");
@@ -33,7 +34,7 @@ const Work = () => {
   const sliderCards = useMemo(
     () =>
       workSliderData.map((item, index) => (
-        <div key={`${item.title}_${index}`} className={scss.work__item}  id="work">
+        <div key={`${item.title}_${index}`} className={scss.work__item} id="work">
           <h1 className={scss.work__item__counter} id="work" >{`0${index + 1}`}</h1>
           <div className={scss.work__item_info}>
             <p className={scss.title}>{t(item.title)}</p>
@@ -44,11 +45,29 @@ const Work = () => {
     [workSliderData]
   );
 
+  const [activeItem, setActiveItem] = useState(null);
+
+  const handleClick = (index) => {
+    if (index === activeItem) {
+      setActiveItem(null);
+    } else {
+      setActiveItem(index);
+    }
+  };
+
+  const renderAdaptiveItems = useMemo(() =>
+    workSliderData.map((el, i) => <AdaptiveWorkIte activeItem={activeItem} handleClick={handleClick} countOfItem={i} key={`${el.title}_${i}`} {...el} />), [workSliderData, handleClick, activeItem])
+
   return (
     <SectionContainer title={t("work.title")} id="work">
-      <WorkNavbar setState={setState} state={state} navbarLinks={workLinks} paramName={"work"} />
-      <div className={`${scss.wrapper} work__wrapper`} id="work">
-        <Slider ref={sliderRef} {...settings}>{sliderCards}</Slider>
+      <div className={scss.desktopView}>
+        <WorkNavbar setState={setState} state={state} navbarLinks={workLinks} paramName={"work"} />
+        <div className={`${scss.wrapper} work__wrapper`} id="work">
+          <Slider ref={sliderRef} {...settings}>{sliderCards}</Slider>
+        </div>
+      </div>
+      <div className={scss.mobileView}>
+        {renderAdaptiveItems}
       </div>
     </SectionContainer>
   );
