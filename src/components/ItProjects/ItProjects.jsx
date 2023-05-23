@@ -40,7 +40,7 @@ const ItProjects = () => {
           </div>
         </div>
         <div
-          className={`${scss.projects__cards_wrapper} ${
+          className={`${scss.cards__wrapper} ${
             isOpen ? scss.show : ""
           }`}
           style={{
