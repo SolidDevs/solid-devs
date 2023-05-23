@@ -8,6 +8,9 @@
   position: sticky;
   top: 17%;
   margin-bottom: 87px;
+  @include breackpoint(sm) {
+    display: none;
+  }
   .aside__itProject_scroll {
     @include breackpoint(sm) {
       display: none;
