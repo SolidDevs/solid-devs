@@ -46,27 +46,25 @@ const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
             </button>
           </div>
           <div className={scss.navbar__adaptive}>
-            <button
-              key={`${item}_${index}`}
-              onClick={() => {
-                handleClick(item);
-                handleOpen();
-              }}
-              className={
-                paramValue == item
-                  ? scss.navbar__item_currentSelect
-                  : scss.navbar__item_nonActive
-              }
-            >
-              {t(`navbar.${item}`)}
-              <div
+            <div className={scss.navbar__wrapper}>
+              <button
+                key={`${item}_${index}`}
+                onClick={() => {
+                  handleClick(item);
+                  handleOpen();
+                }}
                 className={
-                  handleOpen ? scss.title__right_active : scss.title__right
+                  paramValue == item
+                    ? scss.navbar__item_currentSelect
+                    : scss.navbar__item_nonActive
                 }
               >
-                <Image src={arrow} width={14} height={8} />
+                {t(`navbar.${item}`)}
+              </button>
+              <div>
+                <Image className={isOpen ? scss.icon__active : scss.icon} src={arrow} width={14} height={8} />
               </div>
-            </button>
+            </div>
             {activeButton === item && (
               <div className={scss.navbar__technologies}>{children}</div>
             )}

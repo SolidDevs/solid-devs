@@ -98,7 +98,28 @@
       }
       .navbar__adaptive {
         display: block;
-
+        .navbar__wrapper {
+          display: flex;
+          background: #f1f1f1;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 6px;
+          padding: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          
+          .icon__active {  
+            transform: rotate(0deg);
+            transition: ease-in-out 0.2s all;
+          }
+          .icon {
+            transform: rotate(90deg);
+            transition: ease-in-out 0.2s all;
+          }
+        }
       }
       .navbar__technologies {
         display: grid;
@@ -107,7 +128,6 @@
       }
       .navbar__item_currentSelect {
         background: #f1f1f1;
-        padding: 15px;
         width: 100%;
         font-weight: 300;
         &::after {
@@ -116,27 +136,9 @@
       }
       .navbar__item_nonActive {
         background: #f1f1f1;
-        padding: 15px;
         width: 100%;
       }
 
-      button {
-        margin-bottom: 6px;
-        justify-content: space-between;
-        align-items: center;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-        .title_right {
-          transform: rotate(-90deg);
-          transition: ease-in-out 0.2s all;
-        }
-        .title_right_active {
-          transform: rotate(0deg);
-          transition: ease-in-out 0.2s all;
-        }
-      }
     }
   }
 }
