@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import arrow from "../../../public/images/technologies/arrow.svg";
-const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
+const Navbar = ({ navbarLinks, paramName, handleOpen, children }) => {
   const router = useRouter();
   const [paramValue, setParamValue] = useState("");
-  const [activeButton, setActiveButton] = useState(null);
+  const [isActive, setActive] = useState(null);
   useEffect(() => {
     const { query } = router;
     const value = query[paramName];
@@ -23,8 +23,8 @@ const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
         pathname: router.pathname,
         query,
       };
-      setActiveButton((prevActiveButton) => {
-        if (prevActiveButton === item) {
+      setActive((ActiveButton) => {
+        if (ActiveButton === item) {
           return null;
         }
         return item;
@@ -69,7 +69,7 @@ const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
               <div>
                 <Image
                   className={
-                    activeButton === item ? scss.icon__active : scss.icon
+                    isActive === item ? scss.icon__active : scss.icon
                   }
                   src={arrow}
                   width={14}
@@ -77,7 +77,7 @@ const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
                 />
               </div>
             </div>
-            {activeButton === item && (
+            {isActive === item && (
               <div className={scss.navbar__technologies}>{children}</div>
             )}
           </div>

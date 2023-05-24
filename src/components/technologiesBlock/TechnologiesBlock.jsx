@@ -59,7 +59,6 @@ const TechnologiesBlock = () => {
         navbarLinks={technologiesLinks}
         paramName={"technologies"}
         handleOpen={handleOpen}
-        isOpen={isOpen}
       >
         {isOpen && technologiesItems}
       </Navbar>
