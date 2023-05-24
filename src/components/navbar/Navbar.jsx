@@ -23,7 +23,12 @@ const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
         pathname: router.pathname,
         query,
       };
-      setActiveButton(item);
+      setActiveButton((prevActiveButton) => {
+        if (prevActiveButton === item) {
+          return null;
+        }
+        return item;
+      });
       router.push(path, path, { shallow: true });
     },
     [paramName, router]
@@ -62,7 +67,14 @@ const Navbar = ({ navbarLinks, paramName, isOpen, handleOpen, children }) => {
                 {t(`navbar.${item}`)}
               </button>
               <div>
-                <Image className={isOpen ? scss.icon__active : scss.icon} src={arrow} width={14} height={8} />
+                <Image
+                  className={
+                    activeButton === item ? scss.icon__active : scss.icon
+                  }
+                  src={arrow}
+                  width={14}
+                  height={8}
+                />
               </div>
             </div>
             {activeButton === item && (
