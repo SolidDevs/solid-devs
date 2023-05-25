@@ -97,9 +97,10 @@
       }
       .langs {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         background: #f1f1f1;
         margin: 6px 0 50px;
+        padding: 15px 20px;
         .mobile__lang__active {
           font-style: normal;
           font-weight: 400;
@@ -114,14 +115,14 @@
           font-weight: 400;
           font-size: 17px;
           line-height: 23px;
-          padding: 10px 50px;
+          padding: 10px 46px;
           color: #262626;
           background: #f1f1f1;
           border: 1px solid #d0d0d0;
         }
       }
       .mobile__footer__main {
-        margin-top: 90px;
+        margin-top: 60px;
         background: #494949;
         .mobile__footer__top {
           display: flex;
