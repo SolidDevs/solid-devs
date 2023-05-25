@@ -16,7 +16,7 @@ const Сard = ({ title, subtitle, img, name, speciality, id }) => {
         <p>{t(subtitle)}</p>
       </div>
       <div className={scss.card__user}>
-        <Image src={img} width={50} height={50} alt={t(name)} />
+        <Image src={img} width={58} height={58} alt={t(name)} />
         <div className={scss.user__info}>
           <h1>{t(name)}</h1>
           <p>{t(speciality)}</p>

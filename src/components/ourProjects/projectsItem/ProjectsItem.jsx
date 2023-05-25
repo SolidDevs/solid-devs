@@ -4,7 +4,7 @@ import Button from "../../Button/Button";
 import Image from "next/image";
 import arrow from "../../../../public/assets/images/ourProject/arrow.svg";
 import { useTranslation } from "react-i18next";
-import imgSLider from "../../../../public/assets/images/ourProject/mac.png";
+import imgSLider from "../../../../public/assets/images/ourProject/MacBook.svg";
 
 const ProjectsItem = ({ title, subtitle, links }) => {
   const [isActive, setActive] = useState(false);
