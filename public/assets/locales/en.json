@@ -44,13 +44,12 @@
     "howWeAreWorking": "How we are working",
     "ourProjects": "Our projects",
     "ourTeam": "Our Team"
-
   },
-  "technologies" : {
-    "title" : "Technologies and tools we use",
-    "Terraform" : "Terraform",
-    "Ansible" : "Ansible",
-    "Jenkins" : "Jenkins"
+  "technologies": {
+    "title": "Technologies and tools we use",
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
   },
   "footer": {
     "title__company": "About company",
@@ -290,6 +289,9 @@
   "solidLinks": {
     "about": "About Us",
     "career": "Career"
+  },
+  "headerMobile": {
+    "title": "Contact"
   },
   "work": {
     "title": "How we are working?",
