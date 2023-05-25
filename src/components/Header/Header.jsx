@@ -49,10 +49,18 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const modalElement = document.querySelector("header__contactModal_active");
     document.body.style.height =
       isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
     document.body.style.overflow =
       isContactModalOpen || isServiceModalOpen ? "hidden" : "visible";
+    document.body.style.overflowY =
+      isContactModalOpen || isServiceModalOpen ? "scroll" : "";
+      if (modalElement) {
+        modalElement.addEventListener('wheel', function(event) {
+          event.preventDefault();
+        });
+      }
   }, [isContactModalOpen, isServiceModalOpen]);
 
   const handleInputChange = (e) => {
