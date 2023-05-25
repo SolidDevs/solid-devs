@@ -11,7 +11,7 @@ import { service__navs } from "@/constants/header";
 import { inputs } from "@/constants/header";
 import close from "/public/images/Header/close.svg";
 import Logo from "../logo/Logo";
-import HeaderMobileMenu from "../headerMobileMenu/headerMobileMenu";
+import HeaderMobileMenu from "../headerMobileMenu/HeaderMobileMenu";
 
 const Header = () => {
   const { t, language } = i18n;
