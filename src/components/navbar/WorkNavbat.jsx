@@ -32,7 +32,7 @@ const WorkNavbar = ({ navbarLinks, paramName, state, setState }) => {
           key={`${item}_${index}`}
           onClick={() => handleClick(item, index)}
           className={
-            state > index - 1
+            state === index
               ? scss.navbar__item_currentSelect
               : scss.navbar__item_nonActive
           }
