@@ -3,7 +3,7 @@ import scss from "./HeaderMobileModal.module.scss";
 import close from "/public/images/Header/close.svg";
 import { inputs } from "@/constants/header";
 import i18n from "i18next";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const HeaderMobileModal = ({click}) => {
   const { t, language } = i18n;

@@ -10,8 +10,8 @@ const WebServicePage = () => {
     <>
       <Header />
       <ReusableMainContent data={webMain} />
-      <ServicesAndProcess  data={webServices}/>
-      <ServicesAndProcess variant="process" data={webProcess}/>
+      <ServicesAndProcess data={webServices} />
+      <ServicesAndProcess variant="process" data={webProcess} />
       <ContactUs />
       <Footer />
     </>

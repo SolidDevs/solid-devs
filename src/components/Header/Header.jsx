@@ -17,10 +17,16 @@ const Header = () => {
   const { t, language } = i18n;
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(false);
+  const [serviceIndex, setServiceIndex] = useState(false);
   const [lan, setLan] = useState(false);
   const { route } = useRouter();
-  const handleClick = () => setIsServiceModalOpen(!isServiceModalOpen);
+  const handleClick = () => {
+    setServiceIndex(true);
+    setIsServiceModalOpen(!isServiceModalOpen);
+  };
   const handleButtonClick = () => {
+    setModalIndex(true);
     setIsContactModalOpen(!isContactModalOpen);
     setIsServiceModalOpen(false);
   };
@@ -118,48 +124,73 @@ const Header = () => {
       )),
     [language, inputValues]
   );
+
+  const contactModal = useMemo(
+    () =>
+      modalIndex && (
+        <header
+          className={
+            isContactModalOpen
+              ? scss.header__contactModal_active
+              : scss.header__contactModal_notActive
+          }
+          onClick={handleButtonClick}
+        >
+          <section
+            className={scss.header__contactModal}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <header>
+              <h1>{t("header.your-project")}</h1>
+              <Image
+                src={close}
+                width={26}
+                height={26}
+                onClick={handleButtonClick}
+                alt="close"
+              />
+            </header>
+            <form onSubmit={sendForm}>
+              <main>{contactInputs}</main>
+              <footer>
+                <input
+                  placeholder={t("header.us-help")}
+                  type="text"
+                  name="usHelp"
+                  value={inputValues["usHelp"]}
+                  required
+                  onChange={handleInputChange}
+                />
+                <button type="sumbit" className={scss.header__button}>
+                  {t("header.send")}
+                </button>
+              </footer>
+            </form>
+          </section>
+        </header>
+      )
+  );
+
+  const serviceModal = useMemo(
+    () =>
+      serviceIndex && (
+        <footer
+          className={
+            isServiceModalOpen ? scss.modal_active : scss.modal_notActive
+          }
+          onClick={handleClick}
+        >
+          <main onClick={(event) => event.stopPropagation()}>
+            <h2>{t("header.our_services")}</h2>
+            <nav>{serviceNavs}</nav>
+          </main>
+        </footer>
+      )
+  );
+
   return (
     <section className={scss.header}>
-      <header
-        className={
-          isContactModalOpen
-            ? scss.header__contactModal_active
-            : scss.header__contactModal_notActive
-        }
-        onClick={handleButtonClick}
-      >
-        <section
-          className={scss.header__contactModal}
-          onClick={(event) => event.stopPropagation()}
-        >
-          <header>
-            <h1>{t("header.your-project")}</h1>
-            <Image
-              src={close}
-              width={26}
-              height={26}
-              onClick={handleButtonClick}
-              alt="close"
-            />
-          </header>
-          <form onSubmit={sendForm}>
-            <main>{contactInputs}</main>
-            <footer>
-              <input
-                placeholder={t("header.us-help")}
-                type="text"
-                name="usHelp"
-                value={inputValues["usHelp"]}
-                required
-                onChange={handleInputChange}
-              />
-              <button type="sumbit" className={scss.header__button}>
-                {t("header.send")}
-              </button>
-            </footer>
-          </form>
-        </section>
-      </header>
+      {contactModal}
       <aside className={scss.header_left}>
         <Link href={"/"}>
           <Logo />
@@ -214,6 +245,7 @@ const Header = () => {
           <nav>{serviceNavs}</nav>
         </main>
       </footer>
+      {serviceModal}
     </section>
   );
 };

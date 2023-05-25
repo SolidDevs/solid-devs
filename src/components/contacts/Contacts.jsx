@@ -29,7 +29,9 @@ const Contacts = () => {
               <div>
                 <p>+996 (707) 77-77-77</p>
               </div>
-              <div>privet@solid.kg</div>
+              <div>
+                <p>privet@solid.kg</p>
+              </div>
             </div>
           </div>
         </div>

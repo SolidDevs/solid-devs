@@ -15,8 +15,8 @@ const OurTeam = () => {
     []
   );
   return (
-    <SectionContainer title={t("ourTeam.title")}>
-      <div className={scss.ourTeam}>{ourTeamItems}</div>
+    <SectionContainer title={t("ourTeam.title")}id="team" >
+      <div className={scss.ourTeam} id="team">{ourTeamItems}</div>
     </SectionContainer>
   );
 };

@@ -146,11 +146,26 @@
           .form__title {
             p {
               margin-bottom: 15px;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 32px;
+              line-height: 40px;
             }
           }
           .form__buttons {
             background: #f1f1f1;
             padding: 20px;
+            div {
+              p {
+                margin: 0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 23px;
+                color: $white;
+                text-align: center;
+              }
+            }
           }
         }
       }

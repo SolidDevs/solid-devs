@@ -14,7 +14,7 @@ const ServicesBlock = () => {
   );
   return (
     <>
-      <SectionContainer title="serviceBlock.title">
+      <SectionContainer title="serviceBlock.title" id="service">
         <div className={scss.servicesBlock}>{serviseItems}</div>
       </SectionContainer>
     </>
