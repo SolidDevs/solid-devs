@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 
 html,
 body {
@@ -13,7 +13,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .container,
@@ -40,12 +40,11 @@ a {
   display: flex;
 }
 
-.slick-slide>div {
+.slick-slide > div {
   margin: 0px 16px;
 }
 
 @media (min-width: 576px) {
-
   .container,
   .container-sm {
     max-width: 540px;
@@ -53,7 +52,6 @@ a {
 }
 
 @media (min-width: 768px) {
-
   .container,
   .container-md,
   .container-sm {
@@ -62,7 +60,6 @@ a {
 }
 
 @media (min-width: 992px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -72,7 +69,6 @@ a {
 }
 
 @media (min-width: 1200px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -83,7 +79,6 @@ a {
 }
 
 @media (min-width: 1400px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -94,8 +89,12 @@ a {
   }
 }
 @media (max-width: 768px) {
-    .container{
-      padding: 0;
-      max-width: 100%;
-    }
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
+#__next {
+  overflow: hidden;
 }

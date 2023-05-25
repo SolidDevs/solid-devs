@@ -1,0 +1,178 @@
+@import "../../styles/variables.scss";
+
+.burger__main {
+  display: none;
+  position: relative;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    background: $white;
+    .burger {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 20px;
+      position: absolute;
+      img {
+        z-index: 9999;
+      }
+    }
+    .burger_none{
+      display: none;
+    }
+    .burger__menu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      padding-top: 70px;
+      top: 0;
+      right: -100vw;
+      width: 100vw;
+      height: 100vh;
+      background-color: $white;
+      transition: all 0.5s;
+      overflow-y: scroll;
+
+      .burger__navs {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          padding: 15px 20px;
+          color: #262626;
+          background: #f1f1f1;
+          p {
+            margin: 0;
+          }
+        }
+        #burger__accardion {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 20px;
+          background: #f1f1f1;
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0;
+            color: #262626;
+          }
+        }
+      }
+      .modal_active__mobile {
+        width: 100%;
+        animation: fadeIn 0.5s ease-in-out;
+        main {
+          background: $white;
+          nav {
+            display: flex;
+            flex-direction: column;
+            a {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 25px;
+              color: $darkGrayText;
+              padding: 15px 20px;
+              border-bottom: 1px solid #d0d0d0;
+            }
+          }
+        }
+      }
+      .modal_notActive__mobile {
+        left: 0;
+        width: 100%;
+        animation: fadeOut 0.5s ease-in-out;
+        main {
+          display: none;
+        }
+      }
+      .langs {
+        display: flex;
+        justify-content: space-evenly;
+        background: #f1f1f1;
+        margin: 6px 0 50px;
+        .mobile__lang__active {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 23px;
+          padding: 10px 50px;
+          color: $white;
+          background: $blue;
+        }
+        .mobile__lang__notActive {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 23px;
+          padding: 10px 50px;
+          color: #262626;
+          background: #f1f1f1;
+          border: 1px solid #d0d0d0;
+        }
+      }
+      .mobile__footer__main {
+        margin-top: 90px;
+        background: #494949;
+        .mobile__footer__top {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          gap: 10px;
+          .contact {
+            padding: 15px 20px;
+            margin: 0 20px 0;
+            background: #494949;
+            border: 1px solid $white;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 23px;
+            color: $white;
+          }
+        }
+        .mobile__footer__bottom {
+          padding: 20px 20px 30px;
+          display: flex;
+          justify-content: space-between;
+          border-top: 1px solid #d0d0d0;
+        }
+      }
+    }
+
+    .active {
+      right: 0;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

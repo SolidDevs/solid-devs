@@ -10,13 +10,27 @@
   align-items: center;
   width: 100%;
   background: $white;
+  @media (max-width: 912px) {
+    padding: 0 20px 0 0;
+    align-items: inherit;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+    align-items: inherit;
+  }
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   .header_left {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 70%;
+    z-index: 9999;
     @media (max-width: 1400px) {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      background: $white;
+      padding-left: 20px;
       width: 100%;
     }
     .header__title {
@@ -37,6 +51,12 @@
       width: 70%;
       padding-bottom: 10px;
       gap: 10px;
+      @media (max-width: 912px) {
+        justify-content: start;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
       .header__nav_notActive {
         height: 45px;
         color: #262626;
@@ -50,6 +70,9 @@
           cursor: pointer;
           text-align: center;
           padding: 0 10px;
+          @media (max-width: 912px) {
+            padding: 0;
+          }
         }
       }
       .header__nav_active {
@@ -65,6 +88,9 @@
           cursor: pointer;
           text-align: center;
           padding: 0 10px;
+          @media (max-width: 912px) {
+            padding: 0;
+          }
         }
       }
       .header__option_notActive {
@@ -74,6 +100,9 @@
         height: 37px;
         margin-top: 9px;
         padding: 0 20px;
+        @media (max-width: 912px) {
+          padding: 10px;
+        }
         &:hover {
           background: #f5f5f5;
         }
@@ -92,6 +121,9 @@
         margin-top: 9px;
         padding: 0 20px;
         background: #f5f5f5;
+        @media (max-width: 912px) {
+          padding: 10px;
+        }
         p {
           padding: 0;
         }
@@ -107,6 +139,9 @@
     justify-content: flex-end;
     align-items: center;
     gap: 30px;
+    @media (max-width: 768px) {
+      display: none;
+    }
     .header__language {
       display: flex;
       gap: 13px;
@@ -142,6 +177,7 @@
       padding: 30px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
       border-radius: 0px 0px 3px 3px;
+      color: #262626;
       h2 {
         margin: 0;
         font-style: normal;
@@ -245,7 +281,7 @@
         color: #262626;
         margin: 0;
       }
-      img{
+      img {
         cursor: pointer;
       }
     }
@@ -256,7 +292,7 @@
       height: 466px;
       padding: 40px;
       width: 796px;
-      main{
+      main {
         margin-top: 40px;
         margin-bottom: 20px;
         display: grid;
@@ -331,7 +367,7 @@
         color: #262626;
         margin: 0;
       }
-      img{
+      img {
         cursor: pointer;
       }
     }
@@ -342,7 +378,7 @@
       height: 466px;
       padding: 40px;
       width: 796px;
-      main{
+      main {
         margin-top: 40px;
         margin-bottom: 20px;
         display: grid;
@@ -390,6 +426,12 @@
           padding: 10px 20px;
           margin-top: 30px;
           cursor: pointer;
+
+          &:hover {
+            background: $mainBlue;
+            color: $white;
+            transition: .3s ease;
+          }
         }
       }
     }

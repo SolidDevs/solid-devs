@@ -279,5 +279,8 @@
   "solidLinks": {
     "about": "О нас",
     "career": "Карьера"
+  },
+  "headerMobile": {
+    "title": "Связаться"
   }
 }

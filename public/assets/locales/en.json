@@ -281,5 +281,8 @@
   "solidLinks": {
     "about": "About Us",
     "career": "Career"
+  },
+  "headerMobile": {
+    "title": "Contact"
   }
 }
