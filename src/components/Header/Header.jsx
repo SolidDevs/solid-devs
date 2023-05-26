@@ -18,8 +18,14 @@ const Header = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(false);
   const [serviceIndex, setServiceIndex] = useState(false);
-  const [lan, setLan] = useState(false);
   const { route } = useRouter();
+  const [selectLan,setSelectLan] = useState("")
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language");
+    setSelectLan(storedLanguage == "ru" ? true : false);
+    i18n.changeLanguage(storedLanguage);
+  }, []);
   const handleClick = () => {
     setServiceIndex(true);
     setIsServiceModalOpen(!isServiceModalOpen);
@@ -37,24 +43,24 @@ const Header = () => {
     usHelp: "",
   });
   const change = () => {
-    i18n.changeLanguage(!lan ? "ru" : "en");
+    i18n.changeLanguage(!selectLan ? "ru" : "en");
+    localStorage.setItem("language", !selectLan ? "ru" : "en");
   };
   const ru = () => {
-    setLan(true);
+    setSelectLan(true)
     change();
   };
   const en = () => {
-    setLan(false);
+    setSelectLan(false)
     change();
   };
-
   useEffect(() => {
     document.body.style.height =
       isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
     document.body.style.overflow =
       isContactModalOpen || isServiceModalOpen ? "hidden" : "visible";
   }, [isContactModalOpen, isServiceModalOpen]);
-
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputValues((prevInputValues) => ({
@@ -187,6 +193,23 @@ const Header = () => {
       )
   );
 
+  const languages = useMemo(() => (
+    <div className={scss.header__language}>
+      <p
+        onClick={en}
+        className={!selectLan ? scss.header__lan_active : scss.header__lan_notActive}
+      >
+        En
+      </p>
+      <p
+        onClick={ru}
+        className={selectLan ? scss.header__lan_active : scss.header__lan_notActive}
+      >
+        Ру
+      </p>
+    </div>
+  ),[selectLan,route,language]);
+
   return (
     <section className={scss.header}>
       {contactModal}
@@ -210,24 +233,7 @@ const Header = () => {
         </nav>
       </aside>
       <aside className={scss.header_right}>
-        <div className={scss.header__language}>
-          <p
-            onClick={en}
-            className={
-              !lan ? scss.header__lan_active : scss.header__lan_notActive
-            }
-          >
-            En
-          </p>
-          <p
-            onClick={ru}
-            className={
-              lan ? scss.header__lan_active : scss.header__lan_notActive
-            }
-          >
-            Ру
-          </p>
-        </div>
+        {languages}
         <label onClick={handleButtonClick}>
           {" "}
           <Button title={t("header.button")} withArrow={false} />
