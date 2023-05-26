@@ -19,7 +19,7 @@ const Header = () => {
   const [modalIndex, setModalIndex] = useState(false);
   const [serviceIndex, setServiceIndex] = useState(false);
   const { route } = useRouter();
-  const [selectLan,setSelectLan] = useState("")
+  const [selectLan, setSelectLan] = useState("");
 
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language");
@@ -47,11 +47,11 @@ const Header = () => {
     localStorage.setItem("language", !selectLan ? "ru" : "en");
   };
   const ru = () => {
-    setSelectLan(true)
+    setSelectLan(true);
     change();
   };
   const en = () => {
-    setSelectLan(false)
+    setSelectLan(false);
     change();
   };
   useEffect(() => {
@@ -60,7 +60,7 @@ const Header = () => {
     document.body.style.overflow =
       isContactModalOpen || isServiceModalOpen ? "hidden" : "visible";
   }, [isContactModalOpen, isServiceModalOpen]);
-  
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputValues((prevInputValues) => ({
@@ -193,23 +193,6 @@ const Header = () => {
       )
   );
 
-  const languages = useMemo(() => (
-    <div className={scss.header__language}>
-      <p
-        onClick={en}
-        className={!selectLan ? scss.header__lan_active : scss.header__lan_notActive}
-      >
-        En
-      </p>
-      <p
-        onClick={ru}
-        className={selectLan ? scss.header__lan_active : scss.header__lan_notActive}
-      >
-        Ру
-      </p>
-    </div>
-  ),[selectLan,route,language]);
-
   return (
     <section className={scss.header}>
       {contactModal}
@@ -233,7 +216,24 @@ const Header = () => {
         </nav>
       </aside>
       <aside className={scss.header_right}>
-        {languages}
+        <div className={scss.header__language}>
+          <p
+            onClick={en}
+            className={
+              !selectLan ? scss.header__lan_active : scss.header__lan_notActive
+            }
+          >
+            En
+          </p>
+          <p
+            onClick={ru}
+            className={
+              selectLan ? scss.header__lan_active : scss.header__lan_notActive
+            }
+          >
+            Ру
+          </p>
+        </div>
         <label onClick={handleButtonClick}>
           {" "}
           <Button title={t("header.button")} withArrow={false} />
