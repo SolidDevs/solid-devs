@@ -1,10 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500&display=swap');
 
 a {
   color: inherit;
@@ -15,7 +9,31 @@ a {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.slick-slider {
+  width: 100%;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide>div {
+  margin: 0px 16px;
+}
+
+.work__wrapper .slick-disabled>p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #797979 !important;
+}
+
+.work__wrapper .slick-disabled .svg path {
+  fill: #797979 !important;
 }
 
 .container,
@@ -34,39 +52,28 @@ a {
   margin-left: auto;
 }
 
-.slick-slider {
-  width: 100%;
+@media (min-width: 120px) {
+  #__next {
+    overflow: hidden;
+  }
 }
-
-.slick-track {
-  display: flex;
-}
-
-.slick-slide > div {
-  margin: 0px 16px;
-}
-
-.work__wrapper .slick-disabled>p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  color: #797979 !important;
-}
-
-.work__wrapper .slick-disabled .svg path {
-  fill: #797979 !important;
-}
-
 
 @media (min-width: 576px) {
+
   .container,
   .container-sm {
     max-width: 540px;
   }
+
 }
 
+
 @media (min-width: 768px) {
+
+  #__next {
+    overflow: visible;
+  }
+
   .container,
   .container-md,
   .container-sm {
@@ -75,6 +82,7 @@ a {
 }
 
 @media (min-width: 992px) {
+
   .container,
   .container-lg,
   .container-md,
@@ -84,33 +92,24 @@ a {
 }
 
 @media (min-width: 1200px) {
+
   .container,
   .container-lg,
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 90%;
+    max-width: 1140px;
   }
 }
 
 @media (min-width: 1400px) {
+
   .container,
   .container-lg,
   .container-md,
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 90%;
+    max-width: 1320px;
   }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0;
-    max-width: 100%;
-  }
-}
-
-#__next {
-  overflow: hidden;
 }
