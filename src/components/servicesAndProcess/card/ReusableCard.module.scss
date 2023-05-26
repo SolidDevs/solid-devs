@@ -1,11 +1,10 @@
 @import "../../../styles/variables.scss";
 
 .card {
-  padding: 20px 20px 0px;
+  padding: 20px 20px;
   background: #ffffff;
   border: 1px solid #e6e6e6;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  height: 278px;
 
   .card__icon {
     width: 49px;
