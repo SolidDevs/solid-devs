@@ -65,7 +65,7 @@ $step__numeration__width: calc(4vw + -1.5vh);
           font-weight: 400;
           font-size: calc(1vw + 0.6vh);
           line-height: 23px;
-          color: #797979;
+          color: $darkGrayText;
         }
       }
     }
@@ -105,7 +105,7 @@ $step__numeration__width: calc(4vw + -1.5vh);
       font-weight: 400;
       font-size: 19px;
       line-height: 28px;
-      color: #797979;
+      color: $darkGrayText;
       margin: 0;
 
       @media (max-width: 576px) {
@@ -120,7 +120,13 @@ $step__numeration__width: calc(4vw + -1.5vh);
       font-weight: 400;
       font-size: 19px;
       line-height: 28px;
-      color: #797979;
+      color: $darkGrayText;
+
+      @media (max-width: 576px) {
+        font-size: 18px;
+        line-height: 25px;
+        color: #979797;
+      }
     }
   }
 

@@ -11,6 +11,7 @@ import { service__navs } from "@/constants/header";
 import { inputs } from "@/constants/header";
 import close from "/public/images/Header/close.svg";
 import Logo from "../logo/Logo";
+import HeaderMobileMenu from "../headerMobileMenu/HeaderMobileMenu";
 
 const Header = () => {
   const { t, language } = i18n;
@@ -76,9 +77,9 @@ const Header = () => {
 
   const headerNavs = useMemo(
     () =>
-      header__navs.map(({ path, title }) => (
+      header__navs.map(({ path, title, index }) => (
         <Link
-          key={path}
+          key={`${title}_${index}`}
           href={path}
           className={
             route === path
@@ -94,9 +95,9 @@ const Header = () => {
 
   const serviceNavs = useMemo(
     () =>
-      service__navs.map(({ title, path }) => (
+      service__navs.map(({ title, path, index }) => (
         <Link
-          key={path}
+          key={`${title}_${index}`}
           href={path}
           className={
             route == path ? scss.modal__nav_active : scss.modal__nav_notActive
@@ -229,10 +230,21 @@ const Header = () => {
           </p>
         </div>
         <label onClick={handleButtonClick}>
-          {" "}
           <Button title={t("header.button")} withArrow={false} />
         </label>
       </aside>
+      <HeaderMobileMenu />
+      <footer
+        className={
+          isServiceModalOpen ? scss.modal_active : scss.modal_notActive
+        }
+        onClick={handleClick}
+      >
+        <main onClick={(event) => event.stopPropagation()}>
+          <h2>{t("header.our_services")}</h2>
+          <nav>{serviceNavs}</nav>
+        </main>
+      </footer>
       {serviceModal}
     </section>
   );
