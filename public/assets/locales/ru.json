@@ -60,19 +60,19 @@
     "reviews": "Обзоры",
     "howWeAreWorking": "Как мы работаем?",
     "ourProjects": "Наши проекты",
-    "ourTeam" : "Наша команда"
+    "ourTeam": "Наша команда"
   },
-  "technologies" : {
-    "title" : "Технологии и инструменты которые мы используем",
-    "Terraform" : "Terraform",
-    "Ansible" : "Ansible",
-    "Jenkins" : "Jenkins"
+  "technologies": {
+    "title": "Технологии и инструменты которые мы используем",
+    "Terraform": "Terraform",
+    "Ansible": "Ansible",
+    "Jenkins": "Jenkins"
   },
   "footer": {
     "title__company": "О компании",
     "company__desc": "Мощь инноваций в области программного обеспечения, созданная для того, чтобы вывести ваш бизнес на вершину!",
     "title__adress": "Наш адрес",
-    "adress__desc": "Кыргызстан, г. /nБишкек Ахунбаева 133",
+    "adress__desc": "Кыргызстан, г. Бишкек \nАхунбаева 133",
     "title__pages": "Страницы:",
     "page__us": "О Нас",
     "page__jobs": "Вакансии",

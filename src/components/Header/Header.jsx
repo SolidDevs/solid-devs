@@ -19,8 +19,14 @@ const Header = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(false);
   const [serviceIndex, setServiceIndex] = useState(false);
-  const [lan, setLan] = useState(false);
   const { route } = useRouter();
+  const [selectLan, setSelectLan] = useState("");
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language");
+    setSelectLan(storedLanguage == "ru" ? true : false);
+    i18n.changeLanguage(storedLanguage);
+  }, []);
   const handleClick = () => {
     setServiceIndex(true);
     setIsServiceModalOpen(!isServiceModalOpen);
@@ -38,17 +44,17 @@ const Header = () => {
     usHelp: "",
   });
   const change = () => {
-    i18n.changeLanguage(!lan ? "ru" : "en");
+    i18n.changeLanguage(!selectLan ? "ru" : "en");
+    localStorage.setItem("language", !selectLan ? "ru" : "en");
   };
   const ru = () => {
-    setLan(true);
+    setSelectLan(true);
     change();
   };
   const en = () => {
-    setLan(false);
+    setSelectLan(false);
     change();
   };
-
   useEffect(() => {
     document.body.style.height =
       isContactModalOpen || isServiceModalOpen ? "100vh" : "auto";
@@ -215,7 +221,7 @@ const Header = () => {
           <p
             onClick={en}
             className={
-              !lan ? scss.header__lan_active : scss.header__lan_notActive
+              !selectLan ? scss.header__lan_active : scss.header__lan_notActive
             }
           >
             En
@@ -223,7 +229,7 @@ const Header = () => {
           <p
             onClick={ru}
             className={
-              lan ? scss.header__lan_active : scss.header__lan_notActive
+              selectLan ? scss.header__lan_active : scss.header__lan_notActive
             }
           >
             Ру
