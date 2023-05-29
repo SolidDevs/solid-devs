@@ -14,16 +14,19 @@ const WorkNavbar = ({ navbarLinks, paramName, state, setState }) => {
   }, [router, paramName]);
   const { t } = useTranslation("");
 
-  const handleClick = useCallback((item, index) => {
-    setState(index)
-    const query = router.query;
-    query[paramName] = t(item);
-    const path = {
-      pathname: router.pathname,
-      query,
-    };
-    router.push(path, path, { shallow: true });
-  }, [paramName, router])
+  const handleClick = useCallback(
+    (item, index) => {
+      setState(index);
+      const query = router.query;
+      query[paramName] = t(item);
+      const path = {
+        pathname: router.pathname,
+        query,
+      };
+      router.push(path, path, { shallow: true });
+    },
+    [paramName, router]
+  );
 
   const navbarItems = useMemo(
     () =>
@@ -36,6 +39,7 @@ const WorkNavbar = ({ navbarLinks, paramName, state, setState }) => {
               ? scss.navbar__item_currentSelect
               : scss.navbar__item_nonActive
           }
+          style={state == index ? null : { fontWeight: "normal" }}
         >
           {t(`${item}`)}
         </button>
