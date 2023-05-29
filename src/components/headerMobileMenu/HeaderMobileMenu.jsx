@@ -18,25 +18,32 @@ import HeaderMobileModal from "../headerMobileModal/HeaderMobileModal";
 const HeaderMobileMenu = () => {
   const [isServiceModalOpenMobile, setIsServiceModalOpenMobile] =
     useState(false);
-  const [lan, setLan] = useState(i18n.language == "en" ? false : true);
   const [isContactModal, setIsContactModal] = useState(false);
   const { route } = useRouter();
   const [isActive, setIsActive] = useState(false);
   const handleClickMobile = () =>
     setIsServiceModalOpenMobile(!isServiceModalOpenMobile);
   const { t, language } = i18n;
+  const [selectLan, setSelectLan] = useState("");
 
   const change = () => {
-    i18n.changeLanguage(!lan ? "ru" : "en");
+    i18n.changeLanguage(!selectLan ? "ru" : "en");
+    localStorage.setItem("languageMobile", !selectLan ? "ru" : "en");
   };
   const ru = () => {
-    setLan(true);
+    setSelectLan(true);
     change();
   };
   const en = () => {
-    setLan(false);
+    setSelectLan(false);
     change();
   };
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("languageMobile");
+    setSelectLan(storedLanguage == "ru" ? true : false);
+    i18n.changeLanguage(storedLanguage);
+  }, []);
 
   const click = () => setIsContactModal(!isContactModal);
 
@@ -136,9 +143,9 @@ const HeaderMobileMenu = () => {
         </nav>
         <div
           className={
-            isServiceModalOpenMobile
-              ? scss.modal_active__mobile
-              : scss.modal_notActive__mobile
+            !isServiceModalOpenMobile
+              ? scss.modal_notActive__mobile
+              : scss.modal_active__mobile
           }
           onClick={handleClickMobile}
         >
@@ -150,7 +157,9 @@ const HeaderMobileMenu = () => {
           <p
             onClick={ru}
             className={
-              lan ? scss.mobile__lang__active : scss.mobile__lang__notActive
+              selectLan
+                ? scss.mobile__lang__active
+                : scss.mobile__lang__notActive
             }
           >
             Русский
@@ -158,7 +167,9 @@ const HeaderMobileMenu = () => {
           <p
             onClick={en}
             className={
-              !lan ? scss.mobile__lang__active : scss.mobile__lang__notActive
+              !selectLan
+                ? scss.mobile__lang__active
+                : scss.mobile__lang__notActive
             }
           >
             English
