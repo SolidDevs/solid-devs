@@ -13,7 +13,7 @@ const UiDesignPage = () => {
       <ReusableMainContent data={uiMain} />
       <ServicesAndProcess data={uiWeb} />
       <ServicesAndProcess data={uiProcess} variant={"process"} />
-      <ContactUs />
+      <ContactUs line={true}/>
       <Footer />
     </>
   );

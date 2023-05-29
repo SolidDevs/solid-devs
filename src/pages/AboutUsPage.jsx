@@ -11,8 +11,10 @@ const AboutUsPage = () => {
       <Header />
       <AboutUs />
       <ReasonsBlock />
-      <FeedBack />
-      <ContactUs />
+      <div className="container">
+        <FeedBack />
+      </div>
+      <ContactUs line={true} />
       <Footer />
     </>
   );
