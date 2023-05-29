@@ -240,17 +240,6 @@ const Header = () => {
         </label>
       </aside>
       <HeaderMobileMenu />
-      <footer
-        className={
-          isServiceModalOpen ? scss.modal_active : scss.modal_notActive
-        }
-        onClick={handleClick}
-      >
-        <main onClick={(event) => event.stopPropagation()}>
-          <h2>{t("header.our_services")}</h2>
-          <nav>{serviceNavs}</nav>
-        </main>
-      </footer>
       {serviceModal}
     </section>
   );

@@ -31,6 +31,7 @@
       background: $white;
       padding-left: 20px;
       width: 100%;
+      z-index: 9;
     }
     .header__title {
       padding-right: 27px;
@@ -356,6 +357,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
     header {
       display: flex;
       align-items: center;

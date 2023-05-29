@@ -15,7 +15,6 @@ const TechnologiesBlock = () => {
       technologiesInfo.map((item, index) => (
         <div className={scss.technologies__item} key={`${item}_${index}`}>
           <div
-            key={`${item.title}_${index}`}
             className={scss.item__dekstop}
             id="technologies"
           >
@@ -30,7 +29,6 @@ const TechnologiesBlock = () => {
             <p className={scss.title}>{t(item.title)}</p>
           </div>
           <div
-            key={`${item.title}_${index}`}
             className={scss.item__adaptive}
             id="technologies"
           >
