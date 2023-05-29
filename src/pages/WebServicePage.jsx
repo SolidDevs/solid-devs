@@ -12,7 +12,7 @@ const WebServicePage = () => {
       <ReusableMainContent data={webMain} />
       <ServicesAndProcess data={webServices} />
       <ServicesAndProcess variant="process" data={webProcess} />
-      <ContactUs />
+      <ContactUs line={true}/>
       <Footer />
     </>
   );

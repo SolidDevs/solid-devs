@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { contactUsCardArr } from "@/constants/contactUs";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-const ContactUs = () => {
+const ContactUs = ({ line }) => {
   const { t } = useTranslation();
   const renderCards = useMemo(
     () =>
@@ -25,7 +25,7 @@ const ContactUs = () => {
   );
   return (
     <div className={scss.contactUs}>
-      <div className={scss.contactUs__line}></div>
+      {line && <div className={scss.contactUs__line}></div>}
       <div className="container">
         <div className={scss.contactUs__wrapper}>
           <div className={scss.contactUs__info}>

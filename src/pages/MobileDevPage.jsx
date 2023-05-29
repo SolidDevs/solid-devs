@@ -13,7 +13,7 @@ const MobileDevPage = () => {
       <ReusableMainContent data={mobileMain} />
       <ServicesAndProcess data={mobileWeb}/>
       <ServicesAndProcess variant={"process"} data={mobileProcess} />
-      <ContactUs />
+      <ContactUs line={true}/>
       <Footer />
     </>
   );
