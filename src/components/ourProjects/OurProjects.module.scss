@@ -1,7 +1,6 @@
 @import "../../styles/variables.scss";
 
 .ourProjects {
-  padding-bottom: 70px;
   h1 {
     font-style: normal;
     font-weight: 300;
@@ -9,14 +8,18 @@
     line-height: 48px;
     color: #262626;
     margin-bottom: 30px;
+    @include breackpoint(sm){
+      margin-bottom: 15px;
+    }
   }
 }
 
 .projects {
   margin-bottom: 70px;
-
+  @include breackpoint(sm){
+    margin-bottom: 40px;
+  }
   @include breackpoint(xm) {
-    margin-bottom: 0 !important;
     position: relative;
   }
   .projects__item {

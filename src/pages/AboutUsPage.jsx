@@ -3,9 +3,11 @@ import Header from "@/components/Header/Header";
 import AboutUs from "@/components/aboutUs/AboutUs";
 import ReasonsBlock from "@/components/columnsReusableComponent/ReasonsBlock";
 import ContactUs from "@/components/contactUs/ContactUs";
+import Contacts from "@/components/contacts/Contacts";
 import FeedBack from "@/components/feedBack/FeedBack";
 
 const AboutUsPage = () => {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   return (
     <>
       <Header />
@@ -14,7 +16,7 @@ const AboutUsPage = () => {
       <div className="container">
         <FeedBack />
       </div>
-      <ContactUs line={true} />
+      {isMobile ? <div className="container"><Contacts /></div> : <ContactUs line={true} />}
       <Footer />
     </>
   );

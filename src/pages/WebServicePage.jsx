@@ -6,13 +6,20 @@ import ReusableMainContent from "@/components/webMain/WebMain";
 import { webMain } from "@/constants/reusableMain";
 import { webProcess, webServices } from "@/constants/reusebleService";
 const WebServicePage = () => {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   return (
     <>
       <Header />
       <ReusableMainContent data={webMain} />
       <ServicesAndProcess data={webServices} />
       <ServicesAndProcess variant="process" data={webProcess} />
-      <ContactUs line={true}/>
+      {isMobile ? (
+        <div className="container">
+          <Contacts />
+        </div>
+      ) : (
+        <ContactUs line={true} />
+      )}
       <Footer />
     </>
   );

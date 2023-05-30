@@ -6,6 +6,9 @@ $line__height: calc(3vw + 2vh);
 .serviceMain {
   background-color: $mainDarkText;
   padding: 50px 0px;
+  @include breackpoint(sm) {
+    margin-bottom: 30px !important;
+  }
   h2 {
     font-family: "Nunito Sans";
     font-style: normal;
@@ -22,7 +25,9 @@ $line__height: calc(3vw + 2vh);
   background-color: $white;
   padding-top: 20px;
   margin-bottom: 50px;
-
+  @include breackpoint(sm) {
+    margin-bottom: 30px !important;
+  }
   h2 {
     font-family: "Nunito Sans";
     font-style: normal;
@@ -68,7 +73,6 @@ $line__height: calc(3vw + 2vh);
   .serviceMain {
     background-color: #f1f1f1;
     padding: 20px 20px;
-    margin-bottom: 50px;
     h2 {
       color: #262626;
       width: 56%;
