@@ -6,10 +6,8 @@ import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProce
 import ReusableMainContent from "@/components/webMain/WebMain";
 import { mvpMain } from "@/constants/reusableMain";
 import { mvpBlock, mvpProcess, mvpWeb } from "@/constants/reusebleService";
-
+import scss from "./pages.module.scss";
 const MvpDevPage = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
   return (
     <>
       <Header />
@@ -17,13 +15,14 @@ const MvpDevPage = () => {
       <ServicesAndProcess data={mvpWeb} />
       <ServicesAndProcess variant={"process"} data={mvpProcess} />
       <ServicesAndProcess data={mvpBlock} />
-      {isMobile ? (
+      <div className={scss.dekstop}>
+        <ContactUs line={true} />
+      </div>
+      <div className={scss.adaptive}>
         <div className="container">
           <Contacts />
         </div>
-      ) : (
-        <ContactUs line={true} />
-      )}
+      </div>
       <Footer />
     </>
   );

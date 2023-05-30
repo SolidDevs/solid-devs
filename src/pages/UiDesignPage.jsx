@@ -6,22 +6,22 @@ import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProce
 import ReusableMainContent from "@/components/webMain/WebMain";
 import { uiMain } from "@/constants/reusableMain";
 import { uiProcess, uiWeb } from "@/constants/reusebleService";
-
+import scss from "./pages.module.scss";
 const UiDesignPage = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   return (
     <>
       <Header />
       <ReusableMainContent data={uiMain} />
       <ServicesAndProcess data={uiWeb} />
       <ServicesAndProcess data={uiProcess} variant={"process"} />
-      {isMobile ? (
+      <div className={scss.dekstop}>
+        <ContactUs line={true} />
+      </div>
+      <div className={scss.adaptive}>
         <div className="container">
           <Contacts />
         </div>
-      ) : (
-        <ContactUs line={true} />
-      )}
+      </div>
       <Footer />
     </>
   );

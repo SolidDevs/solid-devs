@@ -5,9 +5,8 @@ import ReasonsBlock from "@/components/columnsReusableComponent/ReasonsBlock";
 import ContactUs from "@/components/contactUs/ContactUs";
 import Contacts from "@/components/contacts/Contacts";
 import FeedBack from "@/components/feedBack/FeedBack";
-
+import scss from "./pages.module.scss";
 const AboutUsPage = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
   return (
     <>
       <Header />
@@ -16,7 +15,14 @@ const AboutUsPage = () => {
       <div className="container">
         <FeedBack />
       </div>
-      {isMobile ? <div className="container"><Contacts /></div> : <ContactUs line={true} />}
+      <div className={scss.dekstop}>
+        <ContactUs line={true} />
+      </div>
+      <div className={scss.adaptive}>
+        <div className="container">
+          <Contacts />
+        </div>
+      </div>
       <Footer />
     </>
   );

@@ -7,10 +7,8 @@ import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProce
 import ReusableMainContent from "@/components/webMain/WebMain";
 import { chatMain } from "@/constants/reusableMain";
 import { chatWeb } from "@/constants/reusebleService";
-
+import scss from "./pages.module.scss";
 const ChatDevPage = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
   return (
     <>
       <Header />
@@ -18,13 +16,14 @@ const ChatDevPage = () => {
       <ServicesAndProcess data={chatWeb} />
       <BenefitsAndStatistics />
       <BenefitsAndStatistics variant="statistic" />
-      {isMobile ? (
+      <div className={scss.dekstop}>
+        <ContactUs />
+      </div>
+      <div className={scss.adaptive}>
         <div className="container">
           <Contacts />
         </div>
-      ) : (
-        <ContactUs />
-      )}
+      </div>
       <Footer />
     </>
   );

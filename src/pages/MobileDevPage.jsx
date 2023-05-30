@@ -6,23 +6,22 @@ import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProce
 import ReusableMainContent from "@/components/webMain/WebMain";
 import { mobileMain } from "@/constants/reusableMain";
 import { mobileProcess, mobileWeb } from "@/constants/reusebleService";
-
+import scss from "./pages.module.scss";
 const MobileDevPage = () => {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
   return (
     <>
       <Header />
       <ReusableMainContent data={mobileMain} />
       <ServicesAndProcess data={mobileWeb} />
       <ServicesAndProcess variant={"process"} data={mobileProcess} />
-      {isMobile ? (
+      <div className={scss.dekstop}>
+        <ContactUs line={true} />
+      </div>
+      <div className={scss.adaptive}>
         <div className="container">
           <Contacts />
         </div>
-      ) : (
-        <ContactUs line={true} />
-      )}
+      </div>
       <Footer />
     </>
   );

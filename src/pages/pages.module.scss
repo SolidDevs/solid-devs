@@ -1,0 +1,14 @@
+.dekstop {
+  display: block;
+}
+.adaptive {
+  display: none;
+}
+@media (max-width: 768px) {
+  .dekstop {
+    display: none;
+  }
+  .adaptive {
+    display: block;
+  }
+}
