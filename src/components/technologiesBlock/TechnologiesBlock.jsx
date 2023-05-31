@@ -48,7 +48,7 @@ const TechnologiesBlock = () => {
     [t]
   );
   const handleOpen = useCallback(() => {
-    setOpen(!isOpen);
+    setOpen(isOpen);
   });
   return (
     <SectionContainer title={t("technologies.title")} id="technologies">
