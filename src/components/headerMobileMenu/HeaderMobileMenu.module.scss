@@ -19,7 +19,7 @@
         z-index: 9;
       }
     }
-    .burger_none{
+    .burger_none {
       display: none;
     }
     .burger__menu {
@@ -65,6 +65,16 @@
             margin: 0;
             color: #262626;
           }
+          .mobile__arrow {
+            .arrow__down {
+              transform: rotate(0deg);
+              transition: ease-in-out 0.2s all;
+            }
+            .arrow__rotate {
+              transform: rotate(-90deg);
+              transition: ease-in-out 0.2s all;
+            }
+          }
         }
       }
       .modal_active__mobile {
@@ -88,11 +98,23 @@
         }
       }
       .modal_notActive__mobile {
-        left: 0;
         width: 100%;
-        animation: fadeOut 0.5s ease-in-out;
+        animation: fadeOut 0.5s normal forwards ease-in-out;
         main {
-          display: none;
+          background: $white;
+          nav {
+            display: flex;
+            flex-direction: column;
+            a {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 25px;
+              color: $darkGrayText;
+              padding: 15px 20px;
+              border-bottom: 1px solid #d0d0d0;
+            }
+          }
         }
       }
       .langs {
@@ -157,23 +179,47 @@
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
     visibility: hidden;
+    height: 0%;
+    transition: all ease-in-out 0.3s;
   }
-  to {
+  30% {
+    height: 30%;
+  }
+  50% {
+    height: 50%;
+  }
+  72% {
+    height: 72%;
+  }
+  100% {
     opacity: 1;
     visibility: visible;
+    transition: all ease-in-out 0.3s;
   }
 }
 
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
     visibility: visible;
+    transition: all ease-in-out 0.3s;
   }
-  to {
+  30% {
+    height: 72%;
+  }
+  50% {
+    height: 50%;
+  }
+  72% {
+    height: 30%;
+  }
+  100% {
     opacity: 0;
     visibility: hidden;
+    height: 0%;
+    transition: all ease-in-out 0.3s;
   }
 }

@@ -2,7 +2,6 @@ import scss from "./HeaderMobileMenu.module.scss";
 import Burger from "public/images/Header/burger.svg";
 import CloseIcon from "public/images/Header/closeX.svg";
 import DownArrow from "public/images/Header/downArrow.svg";
-import RightArrow from "public/images/Header/rightArrow.svg";
 import Fb from "public/images/Header/fbLight.svg";
 import Insta from "public/images/Header/instaLight.svg";
 import Linked from "public/images/Header/inLight.svg";
@@ -133,11 +132,17 @@ const HeaderMobileMenu = () => {
           >
             <p>{t("header.our_services")}</p>
             <div className={scss.mobile__arrow}>
-              {!isServiceModalOpenMobile ? (
-                <Image src={DownArrow} width={14} height={8} alt="arrow" />
-              ) : (
-                <Image src={RightArrow} width={8} height={14} alt="arrow" />
-              )}
+              <Image
+                className={
+                  isServiceModalOpenMobile
+                    ? scss.arrow__down
+                    : scss.arrow__rotate
+                }
+                src={DownArrow}
+                width={14}
+                height={8}
+                alt="arrow"
+              />
             </div>
           </label>
         </nav>
