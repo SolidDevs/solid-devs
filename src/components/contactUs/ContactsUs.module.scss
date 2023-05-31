@@ -4,6 +4,9 @@
   .contactUs__line {
     border: 1px solid #b8b8b8;
     margin-bottom: 40px;
+    @include breackpoint(sm){
+      display: none;
+    }
   }
   .contactUs__wrapper {
     display: flex;

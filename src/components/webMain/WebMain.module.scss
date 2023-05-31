@@ -91,6 +91,9 @@ $description__size: calc(0.8vw + 1vh);
       line-height: 28px;
       letter-spacing: 0.03em;
       color: $darkGrayText;
+      @include breackpoint(sm){
+        margin-bottom: 20px;
+      }
       @include breackpoint(xm) {
         font-weight: 400;
         font-size: 18px;

@@ -16,3 +16,9 @@
 .wrapper {
   margin-bottom: 70px;
 }
+
+@media (max-width: 768px) {
+  .wrapper_title{
+    margin-bottom: 15px;
+  }
+}

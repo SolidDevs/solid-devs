@@ -6,7 +6,9 @@ $line__height: calc(3vw + 2vh);
 .priorityCard {
   background-color: $white;
   padding: 20px 0px 50px;
-
+  @include breackpoint(sm){
+    background-color: #F1F1F1;
+  }
   h2 {
     font-style: normal;
     width: 100%;
