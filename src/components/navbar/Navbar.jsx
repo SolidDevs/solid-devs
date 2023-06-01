@@ -68,9 +68,7 @@ const Navbar = ({ navbarLinks, paramName, handleOpen, children }) => {
               </button>
               <div>
                 <Image
-                  className={
-                    isActive === item ? scss.icon__active : scss.icon
-                  }
+                  className={isActive === item ? scss.icon__active : scss.icon}
                   src={arrow}
                   width={14}
                   height={8}
@@ -78,7 +76,13 @@ const Navbar = ({ navbarLinks, paramName, handleOpen, children }) => {
               </div>
             </div>
             {isActive === item && (
-              <div className={scss.navbar__technologies}>{children}</div>
+              <div
+                className={`${scss.navbar__technologies} ${
+                  isActive ? scss.show : ""
+                }`}
+              >
+                {children}
+              </div>
             )}
           </div>
         </div>
