@@ -128,6 +128,9 @@
         grid-template-columns: repeat(2, 1fr);
         animation: fadeIn 0.5s ease-in-out;
       }
+      .show {
+        margin: 15px 0px;
+      }
       .navbar__item_currentSelect {
         background: #f1f1f1;
         width: 100%;

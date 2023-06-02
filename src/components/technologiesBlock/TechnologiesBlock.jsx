@@ -9,15 +9,12 @@ import Image from "next/image";
 
 const TechnologiesBlock = () => {
   const { t } = useTranslation("");
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
   const technologiesItems = useMemo(
     () =>
       technologiesInfo.map((item, index) => (
         <div className={scss.technologies__item} key={`${item}_${index}`}>
-          <div
-            className={scss.item__dekstop}
-            id="technologies"
-          >
+          <div className={scss.item__dekstop} id="technologies">
             <div className={scss.icon}>
               <Image
                 src={`${item.img}`}
@@ -28,10 +25,7 @@ const TechnologiesBlock = () => {
             </div>
             <p className={scss.title}>{t(item.title)}</p>
           </div>
-          <div
-            className={scss.item__adaptive}
-            id="technologies"
-          >
+          <div className={scss.item__adaptive} id="technologies">
             <div className={scss.icon}>
               <Image
                 src={`${item.img}`}
@@ -48,7 +42,7 @@ const TechnologiesBlock = () => {
     [t]
   );
   const handleOpen = useCallback(() => {
-    setOpen(!isOpen);
+    setOpen(isOpen);
   });
   return (
     <SectionContainer title={t("technologies.title")} id="technologies">
