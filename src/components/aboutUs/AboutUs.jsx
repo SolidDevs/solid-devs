@@ -16,7 +16,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="container">
-        <div className={scss.about__description }>
+        <div className={scss.about__description}>
           <div className={scss.left__content}>
             <h2>{t("aboutUs.main__title")}</h2>
             <p>{t("aboutUs.firstStepDesc")}</p>
