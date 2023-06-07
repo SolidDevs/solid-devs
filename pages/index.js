@@ -1,6 +1,6 @@
-import Head from "next/head"
-import HomePage from "@/pages/HomePage"
-import "slick-carousel/slick/slick.css"; 
+import Head from "next/head";
+import HomePage from "@/pages/HomePage";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
@@ -13,9 +13,14 @@ export default function Home() {
           content="
           Solid, Solid devs, Отдел разработки"
         />
-        <link rel="icon" href="/solid-logo.svg" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width"
+          key="viewport"
+        />
+        <link rel="icon" href="solid" />
       </Head>
       <HomePage />
     </div>
-  )
+  );
 }
