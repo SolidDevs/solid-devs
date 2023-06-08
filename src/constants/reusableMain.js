@@ -4,11 +4,11 @@ import mobileImage from "/public/images/reusableMain/mobileMain.jpg";
 import mvpImage from "/public/images/reusableMain/mvpMain.jpg";
 import chatImage from "/public/images/reusableMain/chatMain.jpg";
 //adaptive images
-import adaptiveWeb from "/public/images/adaptiveServices/webdev.png";
-import adaptiveDesign from "/public/images/adaptiveServices/uxui.png";
-import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.png";
-import adaptiveMvp from "/public/images/adaptiveServices/mvp.png";
-import adaptiveChat from "/public/images/adaptiveServices/services.png";
+import adaptiveWeb from "/public/images/adaptiveServices/webdev.svg";
+import adaptiveDesign from "/public/images/adaptiveServices/uxui.svg";
+import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.svg";
+import adaptiveMvp from "/public/images/adaptiveServices/mvp.svg";
+import adaptiveChat from "/public/images/adaptiveServices/services.svg";
 
 export const webMain = {
   title: "webMain.title",
