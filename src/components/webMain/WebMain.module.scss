@@ -37,7 +37,7 @@ $description__size: calc(0.8vw + 1vh);
       object-fit: contain;
       @include breackpoint(xm) {
         display: block;
-        margin: -10vh 0px;
+        margin: -2vh 0 25px 0;
         object-fit: contain;
       }
       @media (min-width: 601px) {

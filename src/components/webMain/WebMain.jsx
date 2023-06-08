@@ -43,8 +43,6 @@ const WebMain = ({ data }) => {
               src={data.adaptiveImage}
               alt="website image"
               className={scss.content__image_adaptive}
-              width={631}
-              height={563}
             />
           </div>
         </div>
