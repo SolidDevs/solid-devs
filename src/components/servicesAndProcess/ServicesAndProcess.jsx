@@ -20,18 +20,23 @@ const ServicesAndProcess = ({ variant, data }) => {
   );
 
   const renderTitle = useMemo(() => {
-    const title = data.map((title) => title.desc)
-    return <h2>{t(title)}</h2>
+    const title = data.map((title) => title.desc);
+    return <h2>{t(title)}</h2>;
   }, [data, t]);
 
-  const gridClass = reasonsRender.length === 2 ? scss.main__grid : scss.main__cards
+  const gridClass =
+    reasonsRender.length === 2 ? scss.main__grid : scss.main__cards;
   return (
-    <div className={variant == "process" ? scss.processMain : scss.serviceMain}>
-      <div className="container">
-        {renderTitle}
-        <div className={gridClass}>{reasonsRender}</div>
+    <>
+      <div
+        className={variant == "process" ? scss.processMain : scss.serviceMain}
+      >
+        <div className="container">
+          {renderTitle}
+          <div className={gridClass}>{reasonsRender}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

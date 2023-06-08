@@ -8,10 +8,14 @@ import ReusableMainContent from "@/components/webMain/WebMain";
 import { chatMain } from "@/constants/reusableMain";
 import { chatWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
+import { useTranslation } from "react-i18next";
+import Navigation from "@/components/Navigation/Navigation";
 const ChatDevPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Header />
+      <Navigation title={t("navigation.Chat_description")} />
       <ReusableMainContent data={chatMain} />
       <ServicesAndProcess data={chatWeb} />
       <BenefitsAndStatistics />

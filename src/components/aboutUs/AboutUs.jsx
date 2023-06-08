@@ -3,6 +3,7 @@ import scss from "./AboutUs.module.scss";
 import React, { useMemo } from "react";
 import { aboutUs } from "@/constants/aboutUs";
 import AboutCard from "./aboutCard/AboutCard";
+import Navigation from "../Navigation/Navigation";
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -15,6 +16,7 @@ const AboutUs = () => {
   );
   return (
     <>
+      <Navigation title={t("navigation.aboutUs_description")} />
       <div className="container">
         <div className={scss.about__description}>
           <div className={scss.left__content}>

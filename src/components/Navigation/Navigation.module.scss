@@ -1,0 +1,33 @@
+.wrapper {
+  background: #f1f1f1;
+  height: 41px;
+  width: 100%;
+  padding: 11px 98px 11px 28px;
+}
+.title {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  display: flex;
+  white-space: nowrap;
+  .wrapper__title {
+    color: #979797;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-right: 5px;
+  }
+}
+.wrapper {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    display: block;
+  }
+}

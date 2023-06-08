@@ -7,10 +7,14 @@ import ReusableMainContent from "@/components/webMain/WebMain";
 import { mvpMain } from "@/constants/reusableMain";
 import { mvpBlock, mvpProcess, mvpWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
+import Navigation from "@/components/Navigation/Navigation";
+import { useTranslation } from "react-i18next";
 const MvpDevPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Header />
+      <Navigation title={t("navigation.MVP_description")} />
       <ReusableMainContent data={mvpMain} />
       <ServicesAndProcess data={mvpWeb} />
       <ServicesAndProcess variant={"process"} data={mvpProcess} />
