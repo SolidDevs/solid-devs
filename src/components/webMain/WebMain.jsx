@@ -3,7 +3,6 @@ import scss from "./WebMain.module.scss";
 import { useTranslation } from "react-i18next";
 import Button from "../Button/Button";
 import Image from "next/image";
-import Navigation from "../Navigation/Navigation";
 
 const WebMain = ({ data }) => {
   const { t } = useTranslation();
