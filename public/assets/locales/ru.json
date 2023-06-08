@@ -128,7 +128,9 @@
     "Chat_description": "Карьера",
     "MVP_description": "Карьера",
     "Design_description": "Карьера",
-    "Mobile_description": "Карьера"
+    "Mobile_description": "Карьера",
+    "aboutUs_description": "О нас",
+    "Career_description": "Карьера"
   },
   "benefitAndStatistic": {
     "priority": "Преимущества разработки чат-приложений",

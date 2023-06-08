@@ -130,7 +130,10 @@
     "Chat_description": "Career",
     "MVP_description": "Career",
     "Design_description": "Career",
-    "Mobile_description": "Career"
+    "Mobile_description": "Career",
+    "aboutUs_description": "About Us",
+    "Career_description": "Career"
+
   },
   "benefitAndStatistic": {
     "priority": "Benefits of Chat Application Development",
