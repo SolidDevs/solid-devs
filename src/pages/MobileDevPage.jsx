@@ -7,10 +7,14 @@ import ReusableMainContent from "@/components/webMain/WebMain";
 import { mobileMain } from "@/constants/reusableMain";
 import { mobileProcess, mobileWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
+import Navigation from "@/components/Navigation/Navigation";
+import { useTranslation } from "react-i18next";
 const MobileDevPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Header />
+      <Navigation title={t("navigation.Mobile_description")} />
       <ReusableMainContent data={mobileMain} />
       <ServicesAndProcess data={mobileWeb} />
       <ServicesAndProcess variant={"process"} data={mobileProcess} />

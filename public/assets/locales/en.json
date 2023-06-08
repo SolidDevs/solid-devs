@@ -124,6 +124,17 @@
     "serviceTitle": "Web development services, which we provide",
     "processTitle": "Development process"
   },
+  "navigation": {
+    "title": "Main /",
+    "Develop_description": "Web Application Development",
+    "Chat_description": "Career",
+    "MVP_description": "Career",
+    "Design_description": "Career",
+    "Mobile_description": "Career",
+    "aboutUs_description": "About Us",
+    "Career_description": "Career"
+
+  },
   "benefitAndStatistic": {
     "priority": "Benefits of Chat Application Development",
     "connection": "Real time communication time",

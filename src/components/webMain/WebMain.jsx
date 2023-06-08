@@ -27,25 +27,27 @@ const WebMain = ({ data }) => {
   );
 
   return (
-    <div className={scss.main}>
-      <div className="container">
-        <div className={scss.main__content}>
-          {renderContent}
-          <Image
-            src={data.image}
-            alt="website image"
-            className={scss.content__image_nonAdaptive}
-            width={631}
-            height={563}
-          />
-          <Image
-            src={data.adaptiveImage}
-            alt="website image"
-            className={scss.content__image_adaptive}
-          />
+    <>
+      <div className={scss.main}>
+        <div className="container">
+          <div className={scss.main__content}>
+            {renderContent}
+            <Image
+              src={data.image}
+              alt="website image"
+              className={scss.content__image_nonAdaptive}
+              width={631}
+              height={563}
+            />
+            <Image
+              src={data.adaptiveImage}
+              alt="website image"
+              className={scss.content__image_adaptive}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
