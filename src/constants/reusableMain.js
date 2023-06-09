@@ -1,8 +1,8 @@
-import webImage from "/public/images/reusableMain/webServiceMain.jpg";
-import designImage from "/public/images/reusableMain/DesignMain.jpg";
-import mobileImage from "/public/images/reusableMain/mobileMain.jpg";
-import mvpImage from "/public/images/reusableMain/mvpMain.jpg";
-import chatImage from "/public/images/reusableMain/chatMain.jpg";
+import webImage from "/public/images/reusableMain/webServiceMain.svg";
+import designImage from "/public/images/reusableMain/DesignMain.svg";
+import mobileImage from "/public/images/reusableMain/mobileMain.svg";
+import mvpImage from "/public/images/reusableMain/mvpMain.svg";
+import chatImage from "/public/images/reusableMain/chatMain.svg";
 //adaptive images
 import adaptiveWeb from "/public/images/adaptiveServices/webdev.svg";
 import adaptiveDesign from "/public/images/adaptiveServices/uxui.svg";
