@@ -28,8 +28,8 @@ const Aside = () => {
   }, [currentSection]);
 
   const change = (href) => {
-    if (href === "#itProject") {
-      setIndex(scss.aside__itProject_scroll);
+    if (currentSection === "itProject") {
+      setIndex(scss.aside_scroll_it);
     } else if (href === "#service") {
       setIndex(scss.aside__service_scroll);
     } else if (href === "#technologies") {
