@@ -13,7 +13,7 @@
     height: 60px;
     margin-bottom: 30px;
 
-    @media (max-width: 1400px) {
+    @media (min-width: 1340px) {
       overflow-x: scroll;
     }
 
@@ -21,6 +21,7 @@
       content: "";
       position: absolute;
       left: 0;
+      top: 41px;
       width: 0;
       bottom: 0px;
       transition: ease-in-out 0.3s;
