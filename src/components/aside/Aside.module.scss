@@ -174,5 +174,15 @@
         color: #333333;
       }
     }
+    .aside__links_active{
+      height: 48px;
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 19px;
+      color: #333333;
+        font-weight: 600;
+    }
   }
 }
