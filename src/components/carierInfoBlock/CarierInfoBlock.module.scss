@@ -95,7 +95,7 @@ $step__numeration__width: calc(4vw + -1.5vh);
       font-size: 48px;
       line-height: 60px;
       color: #262626;
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
 
       @media (max-width: 576px) {
         font-size: 32px;
@@ -104,12 +104,13 @@ $step__numeration__width: calc(4vw + -1.5vh);
     }
 
     .content__description {
+      white-space: pre-line;
       font-style: normal;
       font-weight: 400;
       font-size: 19px;
       line-height: 28px;
       color: $darkGrayText;
-      margin: 0;
+      margin: 0 0 15px;
 
       @media (max-width: 576px) {
         font-size: 18px;
