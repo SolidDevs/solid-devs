@@ -16,7 +16,6 @@ const OurProjects = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isActive, setActive] = useState(false);
   const [links, setLinks] = useState([]);
-  console.log(links);
   const handleSlideChange = (index) => {
     setActiveSlide(index);
   };
