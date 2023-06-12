@@ -18,10 +18,16 @@ a {
 
 .slick-track {
   display: flex;
+  height: 100%;
 }
 
 .slick-slide>div {
   margin: 0px 16px;
+  height: 100%;
+}
+
+.projects .slick-list{
+  height: 100% !important;
 }
 
 .work__wrapper .slick-disabled>p {
