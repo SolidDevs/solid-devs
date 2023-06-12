@@ -46,7 +46,11 @@ const WorkNavbar = ({ navbarLinks, paramName, state, setState }) => {
       )),
     [navbarLinks, paramValue, handleClick, t]
   );
-  return <nav className={scss.navbar}>{navbarItems}</nav>;
+  return (
+    <div className={scss.navbar__wrapper}>
+      <nav className={scss.navbar}>{navbarItems}</nav>
+    </div>
+  );
 };
 
 export default WorkNavbar;
