@@ -16,7 +16,9 @@ const Aside = () => {
       );
       if (currentSection) {
         const currentSectionId = currentSection.getAttribute("id");
-        setCurrentSection(currentSectionId);
+        if (currentSectionId) {
+          setCurrentSection(currentSectionId);
+        }
       }
     };
 
@@ -25,11 +27,11 @@ const Aside = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [currentSection]);
+  }, []);
 
   const change = (href) => {
-    if (href === "#itProject") {
-      setIndex(scss.aside__itProject_scroll);
+    if (currentSection === "itProject") {
+      setIndex(scss.aside_scroll_it);
     } else if (href === "#service") {
       setIndex(scss.aside__service_scroll);
     } else if (href === "#technologies") {
@@ -40,21 +42,24 @@ const Aside = () => {
       setIndex(scss.aside__rewiews_scroll);
     } else if (href === "#ourProject") {
       setIndex(scss.aside__ourProject_scroll);
-    }else if (href === "#work") {
+    } else if (href === "#work") {
       setIndex(scss.aside__work_scroll);
     }
   };
 
-  const aside__links = asideLinks.map((item, index) => (
-    <a
-      key={`${item.link}_${index}`}
-      className={scss.aside__links}
-      href={item.path}
-      onClick={() => change(item.path)}
-    >
-      {t(item.link)}
-    </a>
-  ));
+  const aside__links = asideLinks.map((item, index) => {
+    const isActive = item.path.slice(1) === currentSection;
+    return (
+      <a
+        key={`${item.link}_${index}`}
+        className={isActive ? scss.aside__links_active : scss.aside__links}
+        href={item.path}
+        onClick={() => change(item.path)}
+      >
+        {t(item.link)}
+      </a>
+    );
+  });
 
   useEffect(() => {
     if (currentSection === "itProject") {
@@ -69,7 +74,7 @@ const Aside = () => {
       setIndex(scss.aside__rewiews_scroll);
     } else if (currentSection === "ourProject") {
       setIndex(scss.aside__ourProject_scroll);
-    }else if (currentSection === "work") {
+    } else if (currentSection === "work") {
       setIndex(scss.aside__work_scroll);
     }
   }, [currentSection]);

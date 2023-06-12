@@ -11,6 +11,24 @@
   @include breackpoint(sm) {
     display: none;
   }
+  .aside_scroll_it {
+    @include breackpoint(sm) {
+      display: none;
+    }
+    background: #d9d9d9;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    .aside__scroll_before{
+      transition: all 0.2s ease;
+      width: 4px;
+      height: 48px;
+      background: #0e61fe;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
   .aside__itProject_scroll {
     @include breackpoint(sm) {
       display: none;
@@ -155,6 +173,16 @@
         font-weight: 600;
         color: #333333;
       }
+    }
+    .aside__links_active{
+      height: 48px;
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 19px;
+      color: #333333;
+        font-weight: 600;
     }
   }
 }
