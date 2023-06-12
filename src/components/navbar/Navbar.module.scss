@@ -40,6 +40,7 @@
     font-size: 17px;
     line-height: 23px;
     color: #262626;
+    white-space: nowrap;
 
     &::after {
       content: "";
@@ -69,6 +70,7 @@
   font-size: 17px;
   line-height: 23px;
   color: #262626;
+  white-space: nowrap;
 
   &::after {
     content: "";
@@ -83,6 +85,16 @@
   }
 }
 
+@media (max-width: 1405px) {
+  .navbar {
+    .navbar__item_nonActive {
+      font-size: 15px;
+    }
+    .navbar__item_currentSelect {
+      font-size: 16px;
+    }
+  }
+}
 @media (max-width: 1340px) {
   .navbar {
     display: flex;
@@ -91,6 +103,12 @@
     height: 100%;
     &::after {
       display: none;
+    }
+    .navbar__item_nonActive {
+      font-size: 17px;
+    }
+    .navbar__item_currentSelect {
+      font-size: 17px;
     }
     .navbar__links {
       width: 100%;
