@@ -7,6 +7,7 @@ import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 import Paging from "./paging/Paging";
 import ProjectsItem from "./projectsItem/ProjectsItem";
 import { useTranslation } from "react-i18next";
+import SectionContainer from "../layoutComponent/SectionContainer";
 
 const OurProjects = () => {
   const { t } = useTranslation();
@@ -67,11 +68,12 @@ const OurProjects = () => {
   );
 
   return (
-    <div className={scss.ourProjects}  id="ourProject" >
-      <h1  id="ourProject" >{t("ourProjects.ourProjectsTitle")}</h1>
-      <div className={scss.projects}>
-        <Slider {...sliderSettings}>{renderProjects}</Slider>
-      </div>
+    <div className={scss.ourProjects} id="ourProject" >
+      <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">
+        <div className={scss.projects}>
+          <Slider {...sliderSettings}>{renderProjects}</Slider>
+        </div>
+      </SectionContainer>
     </div>
   );
 };

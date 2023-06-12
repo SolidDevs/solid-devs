@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 import Paging from "./paging/Paging";
+import SectionContainer from "../layoutComponent/SectionContainer";
 
 const FeedBack = ({ isMain }) => {
 
@@ -71,11 +72,12 @@ const FeedBack = ({ isMain }) => {
     []
   );
   return (
-    <div className={scss.feedBack}  id="feedback" >
-      <h1  id="feedback" >{t("feedBack.heading")}</h1>
-      <div className={scss.feedBack__slide}>
-        <Slider {...sliderSettings}>{renderCard}</Slider>
-      </div>
+    <div className={scss.feedBack} id="feedback" >
+      <SectionContainer id="feedback" title={t("feedBack.heading")}>
+        <div className={scss.feedBack__slide}>
+          <Slider {...sliderSettings}>{renderCard}</Slider>
+        </div>
+      </SectionContainer>
     </div>
   );
 };
