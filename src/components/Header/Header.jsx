@@ -27,15 +27,22 @@ const Header = () => {
     setSelectLan(storedLanguage == "ru" ? true : false);
     i18n.changeLanguage(storedLanguage);
   }, []);
-  const handleClick = () => {
+
+  const handleClickOpen = () => {
     setServiceIndex(true);
-    setIsServiceModalOpen(!isServiceModalOpen);
+    setIsServiceModalOpen(true);
   };
+
+  const handleClickClose = () => {
+    setIsServiceModalOpen(false);
+  }
+
   const handleButtonClick = () => {
     setModalIndex(true);
     setIsContactModalOpen(!isContactModalOpen);
     setIsServiceModalOpen(false);
   };
+
   const [inputValues, setInputValues] = useState({
     name: "",
     number: "",
@@ -184,9 +191,8 @@ const Header = () => {
           className={
             isServiceModalOpen ? scss.modal_active : scss.modal_notActive
           }
-          onClick={handleClick}
         >
-          <main onClick={(event) => event.stopPropagation()}>
+          <main onMouseLeave={() => handleClickClose()} onClick={(event) => event.stopPropagation()}>
             <h2>{t("header.our_services")}</h2>
             <nav>{serviceNavs}</nav>
           </main>
@@ -204,14 +210,14 @@ const Header = () => {
         <nav className={scss.header__navs}>
           {headerNavs}
           <label
+            onMouseOver={() => handleClickOpen()}
             className={
               !isServiceModalOpen
                 ? scss.header__option_notActive
                 : scss.header__option_active
             }
-            onClick={handleClick}
           >
-            <p>{t("header.service")}</p>
+            <p >{t("header.service")}</p>
             <Image src={arrow} alt="arrow" width={16} height={8} />
           </label>
         </nav>
