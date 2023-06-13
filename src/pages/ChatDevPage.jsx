@@ -5,7 +5,6 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import Contacts from "@/components/contacts/Contacts";
 import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProcess";
 import ReusableMainContent from "@/components/webMain/WebMain";
-import { chatWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation/Navigation";
@@ -13,6 +12,7 @@ import useService from "@/hooks/useService";
 import { useEffect } from "react";
 import adaptiveChat from "/public/images/adaptiveServices/services.svg";
 import chatImage from "/public/images/reusableMain/chatMain.svg";
+import StatisticsChat from "@/components/statisticsChat/StatisticsChat";
 
 const ChatDevPage = () => {
   const { t } = useTranslation();
@@ -36,7 +36,7 @@ const ChatDevPage = () => {
       <ReusableMainContent data={chatMain} />
       <ServicesAndProcess data={services[0]?.services} title={t("services.chatService")} />
       <BenefitsAndStatistics data={services[0]?.advantage} title={t("services.chatProcess")} />
-      <BenefitsAndStatistics variant="statistic" data={services[0]?.process} title={t("services.chatStat")} />
+      <StatisticsChat data={services[0]?.process} title={t("services.chatStat")} />
       <div className={scss.dekstop}>
         <ContactUs />
       </div>

@@ -1,15 +1,14 @@
-import { useTranslation } from "react-i18next";
 import scss from "./ReusableContentCard.module.scss";
 import React, { useMemo } from "react";
 import Image from "next/image";
+import icon from "../../../../public/images/webServices/check-mark.png"
 
-const ReusableContentCard = ({ item, icon, variant, accounting }) => {
-  const { t } = useTranslation();
+const ReusableContentCard = ({ item, variant, accounting }) => {
   const renderContent = useMemo(() => {
     if (variant == "statistic") {
       return <p>{accounting}+</p>;
     } else {
-      return <Image src={icon} alt="icon" width={27} height={19} />;
+      return <Image src={icon} alt="icon" width={23} height={16} />;
     }
   }, [variant]);
   return (

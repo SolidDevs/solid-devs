@@ -11,6 +11,7 @@ import useService from "@/hooks/useService";
 import mvpImage from "/public/images/reusableMain/mvpMain.svg";
 import adaptiveMvp from "/public/images/adaptiveServices/mvp.svg";
 import { useEffect } from "react";
+import Service from "@/components/ServiceMvp/Service";
 
 const MvpDevPage = () => {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ const MvpDevPage = () => {
       <ReusableMainContent data={mvpMain} />
       <ServicesAndProcess data={services[0]?.services} title={t("services.mvpService")} />
       <ServicesAndProcess variant={"process"} data={services[0]?.process} title={t("services.mvpProcess")} />
-      <ServicesAndProcess data={services[0]?.reasons} title={t("services.mvpReason")} />
+      <Service data={services[0]?.reasons} title={t("services.mvpReason")} />
       <div className={scss.dekstop}>
         <ContactUs line={true} />
       </div>
