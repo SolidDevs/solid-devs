@@ -5,8 +5,9 @@ import Image from "next/image";
 import arrow from "../../../../public/assets/images/ourProject/arrow.svg";
 import { useTranslation } from "react-i18next";
 import imgSLider from "../../../../public/assets/images/ourProject/MacBook.svg";
+import Link from "next/link";
 
-const ProjectsItem = ({ title, subtitle, links }) => {
+const ProjectsItem = ({ companyName, companyDesc, tasks, image, link }) => {
   const [isActive, setActive] = useState(false);
 
   const { t } = useTranslation();
@@ -15,13 +16,13 @@ const ProjectsItem = ({ title, subtitle, links }) => {
     <div className={scss.projects__item} id="ourProject">
       <div className={scss.item__info} id="ourProject">
         <div className={scss.item__title}>
-          <h1>{t(title)}</h1>
+          <h1>{companyName}</h1>
         </div>
         <div className={scss.item__subtitle}>
-          <p>{t(subtitle)}</p>
+          <p>{companyDesc}</p>
         </div>
         <div className={scss.item__links}>
-          {links.map((link, i) => (
+          {tasks.map((link, i) => (
             <>
               <div
                 key={`${link}_${i}`}
@@ -29,16 +30,18 @@ const ProjectsItem = ({ title, subtitle, links }) => {
                 id="ourProject"
               >
                 <Image src={arrow} width={8} height={14} />
-                <p>{t(link)}</p>
+                <p>{link}</p>
               </div>
             </>
           ))}
         </div>
-        <Button
-          title={"button__reusable.site"}
-          variant={"btn__no_bg"}
-          withArrow={true}
-        />
+        <Link href={link} target="_blank">
+          <Button
+            title={"button__reusable.site"}
+            variant={"btn__no_bg"}
+            withArrow={true}
+          />
+        </Link>
       </div>
       <div className={scss.item__info_adaptive} id="ourProject">
         <div
@@ -47,10 +50,10 @@ const ProjectsItem = ({ title, subtitle, links }) => {
         >
           <div className={scss.wrapper__title_left}>
             <div className={scss.item__title}>
-              <h1>{t(subtitle)}</h1>
+              <h1>{companyDesc}</h1>
             </div>
             <div className={scss.item__subtitle}>
-              <p>{t(title)}</p>
+              <p>{companyName}</p>
             </div>
           </div>
           <div
@@ -70,7 +73,7 @@ const ProjectsItem = ({ title, subtitle, links }) => {
                 <>
                   <div key={`${link}_${i}`} className={scss.links__item}>
                     <Image src={arrow} width={8} height={14} />
-                    <p>{t(link)}</p>
+                    <p>{link}</p>
                   </div>
                 </>
               ))}
@@ -86,7 +89,7 @@ const ProjectsItem = ({ title, subtitle, links }) => {
         )}
       </div>
       <div className={scss.item__img}>
-        <Image src={imgSLider} width={388} height={230} />
+        <img src={image} width={388} height={230} />
       </div>
     </div>
   );

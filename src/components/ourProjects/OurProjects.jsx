@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import scss from "./OurProjects.module.scss";
 import { ourProjectArr } from "@/constants/ourProjects";
 import Slider from "react-slick";
@@ -8,10 +8,20 @@ import Paging from "./paging/Paging";
 import ProjectsItem from "./projectsItem/ProjectsItem";
 import { useTranslation } from "react-i18next";
 import SectionContainer from "../layoutComponent/SectionContainer";
+import useProject from "@/hooks/useProject";
 
 const OurProjects = () => {
   const { t } = useTranslation();
   const [activeSlide, setActiveSlide] = useState(0);
+  const { projects, getProjects } = useProject();
+
+  useEffect(() => {
+    getProjects();
+    if (projects) {
+      console.log(projects)
+    }
+  }, [])
+
   const handleSlideChange = (index) => {
     setActiveSlide(index);
   };
@@ -61,10 +71,10 @@ const OurProjects = () => {
 
   const renderProjects = useMemo(
     () =>
-      ourProjectArr.map((el, index) => (
+      projects?.map((el, index) => (
         <ProjectsItem {...el} key={`${el.title}_${index}`} />
       )),
-    []
+    [projects]
   );
 
   return (

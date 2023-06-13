@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import scss from "./FeedBack.module.scss";
 import Card from "./card/Card";
 import { feedBackArr } from "@/constants/feedBack";
@@ -10,10 +10,16 @@ import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 import Paging from "./paging/Paging";
 import SectionContainer from "../layoutComponent/SectionContainer";
+import useFeedback from "@/hooks/useFeedback";
 
 const FeedBack = ({ isMain }) => {
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const { feedbacks, getFeedbacks } = useFeedback()
+
+  useEffect(() => {
+    getFeedbacks();
+  }, [])
 
   const handleSlideChange = (index) => {
     setActiveSlide(index);
@@ -66,10 +72,10 @@ const FeedBack = ({ isMain }) => {
   const { t } = useTranslation();
   const renderCard = useMemo(
     () =>
-      feedBackArr.map((el, index) => (
+    feedbacks?.map((el, index) => (
         <Card {...el} key={`${el.title}_${index}`} />
       )),
-    []
+    [feedbacks]
   );
   return (
     <div className={scss.feedBack} id="feedback" >
