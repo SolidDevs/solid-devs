@@ -1,15 +1,12 @@
-import Image from "next/image";
 import scss from "./OurTeamCard.module.scss";
-import { useTranslation } from "react-i18next";
 
-const OurTeamCard = ({ image, name, surname, position }) => {
-  const { t } = useTranslation("");
+const OurTeamCard = ({ image, name, speciality }) => {
   return (
     <>
       <div className={scss.ourTeam__card} id="team">
-        <Image
+        <img
           src={image}
-          alt={`${name} ${surname}`}
+          alt={name}
           width={0}
           height={0}
           sizes="100vw"
@@ -17,9 +14,9 @@ const OurTeamCard = ({ image, name, surname, position }) => {
         />
         <div className={scss.our__team__item_hovered} id="team" >
           <h1 className={scss.our__team__item_fullName} id="team" >
-            {`${t(surname)}  ${t(name)}`}
+            {name}
           </h1>
-          <h1 className={scss.our__team__item_position} id="team" >{t(position)}</h1>
+          <h1 className={scss.our__team__item_position} id="team" >{speciality}</h1>
         </div>
       </div>
     </>
