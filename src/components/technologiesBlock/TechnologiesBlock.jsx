@@ -52,7 +52,7 @@ const TechnologiesBlock = () => {
       filtering({ category: "category", operator: "==", comparison: "Mobile" })
     } else if (technologies == "infrastructure") {
       filtering({ category: "category", operator: "==", comparison: "Infrastructure" })
-    } else if (technologies == "UX/UI") {
+    } else if (technologies == "ux") {
       filtering({ category: "category", operator: "==", comparison: "UX/UI" })
     }
   }, [technologies])

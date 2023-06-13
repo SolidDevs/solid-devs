@@ -333,6 +333,12 @@
     "designServices": "UX/UI design services we provide",
     "designProcess": "Design process",
     "webServices": "Web development services we provide",
-    "webProcess": "Development process"
+    "webProcess": "Development process",
+    "mvpService": "Development Services custom applications MVPs we provide",
+    "mvpProcess": "MVP software development process",
+    "mvpReason": "Why do you need an MVP?",
+    "chatService": "What types of chat applications do we provide",
+    "chatProcess": "Benefits of Chat Application Development",
+    "chatStat": "Solid statistics"
   }
 }

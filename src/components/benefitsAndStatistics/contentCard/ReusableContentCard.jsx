@@ -3,7 +3,7 @@ import scss from "./ReusableContentCard.module.scss";
 import React, { useMemo } from "react";
 import Image from "next/image";
 
-const ReusableContentCard = ({ title, icon, variant, accounting }) => {
+const ReusableContentCard = ({ item, icon, variant, accounting }) => {
   const { t } = useTranslation();
   const renderContent = useMemo(() => {
     if (variant == "statistic") {
@@ -15,7 +15,7 @@ const ReusableContentCard = ({ title, icon, variant, accounting }) => {
   return (
     <div className={scss.cards}>
       <div className={scss.cards__pictogram}>{renderContent}</div>
-      <h3>{t(title)}</h3>
+      <h3>{item}</h3>
     </div>
   );
 };
