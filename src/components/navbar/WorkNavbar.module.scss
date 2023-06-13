@@ -4,6 +4,7 @@
   position: relative;
   ::-webkit-scrollbar {
     width: 0;
+    display: none;
   }
 
   .navbar {
@@ -21,7 +22,7 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 41px;
+      top: 58px;
       width: 0;
       bottom: 0px;
       transition: ease-in-out 0.3s;
