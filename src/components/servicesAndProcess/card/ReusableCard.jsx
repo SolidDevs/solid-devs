@@ -1,14 +1,15 @@
 import { useTranslation } from "react-i18next";
 import scss from "./ReusableCard.module.scss";
 import React, { useMemo } from "react";
-
-const ReusableCard = ({ title, description, image, variant, numeration }) => {
+import arrow from "../../../../public/images/servicesBlock/arrowService.svg";
+import Image from "next/image";
+const ReusableCard = ({ title, description, variant, numeration }) => {
   const { t } = useTranslation();
   const renderContent = useMemo(() => {
     if (variant == "process") {
       return <p>{numeration}</p>;
     } else {
-      return <img src={image} alt="icon" width={27} height={16} />;
+      return <Image src={arrow} alt="icon" width={27} height={16} />;
     }
   }, [variant]);
   return (

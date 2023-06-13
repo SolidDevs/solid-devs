@@ -9,6 +9,7 @@ import { mvpBlock, mvpProcess, mvpWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import { useTranslation } from "react-i18next";
+import Service from "@/components/ServiceMvp/Service";
 const MvpDevPage = () => {
   const { t } = useTranslation();
   return (
@@ -18,7 +19,7 @@ const MvpDevPage = () => {
       <ReusableMainContent data={mvpMain} />
       <ServicesAndProcess data={mvpWeb} />
       <ServicesAndProcess variant={"process"} data={mvpProcess} />
-      <ServicesAndProcess data={mvpBlock} />
+      <Service data={mvpBlock} />
       <div className={scss.dekstop}>
         <ContactUs line={true} />
       </div>

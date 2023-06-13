@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+$title__size: calc(2vw + 2vh);
+$line__height: calc(3vw + 2vh);
+
+.serviceMain {
+  background-color: $mainDarkText;
+  padding: 50px 0px;
+  @include breackpoint(sm) {
+    margin-bottom: 30px !important;
+  }
+  h2 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    width: 50%;
+    font-weight: 300;
+    font-size: $title__size;
+    line-height: $line__height;
+    color: $white;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+}
+
+.main__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  $title__size: calc(3vw + 2vh);
+  $line__height: calc(4vw + 2vh);
+  .serviceMain {
+    background-color: #f1f1f1;
+    padding: 20px 20px;
+    h2 {
+      color: #262626;
+      width: 56%;
+      margin: 0;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 412px) {
+    .serviceMain {
+      h2 {
+        width: 68%;
+      }
+    }
+  }
+}
