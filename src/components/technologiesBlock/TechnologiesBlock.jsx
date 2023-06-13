@@ -4,30 +4,32 @@ import Navbar from "../navbar/Navbar";
 import scss from "./Technologies.module.scss";
 import { useTranslation } from "react-i18next";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { db } from "../../firebase/firebase"
+import { db } from "../../firebase/firebase";
 import { useRouter } from "next/router";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
 const TechnologiesBlock = () => {
   const { t } = useTranslation("");
   const [isOpen, setOpen] = useState(true);
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
   const router = useRouter();
-  const { technologies } = router.query
+  const { technologies } = router.query;
 
   useEffect(() => {
     const path = {
       pathname: "",
       search: "?technologies=devOps",
-    }
+    };
     router.push(path, path, { shallow: true });
-  }, [])
+  }, []);
 
   const filtering = async ({ category, operator, comparison }) => {
-    const q = query(collection(db, "technologies"),
-      where(category, operator, comparison))
-    const data = []
+    const q = query(
+      collection(db, "technologies"),
+      where(category, operator, comparison)
+    );
+    const data = [];
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       let obj = {
@@ -36,26 +38,38 @@ const TechnologiesBlock = () => {
       };
       data.push(obj);
     });
-    setData(data)
-  }
+    setData(data);
+  };
 
   useMemo(() => {
     if (technologies == "devOps") {
-      filtering({ category: "category", operator: "==", comparison: "DevOps" })
+      filtering({ category: "category", operator: "==", comparison: "DevOps" });
     } else if (technologies == "frontend") {
-      filtering({ category: "category", operator: "==", comparison: "Frontend" })
+      filtering({
+        category: "category",
+        operator: "==",
+        comparison: "Frontend",
+      });
     } else if (technologies == "qa") {
-      filtering({ category: "category", operator: "==", comparison: "QA" })
+      filtering({ category: "category", operator: "==", comparison: "QA" });
     } else if (technologies == "backend") {
-      filtering({ category: "category", operator: "==", comparison: "Backend" })
+      filtering({
+        category: "category",
+        operator: "==",
+        comparison: "Backend",
+      });
     } else if (technologies == "mobilePhone") {
-      filtering({ category: "category", operator: "==", comparison: "Mobile" })
+      filtering({ category: "category", operator: "==", comparison: "Mobile" });
     } else if (technologies == "infrastructure") {
-      filtering({ category: "category", operator: "==", comparison: "Infrastructure" })
+      filtering({
+        category: "category",
+        operator: "==",
+        comparison: "Infrastructure",
+      });
     } else if (technologies == "UX/UI") {
-      filtering({ category: "category", operator: "==", comparison: "UX/UI" })
+      filtering({ category: "category", operator: "==", comparison: "UX/UI" });
     }
-  }, [technologies])
+  }, [technologies]);
   const technologiesItems = useMemo(
     () =>
       data?.map((item, index) => (
