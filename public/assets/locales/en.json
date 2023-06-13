@@ -98,11 +98,12 @@
   },
   "navbar": {
     "devOps": "DevOps",
-    "frontend": "Front End",
-    "qualityControl": "Quality Control",
-    "backend": "Back End",
-    "mobilePhone": "Mobile Phone",
-    "infrastructure": "Infrastructure"
+    "frontend": "Frontend",
+    "qa": "QA",
+    "backend": "Backend",
+    "mobilePhone": "Mobile",
+    "infrastructure": "Infrastructure",
+    "ux": "UX/UI"
   },
   "main": {
     "title": "Solid Devs",
@@ -133,7 +134,6 @@
     "Mobile_description": "Career",
     "aboutUs_description": "About Us",
     "Career_description": "Career"
-
   },
   "benefitAndStatistic": {
     "priority": "Benefits of Chat Application Development",
@@ -326,5 +326,13 @@
       "launch": "Launch",
       "launchDes": "We stay with you after launch to fix and update the solution."
     }
+  },
+  "services": {
+    "mobileServices": "Mobile Application Development Services We Offer",
+    "mobileProcess": "Mobile development process",
+    "designServices": "UX/UI design services we provide",
+    "designProcess": "Design process",
+    "webServices": "Web development services we provide",
+    "webProcess": "Development process"
   }
 }

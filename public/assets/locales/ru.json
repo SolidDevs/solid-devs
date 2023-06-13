@@ -98,11 +98,12 @@
   },
   "navbar": {
     "devOps": "DevOps",
-    "frontend": "Внешний интерфейс",
-    "qualityControl": "Контроль качества",
-    "backend": "Бэкэнд",
-    "mobilePhone": "Мобилка",
-    "infrastructure": "Инфраструктура"
+    "frontend": "Frontend",
+    "qa": "QA",
+    "backend": "Backend",
+    "mobilePhone": "Мобильная разработка",
+    "infrastructure": "Infrastructure",
+    "ux": "UX/UI"
   },
   "main": {
     "title": "Solid Devs",
@@ -323,5 +324,13 @@
       "launch": "Запуск",
       "launchDes": "Мы остаемся с вами после запуска, чтобы исправить и обновить решение."
     }
+  },
+  "services": {
+    "mobileServices": "Услуги по разработке мобильных приложений, которые мы предоставляем",
+    "mobileProcess": "Процесс мобильной разработки",
+    "designServices": "Услуги UX/UI дизайна, которые мы предоставляем",
+    "designProcess": "Процесс дизайна",
+    "webServices": "Услуги по веб-разработки, которые мы предоставляем",
+    "webProcess": "Процесс разработки"
   }
 }

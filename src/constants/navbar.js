@@ -1,10 +1,11 @@
 export const technologiesLinks = [
   "devOps",
   "frontend",
-  "qualityControl",
+  "qa",
   "backend",
   "mobilePhone",
   "infrastructure",
+  "ux"
 ];
 
 export const workLinks = [
