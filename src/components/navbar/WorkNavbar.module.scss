@@ -4,6 +4,7 @@
   position: relative;
   ::-webkit-scrollbar {
     width: 0;
+    display: none;
   }
 
   .navbar {
@@ -21,14 +22,14 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 41px;
+      top: 58px;
       width: 0;
       bottom: 0px;
       transition: ease-in-out 0.3s;
       z-index: 19;
       width: 100%;
       height: 2px;
-      background-color: #d9d9d9;
+      background: #d9d9d9;
     }
 
     .navbar__item {
