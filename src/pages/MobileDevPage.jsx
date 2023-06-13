@@ -4,20 +4,36 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import Contacts from "@/components/contacts/Contacts";
 import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProcess";
 import ReusableMainContent from "@/components/webMain/WebMain";
-import { mobileMain } from "@/constants/reusableMain";
-import { mobileProcess, mobileWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import { useTranslation } from "react-i18next";
+import useService from "@/hooks/useService";
+import mobileImage from "/public/images/reusableMain/mobileMain.svg";
+import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.svg";
+import { useEffect } from "react";
+
+
 const MobileDevPage = () => {
   const { t } = useTranslation();
+  const { services, getServices } = useService("mobileServices")
+
+  useEffect(() => {
+    getServices();
+  }, [])
+
+  const mobileMain = {
+    services,
+    image: mobileImage,
+    adaptiveImage: adaptiveMobile,
+  };
+
   return (
     <>
       <Header />
       <Navigation title={t("navigation.Mobile_description")} />
       <ReusableMainContent data={mobileMain} />
-      <ServicesAndProcess data={mobileWeb} />
-      <ServicesAndProcess variant={"process"} data={mobileProcess} />
+      <ServicesAndProcess data={services[0]?.services} title={t("services.mobileServices")} />
+      <ServicesAndProcess variant={"process"} data={services[0]?.process} title={t("services.mobileProcess")} />
       <div className={scss.dekstop}>
         <ContactUs line={true} />
       </div>

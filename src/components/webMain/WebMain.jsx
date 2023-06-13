@@ -11,10 +11,18 @@ const WebMain = ({ data }) => {
     () => (
       <div className={scss.content__text__wrapper}>
         <div className={scss.content__title}>
-          <p>{t(data.title)}</p>
+          {
+            data?.services?.map((el, index) => (
+              <p key={index}>{el.title}</p>
+            ))
+          }
         </div>
         <div className={scss.content__description}>
-          <p>{t(data.description)}</p>
+          {
+            data?.services?.map((el, index) => (
+              <p key={index}>{el.description}</p>
+            ))
+          }
         </div>
         <Button
           title={t("button__reusable.project")}
