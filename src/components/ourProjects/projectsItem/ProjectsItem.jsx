@@ -3,14 +3,10 @@ import scss from "./ProjectsItem.module.scss";
 import Button from "../../Button/Button";
 import Image from "next/image";
 import arrow from "../../../../public/assets/images/ourProject/arrow.svg";
-import { useTranslation } from "react-i18next";
-import imgSLider from "../../../../public/assets/images/ourProject/MacBook.svg";
 import Link from "next/link";
 
 const ProjectsItem = ({ companyName, companyDesc, tasks, image, link }) => {
   const [isActive, setActive] = useState(false);
-
-  const { t } = useTranslation();
 
   return (
     <div className={scss.projects__item} id="ourProject">

@@ -12,15 +12,15 @@ const WebMain = ({ data }) => {
       <div className={scss.content__text__wrapper}>
         <div className={scss.content__title}>
           {
-            data?.services?.map((el) => (
-              <p>{el.title}</p>
+            data?.services?.map((el, index) => (
+              <p key={index}>{el.title}</p>
             ))
           }
         </div>
         <div className={scss.content__description}>
           {
-            data?.services?.map((el) => (
-              <p>{el.description}</p>
+            data?.services?.map((el, index) => (
+              <p key={index}>{el.description}</p>
             ))
           }
         </div>

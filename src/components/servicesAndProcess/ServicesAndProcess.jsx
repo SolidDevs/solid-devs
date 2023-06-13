@@ -1,10 +1,8 @@
 import scss from "./ServicesAndProcess.module.scss";
 import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import ReusableCard from "./card/ReusableCard";
 
 const ServicesAndProcess = ({ variant, data, title }) => {
-  const { t } = useTranslation();
 
   const reasonsRender = useMemo(
     () =>

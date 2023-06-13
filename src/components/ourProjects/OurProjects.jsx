@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import scss from "./OurProjects.module.scss";
-import { ourProjectArr } from "@/constants/ourProjects";
 import Slider from "react-slick";
 import SampleNextArrow from "./arrows/nextArrow/SampleNextArrow";
 import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
@@ -17,9 +16,6 @@ const OurProjects = () => {
 
   useEffect(() => {
     getProjects();
-    if (projects) {
-      console.log(projects)
-    }
   }, [])
 
   const handleSlideChange = (index) => {

@@ -4,7 +4,6 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import Contacts from "@/components/contacts/Contacts";
 import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProcess";
 import ReusableMainContent from "@/components/webMain/WebMain";
-import { uiProcess, uiWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import { useTranslation } from "react-i18next";
@@ -15,7 +14,7 @@ import { useEffect } from "react";
 
 const UiDesignPage = () => {
   const { t } = useTranslation();
-  const { services, getServices } = useService('designServices')
+  const { services, getServices } = useService("designServices")
 
   useEffect(() => {
     getServices();
@@ -33,8 +32,8 @@ const UiDesignPage = () => {
       <Header />
       <Navigation title={t("navigation.Design_description")} />
       <ReusableMainContent data={uiMain} />
-      <ServicesAndProcess data={services[0]?.services} title={t('services.designServices')} />
-      <ServicesAndProcess data={services[0]?.process} variant={"process"} title={t('services.designProcess')} />
+      <ServicesAndProcess data={services[0]?.services} title={t("services.designServices")} />
+      <ServicesAndProcess data={services[0]?.process} variant={"process"} title={t("services.designProcess")} />
       <div className={scss.dekstop}>
         <ContactUs line={true} />
       </div>

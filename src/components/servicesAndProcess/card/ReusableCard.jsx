@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import scss from "./ReusableCard.module.scss";
 import React, { useMemo } from "react";
-import Image from "next/image";
 
 const ReusableCard = ({ title, description, image, variant, numeration }) => {
   const { t } = useTranslation();

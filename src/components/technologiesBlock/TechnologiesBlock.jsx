@@ -3,12 +3,10 @@ import SectionContainer from "../layoutComponent/SectionContainer";
 import Navbar from "../navbar/Navbar";
 import scss from "./Technologies.module.scss";
 import { useTranslation } from "react-i18next";
-import { technologiesInfo } from "@/constants/technologies";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import Image from "next/image";
-import { db } from '../../firebase/firebase'
+import { db } from "../../firebase/firebase"
 import { useRouter } from "next/router";
-import { WhereFilterOp, collection, getDocs, orderBy, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const TechnologiesBlock = () => {
   const { t } = useTranslation("");
@@ -21,7 +19,7 @@ const TechnologiesBlock = () => {
   useEffect(() => {
     const path = {
       pathname: "",
-      search: '?technologies=devOps',
+      search: "?technologies=devOps",
     }
     router.push(path, path, { shallow: true });
   }, [])
@@ -39,24 +37,23 @@ const TechnologiesBlock = () => {
       data.push(obj);
     });
     setData(data)
-    console.log(data)
   }
 
   useMemo(() => {
-    if (technologies == 'devOps') {
-      filtering({ category: 'category', operator: '==', comparison: 'DevOps' })
-    } else if (technologies == 'frontend') {
-      filtering({ category: 'category', operator: '==', comparison: 'Frontend' })
-    } else if (technologies == 'qa') {
-      filtering({ category: 'category', operator: '==', comparison: 'QA' })
-    } else if (technologies == 'backend') {
-      filtering({ category: 'category', operator: '==', comparison: 'Backend' })
-    } else if (technologies == 'mobilePhone') {
-      filtering({ category: 'category', operator: '==', comparison: 'Mobile' })
-    }else if (technologies == 'infrastructure') {
-      filtering({ category: 'category', operator: '==', comparison: 'Infrastructure' })
-    }else if (technologies == 'UX/UI') {
-      filtering({ category: 'category', operator: '==', comparison: 'UX/UI' })
+    if (technologies == "devOps") {
+      filtering({ category: "category", operator: "==", comparison: "DevOps" })
+    } else if (technologies == "frontend") {
+      filtering({ category: "category", operator: "==", comparison: "Frontend" })
+    } else if (technologies == "qa") {
+      filtering({ category: "category", operator: "==", comparison: "QA" })
+    } else if (technologies == "backend") {
+      filtering({ category: "category", operator: "==", comparison: "Backend" })
+    } else if (technologies == "mobilePhone") {
+      filtering({ category: "category", operator: "==", comparison: "Mobile" })
+    } else if (technologies == "infrastructure") {
+      filtering({ category: "category", operator: "==", comparison: "Infrastructure" })
+    } else if (technologies == "UX/UI") {
+      filtering({ category: "category", operator: "==", comparison: "UX/UI" })
     }
   }, [technologies])
   const technologiesItems = useMemo(
