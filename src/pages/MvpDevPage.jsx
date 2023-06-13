@@ -4,22 +4,37 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import Contacts from "@/components/contacts/Contacts";
 import ServicesAndProcess from "@/components/servicesAndProcess/ServicesAndProcess";
 import ReusableMainContent from "@/components/webMain/WebMain";
-import { mvpMain } from "@/constants/reusableMain";
-import { mvpBlock, mvpProcess, mvpWeb } from "@/constants/reusebleService";
 import scss from "./pages.module.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import { useTranslation } from "react-i18next";
+import useService from "@/hooks/useService";
+import mvpImage from "/public/images/reusableMain/mvpMain.svg";
+import adaptiveMvp from "/public/images/adaptiveServices/mvp.svg";
+import { useEffect } from "react";
 import Service from "@/components/ServiceMvp/Service";
+
 const MvpDevPage = () => {
   const { t } = useTranslation();
+  const { services, getServices } = useService("mvpServices")
+
+  useEffect(() => {
+    getServices();
+  }, [])
+
+  const mvpMain = {
+    services,
+    image: mvpImage,
+    adaptiveImage: adaptiveMvp,
+  };
+
   return (
     <>
       <Header />
       <Navigation title={t("navigation.MVP_description")} />
       <ReusableMainContent data={mvpMain} />
-      <ServicesAndProcess data={mvpWeb} />
-      <ServicesAndProcess variant={"process"} data={mvpProcess} />
-      <Service data={mvpBlock} />
+      <ServicesAndProcess data={services[0]?.services} title={t("services.mvpService")} />
+      <ServicesAndProcess variant={"process"} data={services[0]?.process} title={t("services.mvpProcess")} />
+      <Service data={services[0]?.reasons} title={t("services.mvpReason")} />
       <div className={scss.dekstop}>
         <ContactUs line={true} />
       </div>

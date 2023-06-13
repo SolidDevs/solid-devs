@@ -2,22 +2,20 @@ import scss from "./BenefitsAndStatistics.module.scss";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ReusableContentCard from "./contentCard/ReusableContentCard";
-import { data_f_priority } from "@/constants/priority";
-import { data_f_information } from "@/constants/information";
 
-const BenefitsAndStatistics = ({ variant }) => {
+const BenefitsAndStatistics = ({ data, variant }) => {
   const { t, i18n } = useTranslation();
   const { language } = i18n;
-  let data = variant == "statistic" ? data_f_information : data_f_priority;
 
   const renderCards = useMemo(
     () =>
-      data.map((item, index) => (
+      data?.map((item, index) => (
         <ReusableContentCard
           key={`${item.title}_${index}`}
           {...item}
           variant={variant}
           numeration={index + 1}
+          item={item}
         />
       )),
     [data, variant]

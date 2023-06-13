@@ -1,0 +1,121 @@
+@import "../../../styles/variables.scss";
+
+.cards {
+  padding: 16px 20px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  @include breackpoint(sm){
+    background-color: $white;
+    flex-direction: column;
+    align-items: start;
+  }
+  .cards__pictogram {
+    width: 56px;
+    height: 56px;
+    background-color: $blue;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: $white;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    width: 60%;
+    height: 58px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    line-height: 29px;
+    margin-left: 30px;
+    color: $mainDarkText;
+    @include breackpoint(sm){
+      margin-left: 0 !important;
+    }
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: $darkGrayText;
+  }
+}
+@media (max-width: 992px) {
+  .cards {
+    .cards__pictogram {
+      width: 54px;
+      height: 54px;
+    }
+    h3 {
+      width: 231px;
+      font-size: 18px;
+      line-height: 24px;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .cards {
+    padding: 15px 15px;
+    h3 {
+      width: 216px;
+      font-size: 17px;
+      margin-left: 15px;
+    }
+  }
+}
+@media (max-width: 336px) {
+  .cards {
+    padding: 5px 10px;
+    .cards__pictogram {
+      width: 45px;
+      height: 45px;
+    }
+    h3 {
+      width: 216px;
+      font-size: 17px;
+      line-height: 22px;
+      margin-left: 15px;
+    }
+  }
+}
+@media (max-width: 325px) {
+  .cards {
+    padding: 5px 15px;
+    .cards__pictogram {
+      width: 40px;
+      height: 40px;
+    }
+    h3 {
+      width: 190px;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 15px;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .cards {
+    padding: 0px 10px;
+    .cards__pictogram {
+      width: 35px;
+      height: 35px;
+    }
+    h3 {
+      width: 190px;
+      font-size: 13px;
+      line-height: 16px;
+      margin-left: 10px;
+    }
+  }
+}

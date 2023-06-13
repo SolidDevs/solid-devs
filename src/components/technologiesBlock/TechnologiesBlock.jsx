@@ -61,13 +61,9 @@ const TechnologiesBlock = () => {
     } else if (technologies == "mobilePhone") {
       filtering({ category: "category", operator: "==", comparison: "Mobile" });
     } else if (technologies == "infrastructure") {
-      filtering({
-        category: "category",
-        operator: "==",
-        comparison: "Infrastructure",
-      });
-    } else if (technologies == "UX/UI") {
-      filtering({ category: "category", operator: "==", comparison: "UX/UI" });
+      filtering({ category: "category", operator: "==", comparison: "Infrastructure" })
+    } else if (technologies == "ux") {
+      filtering({ category: "category", operator: "==", comparison: "UX/UI" })
     }
   }, [technologies]);
   const technologiesItems = useMemo(
