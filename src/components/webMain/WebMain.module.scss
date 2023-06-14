@@ -5,7 +5,7 @@ $title__size: calc(2vw + 2vh);
 $description__size: calc(0.8vw + 1vh);
 
 .main {
-  padding: 37px 0 30px;
+  padding: 37px 0 0;
   @include breackpoint(xm) {
     background-color: #494949;
   }
