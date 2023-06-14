@@ -4,10 +4,11 @@ import scss from "./OurTeam.module.scss";
 import { useEffect, useMemo } from "react";
 import OurTeamCard from "./our__team_card/OurTeamCard";
 import useTeam from "@/hooks/useTeam";
+import Preloader from "../Preloader/Preloader";
 
 const OurTeam = () => {
   const { t } = useTranslation("");
-  const { team, getTeam } = useTeam();
+  const { team, getTeam, isLoading } = useTeam();
 
   useEffect(() => {
     getTeam();
@@ -20,6 +21,7 @@ const OurTeam = () => {
       )),
     [team]
   );
+  if (isLoading) return <Preloader />
   return (
     <SectionContainer title={t("ourTeam.title")} id="team" >
       <div className={scss.ourTeam} id="team">{ourTeamItems}</div>

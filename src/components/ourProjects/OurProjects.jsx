@@ -8,11 +8,12 @@ import ProjectsItem from "./projectsItem/ProjectsItem";
 import { useTranslation } from "react-i18next";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import useProject from "@/hooks/useProject";
+import Preloader from "../Preloader/Preloader";
 
 const OurProjects = () => {
   const { t } = useTranslation();
   const [activeSlide, setActiveSlide] = useState(0);
-  const { projects, getProjects } = useProject();
+  const { projects, getProjects, isLoading } = useProject();
 
   useEffect(() => {
     getProjects();
@@ -72,7 +73,7 @@ const OurProjects = () => {
       )),
     [projects]
   );
-
+  if (isLoading) return <Preloader />
   return (
     <div className={scss.ourProjects} id="ourProject" >
       <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">

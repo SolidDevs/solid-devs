@@ -11,10 +11,11 @@ import designImage from "/public/images/reusableMain/DesignMain.svg";
 import adaptiveDesign from "/public/images/adaptiveServices/uxui.svg";
 import useService from "@/hooks/useService";
 import { useEffect } from "react";
+import Preloader from "@/components/Preloader/Preloader";
 
 const UiDesignPage = () => {
   const { t } = useTranslation();
-  const { services, getServices } = useService("designServices")
+  const { services, getServices, isLoading } = useService("designServices")
 
   useEffect(() => {
     getServices();
@@ -26,7 +27,7 @@ const UiDesignPage = () => {
     adaptiveImage: adaptiveDesign,
   };
 
-
+  if (isLoading) return <Preloader />
   return (
     <>
       <Header />

@@ -10,9 +10,10 @@ import { useEffect } from "react";
 import webImage from "/public/images/reusableMain/webServiceMain.svg";
 import adaptiveWeb from "/public/images/adaptiveServices/webdev.svg";
 import { useTranslation } from "react-i18next";
+import Preloader from "@/components/Preloader/Preloader";
 
 const WebServicePage = () => {
-  const { services, getServices } = useService("webServices")
+  const { services, getServices, isLoading } = useService("webServices")
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const WebServicePage = () => {
     image: webImage,
     adaptiveImage: adaptiveWeb,
   };
-
+  if (isLoading) return <Preloader />
   return (
     <>
       <Header />

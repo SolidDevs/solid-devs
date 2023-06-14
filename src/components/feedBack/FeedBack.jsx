@@ -10,11 +10,12 @@ import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 import Paging from "./paging/Paging";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import useFeedback from "@/hooks/useFeedback";
+import Preloader from "../Preloader/Preloader";
 
 const FeedBack = ({ isMain }) => {
 
   const [activeSlide, setActiveSlide] = useState(0);
-  const { feedbacks, getFeedbacks } = useFeedback()
+  const { feedbacks, getFeedbacks, isLoading } = useFeedback()
 
   useEffect(() => {
     getFeedbacks();
@@ -76,6 +77,7 @@ const FeedBack = ({ isMain }) => {
       )),
     [feedbacks]
   );
+  if (isLoading) return <Preloader />
   return (
     <div className={scss.feedBack} id="feedback" >
       <SectionContainer id="feedback" title={t("feedBack.heading")}>

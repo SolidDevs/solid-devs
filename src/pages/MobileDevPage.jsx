@@ -11,11 +11,12 @@ import useService from "@/hooks/useService";
 import mobileImage from "/public/images/reusableMain/mobileMain.svg";
 import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.svg";
 import { useEffect } from "react";
+import Preloader from "@/components/Preloader/Preloader";
 
 
 const MobileDevPage = () => {
   const { t } = useTranslation();
-  const { services, getServices } = useService("mobileServices")
+  const { services, getServices, isLoading } = useService("mobileServices")
 
   useEffect(() => {
     getServices();
@@ -26,7 +27,7 @@ const MobileDevPage = () => {
     image: mobileImage,
     adaptiveImage: adaptiveMobile,
   };
-
+  if (isLoading) return <Preloader />
   return (
     <>
       <Header />
