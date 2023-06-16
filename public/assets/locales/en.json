@@ -341,5 +341,9 @@
     "chatService": "What types of chat applications do we provide",
     "chatProcess": "Benefits of Chat Application Development",
     "chatStat": "Solid statistics"
+  },
+  "emailJS": {
+    "success": "successfully sent",
+    "failed": "Something went wrong"
   }
 }

@@ -4,10 +4,13 @@ import close from "/public/images/Header/close.svg";
 import { inputs } from "@/constants/header";
 import i18n from "i18next";
 import { useMemo, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Preloader from "../Preloader/Preloader";
 
-const HeaderMobileModal = ({click}) => {
+const HeaderMobileModal = ({ click }) => {
   const { t, language } = i18n;
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
   const handleButtonClick = () => {
     setIsContactModalOpen(!isContactModalOpen);
     click()
@@ -28,7 +31,9 @@ const HeaderMobileModal = ({click}) => {
       [name]: value,
     }));
   };
-  const sendForm = (event) => {
+  const sendForm = async (event) => {
+    event.preventDefault();
+    setIsLoading(true)
     setIsContactModalOpen(false);
     setInputValues({
       name: "",
@@ -37,7 +42,15 @@ const HeaderMobileModal = ({click}) => {
       company: "",
       usHelp: "",
     });
-    event.preventDefault();
+
+    emailjs.send("service_s1rx1ps", "template_bx03nbz", inputValues, "r5POqpjOCvzJRuMU-")
+      .then(function () {
+        alert(t("emailJs.success"));
+        setIsLoading(false)
+      }, function () {
+        alert(t("emailJs.failed"));
+        setIsLoading(false)
+      });
   };
 
   const contactInputs = useMemo(
@@ -57,6 +70,8 @@ const HeaderMobileModal = ({click}) => {
     [language, inputValues]
   );
 
+  if (isLoading) return <Preloader />
+
   return (
     <div className={scss.wrapper}>
       <label onClick={handleButtonClick}>
@@ -75,7 +90,7 @@ const HeaderMobileModal = ({click}) => {
           onClick={(event) => event.stopPropagation()}
         >
           <header>
-            <h1>{t("header.your-project")}</h1>
+            <h1>{t("header.your-pmroject")}</h1>
             <Image
               src={close}
               width={26}

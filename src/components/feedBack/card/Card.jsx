@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import scss from "./Card.module.scss";
-const Сard = ({ companyName, description, image, name, speciality, id, index }) => {
+const Сard = ({ companyName, description, image, name, speciality, index }) => {
   const { t } = useTranslation("");
   return (
     <div className={scss.card} id="feedback">

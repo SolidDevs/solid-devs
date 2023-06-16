@@ -12,6 +12,8 @@ import { inputs } from "@/constants/header";
 import close from "/public/images/Header/close.svg";
 import Logo from "../logo/Logo";
 import HeaderMobileMenu from "../headerMobileMenu/HeaderMobileMenu";
+import emailjs from "@emailjs/browser";
+import Preloader from "../Preloader/Preloader";
 
 const Header = () => {
   const { t, language } = i18n;
@@ -21,6 +23,7 @@ const Header = () => {
   const [serviceIndex, setServiceIndex] = useState(false);
   const { route } = useRouter();
   const [selectLan, setSelectLan] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language");
@@ -50,6 +53,7 @@ const Header = () => {
     company: "",
     usHelp: "",
   });
+
   const change = () => {
     i18n.changeLanguage(!selectLan ? "ru" : "en");
     localStorage.setItem("language", !selectLan ? "ru" : "en");
@@ -76,7 +80,9 @@ const Header = () => {
       [name]: value,
     }));
   };
-  const sendForm = (event) => {
+  const sendForm = async (event) => {
+    event.preventDefault();
+    setIsLoading(true)
     setIsContactModalOpen(false);
     setInputValues({
       name: "",
@@ -85,7 +91,15 @@ const Header = () => {
       company: "",
       usHelp: "",
     });
-    event.preventDefault();
+
+    emailjs.send("service_s1rx1ps", "template_bx03nbz", inputValues, "r5POqpjOCvzJRuMU-")
+      .then(function () {
+        alert(t("emailJs.success"));
+        setIsLoading(false)
+      }, function () {
+        alert(t("emailJs.failed"));
+        setIsLoading(false)
+      });
   };
 
   const headerNavs = useMemo(
@@ -163,7 +177,7 @@ const Header = () => {
                 alt="close"
               />
             </header>
-            <form onSubmit={sendForm}>
+            <form onSubmit={sendForm} >
               <main>{contactInputs}</main>
               <footer>
                 <input
@@ -200,6 +214,7 @@ const Header = () => {
       )
   );
 
+  if (isLoading) return <Preloader />
   return (
     <section className={scss.header}>
       {contactModal}
