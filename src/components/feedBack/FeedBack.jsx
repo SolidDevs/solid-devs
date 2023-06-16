@@ -73,7 +73,7 @@ const FeedBack = ({ isMain }) => {
   const renderCard = useMemo(
     () =>
       feedbacks?.map((el, index) => (
-        <Card {...el} key={`${el.title}_${index}`} />
+        <Card {...el} key={`${el.title}_${index}`} index={index} />
       )),
     [feedbacks]
   );

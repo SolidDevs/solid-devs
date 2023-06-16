@@ -1,13 +1,11 @@
 import { useTranslation } from "react-i18next";
 import scss from "./Card.module.scss";
-const Сard = ({ companyName, description, image, name, speciality, id }) => {
+const Сard = ({ companyName, description, image, name, speciality, id, index }) => {
   const { t } = useTranslation("");
-  const isColor = id % 2 === 0;
   return (
     <div className={scss.card} id="feedback">
       <div
-        className={scss.card__title}
-        style={{ color: isColor ? "#00b212" : "#0E61FE" }}
+        className={index % 2 === 1 ? scss.card__title_green : scss.card__title_blue}
       >
         <p>{companyName}</p>
       </div>
