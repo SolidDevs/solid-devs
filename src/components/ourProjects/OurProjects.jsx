@@ -8,7 +8,8 @@ import ProjectsItem from "./projectsItem/ProjectsItem";
 import { useTranslation } from "react-i18next";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import useProject from "@/hooks/useProject";
-import Preloader from "../Preloader/Preloader";
+import SimpleLoader from "../simpleLoader/SimpleLoader";
+import { Suspense } from "react";
 
 const OurProjects = () => {
   const { t } = useTranslation();
@@ -73,15 +74,17 @@ const OurProjects = () => {
       )),
     [projects]
   );
-  if (isLoading) return <Preloader />
+
   return (
-    <div className={scss.ourProjects} id="ourProject" >
-      <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">
-        <div className={scss.projects}>
-          <Slider {...sliderSettings}>{renderProjects}</Slider>
-        </div>
-      </SectionContainer>
-    </div>
+    <Suspense fallback={SimpleLoader}>
+      <div className={scss.ourProjects} id="ourProject" >
+        <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">
+          <div className={scss.projects}>
+            <Slider {...sliderSettings}>{renderProjects}</Slider>
+          </div>
+        </SectionContainer>
+      </div>
+    </Suspense>
   );
 };
 

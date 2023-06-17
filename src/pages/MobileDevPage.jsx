@@ -11,8 +11,8 @@ import useService from "@/hooks/useService";
 import mobileImage from "/public/images/reusableMain/mobileMain.svg";
 import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.svg";
 import { useEffect } from "react";
-import Preloader from "@/components/Preloader/Preloader";
-
+import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
+import { Suspense } from "react";
 
 const MobileDevPage = () => {
   const { t } = useTranslation();
@@ -27,9 +27,9 @@ const MobileDevPage = () => {
     image: mobileImage,
     adaptiveImage: adaptiveMobile,
   };
-  if (isLoading) return <Preloader />
+
   return (
-    <>
+    <Suspense fallback={SimpleLoader}>
       <Header />
       <Navigation title={t("navigation.Mobile_description")} />
       <ReusableMainContent data={mobileMain} />
@@ -44,7 +44,7 @@ const MobileDevPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </Suspense>
   );
 };
 

@@ -13,11 +13,12 @@ import { useEffect } from "react";
 import adaptiveChat from "/public/images/adaptiveServices/services.svg";
 import chatImage from "/public/images/reusableMain/chatMain.svg";
 import StatisticsChat from "@/components/statisticsChat/StatisticsChat";
-import Preloader from "@/components/Preloader/Preloader";
+import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
+import { Suspense } from "react";
 
 const ChatDevPage = () => {
   const { t } = useTranslation();
-  const { services, getServices, isLoading } = useService("chatServices")
+  const { services, getServices } = useService("chatServices")
 
   useEffect(() => {
     getServices();
@@ -29,9 +30,8 @@ const ChatDevPage = () => {
     adaptiveImage: adaptiveChat,
   };
 
-  if (isLoading) return <Preloader />
   return (
-    <>
+    <Suspense fallback={SimpleLoader}>
       <Header />
       <Navigation title={t("navigation.Chat_description")} />
       <ReusableMainContent data={chatMain} />
@@ -47,7 +47,7 @@ const ChatDevPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </Suspense>
   );
 };
 

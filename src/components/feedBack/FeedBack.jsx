@@ -10,7 +10,8 @@ import SamplePrevArrow from "./arrows/prevArrow/SamplePrevArrow";
 import Paging from "./paging/Paging";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import useFeedback from "@/hooks/useFeedback";
-import Preloader from "../Preloader/Preloader";
+import SimpleLoader from "../simpleLoader/SimpleLoader";
+import { Suspense } from "react";
 
 const FeedBack = ({ isMain }) => {
 
@@ -77,15 +78,16 @@ const FeedBack = ({ isMain }) => {
       )),
     [feedbacks]
   );
-  if (isLoading) return <Preloader />
   return (
-    <div className={scss.feedBack} id="feedback" >
-      <SectionContainer id="feedback" title={t("feedBack.heading")}>
-        <div className={scss.feedBack__slide}>
-          <Slider {...sliderSettings}>{renderCard}</Slider>
-        </div>
-      </SectionContainer>
-    </div>
+    <Suspense fallback={<SimpleLoader />}>
+      <div className={scss.feedBack} id="feedback" >
+        <SectionContainer id="feedback" title={t("feedBack.heading")}>
+          <div className={scss.feedBack__slide}>
+            <Slider {...sliderSettings}>{renderCard}</Slider>
+          </div>
+        </SectionContainer>
+      </div>
+    </Suspense>
   );
 };
 

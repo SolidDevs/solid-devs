@@ -5,7 +5,8 @@ import { inputs } from "@/constants/header";
 import i18n from "i18next";
 import { useMemo, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Preloader from "../Preloader/Preloader";
+import SimpleLoader from "../simpleLoader/SimpleLoader";
+import { Suspense } from "react";
 
 const HeaderMobileModal = ({ click }) => {
   const { t, language } = i18n;
@@ -70,55 +71,55 @@ const HeaderMobileModal = ({ click }) => {
     [language, inputValues]
   );
 
-  if (isLoading) return <Preloader />
-
   return (
-    <div className={scss.wrapper}>
-      <label onClick={handleButtonClick}>
-        <button>{t("headerMobile.title")}</button>
-      </label>
-      <header
-        className={
-          isContactModalOpen
-            ? scss.header__contactModal_active
-            : scss.header__contactModal_notActive
-        }
-        onClick={handleButtonClick}
-      >
-        <section
-          className={scss.header__contactModal}
-          onClick={(event) => event.stopPropagation()}
+    <Suspense fallback={SimpleLoader}>
+      <div className={scss.wrapper}>
+        <label onClick={handleButtonClick}>
+          <button>{t("headerMobile.title")}</button>
+        </label>
+        <header
+          className={
+            isContactModalOpen
+              ? scss.header__contactModal_active
+              : scss.header__contactModal_notActive
+          }
+          onClick={handleButtonClick}
         >
-          <header>
-            <h1>{t("header.your-pmroject")}</h1>
-            <Image
-              src={close}
-              width={26}
-              height={26}
-              onClick={handleButtonClick}
-              alt="close"
-            />
-          </header>
-          <form onSubmit={sendForm}>
-            <main>{contactInputs}</main>
-            <footer>
-              <input
-                className={scss.form__input__area}
-                placeholder={t("header.us-help")}
-                type="text"
-                name="usHelp"
-                value={inputValues["usHelp"]}
-                required
-                onChange={handleInputChange}
+          <section
+            className={scss.header__contactModal}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <header>
+              <h1>{t("header.your-pmroject")}</h1>
+              <Image
+                src={close}
+                width={26}
+                height={26}
+                onClick={handleButtonClick}
+                alt="close"
               />
-              <button type="sumbit" className={scss.header__button}>
-                {t("header.send")}
-              </button>
-            </footer>
-          </form>
-        </section>
-      </header>
-    </div>
+            </header>
+            <form onSubmit={sendForm}>
+              <main>{contactInputs}</main>
+              <footer>
+                <input
+                  className={scss.form__input__area}
+                  placeholder={t("header.us-help")}
+                  type="text"
+                  name="usHelp"
+                  value={inputValues["usHelp"]}
+                  required
+                  onChange={handleInputChange}
+                />
+                <button type="sumbit" className={scss.header__button}>
+                  {t("header.send")}
+                </button>
+              </footer>
+            </form>
+          </section>
+        </header>
+      </div>
+    </Suspense>
   );
 };
 
