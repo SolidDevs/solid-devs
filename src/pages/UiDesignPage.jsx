@@ -12,11 +12,10 @@ import adaptiveDesign from "/public/images/adaptiveServices/uxui.svg";
 import useService from "@/hooks/useService";
 import { useEffect } from "react";
 import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
-import { Suspense } from "react";
 
 const UiDesignPage = () => {
   const { t } = useTranslation();
-  const { services, getServices } = useService("designServices")
+  const { services, getServices, isLoading } = useService("designServices")
 
   useEffect(() => {
     getServices();
@@ -28,8 +27,9 @@ const UiDesignPage = () => {
     adaptiveImage: adaptiveDesign,
   };
 
+  if (isLoading) return <SimpleLoader />
   return (
-    <Suspense fallback={SimpleLoader}>
+    <>
       <Header />
       <Navigation title={t("navigation.Design_description")} />
       <ReusableMainContent data={uiMain} />
@@ -44,7 +44,7 @@ const UiDesignPage = () => {
         </div>
       </div>
       <Footer />
-    </Suspense>
+    </>
   );
 };
 

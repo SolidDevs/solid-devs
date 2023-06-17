@@ -12,7 +12,6 @@ import mobileImage from "/public/images/reusableMain/mobileMain.svg";
 import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.svg";
 import { useEffect } from "react";
 import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
-import { Suspense } from "react";
 
 const MobileDevPage = () => {
   const { t } = useTranslation();
@@ -28,8 +27,9 @@ const MobileDevPage = () => {
     adaptiveImage: adaptiveMobile,
   };
 
+  if (isLoading) return <SimpleLoader />
   return (
-    <Suspense fallback={SimpleLoader}>
+    <>
       <Header />
       <Navigation title={t("navigation.Mobile_description")} />
       <ReusableMainContent data={mobileMain} />
@@ -44,7 +44,7 @@ const MobileDevPage = () => {
         </div>
       </div>
       <Footer />
-    </Suspense>
+    </>
   );
 };
 

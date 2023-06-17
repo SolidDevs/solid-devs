@@ -5,7 +5,6 @@ import { useEffect, useMemo } from "react";
 import OurTeamCard from "./our__team_card/OurTeamCard";
 import useTeam from "@/hooks/useTeam";
 import SimpleLoader from "../simpleLoader/SimpleLoader";
-import { Suspense } from "react";
 
 const OurTeam = () => {
   const { t } = useTranslation("");
@@ -22,12 +21,12 @@ const OurTeam = () => {
       )),
     [team]
   );
+
+  if (isLoading) return <SimpleLoader />
   return (
-    <Suspense fallback={SimpleLoader}>
-      <SectionContainer title={t("ourTeam.title")} id="team" >
-        <div className={scss.ourTeam} id="team">{ourTeamItems}</div>
-      </SectionContainer>
-    </Suspense>
+    <SectionContainer title={t("ourTeam.title")} id="team" >
+      <div className={scss.ourTeam} id="team">{ourTeamItems}</div>
+    </SectionContainer>
   );
 };
 

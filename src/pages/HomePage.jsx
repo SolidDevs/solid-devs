@@ -8,14 +8,12 @@ import Main from "@/components/main/Main";
 import OurProjects from "@/components/ourProjects/OurProjects";
 import OurTeam from "@/components/our__team/OurTeam";
 import ServicesBlock from "@/components/servicesBlock/ServicesBlock";
-import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
 import TechnologiesBlock from "@/components/technologiesBlock/TechnologiesBlock";
 import Work from "@/components/work/Work";
-import { Suspense } from "react";
 
 const HomePage = () => {
   return (
-    <Suspense fallback={SimpleLoader}>
+    <>
       <Header />
       <Main />
       <MainContent>
@@ -29,7 +27,7 @@ const HomePage = () => {
         <Contacts />
       </MainContent>
       <Footer />
-    </Suspense>
+    </>
   );
 };
 export default HomePage;

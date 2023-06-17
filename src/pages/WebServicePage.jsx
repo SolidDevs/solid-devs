@@ -11,7 +11,6 @@ import webImage from "/public/images/reusableMain/webServiceMain.svg";
 import adaptiveWeb from "/public/images/adaptiveServices/webdev.svg";
 import { useTranslation } from "react-i18next";
 import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
-import { Suspense } from "react";
 
 const WebServicePage = () => {
   const { services, getServices, isLoading } = useService("webServices")
@@ -26,8 +25,10 @@ const WebServicePage = () => {
     image: webImage,
     adaptiveImage: adaptiveWeb,
   };
+
+  if (isLoading) return <SimpleLoader />
   return (
-    <Suspense fallback={SimpleLoader}>
+    <>
       <Header />
       <ReusableMainContent data={webMain} />
       <ServicesAndProcess data={services[0]?.services} title={t("services.webServices")} />
@@ -41,7 +42,7 @@ const WebServicePage = () => {
         </div>
       </div>
       <Footer />
-    </Suspense>
+    </>
   );
 };
 export default WebServicePage;

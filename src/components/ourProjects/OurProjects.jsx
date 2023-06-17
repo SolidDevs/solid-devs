@@ -9,7 +9,6 @@ import { useTranslation } from "react-i18next";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import useProject from "@/hooks/useProject";
 import SimpleLoader from "../simpleLoader/SimpleLoader";
-import { Suspense } from "react";
 
 const OurProjects = () => {
   const { t } = useTranslation();
@@ -74,17 +73,16 @@ const OurProjects = () => {
       )),
     [projects]
   );
+  if (isLoading) return <SimpleLoader />
 
   return (
-    <Suspense fallback={SimpleLoader}>
-      <div className={scss.ourProjects} id="ourProject" >
-        <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">
-          <div className={scss.projects}>
-            <Slider {...sliderSettings}>{renderProjects}</Slider>
-          </div>
-        </SectionContainer>
-      </div>
-    </Suspense>
+    <div className={scss.ourProjects} id="ourProject" >
+      <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">
+        <div className={scss.projects}>
+          <Slider {...sliderSettings}>{renderProjects}</Slider>
+        </div>
+      </SectionContainer>
+    </div>
   );
 };
 

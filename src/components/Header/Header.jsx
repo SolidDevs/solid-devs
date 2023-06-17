@@ -14,8 +14,6 @@ import Logo from "../logo/Logo";
 import HeaderMobileMenu from "../headerMobileMenu/HeaderMobileMenu";
 import emailjs from "@emailjs/browser";
 import SimpleLoader from "../simpleLoader/SimpleLoader";
-import { Suspense } from "react";
-
 const Header = () => {
   const { t, language } = i18n;
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
@@ -214,57 +212,55 @@ const Header = () => {
         </footer>
       )
   );
-
+  if (isLoading) return <SimpleLoader />
   return (
-    <Suspense fallback={SimpleLoader}>
-      <section className={scss.header}>
-        {contactModal}
-        <aside className={scss.header_left}>
-          <Link href={"/"}>
-            <Logo />
-          </Link>
-          <nav className={scss.header__navs}>
-            {headerNavs}
-            <label
-              onMouseOver={() => handleClickOpen()}
-              className={
-                !isServiceModalOpen
-                  ? scss.header__option_notActive
-                  : scss.header__option_active
-              }
-            >
-              <p >{t("header.service")}</p>
-              <Image src={arrow} alt="arrow" width={16} height={8} />
-            </label>
-          </nav>
-        </aside>
-        <aside className={scss.header_right}>
-          <div className={scss.header__language}>
-            <p
-              onClick={en}
-              className={
-                !selectLan ? scss.header__lan_active : scss.header__lan_notActive
-              }
-            >
-              En
-            </p>
-            <p
-              onClick={ru}
-              className={
-                selectLan ? scss.header__lan_active : scss.header__lan_notActive
-              }
-            >
-              Ру
-            </p>
-          </div>
-          <label onClick={handleButtonClick}>
-            <Button title={t("header.button")} withArrow={false} />
+    <section className={scss.header}>
+      {contactModal}
+      <aside className={scss.header_left}>
+        <Link href={"/"}>
+          <Logo />
+        </Link>
+        <nav className={scss.header__navs}>
+          {headerNavs}
+          <label
+            onMouseOver={() => handleClickOpen()}
+            className={
+              !isServiceModalOpen
+                ? scss.header__option_notActive
+                : scss.header__option_active
+            }
+          >
+            <p >{t("header.service")}</p>
+            <Image src={arrow} alt="arrow" width={16} height={8} />
           </label>
-        </aside>
-        <HeaderMobileMenu />
-        {serviceModal}
-      </section>
-    </Suspense>
+        </nav>
+      </aside>
+      <aside className={scss.header_right}>
+        <div className={scss.header__language}>
+          <p
+            onClick={en}
+            className={
+              !selectLan ? scss.header__lan_active : scss.header__lan_notActive
+            }
+          >
+            En
+          </p>
+          <p
+            onClick={ru}
+            className={
+              selectLan ? scss.header__lan_active : scss.header__lan_notActive
+            }
+          >
+            Ру
+          </p>
+        </div>
+        <label onClick={handleButtonClick}>
+          <Button title={t("header.button")} withArrow={false} />
+        </label>
+      </aside>
+      <HeaderMobileMenu />
+      {serviceModal}
+    </section>
   );
 };
 
