@@ -25,6 +25,29 @@ const Header = () => {
   const [selectLan, setSelectLan] = useState("");
   const [isLoading, setIsLoading] = useState(false)
 
+  const [userLanguage, setUserLanguage] = useState();
+
+
+  useEffect(() => {
+    if (userLanguage) {
+      if (userLanguage == "ru") {
+        setSelectLan(true)
+        i18n.changeLanguage("ru");
+      } else {
+        setSelectLan(false)
+        i18n.changeLanguage("en");
+      }
+    }
+  }, [userLanguage])
+
+  useEffect(() => {
+    const detectUserLanguage = () => {
+      const language = navigator.language || navigator.userLanguage;
+      setUserLanguage(language);
+    };
+    detectUserLanguage();
+  }, []);
+
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language");
     setSelectLan(storedLanguage == "ru" ? true : false);
