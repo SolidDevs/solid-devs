@@ -7,11 +7,13 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { db } from "../../firebase/firebase";
 import { useRouter } from "next/router";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import SkeletonItem from "./skeleton/SkeletonItem";
 
 const TechnologiesBlock = () => {
   const { t } = useTranslation("");
   const [isOpen, setOpen] = useState(true);
   const [data, setData] = useState([]);
+  const [isComing, setComing] = useState(false);
 
   const router = useRouter();
   const { technologies } = router.query;
@@ -25,6 +27,7 @@ const TechnologiesBlock = () => {
   }, []);
 
   const filtering = async ({ category, operator, comparison }) => {
+    setComing(true)
     const q = query(
       collection(db, "technologies"),
       where(category, operator, comparison)
@@ -39,6 +42,7 @@ const TechnologiesBlock = () => {
       data.push(obj);
     });
     setData(data);
+    setComing(false)
   };
 
   useMemo(() => {
@@ -97,9 +101,21 @@ const TechnologiesBlock = () => {
       )),
     [t, data]
   );
+
   const handleOpen = useCallback(() => {
     setOpen(isOpen);
   });
+
+
+  const isDataComes = () => {
+    if (isComing) {
+      return <SkeletonItem />
+    } else {
+      return technologiesItems
+    }
+  }
+
+
   return (
     <SectionContainer title={t("technologies.title")} id="technologies">
       <Navbar
@@ -111,7 +127,7 @@ const TechnologiesBlock = () => {
         {isOpen && technologiesItems}
       </Navbar>
       <div className={scss.technologies__dekstop} id="technologies">
-        {technologiesItems}
+        {isDataComes()}
       </div>
     </SectionContainer>
   );
