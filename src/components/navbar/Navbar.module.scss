@@ -40,6 +40,9 @@
       z-index: 20;
       height: 2px;
       background-color: $mainBlue;
+      @include breackpoint(sm) {
+        height: 0px !important;
+      }
     }
     &::after {
       content: "";
@@ -52,6 +55,9 @@
       width: 100%;
       height: 2px;
       background-color: #d9d9d9;
+      @include breackpoint(sm) {
+        height: 0px !important;
+      }
     }
   }
 }
