@@ -17,7 +17,7 @@ import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
 
 const ChatDevPage = () => {
   const { t } = useTranslation();
-  const { services, getServices } = useService("chatServices")
+  const { services, getServices, isLoading } = useService("chatServices")
 
   useEffect(() => {
     getServices();
