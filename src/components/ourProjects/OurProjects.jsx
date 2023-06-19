@@ -8,7 +8,7 @@ import ProjectsItem from "./projectsItem/ProjectsItem";
 import { useTranslation } from "react-i18next";
 import SectionContainer from "../layoutComponent/SectionContainer";
 import useProject from "@/hooks/useProject";
-import Preloader from "../Preloader/Preloader";
+import SimpleLoader from "../simpleLoader/SimpleLoader";
 
 const OurProjects = () => {
   const { t } = useTranslation();
@@ -73,7 +73,8 @@ const OurProjects = () => {
       )),
     [projects]
   );
-  if (isLoading) return <Preloader />
+  if (isLoading) return <SimpleLoader />
+
   return (
     <div className={scss.ourProjects} id="ourProject" >
       <SectionContainer title={t("ourProjects.ourProjectsTitle")} id="ourProject">

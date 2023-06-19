@@ -11,8 +11,7 @@ import useService from "@/hooks/useService";
 import mobileImage from "/public/images/reusableMain/mobileMain.svg";
 import adaptiveMobile from "/public/images/adaptiveServices/mobiledev.svg";
 import { useEffect } from "react";
-import Preloader from "@/components/Preloader/Preloader";
-
+import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
 
 const MobileDevPage = () => {
   const { t } = useTranslation();
@@ -27,7 +26,8 @@ const MobileDevPage = () => {
     image: mobileImage,
     adaptiveImage: adaptiveMobile,
   };
-  if (isLoading) return <Preloader />
+
+  if (isLoading) return <SimpleLoader />
   return (
     <>
       <Header />

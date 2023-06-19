@@ -12,7 +12,7 @@ import mvpImage from "/public/images/reusableMain/mvpMain.svg";
 import adaptiveMvp from "/public/images/adaptiveServices/mvp.svg";
 import { useEffect } from "react";
 import Service from "@/components/ServiceMvp/Service";
-import Preloader from "@/components/Preloader/Preloader";
+import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
 
 const MvpDevPage = () => {
   const { t } = useTranslation();
@@ -27,7 +27,8 @@ const MvpDevPage = () => {
     image: mvpImage,
     adaptiveImage: adaptiveMvp,
   };
-  if (isLoading) return <Preloader />
+
+  if (isLoading) return <SimpleLoader />
   return (
     <>
       <Header />
@@ -45,7 +46,7 @@ const MvpDevPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </ >
   );
 };
 

@@ -11,7 +11,7 @@ import designImage from "/public/images/reusableMain/DesignMain.svg";
 import adaptiveDesign from "/public/images/adaptiveServices/uxui.svg";
 import useService from "@/hooks/useService";
 import { useEffect } from "react";
-import Preloader from "@/components/Preloader/Preloader";
+import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
 
 const UiDesignPage = () => {
   const { t } = useTranslation();
@@ -27,7 +27,7 @@ const UiDesignPage = () => {
     adaptiveImage: adaptiveDesign,
   };
 
-  if (isLoading) return <Preloader />
+  if (isLoading) return <SimpleLoader />
   return (
     <>
       <Header />

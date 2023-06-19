@@ -13,8 +13,7 @@ import close from "/public/images/Header/close.svg";
 import Logo from "../logo/Logo";
 import HeaderMobileMenu from "../headerMobileMenu/HeaderMobileMenu";
 import emailjs from "@emailjs/browser";
-import Preloader from "../Preloader/Preloader";
-
+import SimpleLoader from "../simpleLoader/SimpleLoader";
 const Header = () => {
   const { t, language } = i18n;
   const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
@@ -236,8 +235,7 @@ const Header = () => {
         </footer>
       )
   );
-
-  if (isLoading) return <Preloader />
+  if (isLoading) return <SimpleLoader />
   return (
     <section className={scss.header}>
       {contactModal}

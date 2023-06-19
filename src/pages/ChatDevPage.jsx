@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import adaptiveChat from "/public/images/adaptiveServices/services.svg";
 import chatImage from "/public/images/reusableMain/chatMain.svg";
 import StatisticsChat from "@/components/statisticsChat/StatisticsChat";
-import Preloader from "@/components/Preloader/Preloader";
+import SimpleLoader from "@/components/simpleLoader/SimpleLoader";
 
 const ChatDevPage = () => {
   const { t } = useTranslation();
@@ -29,7 +29,7 @@ const ChatDevPage = () => {
     adaptiveImage: adaptiveChat,
   };
 
-  if (isLoading) return <Preloader />
+  if (isLoading) return <SimpleLoader />
   return (
     <>
       <Header />

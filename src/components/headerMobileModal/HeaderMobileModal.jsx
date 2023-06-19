@@ -5,7 +5,7 @@ import { inputs } from "@/constants/header";
 import i18n from "i18next";
 import { useMemo, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Preloader from "../Preloader/Preloader";
+import SimpleLoader from "../simpleLoader/SimpleLoader";
 
 const HeaderMobileModal = ({ click }) => {
   const { t, language } = i18n;
@@ -70,8 +70,7 @@ const HeaderMobileModal = ({ click }) => {
     [language, inputValues]
   );
 
-  if (isLoading) return <Preloader />
-
+  if (isLoading) return <SimpleLoader />
   return (
     <div className={scss.wrapper}>
       <label onClick={handleButtonClick}>
