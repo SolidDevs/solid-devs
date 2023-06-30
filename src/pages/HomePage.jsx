@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import ItProjects from "@/components/ItProjects/ItProjects";
 import MainContent from "@/components/MainContent/MainContent";
 import Contacts from "@/components/contacts/Contacts";
+import CookieConsentComponent from "@/components/cookieConsent/CookieConsent";
 import FeedBack from "@/components/feedBack/FeedBack";
 import Main from "@/components/main/Main";
 import OurProjects from "@/components/ourProjects/OurProjects";
@@ -16,6 +17,7 @@ const HomePage = () => {
     <>
       <Header />
       <Main />
+      <CookieConsentComponent />
       <MainContent>
         <ItProjects />
         <ServicesBlock />
