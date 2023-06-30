@@ -345,5 +345,9 @@
   "emailJS": {
     "success": "successfully sent",
     "failed": "Something went wrong"
+  },
+  "cookies": {
+    "reasons": "This website uses cookies to enhance the user experience.",
+    "accept": "By clicking 'Accept', you agree to the use of cookies."
   }
 }
